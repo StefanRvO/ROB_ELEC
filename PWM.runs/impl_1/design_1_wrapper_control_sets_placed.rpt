@@ -1,0 +1,73 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
+| Date         : Tue Nov 15 23:18:28 2016
+| Host         : Leviathan running 64-bit Arch Linux
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    35 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            7 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              64 |           15 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              69 |           21 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------+---------------------------------------------------+--------------------------------------------+------------------+----------------+
+|                   Clock Signal                  |                   Enable Signal                   |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
++-------------------------------------------------+---------------------------------------------------+--------------------------------------------+------------------+----------------+
+|  design_1_i/PWM_generator_0/U0/scaled_CLK       |                                                   |                                            |                1 |              1 |
+|  design_1_i/processing_system7_0/inst/FCLK_CLK1 | design_1_i/Rotary_counter_0/U0/counter[7]_i_1_n_0 | design_1_i/inverter_0/out_sig              |                3 |              8 |
+|  design_1_i/processing_system7_0/inst/FCLK_CLK1 | design_1_i/Debouncer_3/U0/count[9]_i_2_n_0        | design_1_i/Debouncer_3/U0/count[9]_i_1_n_0 |                3 |             10 |
+|  design_1_i/processing_system7_0/inst/FCLK_CLK1 |                                                   |                                            |                6 |             15 |
+|  design_1_i/processing_system7_0/inst/FCLK_CLK1 | design_1_i/Debouncer_2/U0/count[0]_i_2_n_0        | design_1_i/Debouncer_2/U0/count[0]_i_1_n_0 |                5 |             17 |
+|  design_1_i/processing_system7_0/inst/FCLK_CLK1 | design_1_i/Debouncer_5/U0/count[0]_i_2_n_0        | design_1_i/Debouncer_5/U0/count[0]_i_1_n_0 |                5 |             17 |
+|  design_1_i/processing_system7_0/inst/FCLK_CLK1 | design_1_i/Debouncer_4/U0/count[0]_i_2_n_0        | design_1_i/Debouncer_4/U0/count[0]_i_1_n_0 |                5 |             17 |
+|  design_1_i/processing_system7_0/inst/FCLK_CLK1 |                                                   | design_1_i/inverter_0/out_sig              |                7 |             32 |
+|  design_1_i/PWM_generator_0/U0/scaled_CLK       |                                                   | design_1_i/inverter_0/out_sig              |                8 |             32 |
++-------------------------------------------------+---------------------------------------------------+--------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     1 |
+| 8      |                     1 |
+| 10     |                     1 |
+| 15     |                     1 |
+| 16+    |                     5 |
++--------+-----------------------+
+
+
