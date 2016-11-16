@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Nov 15 23:16:00 2016
-# Process ID: 20059
+# Start of session at: Wed Nov 16 12:17:49 2016
+# Process ID: 18556
 # Current directory: /home/stefan/PWM/PWM.runs/design_1_inverter_0_1_synth_1
 # Command line: vivado -log design_1_inverter_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_inverter_0_1.tcl
 # Log file: /home/stefan/PWM/PWM.runs/design_1_inverter_0_1_synth_1/design_1_inverter_0_1.vds

@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Nov 15 23:38:41 2016
+# Process ID: 28890
+# Current directory: /home/stefan/PWM
+# Command line: vivado -mode tcl PWM.xpr
+# Log file: /home/stefan/PWM/vivado.log
+# Journal file: /home/stefan/PWM/vivado.jou
+#-----------------------------------------------------------
+open_project PWM.xpr
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+top
+ls
+ls
+help
+help Bitgen
+help
+help -category Bitgen
+launch_runs impl_1 -to_step write_bitstream

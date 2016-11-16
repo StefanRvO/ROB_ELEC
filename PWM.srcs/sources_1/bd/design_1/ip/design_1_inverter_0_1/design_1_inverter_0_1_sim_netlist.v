@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Tue Nov 15 23:16:33 2016
+// Date        : Wed Nov 16 12:18:14 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/stefan/PWM/PWM.srcs/sources_1/bd/design_1/ip/design_1_inverter_0_1/design_1_inverter_0_1_sim_netlist.v

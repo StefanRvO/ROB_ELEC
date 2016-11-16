@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Nov 15 23:17:08 2016
-# Process ID: 20580
+# Start of session at: Wed Nov 16 12:18:15 2016
+# Process ID: 18804
 # Current directory: /home/stefan/PWM/PWM.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/stefan/PWM/PWM.runs/synth_1/design_1_wrapper.vds
