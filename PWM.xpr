@@ -54,85 +54,355 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/Synchronizer.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/FifoWritePort.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/FifoReadPort.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/RegFile2.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/FifoCtrl.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/pulse_gen.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/log_pkg.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/gab_link_al_subgrp.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/fifo_out_mux.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/fifo_in_mux.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/Fifo.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/checksum.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/util_pkg.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_tx.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_rx.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_gab_link_dl_tx_fsm.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_gab_link_dl_rx_fsm.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_gab_link_dl_ascii_enc.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_gab_link_dl_ascii_dec.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/rr_prio_enc.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/mod_m_counter.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/gab_link_al_submngr.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/fifo_reg.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/dual_fifo_mux.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/wb_classic_interface.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_gab_link_dl.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_asynch.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/gab_link_al_fsm.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/wb_slv_mem_ctrl.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/wb_mst_ctrl.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_gab_link.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/ram_rwrw.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/wb_mem.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/uart_wb_link.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/clock_gen.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_link/wrap_unity.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/unity_ctrl.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/unity/unity.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xci">
+          <Proxy FileSetName="unity_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.xci">
+          <Proxy FileSetName="unity_unity_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity.hwh"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_unity_ctrl_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_unity_ctrl_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.hwdef"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_ooc.xdc"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/unity/hdl/unity_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/inverter.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Rotary_counter.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Rotary_Encoder.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Debouncer.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/PWM_generator.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Toggler.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_3_0/design_1_Debouncer_3_0.xci">
-          <Proxy FileSetName="design_1_Debouncer_3_0"/>
-        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Debouncer_2_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_inverter_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Debouncer_2_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_inverter_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Debouncer_2_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_inverter_0_0/design_1_inverter_0_0.xci">
+          <Proxy FileSetName="design_1_inverter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Rotary_counter_0_0/design_1_Rotary_counter_0_0.xci">
+          <Proxy FileSetName="design_1_Rotary_counter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Rotary_Encoder_0_0/design_1_Rotary_Encoder_0_0.xci">
+          <Proxy FileSetName="design_1_Rotary_Encoder_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_1_0/design_1_Debouncer_1_0.xci">
           <Proxy FileSetName="design_1_Debouncer_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_2_0/design_1_Debouncer_2_0.xci">
           <Proxy FileSetName="design_1_Debouncer_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Rotary_Encoder_0_0/design_1_Rotary_Encoder_0_0.xci">
-          <Proxy FileSetName="design_1_Rotary_Encoder_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci">
-          <Proxy FileSetName="design_1_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Rotary_counter_0_0/design_1_Rotary_counter_0_0.xci">
-          <Proxy FileSetName="design_1_Rotary_counter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_inverter_0_0/design_1_inverter_0_0.xci">
-          <Proxy FileSetName="design_1_inverter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_2_1/design_1_Debouncer_2_1.xci">
-          <Proxy FileSetName="design_1_Debouncer_2_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_inverter_0_1/design_1_inverter_0_1.xci">
-          <Proxy FileSetName="design_1_inverter_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Toggler_0_0/design_1_Toggler_0_0.xci">
-          <Proxy FileSetName="design_1_Toggler_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_3_0/design_1_Debouncer_3_0.xci">
+          <Proxy FileSetName="design_1_Debouncer_3_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PWM_generator_0_0/design_1_PWM_generator_0_0.xci">
           <Proxy FileSetName="design_1_PWM_generator_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Debouncer_2_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Toggler_0_0/design_1_Toggler_0_0.xci">
+          <Proxy FileSetName="design_1_Toggler_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_inverter_0_1/design_1_inverter_0_1.xci">
+          <Proxy FileSetName="design_1_inverter_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_2_1/design_1_Debouncer_2_1.xci">
+          <Proxy FileSetName="design_1_Debouncer_2_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci">
+          <Proxy FileSetName="design_1_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Rotary_Encoder_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_counter_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Rotary_counter_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_counter_0_0_sim_netlist.vhdl"/>
@@ -147,6 +417,9 @@
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_0_stub.vhdl"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_0_stub.v"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_inverter_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_PWM_generator_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_PWM_generator_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_PWM_generator_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_3_0.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Debouncer_3_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_3_0_sim_netlist.vhdl"/>
@@ -166,9 +439,6 @@
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Rotary_Encoder_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_sim_netlist.vhdl"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Rotary_Encoder_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_1.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_1.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Toggler_0_0.xml"/>
@@ -182,19 +452,22 @@
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_PWM_generator_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_PWM_generator_0_0_sim_netlist.vhdl"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_PWM_generator_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_PWM_generator_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_PWM_generator_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_PWM_generator_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Debouncer_2_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_inverter_0_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Debouncer_2_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_inverter_0_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Debouncer_2_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_1_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_1_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_1_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_1_stub.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_1_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_1_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_1_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_1_stub.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Debouncer_2_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -208,8 +481,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="design_1_wrapper"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="unity_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -220,8 +492,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/constrs_1/new/unity_constr.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraints.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/unity_constr.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -311,15 +589,27 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="design_1_inverter_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_inverter_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_1_inverter_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="design_1_Debouncer_2_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_Debouncer_2_1">
       <Config>
         <Option Name="TopModule" Val="design_1_Debouncer_2_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_inverter_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_inverter_0_1">
+    <FileSet Name="unity_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_processing_system7_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_inverter_0_1"/>
+        <Option Name="TopModule" Val="unity_processing_system7_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_unity_ctrl_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_unity_ctrl_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_unity_ctrl_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -428,6 +718,16 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="design_1_inverter_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_inverter_0_1" Part="xc7z010clg225-1" ConstrsSet="design_1_inverter_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/design_1_inverter_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="design_1_Debouncer_2_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_Debouncer_2_1" Part="xc7z010clg225-1" ConstrsSet="design_1_Debouncer_2_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/design_1_Debouncer_2_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
@@ -438,7 +738,17 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_inverter_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_inverter_0_1" Part="xc7z010clg225-1" ConstrsSet="design_1_inverter_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/design_1_inverter_0_1_synth_1" IncludeInArchive="true">
+    <Run Id="unity_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_processing_system7_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_processing_system7_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_unity_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_unity_ctrl_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_unity_ctrl_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_unity_ctrl_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -601,6 +911,23 @@
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="design_1_inverter_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="design_1_inverter_0_1" Description="Default settings for Implementation." SynthRun="design_1_inverter_0_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="design_1_Debouncer_2_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="design_1_Debouncer_2_1" Description="Default settings for Implementation." SynthRun="design_1_Debouncer_2_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
@@ -618,7 +945,24 @@
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_inverter_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="design_1_inverter_0_1" Description="Default settings for Implementation." SynthRun="design_1_inverter_0_1_synth_1" IncludeInArchive="false">
+    <Run Id="unity_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="unity_processing_system7_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_unity_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_unity_ctrl_0_0" Description="Default settings for Implementation." SynthRun="unity_unity_ctrl_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
           <Desc>Default settings for Implementation.</Desc>

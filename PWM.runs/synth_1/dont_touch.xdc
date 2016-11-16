@@ -3,40 +3,15 @@
 
 # XDC: new/constraints.xdc
 
-# Block Designs: bd/design_1/design_1.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1}]
+# XDC: new/unity_constr.xdc
 
-# IP: bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_0 || ORIG_REF_NAME==design_1_processing_system7_0_0}]
+# Block Designs: bd/unity/unity.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity || ORIG_REF_NAME==unity}]
 
-# IP: bd/design_1/ip/design_1_inverter_0_0/design_1_inverter_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_inverter_0_0 || ORIG_REF_NAME==design_1_inverter_0_0}]
+# IP: bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_processing_system7_0_0 || ORIG_REF_NAME==unity_processing_system7_0_0}]
 
-# IP: bd/design_1/ip/design_1_Rotary_counter_0_0/design_1_Rotary_counter_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Rotary_counter_0_0 || ORIG_REF_NAME==design_1_Rotary_counter_0_0}]
+# IP: bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_unity_ctrl_0_0 || ORIG_REF_NAME==unity_unity_ctrl_0_0}]
 
-# IP: bd/design_1/ip/design_1_Rotary_Encoder_0_0/design_1_Rotary_Encoder_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Rotary_Encoder_0_0 || ORIG_REF_NAME==design_1_Rotary_Encoder_0_0}]
-
-# IP: bd/design_1/ip/design_1_Debouncer_1_0/design_1_Debouncer_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Debouncer_1_0 || ORIG_REF_NAME==design_1_Debouncer_1_0}]
-
-# IP: bd/design_1/ip/design_1_Debouncer_2_0/design_1_Debouncer_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Debouncer_2_0 || ORIG_REF_NAME==design_1_Debouncer_2_0}]
-
-# IP: bd/design_1/ip/design_1_Debouncer_3_0/design_1_Debouncer_3_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Debouncer_3_0 || ORIG_REF_NAME==design_1_Debouncer_3_0}]
-
-# IP: bd/design_1/ip/design_1_PWM_generator_0_0/design_1_PWM_generator_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_PWM_generator_0_0 || ORIG_REF_NAME==design_1_PWM_generator_0_0}]
-
-# IP: bd/design_1/ip/design_1_Toggler_0_0/design_1_Toggler_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Toggler_0_0 || ORIG_REF_NAME==design_1_Toggler_0_0}]
-
-# IP: bd/design_1/ip/design_1_inverter_0_1/design_1_inverter_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_inverter_0_1 || ORIG_REF_NAME==design_1_inverter_0_1}]
-
-# IP: bd/design_1/ip/design_1_Debouncer_2_1/design_1_Debouncer_2_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Debouncer_2_1 || ORIG_REF_NAME==design_1_Debouncer_2_1}]
-
-# XDC: bd/design_1/design_1_ooc.xdc
+# XDC: bd/unity/unity_ooc.xdc
