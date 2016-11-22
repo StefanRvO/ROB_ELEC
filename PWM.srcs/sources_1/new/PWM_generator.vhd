@@ -36,7 +36,7 @@ entity PWM_generator is
     Port ( clk_IN : in STD_LOGIC;
            PWM_duty_in : in STD_LOGIC_VECTOR (7 downto 0);
            reset_in : in STD_LOGIC;
-           PWM_out : out STD_LOGIC);
+           PWM_out : out STD_LOGIC := '0');
 end PWM_generator;
 
 architecture Behavioral of PWM_generator is

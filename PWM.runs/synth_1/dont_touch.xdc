@@ -14,4 +14,22 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_processin
 # IP: bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_unity_ctrl_0_0 || ORIG_REF_NAME==unity_unity_ctrl_0_0}]
 
+# IP: bd/unity/ip/unity_BLDC_CONTROLLER_0_0/unity_BLDC_CONTROLLER_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_BLDC_CONTROLLER_0_0 || ORIG_REF_NAME==unity_BLDC_CONTROLLER_0_0}]
+
+# IP: bd/unity/ip/unity_xlconstant_0_1/unity_xlconstant_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconstant_0_1 || ORIG_REF_NAME==unity_xlconstant_0_1}]
+
+# IP: bd/unity/ip/unity_Debouncer_2_0/unity_Debouncer_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_Debouncer_2_0 || ORIG_REF_NAME==unity_Debouncer_2_0}]
+
+# IP: bd/unity/ip/unity_inverter_0_0/unity_inverter_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_inverter_0_0 || ORIG_REF_NAME==unity_inverter_0_0}]
+
+# IP: bd/unity/ip/unity_xlconstant_1_0/unity_xlconstant_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconstant_1_0 || ORIG_REF_NAME==unity_xlconstant_1_0}]
+
+# IP: bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PWM_generator_0_0 || ORIG_REF_NAME==unity_PWM_generator_0_0}]
+
 # XDC: bd/unity/unity_ooc.xdc

@@ -44,8 +44,6 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -64,6 +62,18 @@ set rc [catch {
   set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.dcp]
   add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.dcp]
+  add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_CONTROLLER_0_0/unity_BLDC_CONTROLLER_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_CONTROLLER_0_0/unity_BLDC_CONTROLLER_0_0.dcp]
+  add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_1/unity_xlconstant_0_1.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_1/unity_xlconstant_0_1.dcp]
+  add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_2_0/unity_Debouncer_2_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_2_0/unity_Debouncer_2_0.dcp]
+  add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_0_0/unity_inverter_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_0_0/unity_inverter_0_0.dcp]
+  add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_0/unity_xlconstant_1_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_0/unity_xlconstant_1_0.dcp]
+  add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp]
   read_xdc -ref unity_processing_system7_0_0 -cells inst /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc
   set_property processing_order EARLY [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc]
   read_xdc /home/stefan/PWM/PWM.srcs/constrs_1/new/constraints.xdc

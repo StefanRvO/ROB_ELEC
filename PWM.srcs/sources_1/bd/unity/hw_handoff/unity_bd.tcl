@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# unity_ctrl
+# BLDC_CONTROLLER, Debouncer, PWM_generator, inverter, unity_ctrl
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -161,14 +161,74 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
+  set PHASE_AH_out [ create_bd_port -dir O PHASE_AH_out ]
+  set PHASE_A_out [ create_bd_port -dir O PHASE_A_out ]
+  set PHASE_BH_out [ create_bd_port -dir O PHASE_BH_out ]
+  set PHASE_B_out [ create_bd_port -dir O PHASE_B_out ]
+  set PHASE_CH_out [ create_bd_port -dir O PHASE_CH_out ]
+  set PHASE_C_out [ create_bd_port -dir O PHASE_C_out ]
+  set PWM_out [ create_bd_port -dir O PWM_out ]
   set leds_o [ create_bd_port -dir O -from 7 -to 0 leds_o ]
+  set reset_in [ create_bd_port -dir I -type rst reset_in ]
+  set_property -dict [ list \
+CONFIG.POLARITY {ACTIVE_LOW} \
+ ] $reset_in
   set rx_i [ create_bd_port -dir I rx_i ]
   set tx_o [ create_bd_port -dir O tx_o ]
 
+  # Create instance: BLDC_CONTROLLER_0, and set properties
+  set block_name BLDC_CONTROLLER
+  set block_cell_name BLDC_CONTROLLER_0
+  if { [catch {set BLDC_CONTROLLER_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $BLDC_CONTROLLER_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+    set_property -dict [ list \
+CONFIG.FREQ {3000} \
+ ] $BLDC_CONTROLLER_0
+
+  # Create instance: Debouncer_2, and set properties
+  set block_name Debouncer
+  set block_cell_name Debouncer_2
+  if { [catch {set Debouncer_2 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Debouncer_2 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+    set_property -dict [ list \
+CONFIG.THRESHOLD {100000} \
+ ] $Debouncer_2
+
+  # Create instance: PWM_generator_0, and set properties
+  set block_name PWM_generator
+  set block_cell_name PWM_generator_0
+  if { [catch {set PWM_generator_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $PWM_generator_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: inverter_0, and set properties
+  set block_name inverter
+  set block_cell_name inverter_0
+  if { [catch {set inverter_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $inverter_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
@@ -1198,15 +1258,36 @@ CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
      return 1
    }
   
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+
+  # Create instance: xlconstant_1, and set properties
+  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
+  set_property -dict [ list \
+CONFIG.CONST_VAL {0} \
+ ] $xlconstant_1
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
 
   # Create port connections
+  connect_bd_net -net BLDC_CONTROLLER_0_PHASE_AH_out [get_bd_ports PHASE_AH_out] [get_bd_pins BLDC_CONTROLLER_0/PHASE_AH_out]
+  connect_bd_net -net BLDC_CONTROLLER_0_PHASE_A_out [get_bd_ports PHASE_A_out] [get_bd_pins BLDC_CONTROLLER_0/PHASE_A_out]
+  connect_bd_net -net BLDC_CONTROLLER_0_PHASE_BH_out [get_bd_ports PHASE_BH_out] [get_bd_pins BLDC_CONTROLLER_0/PHASE_BH_out]
+  connect_bd_net -net BLDC_CONTROLLER_0_PHASE_B_out [get_bd_ports PHASE_B_out] [get_bd_pins BLDC_CONTROLLER_0/PHASE_B_out]
+  connect_bd_net -net BLDC_CONTROLLER_0_PHASE_CH_out [get_bd_ports PHASE_CH_out] [get_bd_pins BLDC_CONTROLLER_0/PHASE_CH_out]
+  connect_bd_net -net BLDC_CONTROLLER_0_PHASE_C_out [get_bd_ports PHASE_C_out] [get_bd_pins BLDC_CONTROLLER_0/PHASE_C_out]
+  connect_bd_net -net Debouncer_2_OUT_SIG [get_bd_pins Debouncer_2/OUT_SIG] [get_bd_pins inverter_0/in_sig]
+  connect_bd_net -net PWM_generator_0_PWM_out [get_bd_ports PWM_out] [get_bd_pins BLDC_CONTROLLER_0/PWM_in] [get_bd_pins PWM_generator_0/PWM_out]
+  connect_bd_net -net inverter_0_out_sig [get_bd_pins BLDC_CONTROLLER_0/reset_in] [get_bd_pins inverter_0/out_sig]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins unity_ctrl_0/clk_i]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins BLDC_CONTROLLER_0/clk_in] [get_bd_pins Debouncer_2/CLK] [get_bd_pins PWM_generator_0/clk_IN] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins unity_ctrl_0/clk_i]
+  connect_bd_net -net reset_in_1 [get_bd_ports reset_in] [get_bd_pins Debouncer_2/IN_SIG]
   connect_bd_net -net rx_i_1 [get_bd_ports rx_i] [get_bd_pins unity_ctrl_0/rx_i]
-  connect_bd_net -net unity_ctrl_0_leds_o [get_bd_ports leds_o] [get_bd_pins unity_ctrl_0/leds_o]
+  connect_bd_net -net unity_ctrl_0_leds_o [get_bd_ports leds_o] [get_bd_pins PWM_generator_0/PWM_duty_in] [get_bd_pins unity_ctrl_0/leds_o]
   connect_bd_net -net unity_ctrl_0_tx_o [get_bd_ports tx_o] [get_bd_pins unity_ctrl_0/tx_o]
+  connect_bd_net -net xlconstant_0_dout1 [get_bd_pins BLDC_CONTROLLER_0/dir_in] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins PWM_generator_0/reset_in] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
 
@@ -1214,20 +1295,45 @@ CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y 20 -defaultsOSRD
-preplace port tx_o -pg 1 -y 170 -defaultsOSRD
-preplace port rx_i -pg 1 -y 190 -defaultsOSRD
+preplace port PWM_out -pg 1 -y 300 -defaultsOSRD
+preplace port tx_o -pg 1 -y 420 -defaultsOSRD
+preplace port PHASE_C_out -pg 1 -y 160 -defaultsOSRD
+preplace port PHASE_CH_out -pg 1 -y 220 -defaultsOSRD
+preplace port rx_i -pg 1 -y 440 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 50 -defaultsOSRD
-preplace portBus leds_o -pg 1 -y 190 -defaultsOSRD
-preplace inst unity_ctrl_0 -pg 1 -lvl 2 -y 180 -defaultsOSRD
+preplace port PHASE_A_out -pg 1 -y 120 -defaultsOSRD
+preplace port PHASE_AH_out -pg 1 -y 180 -defaultsOSRD
+preplace port PHASE_B_out -pg 1 -y 140 -defaultsOSRD
+preplace port reset_in -pg 1 -y 190 -defaultsOSRD
+preplace port PHASE_BH_out -pg 1 -y 200 -defaultsOSRD
+preplace portBus leds_o -pg 1 -y 370 -defaultsOSRD
+preplace inst PWM_generator_0 -pg 1 -lvl 3 -y 300 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -y 320 -defaultsOSRD
+preplace inst Debouncer_2 -pg 1 -lvl 2 -y 200 -defaultsOSRD
+preplace inst inverter_0 -pg 1 -lvl 3 -y 200 -defaultsOSRD
+preplace inst BLDC_CONTROLLER_0 -pg 1 -lvl 4 -y 170 -defaultsOSRD
+preplace inst unity_ctrl_0 -pg 1 -lvl 4 -y 430 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
-preplace netloc unity_ctrl_0_leds_o 1 2 1 N
-preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 50 NJ
-preplace netloc unity_ctrl_0_tx_o 1 2 1 NJ
+preplace netloc xlconstant_1_dout 1 2 1 NJ
+preplace netloc Debouncer_2_OUT_SIG 1 2 1 N
+preplace netloc BLDC_CONTROLLER_0_PHASE_C_out 1 4 1 NJ
+preplace netloc xlconstant_0_dout1 1 3 1 900J
+preplace netloc BLDC_CONTROLLER_0_PHASE_AH_out 1 4 1 NJ
+preplace netloc inverter_0_out_sig 1 3 1 NJ
+preplace netloc unity_ctrl_0_leds_o 1 2 3 620 370 NJ 370 1150
+preplace netloc BLDC_CONTROLLER_0_PHASE_CH_out 1 4 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 50 NJ 50 NJ 50 NJ
+preplace netloc reset_in_1 1 0 2 NJ 190 NJ
+preplace netloc PWM_generator_0_PWM_out 1 3 2 910 300 NJ
+preplace netloc unity_ctrl_0_tx_o 1 4 1 NJ
+preplace netloc BLDC_CONTROLLER_0_PHASE_A_out 1 4 1 NJ
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 180 400
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 1 410
-preplace netloc rx_i_1 1 0 2 NJ 190 NJ
-levelinfo -pg 1 0 210 510 630 -top 0 -bot 240
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 3 410 420 610 420 900
+preplace netloc BLDC_CONTROLLER_0_PHASE_BH_out 1 4 1 NJ
+preplace netloc BLDC_CONTROLLER_0_PHASE_B_out 1 4 1 NJ
+preplace netloc rx_i_1 1 0 4 NJ 440 NJ 440 NJ 440 NJ
+levelinfo -pg 1 0 210 510 760 1030 1170 -top 0 -bot 490
 ",
 }
 

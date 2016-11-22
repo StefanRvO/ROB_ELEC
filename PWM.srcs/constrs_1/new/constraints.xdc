@@ -1,4 +1,4 @@
-set_property PACKAGE_PIN P15 [get_ports PWM_out]
+set_property PACKAGE_PIN G11 [get_ports PWM_out]
 set_property PACKAGE_PIN L15 [get_ports reset_in]
 set_property IOSTANDARD LVCMOS33 [get_ports reset_in]
 set_property IOSTANDARD LVCMOS33 [get_ports PWM_out]
@@ -45,3 +45,5 @@ set_property PACKAGE_PIN K13 [get_ports MOTOR_OUT]
 set_property IOSTANDARD LVCMOS33 [get_ports MOTOR_BTN_IN]
 set_property IOSTANDARD LVCMOS33 [get_ports MOTOR_INHIBIT]
 set_property IOSTANDARD LVCMOS33 [get_ports MOTOR_OUT]
+
+

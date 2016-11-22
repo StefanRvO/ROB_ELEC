@@ -2,11 +2,11 @@
 # Webtalk v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Nov 15 23:01:38 2016
-# Process ID: 18618
+# Start of session at: Tue Nov 22 19:27:26 2016
+# Process ID: 8018
 # Current directory: /home/stefan/PWM/PWM.sim/sim_1/behav
-# Command line: wbtcv -mode batch -source /home/stefan/PWM/PWM.sim/sim_1/behav/xsim.dir/Rotary_Encoder_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/stefan/PWM/PWM.sim/sim_1/behav/xsim.dir/PWM_generator_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/stefan/PWM/PWM.sim/sim_1/behav/webtalk.log
 # Journal file: /home/stefan/PWM/PWM.sim/sim_1/behav/webtalk.jou
 #-----------------------------------------------------------
-source /home/stefan/PWM/PWM.sim/sim_1/behav/xsim.dir/Rotary_Encoder_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/stefan/PWM/PWM.sim/sim_1/behav/xsim.dir/PWM_generator_behav/webtalk/xsim_webtalk.tcl -notrace

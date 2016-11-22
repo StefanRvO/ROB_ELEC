@@ -37,7 +37,7 @@ entity unity_ctrl is
            rx_i     : in STD_LOGIC;
            tx_o     : out STD_LOGIC;
            
-           leds_o   : out STD_LOGIC_VECTOR (7 downto 0));
+           leds_o   : out STD_LOGIC_VECTOR (7 downto 0) := (others => '0'));
 end unity_ctrl;
 
 architecture Behavioral of unity_ctrl is
@@ -64,17 +64,17 @@ architecture Behavioral of unity_ctrl is
         return std_logic_vector(to_unsigned(x, 6));
     end A;
 	
-    signal mem_we       : std_logic;
-    signal mem_addr     : std_logic_vector(5 downto 0); 
-    signal mem_data_in  : std_logic_vector(31 downto 0);
-    signal mem_data_out : std_logic_vector(31 downto 0);
-    signal mem_w_ack    : std_logic;
-    signal mem_w_err    : std_logic;
+    signal mem_we       : std_logic := '0';
+    signal mem_addr     : std_logic_vector(5 downto 0) := (others => '0'); 
+    signal mem_data_in  : std_logic_vector(31 downto 0) := (others => '0');
+    signal mem_data_out : std_logic_vector(31 downto 0) := (others => '0');
+    signal mem_w_ack    : std_logic := '0';
+    signal mem_w_err    : std_logic := '0';
 
-signal write_mem        : std_logic;
-signal delay            : std_logic;
-signal leds_buf_o       :std_logic_vector(7 downto 0);
-signal Umem_addr_i		: std_logic_vector(5 downto 0);
+signal write_mem        : std_logic := '0';
+signal delay            : std_logic := '0';
+signal leds_buf_o       : std_logic_vector(7 downto 0) := (others => '0');
+signal Umem_addr_i		: std_logic_vector(5 downto 0) := (others => '0');
 
 type unity_state is (state_1, state_2, state_3);
 signal pr_state, nx_state: unity_state;
