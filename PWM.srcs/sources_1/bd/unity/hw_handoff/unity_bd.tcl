@@ -1271,6 +1271,8 @@ CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
   set_property -dict [ list \
 CONFIG.IN0_WIDTH {8} \
 CONFIG.IN1_WIDTH {8} \
+CONFIG.IN2_WIDTH {8} \
+CONFIG.NUM_PORTS {3} \
  ] $xlconcat_0
 
   # Create instance: xlconstant_0, and set properties
@@ -1302,6 +1304,7 @@ CONFIG.CONST_VAL {0} \
   connect_bd_net -net unity_ctrl_0_leds_o [get_bd_ports leds_o] [get_bd_pins PWM_generator_0/PWM_duty_in] [get_bd_pins vector_splitter_0/vec_4_out]
   connect_bd_net -net unity_ctrl_0_out_addr4 [get_bd_pins unity_ctrl_0/addr4_out] [get_bd_pins vector_splitter_0/vec_in]
   connect_bd_net -net unity_ctrl_0_tx_o [get_bd_ports tx_o] [get_bd_pins unity_ctrl_0/tx_o]
+  connect_bd_net -net vector_splitter_0_vec_1_out [get_bd_pins vector_splitter_0/vec_1_out] [get_bd_pins xlconcat_0/In2]
   connect_bd_net -net vector_splitter_0_vec_2_out [get_bd_pins vector_splitter_0/vec_2_out] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net vector_splitter_0_vec_3_out [get_bd_pins vector_splitter_0/vec_3_out] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins BLDC_CONTROLLER_0/FREQ] [get_bd_pins xlconcat_0/dout]
@@ -1314,51 +1317,52 @@ CONFIG.CONST_VAL {0} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port PWM_out -pg 1 -y 130 -defaultsOSRD
-preplace port tx_o -pg 1 -y 370 -defaultsOSRD
-preplace port PHASE_C_out -pg 1 -y 250 -defaultsOSRD
-preplace port PHASE_CH_out -pg 1 -y 310 -defaultsOSRD
-preplace port rx_i -pg 1 -y 430 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 50 -defaultsOSRD
-preplace port PHASE_A_out -pg 1 -y 210 -defaultsOSRD
-preplace port PHASE_AH_out -pg 1 -y 270 -defaultsOSRD
-preplace port PHASE_B_out -pg 1 -y 230 -defaultsOSRD
-preplace port reset_in -pg 1 -y 300 -defaultsOSRD
-preplace port PHASE_BH_out -pg 1 -y 290 -defaultsOSRD
-preplace portBus leds_o -pg 1 -y 390 -defaultsOSRD
-preplace inst PWM_generator_0 -pg 1 -lvl 3 -y 130 -defaultsOSRD
-preplace inst vector_splitter_0 -pg 1 -lvl 4 -y 520 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 3 -y 230 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 2 -y 150 -defaultsOSRD
-preplace inst Debouncer_2 -pg 1 -lvl 2 -y 310 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 3 -y 570 -defaultsOSRD
-preplace inst inverter_0 -pg 1 -lvl 3 -y 310 -defaultsOSRD
-preplace inst BLDC_CONTROLLER_0 -pg 1 -lvl 4 -y 260 -defaultsOSRD
-preplace inst unity_ctrl_0 -pg 1 -lvl 3 -y 420 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
+preplace port PWM_out -pg 1 -y 260 -defaultsOSRD
+preplace port tx_o -pg 1 -y 560 -defaultsOSRD
+preplace port PHASE_C_out -pg 1 -y 420 -defaultsOSRD
+preplace port PHASE_CH_out -pg 1 -y 480 -defaultsOSRD
+preplace port rx_i -pg 1 -y 580 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 40 -defaultsOSRD
+preplace port PHASE_A_out -pg 1 -y 380 -defaultsOSRD
+preplace port PHASE_AH_out -pg 1 -y 440 -defaultsOSRD
+preplace port PHASE_B_out -pg 1 -y 400 -defaultsOSRD
+preplace port reset_in -pg 1 -y 450 -defaultsOSRD
+preplace port PHASE_BH_out -pg 1 -y 460 -defaultsOSRD
+preplace portBus leds_o -pg 1 -y 190 -defaultsOSRD
+preplace inst PWM_generator_0 -pg 1 -lvl 3 -y 260 -defaultsOSRD
+preplace inst vector_splitter_0 -pg 1 -lvl 2 -y 150 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 360 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -y 280 -defaultsOSRD
+preplace inst Debouncer_2 -pg 1 -lvl 2 -y 460 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -y 120 -defaultsOSRD
+preplace inst inverter_0 -pg 1 -lvl 3 -y 460 -defaultsOSRD
+preplace inst BLDC_CONTROLLER_0 -pg 1 -lvl 4 -y 430 -defaultsOSRD
+preplace inst unity_ctrl_0 -pg 1 -lvl 3 -y 570 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
 preplace netloc xlconstant_1_dout 1 2 1 NJ
 preplace netloc Debouncer_2_OUT_SIG 1 2 1 N
-preplace netloc vector_splitter_0_vec_3_out 1 2 3 610 490 910J 610 1210
+preplace netloc vector_splitter_0_vec_3_out 1 2 1 700
 preplace netloc BLDC_CONTROLLER_0_PHASE_C_out 1 4 1 NJ
-preplace netloc xlconstant_0_dout1 1 3 1 900J
+preplace netloc xlconstant_0_dout1 1 3 1 1020J
 preplace netloc BLDC_CONTROLLER_0_PHASE_AH_out 1 4 1 NJ
-preplace netloc inverter_0_out_sig 1 3 1 900J
-preplace netloc unity_ctrl_0_out_addr4 1 3 1 920J
-preplace netloc unity_ctrl_0_leds_o 1 2 3 620 360 NJ 360 1230
+preplace netloc vector_splitter_0_vec_1_out 1 2 1 710
+preplace netloc inverter_0_out_sig 1 3 1 1020J
+preplace netloc unity_ctrl_0_out_addr4 1 1 3 420 50 NJ 50 1000
+preplace netloc unity_ctrl_0_leds_o 1 2 3 700 190 NJ 190 NJ
 preplace netloc BLDC_CONTROLLER_0_PHASE_CH_out 1 4 1 NJ
-preplace netloc xlconcat_0_dout 1 3 1 930
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 30 NJ 30 NJ 30 1230J
-preplace netloc reset_in_1 1 0 2 NJ 300 NJ
-preplace netloc PWM_generator_0_PWM_out 1 3 2 930 130 NJ
-preplace netloc unity_ctrl_0_tx_o 1 3 2 NJ 410 1240J
+preplace netloc xlconcat_0_dout 1 3 1 1010
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 400J 40 NJ 40 NJ 40 NJ
+preplace netloc reset_in_1 1 0 2 NJ 450 NJ
+preplace netloc PWM_generator_0_PWM_out 1 3 2 1030 260 NJ
+preplace netloc unity_ctrl_0_tx_o 1 3 2 NJ 560 NJ
 preplace netloc BLDC_CONTROLLER_0_PHASE_A_out 1 4 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 160 400
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 3 410 90 610 60 920
-preplace netloc vector_splitter_0_vec_2_out 1 2 3 620 510 900J 600 1220
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 180 400
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 3 410 560 720 410 NJ
+preplace netloc vector_splitter_0_vec_2_out 1 2 1 720
 preplace netloc BLDC_CONTROLLER_0_PHASE_BH_out 1 4 1 NJ
 preplace netloc BLDC_CONTROLLER_0_PHASE_B_out 1 4 1 NJ
-preplace netloc rx_i_1 1 0 3 NJ 430 NJ 430 NJ
-levelinfo -pg 1 0 210 510 760 1070 1260 -top -20 -bot 630
+preplace netloc rx_i_1 1 0 3 NJ 580 NJ 580 NJ
+levelinfo -pg 1 0 210 560 860 1160 1310 -top 0 -bot 630
 ",
 }
 

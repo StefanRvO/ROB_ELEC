@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date             : Wed Nov 23 15:56:10 2016
+| Date             : Wed Nov 23 16:54:20 2016
 | Host             : Leviathan running 64-bit Arch Linux
 | Command          : report_power -file unity_wrapper_power_routed.rpt -pb unity_wrapper_power_summary_routed.pb -rpx unity_wrapper_power_routed.rpx
 | Design           : unity_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.894 |
-| Dynamic (W)              | 0.776 |
+| Total On-Chip Power (W)  | 0.891 |
+| Dynamic (W)              | 0.773 |
 | Device Static (W)        | 0.118 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 74.7  |
@@ -49,21 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.007 |        7 |       --- |             --- |
-| Slice Logic              |     0.003 |     3182 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1849 |     17600 |           10.51 |
-|   CARRY4                 |    <0.001 |      216 |      4400 |            4.91 |
-|   Register               |    <0.001 |      604 |     35200 |            1.72 |
+| Clocks                   |     0.005 |        7 |       --- |             --- |
+| Slice Logic              |     0.003 |     2423 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1308 |     17600 |            7.43 |
+|   CARRY4                 |    <0.001 |       65 |      4400 |            1.48 |
+|   Register               |    <0.001 |      576 |     35200 |            1.64 |
 |   LUT as Distributed RAM |    <0.001 |       68 |      6000 |            1.13 |
 |   F7/F8 Muxes            |    <0.001 |        5 |     17600 |            0.03 |
 |   Others                 |     0.000 |      166 |       --- |             --- |
-| Signals                  |     0.003 |     2520 |       --- |             --- |
+| Signals                  |     0.003 |     1870 |       --- |             --- |
 | Block RAM                |     0.002 |        1 |        60 |            1.67 |
 | MMCM                     |     0.117 |        1 |         2 |           50.00 |
 | I/O                      |     0.003 |       18 |        54 |           33.33 |
 | PS7                      |     0.642 |        1 |       --- |             --- |
 | Static Power             |     0.118 |          |           |                 |
-| Total                    |     0.894 |          |           |                 |
+| Total                    |     0.891 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.020 |       0.015 |      0.005 |
+| Vccint    |       1.000 |     0.018 |       0.012 |      0.005 |
 | Vccaux    |       1.800 |     0.076 |       0.064 |      0.011 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -153,14 +153,14 @@ Table of Contents
 +-------------------------------------------------------------+-----------+
 | Name                                                        | Power (W) |
 +-------------------------------------------------------------+-----------+
-| unity_wrapper                                               |     0.776 |
-|   unity_i                                                   |     0.773 |
-|     BLDC_CONTROLLER_0                                       |     0.003 |
-|       U0                                                    |     0.003 |
+| unity_wrapper                                               |     0.773 |
+|   unity_i                                                   |     0.770 |
+|     BLDC_CONTROLLER_0                                       |     0.001 |
+|       U0                                                    |     0.001 |
 |     Debouncer_2                                             |    <0.001 |
 |       U0                                                    |    <0.001 |
-|     PWM_generator_0                                         |     0.002 |
-|       U0                                                    |     0.002 |
+|     PWM_generator_0                                         |     0.001 |
+|       U0                                                    |     0.001 |
 |     inverter_0                                              |    <0.001 |
 |     processing_system7_0                                    |     0.642 |
 |       inst                                                  |     0.642 |
@@ -169,7 +169,7 @@ Table of Contents
 |         UNITY                                               |     0.125 |
 |           uart_wb_link_inst                                 |     0.006 |
 |             uart_gab_link_inst                              |     0.006 |
-|               gab_link_al_fsm_inst                          |     0.002 |
+|               gab_link_al_fsm_inst                          |     0.003 |
 |                 SUB_GEN.subscription_manager_inst           |    <0.001 |
 |                   SG_GEN[0].sg                              |    <0.001 |
 |                     ram_reg_0_15_0_0                        |    <0.001 |

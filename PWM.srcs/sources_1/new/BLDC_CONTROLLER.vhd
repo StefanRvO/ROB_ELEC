@@ -47,12 +47,12 @@ entity BLDC_CONTROLLER is
            PHASE_BH_out : out STD_LOGIC;
            PHASE_CH_out : out STD_LOGIC;
            reset_in        : in  STD_LOGIC;
-           FREQ         : in STD_LOGIC_VECTOR(15 downto 0)
+           FREQ         : in STD_LOGIC_VECTOR(23 downto 0)
            );
 end BLDC_CONTROLLER;
 
 architecture Behavioral of BLDC_CONTROLLER is
-    signal period : integer := 100000;
+    signal period : unsigned(23 downto 0) := to_unsigned(100000, 24);
     type state_type is (s001, s101, s100, s110, s010, s011);
 
     signal scaled_CLK : STD_LOGIC := '0';
@@ -60,20 +60,10 @@ architecture Behavioral of BLDC_CONTROLLER is
     signal state : state_type := s001;
 
 begin
-
+period <= unsigned(FREQ);
 
 
 --Prescaler process
-freq_calc: process(clk_in, reset_in)
-begin
-    if(rising_edge(clk_in)) then
-        if(reset_in = '1') then
-            period <= 100000;
-        else
-            period <= CLK_FREQ/to_integer(unsigned(FREQ));
-        end if;
-    end if;
-end process;
 
 
 clck_scaler: process(clk_in, reset_in)

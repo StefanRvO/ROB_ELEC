@@ -641,8 +641,10 @@
         <spirit:componentRef spirit:library="ip" spirit:name="xlconcat" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_xlconcat_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="NUM_PORTS">3</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="IN0_WIDTH">8</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="IN1_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="IN2_WIDTH">8</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -768,6 +770,11 @@
         <spirit:name>xlconcat_0_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="BLDC_CONTROLLER_0" spirit:portRef="FREQ"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>vector_splitter_0_vec_1_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vector_splitter_0" spirit:portRef="vec_1_out"/>
+        <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="In2"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

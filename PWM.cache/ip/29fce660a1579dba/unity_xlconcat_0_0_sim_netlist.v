@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Wed Nov 23 16:49:04 2016
+// Date        : Wed Nov 23 16:49:03 2016
 // Host        : Leviathan running 64-bit Arch Linux
-// Command     : write_verilog -force -mode funcsim
-//               /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ unity_xlconcat_0_0_sim_netlist.v
 // Design      : unity_xlconcat_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@
 
 (* CHECK_LICENSE_TYPE = "unity_xlconcat_0_0,xlconcat,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "xlconcat,Vivado 2016.3" *) 
 (* NotValidForBitStream *)
-module unity_xlconcat_0_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (In0,
     In1,
     In2,

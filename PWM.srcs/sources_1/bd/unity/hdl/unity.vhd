@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
---Date        : Wed Nov 23 15:52:46 2016
+--Date        : Wed Nov 23 16:48:27 2016
 --Host        : Leviathan running 64-bit Arch Linux
 --Command     : generate_target unity.bd
 --Design      : unity
@@ -138,7 +138,8 @@ architecture STRUCTURE of unity is
   port (
     In0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     In1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    dout : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    In2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 23 downto 0 )
   );
   end component unity_xlconcat_0_0;
   component unity_BLDC_CONTROLLER_0_0 is
@@ -153,7 +154,7 @@ architecture STRUCTURE of unity is
     PHASE_BH_out : out STD_LOGIC;
     PHASE_CH_out : out STD_LOGIC;
     reset_in : in STD_LOGIC;
-    FREQ : in STD_LOGIC_VECTOR ( 15 downto 0 )
+    FREQ : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
   end component unity_BLDC_CONTROLLER_0_0;
   signal BLDC_CONTROLLER_0_PHASE_AH_out : STD_LOGIC;
@@ -176,9 +177,10 @@ architecture STRUCTURE of unity is
   signal unity_ctrl_0_leds_o : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal unity_ctrl_0_out_addr4 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_tx_o : STD_LOGIC;
+  signal vector_splitter_0_vec_1_out : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal vector_splitter_0_vec_2_out : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal vector_splitter_0_vec_3_out : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal xlconstant_0_dout1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED : STD_LOGIC;
@@ -209,7 +211,6 @@ architecture STRUCTURE of unity is
   signal NLW_processing_system7_0_M_AXI_GP0_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_processing_system7_0_M_AXI_GP0_WID_UNCONNECTED : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal NLW_processing_system7_0_M_AXI_GP0_WSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_vector_splitter_0_vec_1_out_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
 begin
   PHASE_AH_out <= BLDC_CONTROLLER_0_PHASE_AH_out;
   PHASE_A_out <= BLDC_CONTROLLER_0_PHASE_A_out;
@@ -224,7 +225,7 @@ begin
   tx_o <= unity_ctrl_0_tx_o;
 BLDC_CONTROLLER_0: component unity_BLDC_CONTROLLER_0_0
      port map (
-      FREQ(15 downto 0) => xlconcat_0_dout(15 downto 0),
+      FREQ(23 downto 0) => xlconcat_0_dout(23 downto 0),
       PHASE_AH_out => BLDC_CONTROLLER_0_PHASE_AH_out,
       PHASE_A_out => BLDC_CONTROLLER_0_PHASE_A_out,
       PHASE_BH_out => BLDC_CONTROLLER_0_PHASE_BH_out,
@@ -312,7 +313,7 @@ unity_ctrl_0: component unity_unity_ctrl_0_0
     );
 vector_splitter_0: component unity_vector_splitter_0_0
      port map (
-      vec_1_out(7 downto 0) => NLW_vector_splitter_0_vec_1_out_UNCONNECTED(7 downto 0),
+      vec_1_out(7 downto 0) => vector_splitter_0_vec_1_out(7 downto 0),
       vec_2_out(7 downto 0) => vector_splitter_0_vec_2_out(7 downto 0),
       vec_3_out(7 downto 0) => vector_splitter_0_vec_3_out(7 downto 0),
       vec_4_out(7 downto 0) => unity_ctrl_0_leds_o(7 downto 0),
@@ -322,7 +323,8 @@ xlconcat_0: component unity_xlconcat_0_0
      port map (
       In0(7 downto 0) => vector_splitter_0_vec_3_out(7 downto 0),
       In1(7 downto 0) => vector_splitter_0_vec_2_out(7 downto 0),
-      dout(15 downto 0) => xlconcat_0_dout(15 downto 0)
+      In2(7 downto 0) => vector_splitter_0_vec_1_out(7 downto 0),
+      dout(23 downto 0) => xlconcat_0_dout(23 downto 0)
     );
 xlconstant_0: component unity_xlconstant_0_1
      port map (
