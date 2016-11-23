@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg225-1" LaunchTime="1479839724">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg225-1" LaunchTime="1479912769">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="unity_wrapper.drc"/>
   <File Type="BG-BGN" Name="unity_wrapper.bgn"/>
@@ -308,6 +308,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/vector_splitter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/unity/unity.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -364,6 +370,21 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/unity_tb/unity_tb.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/unity_tb/hdl/unity_tb_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="unity_wrapper"/>
@@ -389,18 +410,28 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+    <StratHandle Name="Flow_RuntimeOptimized" Flow="Vivado Implementation 2016">
+      <Desc>Each implementation step trades design performance for better runtime. Physical optimization (phys_opt_design) is disabled.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
-    <Step Id="opt_design"/>
+    <Step Id="opt_design">
+      <Option Id="Directive">4</Option>
+    </Step>
     <Step Id="power_opt_design"/>
-    <Step Id="place_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">15</Option>
+    </Step>
     <Step Id="post_place_power_opt_design"/>
     <Step Id="phys_opt_design"/>
-    <Step Id="route_design"/>
+    <Step Id="route_design">
+      <Option Id="Directive">5</Option>
+    </Step>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="unity_xlconcat_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_unity_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_vector_splitter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_inverter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_Debouncer_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_CONTROLLER_0_0"/>

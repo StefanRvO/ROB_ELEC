@@ -32,4 +32,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconstan
 # IP: bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PWM_generator_0_0 || ORIG_REF_NAME==unity_PWM_generator_0_0}]
 
+# IP: bd/unity/ip/unity_vector_splitter_0_0/unity_vector_splitter_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_vector_splitter_0_0 || ORIG_REF_NAME==unity_vector_splitter_0_0}]
+
+# IP: bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconcat_0_0 || ORIG_REF_NAME==unity_xlconcat_0_0}]
+
 # XDC: bd/unity/unity_ooc.xdc

@@ -37,7 +37,7 @@ entity unity_ctrl is
            rx_i     : in STD_LOGIC;
            tx_o     : out STD_LOGIC;
            
-           leds_o   : out STD_LOGIC_VECTOR (7 downto 0) := (others => '0'));
+           addr4_out   : out STD_LOGIC_VECTOR (31 downto 0));
 end unity_ctrl;
 
 architecture Behavioral of unity_ctrl is
@@ -64,21 +64,21 @@ architecture Behavioral of unity_ctrl is
         return std_logic_vector(to_unsigned(x, 6));
     end A;
 	
-    signal mem_we       : std_logic := '0';
-    signal mem_addr     : std_logic_vector(5 downto 0) := (others => '0'); 
-    signal mem_data_in  : std_logic_vector(31 downto 0) := (others => '0');
-    signal mem_data_out : std_logic_vector(31 downto 0) := (others => '0');
-    signal mem_w_ack    : std_logic := '0';
-    signal mem_w_err    : std_logic := '0';
+    signal mem_we       : std_logic;
+    signal mem_addr     : std_logic_vector(5 downto 0); 
+    signal mem_data_in  : std_logic_vector(31 downto 0);
+    signal mem_data_out : std_logic_vector(31 downto 0);
+    signal mem_w_ack    : std_logic;
+    signal mem_w_err    : std_logic;
 
-signal write_mem        : std_logic := '0';
-signal delay            : std_logic := '0';
-signal leds_buf_o       : std_logic_vector(7 downto 0) := (others => '0');
-signal Umem_addr_i		: std_logic_vector(5 downto 0) := (others => '0');
+signal write_mem        : std_logic;
+signal delay            : std_logic;
+signal Umem_addr_i		: std_logic_vector(5 downto 0);
 
 type unity_state is (state_1, state_2, state_3);
 signal pr_state, nx_state: unity_state;
 
+signal unity_clk            : std_logic;
 
 begin
     UNITY : wrap_unity
@@ -86,7 +86,7 @@ begin
         clk_i       => clk_i, 
         rx_i        => rx_i, 
         tx_o        => tx_o, 
-        clk_user_o  => open, 
+        clk_user_o  => unity_clk, 
         mem_we_i    => write_mem, 
         mem_addr_i  => Umem_addr_i, 
         mem_data_i  => mem_data_in, 
@@ -118,13 +118,14 @@ end process;
 ----------------------------------------------------------------------
 -- This process handles data from memory
 ----------------------------------------------------------------------
-process (clk_i, Umem_addr_i, write_mem)
+process (unity_clk, Umem_addr_i, write_mem)
 begin
-if(rising_edge(clk_i)) then
-    leds_o <= leds_buf_o;
-    if(write_mem = '0') then
+--delay_phase_shift_out <= delay_phase_shift;
+if(rising_edge(unity_clk)) then
+--    if(write_mem = '0') then
+    if(write_mem = '1') then
         case Umem_addr_i is
-          when "000100" => leds_buf_o						<= mem_data_out(7 downto 0);	--04
+          when "000100" => addr4_out						<= mem_data_out;	--04
           when others =>
         end case;
     end if;
@@ -134,9 +135,9 @@ end process;
 -----------------------------------------------------------------------
 -- FSM state register
 -----------------------------------------------------------------------
-process(clk_i)
+process(unity_clk)
 begin
-    if rising_edge(clk_i) then
+    if rising_edge(unity_clk) then
         pr_state <= nx_state;
         
         if(nx_state = state_3) then

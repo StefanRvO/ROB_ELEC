@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
---Date        : Tue Nov 22 19:35:17 2016
+--Date        : Wed Nov 23 15:52:46 2016
 --Host        : Leviathan running 64-bit Arch Linux
 --Command     : generate_target unity.bd
 --Design      : unity
@@ -30,7 +30,7 @@ entity unity is
     tx_o : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of unity : entity is "unity,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=unity,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=8,numReposBlks=8,numNonXlnxBlks=5,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of unity : entity is "unity,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=unity,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=10,numReposBlks=10,numNonXlnxBlks=6,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of unity : entity is "unity.hwdef";
 end unity;
@@ -91,20 +91,6 @@ architecture STRUCTURE of unity is
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component unity_xlconstant_0_1;
-  component unity_BLDC_CONTROLLER_0_0 is
-  port (
-    dir_in : in STD_LOGIC;
-    PHASE_A_out : out STD_LOGIC;
-    PHASE_B_out : out STD_LOGIC;
-    PHASE_C_out : out STD_LOGIC;
-    clk_in : in STD_LOGIC;
-    PWM_in : in STD_LOGIC;
-    PHASE_AH_out : out STD_LOGIC;
-    PHASE_BH_out : out STD_LOGIC;
-    PHASE_CH_out : out STD_LOGIC;
-    reset_in : in STD_LOGIC
-  );
-  end component unity_BLDC_CONTROLLER_0_0;
   component unity_Debouncer_2_0 is
   port (
     IN_SIG : in STD_LOGIC;
@@ -131,14 +117,45 @@ architecture STRUCTURE of unity is
     PWM_out : out STD_LOGIC
   );
   end component unity_PWM_generator_0_0;
+  component unity_vector_splitter_0_0 is
+  port (
+    vec_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    vec_1_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    vec_2_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    vec_3_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    vec_4_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component unity_vector_splitter_0_0;
   component unity_unity_ctrl_0_0 is
   port (
     clk_i : in STD_LOGIC;
     rx_i : in STD_LOGIC;
     tx_o : out STD_LOGIC;
-    leds_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    addr4_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component unity_unity_ctrl_0_0;
+  component unity_xlconcat_0_0 is
+  port (
+    In0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    In1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component unity_xlconcat_0_0;
+  component unity_BLDC_CONTROLLER_0_0 is
+  port (
+    dir_in : in STD_LOGIC;
+    PHASE_A_out : out STD_LOGIC;
+    PHASE_B_out : out STD_LOGIC;
+    PHASE_C_out : out STD_LOGIC;
+    clk_in : in STD_LOGIC;
+    PWM_in : in STD_LOGIC;
+    PHASE_AH_out : out STD_LOGIC;
+    PHASE_BH_out : out STD_LOGIC;
+    PHASE_CH_out : out STD_LOGIC;
+    reset_in : in STD_LOGIC;
+    FREQ : in STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component unity_BLDC_CONTROLLER_0_0;
   signal BLDC_CONTROLLER_0_PHASE_AH_out : STD_LOGIC;
   signal BLDC_CONTROLLER_0_PHASE_A_out : STD_LOGIC;
   signal BLDC_CONTROLLER_0_PHASE_BH_out : STD_LOGIC;
@@ -157,7 +174,11 @@ architecture STRUCTURE of unity is
   signal reset_in_1 : STD_LOGIC;
   signal rx_i_1 : STD_LOGIC;
   signal unity_ctrl_0_leds_o : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal unity_ctrl_0_out_addr4 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_tx_o : STD_LOGIC;
+  signal vector_splitter_0_vec_2_out : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal vector_splitter_0_vec_3_out : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal xlconstant_0_dout1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED : STD_LOGIC;
@@ -188,6 +209,7 @@ architecture STRUCTURE of unity is
   signal NLW_processing_system7_0_M_AXI_GP0_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_processing_system7_0_M_AXI_GP0_WID_UNCONNECTED : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal NLW_processing_system7_0_M_AXI_GP0_WSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_vector_splitter_0_vec_1_out_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
 begin
   PHASE_AH_out <= BLDC_CONTROLLER_0_PHASE_AH_out;
   PHASE_A_out <= BLDC_CONTROLLER_0_PHASE_A_out;
@@ -202,6 +224,7 @@ begin
   tx_o <= unity_ctrl_0_tx_o;
 BLDC_CONTROLLER_0: component unity_BLDC_CONTROLLER_0_0
      port map (
+      FREQ(15 downto 0) => xlconcat_0_dout(15 downto 0),
       PHASE_AH_out => BLDC_CONTROLLER_0_PHASE_AH_out,
       PHASE_A_out => BLDC_CONTROLLER_0_PHASE_A_out,
       PHASE_BH_out => BLDC_CONTROLLER_0_PHASE_BH_out,
@@ -282,10 +305,24 @@ processing_system7_0: component unity_processing_system7_0_0
     );
 unity_ctrl_0: component unity_unity_ctrl_0_0
      port map (
+      addr4_out(31 downto 0) => unity_ctrl_0_out_addr4(31 downto 0),
       clk_i => processing_system7_0_FCLK_CLK1,
-      leds_o(7 downto 0) => unity_ctrl_0_leds_o(7 downto 0),
       rx_i => rx_i_1,
       tx_o => unity_ctrl_0_tx_o
+    );
+vector_splitter_0: component unity_vector_splitter_0_0
+     port map (
+      vec_1_out(7 downto 0) => NLW_vector_splitter_0_vec_1_out_UNCONNECTED(7 downto 0),
+      vec_2_out(7 downto 0) => vector_splitter_0_vec_2_out(7 downto 0),
+      vec_3_out(7 downto 0) => vector_splitter_0_vec_3_out(7 downto 0),
+      vec_4_out(7 downto 0) => unity_ctrl_0_leds_o(7 downto 0),
+      vec_in(31 downto 0) => unity_ctrl_0_out_addr4(31 downto 0)
+    );
+xlconcat_0: component unity_xlconcat_0_0
+     port map (
+      In0(7 downto 0) => vector_splitter_0_vec_3_out(7 downto 0),
+      In1(7 downto 0) => vector_splitter_0_vec_2_out(7 downto 0),
+      dout(15 downto 0) => xlconcat_0_dout(15 downto 0)
     );
 xlconstant_0: component unity_xlconstant_0_1
      port map (

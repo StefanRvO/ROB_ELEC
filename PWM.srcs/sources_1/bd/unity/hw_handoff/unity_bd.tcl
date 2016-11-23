@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# BLDC_CONTROLLER, Debouncer, PWM_generator, inverter, unity_ctrl
+# BLDC_CONTROLLER, Debouncer, PWM_generator, inverter, unity_ctrl, vector_splitter
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -189,10 +189,7 @@ CONFIG.POLARITY {ACTIVE_LOW} \
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-    set_property -dict [ list \
-CONFIG.FREQ {3000} \
- ] $BLDC_CONTROLLER_0
-
+  
   # Create instance: Debouncer_2, and set properties
   set block_name Debouncer
   set block_cell_name Debouncer_2
@@ -1258,6 +1255,24 @@ CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
      return 1
    }
   
+  # Create instance: vector_splitter_0, and set properties
+  set block_name vector_splitter
+  set block_cell_name vector_splitter_0
+  if { [catch {set vector_splitter_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $vector_splitter_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: xlconcat_0, and set properties
+  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
+  set_property -dict [ list \
+CONFIG.IN0_WIDTH {8} \
+CONFIG.IN1_WIDTH {8} \
+ ] $xlconcat_0
+
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
 
@@ -1284,8 +1299,12 @@ CONFIG.CONST_VAL {0} \
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins BLDC_CONTROLLER_0/clk_in] [get_bd_pins Debouncer_2/CLK] [get_bd_pins PWM_generator_0/clk_IN] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins unity_ctrl_0/clk_i]
   connect_bd_net -net reset_in_1 [get_bd_ports reset_in] [get_bd_pins Debouncer_2/IN_SIG]
   connect_bd_net -net rx_i_1 [get_bd_ports rx_i] [get_bd_pins unity_ctrl_0/rx_i]
-  connect_bd_net -net unity_ctrl_0_leds_o [get_bd_ports leds_o] [get_bd_pins PWM_generator_0/PWM_duty_in] [get_bd_pins unity_ctrl_0/leds_o]
+  connect_bd_net -net unity_ctrl_0_leds_o [get_bd_ports leds_o] [get_bd_pins PWM_generator_0/PWM_duty_in] [get_bd_pins vector_splitter_0/vec_4_out]
+  connect_bd_net -net unity_ctrl_0_out_addr4 [get_bd_pins unity_ctrl_0/addr4_out] [get_bd_pins vector_splitter_0/vec_in]
   connect_bd_net -net unity_ctrl_0_tx_o [get_bd_ports tx_o] [get_bd_pins unity_ctrl_0/tx_o]
+  connect_bd_net -net vector_splitter_0_vec_2_out [get_bd_pins vector_splitter_0/vec_2_out] [get_bd_pins xlconcat_0/In1]
+  connect_bd_net -net vector_splitter_0_vec_3_out [get_bd_pins vector_splitter_0/vec_3_out] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net xlconcat_0_dout [get_bd_pins BLDC_CONTROLLER_0/FREQ] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net xlconstant_0_dout1 [get_bd_pins BLDC_CONTROLLER_0/dir_in] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins PWM_generator_0/reset_in] [get_bd_pins xlconstant_1/dout]
 
@@ -1295,45 +1314,51 @@ CONFIG.CONST_VAL {0} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port PWM_out -pg 1 -y 300 -defaultsOSRD
-preplace port tx_o -pg 1 -y 420 -defaultsOSRD
-preplace port PHASE_C_out -pg 1 -y 160 -defaultsOSRD
-preplace port PHASE_CH_out -pg 1 -y 220 -defaultsOSRD
-preplace port rx_i -pg 1 -y 440 -defaultsOSRD
+preplace port PWM_out -pg 1 -y 130 -defaultsOSRD
+preplace port tx_o -pg 1 -y 370 -defaultsOSRD
+preplace port PHASE_C_out -pg 1 -y 250 -defaultsOSRD
+preplace port PHASE_CH_out -pg 1 -y 310 -defaultsOSRD
+preplace port rx_i -pg 1 -y 430 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 50 -defaultsOSRD
-preplace port PHASE_A_out -pg 1 -y 120 -defaultsOSRD
-preplace port PHASE_AH_out -pg 1 -y 180 -defaultsOSRD
-preplace port PHASE_B_out -pg 1 -y 140 -defaultsOSRD
-preplace port reset_in -pg 1 -y 190 -defaultsOSRD
-preplace port PHASE_BH_out -pg 1 -y 200 -defaultsOSRD
-preplace portBus leds_o -pg 1 -y 370 -defaultsOSRD
-preplace inst PWM_generator_0 -pg 1 -lvl 3 -y 300 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 2 -y 320 -defaultsOSRD
-preplace inst Debouncer_2 -pg 1 -lvl 2 -y 200 -defaultsOSRD
-preplace inst inverter_0 -pg 1 -lvl 3 -y 200 -defaultsOSRD
-preplace inst BLDC_CONTROLLER_0 -pg 1 -lvl 4 -y 170 -defaultsOSRD
-preplace inst unity_ctrl_0 -pg 1 -lvl 4 -y 430 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace port PHASE_A_out -pg 1 -y 210 -defaultsOSRD
+preplace port PHASE_AH_out -pg 1 -y 270 -defaultsOSRD
+preplace port PHASE_B_out -pg 1 -y 230 -defaultsOSRD
+preplace port reset_in -pg 1 -y 300 -defaultsOSRD
+preplace port PHASE_BH_out -pg 1 -y 290 -defaultsOSRD
+preplace portBus leds_o -pg 1 -y 390 -defaultsOSRD
+preplace inst PWM_generator_0 -pg 1 -lvl 3 -y 130 -defaultsOSRD
+preplace inst vector_splitter_0 -pg 1 -lvl 4 -y 520 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 230 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -y 150 -defaultsOSRD
+preplace inst Debouncer_2 -pg 1 -lvl 2 -y 310 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -y 570 -defaultsOSRD
+preplace inst inverter_0 -pg 1 -lvl 3 -y 310 -defaultsOSRD
+preplace inst BLDC_CONTROLLER_0 -pg 1 -lvl 4 -y 260 -defaultsOSRD
+preplace inst unity_ctrl_0 -pg 1 -lvl 3 -y 420 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
 preplace netloc xlconstant_1_dout 1 2 1 NJ
 preplace netloc Debouncer_2_OUT_SIG 1 2 1 N
+preplace netloc vector_splitter_0_vec_3_out 1 2 3 610 490 910J 610 1210
 preplace netloc BLDC_CONTROLLER_0_PHASE_C_out 1 4 1 NJ
 preplace netloc xlconstant_0_dout1 1 3 1 900J
 preplace netloc BLDC_CONTROLLER_0_PHASE_AH_out 1 4 1 NJ
-preplace netloc inverter_0_out_sig 1 3 1 NJ
-preplace netloc unity_ctrl_0_leds_o 1 2 3 620 370 NJ 370 1150
+preplace netloc inverter_0_out_sig 1 3 1 900J
+preplace netloc unity_ctrl_0_out_addr4 1 3 1 920J
+preplace netloc unity_ctrl_0_leds_o 1 2 3 620 360 NJ 360 1230
 preplace netloc BLDC_CONTROLLER_0_PHASE_CH_out 1 4 1 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 50 NJ 50 NJ 50 NJ
-preplace netloc reset_in_1 1 0 2 NJ 190 NJ
-preplace netloc PWM_generator_0_PWM_out 1 3 2 910 300 NJ
-preplace netloc unity_ctrl_0_tx_o 1 4 1 NJ
+preplace netloc xlconcat_0_dout 1 3 1 930
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 30 NJ 30 NJ 30 1230J
+preplace netloc reset_in_1 1 0 2 NJ 300 NJ
+preplace netloc PWM_generator_0_PWM_out 1 3 2 930 130 NJ
+preplace netloc unity_ctrl_0_tx_o 1 3 2 NJ 410 1240J
 preplace netloc BLDC_CONTROLLER_0_PHASE_A_out 1 4 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 180 400
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 3 410 420 610 420 900
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 160 400
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 3 410 90 610 60 920
+preplace netloc vector_splitter_0_vec_2_out 1 2 3 620 510 900J 600 1220
 preplace netloc BLDC_CONTROLLER_0_PHASE_BH_out 1 4 1 NJ
 preplace netloc BLDC_CONTROLLER_0_PHASE_B_out 1 4 1 NJ
-preplace netloc rx_i_1 1 0 4 NJ 440 NJ 440 NJ 440 NJ
-levelinfo -pg 1 0 210 510 760 1030 1170 -top 0 -bot 490
+preplace netloc rx_i_1 1 0 3 NJ 430 NJ 430 NJ
+levelinfo -pg 1 0 210 510 760 1070 1260 -top -20 -bot 630
 ",
 }
 

@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,8 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity BLDC_CONTROLLER is
-    GENERIC( CLK_FREQ : INTEGER := 200000000;
-         FREQ : INTEGER := 21000
+    GENERIC( CLK_FREQ : INTEGER := 200000000
          );
 
     Port ( dir_in : in STD_LOGIC;
@@ -45,12 +46,13 @@ entity BLDC_CONTROLLER is
            PHASE_AH_out : out STD_LOGIC;
            PHASE_BH_out : out STD_LOGIC;
            PHASE_CH_out : out STD_LOGIC;
-           reset_in        : in  STD_LOGIC
+           reset_in        : in  STD_LOGIC;
+           FREQ         : in STD_LOGIC_VECTOR(15 downto 0)
            );
 end BLDC_CONTROLLER;
 
 architecture Behavioral of BLDC_CONTROLLER is
-    constant period : integer := CLK_FREQ/FREQ;
+    signal period : integer := 100000;
     type state_type is (s001, s101, s100, s110, s010, s011);
 
     signal scaled_CLK : STD_LOGIC := '0';
@@ -59,7 +61,21 @@ architecture Behavioral of BLDC_CONTROLLER is
 
 begin
 
+
+
 --Prescaler process
+freq_calc: process(clk_in, reset_in)
+begin
+    if(rising_edge(clk_in)) then
+        if(reset_in = '1') then
+            period <= 100000;
+        else
+            period <= CLK_FREQ/to_integer(unsigned(FREQ));
+        end if;
+    end if;
+end process;
+
+
 clck_scaler: process(clk_in, reset_in)
 begin
     if(rising_edge(clk_in)) then

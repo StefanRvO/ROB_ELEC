@@ -74,6 +74,10 @@ set rc [catch {
   set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_0/unity_xlconstant_1_0.dcp]
   add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp]
+  add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_splitter_0_0/unity_vector_splitter_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_splitter_0_0/unity_vector_splitter_0_0.dcp]
+  add_files -quiet /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp]
   read_xdc -ref unity_processing_system7_0_0 -cells inst /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc
   set_property processing_order EARLY [get_files /home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc]
   read_xdc /home/stefan/PWM/PWM.srcs/constrs_1/new/constraints.xdc
@@ -94,7 +98,7 @@ start_step opt_design
 set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
-  opt_design 
+  opt_design -directive RuntimeOptimized
   write_checkpoint -force unity_wrapper_opt.dcp
   report_drc -file unity_wrapper_drc_opted.rpt
   close_msg_db -file opt_design.pb
@@ -112,7 +116,7 @@ set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
   implement_debug_core 
-  place_design 
+  place_design -directive RuntimeOptimized
   write_checkpoint -force unity_wrapper_placed.dcp
   report_io -file unity_wrapper_io_placed.rpt
   report_utilization -file unity_wrapper_utilization_placed.rpt -pb unity_wrapper_utilization_placed.pb
@@ -131,7 +135,7 @@ start_step route_design
 set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
-  route_design 
+  route_design -directive RuntimeOptimized
   write_checkpoint -force unity_wrapper_routed.dcp
   report_drc -file unity_wrapper_drc_routed.rpt -pb unity_wrapper_drc_routed.pb -rpx unity_wrapper_drc_routed.rpx
   report_methodology -file unity_wrapper_methodology_drc_routed.rpt -rpx unity_wrapper_methodology_drc_routed.rpx

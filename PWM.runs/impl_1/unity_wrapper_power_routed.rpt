@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date             : Tue Nov 22 19:40:12 2016
+| Date             : Wed Nov 23 15:56:10 2016
 | Host             : Leviathan running 64-bit Arch Linux
 | Command          : report_power -file unity_wrapper_power_routed.rpt -pb unity_wrapper_power_summary_routed.pb -rpx unity_wrapper_power_routed.rpx
 | Design           : unity_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.892 |
-| Dynamic (W)              | 0.775 |
+| Total On-Chip Power (W)  | 0.894 |
+| Dynamic (W)              | 0.776 |
 | Device Static (W)        | 0.118 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 74.7  |
@@ -49,21 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.005 |        7 |       --- |             --- |
-| Slice Logic              |     0.003 |     2451 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     1298 |     17600 |            7.38 |
-|   CARRY4                 |    <0.001 |       59 |      4400 |            1.34 |
-|   Register               |    <0.001 |      602 |     35200 |            1.71 |
+| Clocks                   |     0.007 |        7 |       --- |             --- |
+| Slice Logic              |     0.003 |     3182 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1849 |     17600 |           10.51 |
+|   CARRY4                 |    <0.001 |      216 |      4400 |            4.91 |
+|   Register               |    <0.001 |      604 |     35200 |            1.72 |
 |   LUT as Distributed RAM |    <0.001 |       68 |      6000 |            1.13 |
 |   F7/F8 Muxes            |    <0.001 |        5 |     17600 |            0.03 |
 |   Others                 |     0.000 |      166 |       --- |             --- |
-| Signals                  |     0.003 |     1898 |       --- |             --- |
-| Block RAM                |     0.001 |        1 |        60 |            1.67 |
+| Signals                  |     0.003 |     2520 |       --- |             --- |
+| Block RAM                |     0.002 |        1 |        60 |            1.67 |
 | MMCM                     |     0.117 |        1 |         2 |           50.00 |
-| I/O                      |     0.004 |       18 |        54 |           33.33 |
+| I/O                      |     0.003 |       18 |        54 |           33.33 |
 | PS7                      |     0.642 |        1 |       --- |             --- |
 | Static Power             |     0.118 |          |           |                 |
-| Total                    |     0.892 |          |           |                 |
+| Total                    |     0.894 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,8 +73,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.018 |       0.013 |      0.005 |
-| Vccaux    |       1.800 |     0.076 |       0.065 |      0.011 |
+| Vccint    |       1.000 |     0.020 |       0.015 |      0.005 |
+| Vccaux    |       1.800 |     0.076 |       0.064 |      0.011 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -82,7 +82,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -133,15 +133,15 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+----------------------------+----------------------------------------------------------+-----------------+
-| Clock                      | Domain                                                   | Constraint (ns) |
-+----------------------------+----------------------------------------------------------+-----------------+
-| CLKFBIN                    | unity_i/unity_ctrl_0/U0/UNITY/CLKFBIN                    |             5.0 |
-| ZYNQ_GEN.zynq_clk_mmcm_n_4 | unity_i/unity_ctrl_0/U0/UNITY/ZYNQ_GEN.zynq_clk_mmcm_n_4 |            20.0 |
-| clk_fpga_0                 | unity_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            20.0 |
-| clk_fpga_1                 | unity_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1] |             5.0 |
-| clk_uart                   | unity_i/unity_ctrl_0/U0/UNITY/clk_uart                   |            10.4 |
-+----------------------------+----------------------------------------------------------+-----------------+
++------------+----------------------------------------------------------+-----------------+
+| Clock      | Domain                                                   | Constraint (ns) |
++------------+----------------------------------------------------------+-----------------+
+| CLKFBIN    | unity_i/unity_ctrl_0/U0/UNITY/CLKFBIN                    |             5.0 |
+| clk_fpga_0 | unity_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            20.0 |
+| clk_fpga_1 | unity_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1] |             5.0 |
+| clk_uart   | unity_i/unity_ctrl_0/U0/UNITY/clk_uart                   |            10.4 |
+| unity_clk  | unity_i/unity_ctrl_0/U0/UNITY/unity_clk                  |            20.0 |
++------------+----------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -153,23 +153,23 @@ Table of Contents
 +-------------------------------------------------------------+-----------+
 | Name                                                        | Power (W) |
 +-------------------------------------------------------------+-----------+
-| unity_wrapper                                               |     0.775 |
-|   unity_i                                                   |     0.771 |
-|     BLDC_CONTROLLER_0                                       |     0.001 |
-|       U0                                                    |     0.001 |
+| unity_wrapper                                               |     0.776 |
+|   unity_i                                                   |     0.773 |
+|     BLDC_CONTROLLER_0                                       |     0.003 |
+|       U0                                                    |     0.003 |
 |     Debouncer_2                                             |    <0.001 |
 |       U0                                                    |    <0.001 |
-|     PWM_generator_0                                         |     0.001 |
-|       U0                                                    |     0.001 |
+|     PWM_generator_0                                         |     0.002 |
+|       U0                                                    |     0.002 |
 |     inverter_0                                              |    <0.001 |
 |     processing_system7_0                                    |     0.642 |
 |       inst                                                  |     0.642 |
-|     unity_ctrl_0                                            |     0.126 |
-|       U0                                                    |     0.126 |
+|     unity_ctrl_0                                            |     0.125 |
+|       U0                                                    |     0.125 |
 |         UNITY                                               |     0.125 |
 |           uart_wb_link_inst                                 |     0.006 |
 |             uart_gab_link_inst                              |     0.006 |
-|               gab_link_al_fsm_inst                          |     0.003 |
+|               gab_link_al_fsm_inst                          |     0.002 |
 |                 SUB_GEN.subscription_manager_inst           |    <0.001 |
 |                   SG_GEN[0].sg                              |    <0.001 |
 |                     ram_reg_0_15_0_0                        |    <0.001 |
@@ -247,9 +247,11 @@ Table of Contents
 |                 uart_rx_inst                                |    <0.001 |
 |                 uart_tx_inst                                |    <0.001 |
 |             wb_mst_ctrl_inst                                |    <0.001 |
-|           wb_mem_inst                                       |     0.001 |
-|             ram_rwrw_inst                                   |     0.001 |
+|           wb_mem_inst                                       |     0.002 |
+|             ram_rwrw_inst                                   |     0.002 |
 |             wb_slv_mem_ctrl_inst                            |    <0.001 |
+|     vector_splitter_0                                       |     0.000 |
+|     xlconcat_0                                              |     0.000 |
 |     xlconstant_1                                            |     0.000 |
 +-------------------------------------------------------------+-----------+
 

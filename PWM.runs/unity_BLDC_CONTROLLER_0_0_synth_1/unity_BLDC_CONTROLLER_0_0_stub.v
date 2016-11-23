@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Tue Nov 22 19:36:02 2016
+// Date        : Wed Nov 23 15:53:23 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ unity_BLDC_CONTROLLER_0_0_stub.v
@@ -15,8 +15,8 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "BLDC_CONTROLLER,Vivado 2016.3" *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(dir_in, PHASE_A_out, PHASE_B_out, PHASE_C_out, 
-  clk_in, PWM_in, PHASE_AH_out, PHASE_BH_out, PHASE_CH_out, reset_in)
-/* synthesis syn_black_box black_box_pad_pin="dir_in,PHASE_A_out,PHASE_B_out,PHASE_C_out,clk_in,PWM_in,PHASE_AH_out,PHASE_BH_out,PHASE_CH_out,reset_in" */;
+  clk_in, PWM_in, PHASE_AH_out, PHASE_BH_out, PHASE_CH_out, reset_in, FREQ)
+/* synthesis syn_black_box black_box_pad_pin="dir_in,PHASE_A_out,PHASE_B_out,PHASE_C_out,clk_in,PWM_in,PHASE_AH_out,PHASE_BH_out,PHASE_CH_out,reset_in,FREQ[15:0]" */;
   input dir_in;
   output PHASE_A_out;
   output PHASE_B_out;
@@ -27,4 +27,5 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(dir_in, PHASE_A_out, PHASE_B_ou
   output PHASE_BH_out;
   output PHASE_CH_out;
   input reset_in;
+  input [15:0]FREQ;
 endmodule

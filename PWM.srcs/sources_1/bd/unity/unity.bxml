@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="unity" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1479842581"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1479842581"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1479842581"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1479912768"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1479912768"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1479912768"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="hdl/unity.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -70,6 +70,22 @@
       </File>
       <File Name="ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.xci" Type="IP">
         <Instance HierarchyPath="PWM_generator_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_vector_splitter_0_0/unity_vector_splitter_0_0.xci" Type="IP">
+        <Instance HierarchyPath="vector_splitter_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlconcat_0_0/unity_xlconcat_0_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconcat_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

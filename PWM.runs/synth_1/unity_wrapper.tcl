@@ -35,7 +35,7 @@ set_property used_in_implementation false [get_files /home/stefan/PWM/PWM.srcs/c
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 
-synth_design -top unity_wrapper -part xc7z010clg225-1
+synth_design -top unity_wrapper -part xc7z010clg225-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
 
 
 write_checkpoint -force -noxdef unity_wrapper.dcp

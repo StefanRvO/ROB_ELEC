@@ -64,7 +64,8 @@ ENTITY unity_BLDC_CONTROLLER_0_0 IS
     PHASE_AH_out : OUT STD_LOGIC;
     PHASE_BH_out : OUT STD_LOGIC;
     PHASE_CH_out : OUT STD_LOGIC;
-    reset_in : IN STD_LOGIC
+    reset_in : IN STD_LOGIC;
+    FREQ : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END unity_BLDC_CONTROLLER_0_0;
 
@@ -73,8 +74,7 @@ ARCHITECTURE unity_BLDC_CONTROLLER_0_0_arch OF unity_BLDC_CONTROLLER_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF unity_BLDC_CONTROLLER_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT BLDC_CONTROLLER IS
     GENERIC (
-      CLK_FREQ : INTEGER;
-      FREQ : INTEGER
+      CLK_FREQ : INTEGER
     );
     PORT (
       dir_in : IN STD_LOGIC;
@@ -86,7 +86,8 @@ ARCHITECTURE unity_BLDC_CONTROLLER_0_0_arch OF unity_BLDC_CONTROLLER_0_0 IS
       PHASE_AH_out : OUT STD_LOGIC;
       PHASE_BH_out : OUT STD_LOGIC;
       PHASE_CH_out : OUT STD_LOGIC;
-      reset_in : IN STD_LOGIC
+      reset_in : IN STD_LOGIC;
+      FREQ : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
   END COMPONENT BLDC_CONTROLLER;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -98,8 +99,7 @@ ARCHITECTURE unity_BLDC_CONTROLLER_0_0_arch OF unity_BLDC_CONTROLLER_0_0 IS
 BEGIN
   U0 : BLDC_CONTROLLER
     GENERIC MAP (
-      CLK_FREQ => 200000000,
-      FREQ => 3000
+      CLK_FREQ => 200000000
     )
     PORT MAP (
       dir_in => dir_in,
@@ -111,6 +111,7 @@ BEGIN
       PHASE_AH_out => PHASE_AH_out,
       PHASE_BH_out => PHASE_BH_out,
       PHASE_CH_out => PHASE_CH_out,
-      reset_in => reset_in
+      reset_in => reset_in,
+      FREQ => FREQ
     );
 END unity_BLDC_CONTROLLER_0_0_arch;
