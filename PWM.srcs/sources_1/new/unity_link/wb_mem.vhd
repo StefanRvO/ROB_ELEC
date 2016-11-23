@@ -5,7 +5,7 @@
 -- Create Date:    09:58:47 04/25/2012 
 -- Design Name: 
 -- Module Name:    wb_mem - structural 
--- Project Name: 
+-- Project      Name: 
 -- Target Devices: 
 -- Tool versions: 
 -- Description: 

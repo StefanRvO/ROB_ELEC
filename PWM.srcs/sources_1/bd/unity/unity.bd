@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xD818893A3EBE68F3" bd:device="xc7z010clg225-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2016.3" bd:top="unity" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xD818893A3EBE68F3" bd:device="xc7z010clg225-1" bd:synthFlowMode="Hierarchical" bd:tool_version="2016.3" bd:top="unity" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -40,11 +40,6 @@
           <spirit:parameter>
             <spirit:name>POLARITY</spirit:name>
             <spirit:value>ACTIVE_LOW</spirit:value>
-            <spirit:vendorExtensions>
-              <bd:configElementInfos>
-                <bd:configElementInfo bd:valueSource="user"/>
-              </bd:configElementInfos>
-            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
