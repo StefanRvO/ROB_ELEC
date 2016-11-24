@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Wed Nov 23 21:59:33 2016
-# Process ID: 1358
+# Start of session at: Thu Nov 24 19:25:31 2016
+# Process ID: 19567
 # Current directory: /home/stefan/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1
 # Command line: vivado -log unity_PWM_generator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_PWM_generator_0_0.tcl
 # Log file: /home/stefan/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1/unity_PWM_generator_0_0.vds

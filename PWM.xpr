@@ -31,7 +31,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="te0726_m"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="80"/>
+    <Option Name="WTXSimLaunchSim" Val="113"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -282,18 +282,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/Debouncer.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/inverter.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/new/PWM_generator.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -312,46 +300,103 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/new/OL_BLDC_Stepper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Debouncer.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Toggler.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/inverter.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/BLDC_STARTUP.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/vector_mux.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/period_smoother.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/unity/unity.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_CONTROLLER_0_0/unity_BLDC_CONTROLLER_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconstant_0_1/unity_xlconstant_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Debouncer_2_0/unity_Debouncer_2_0.xci">
-          <Proxy FileSetName="unity_Debouncer_2_0"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_unity_ctrl_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_unity_ctrl_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_inverter_1_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_inverter_1_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xci">
+          <Proxy FileSetName="unity_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_inverter_0_0/unity_inverter_0_0.xci">
-          <Proxy FileSetName="unity_inverter_0_0"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.xci">
+          <Proxy FileSetName="unity_unity_ctrl_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconstant_1_0/unity_xlconstant_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_CONTROLLER_0_0/unity_BLDC_CONTROLLER_0_0.xci">
+          <Proxy FileSetName="unity_BLDC_CONTROLLER_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconstant_1_0/unity_xlconstant_1_0.xci">
+          <Proxy FileSetName="unity_xlconstant_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.xci">
           <Proxy FileSetName="unity_PWM_generator_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_vector_splitter_0_0/unity_vector_splitter_0_0.xci">
           <Proxy FileSetName="unity_vector_splitter_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconcat_0_0/unity_xlconcat_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconcat_0_0/unity_xlconcat_0_0.xci">
+          <Proxy FileSetName="unity_xlconcat_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.xci">
+          <Proxy FileSetName="unity_BLDC_DIR_CTRL_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.xci">
+          <Proxy FileSetName="unity_OL_BLDC_Stepper_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Debouncer_5_0/unity_Debouncer_5_0.xci">
+          <Proxy FileSetName="unity_Debouncer_5_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Toggler_0_0/unity_Toggler_0_0.xci">
+          <Proxy FileSetName="unity_Toggler_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_inverter_1_0/unity_inverter_1_0.xci">
+          <Proxy FileSetName="unity_inverter_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity.hwh"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.hwdef"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_inverter_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_2_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_Debouncer_2_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_2_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_2_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_2_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_2_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_Debouncer_2_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PWM_generator_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_CONTROLLER_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_splitter_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_vector_splitter_0_0.vhd"/>
@@ -365,14 +410,90 @@
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_sim_netlist.vhdl"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_sim_netlist.v"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PWM_generator_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_inverter_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_1_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Toggler_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_Toggler_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Toggler_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Toggler_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Toggler_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Toggler_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_Toggler_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_OL_BLDC_Stepper_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_Debouncer_5_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_vector_mux_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_Debouncer_5_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_BLDC_STARTUP_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_1_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_1_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_1_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_1_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_STARTUP_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_vector_mux_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_STARTUP_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.xci">
+          <Proxy FileSetName="unity_BLDC_STARTUP_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_Debouncer_5_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_Debouncer_5_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_DIR_CTRL_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_CONTROLLER_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_CONTROLLER_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_BLDC_CONTROLLER_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_inverter_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_inverter_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_1.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Debouncer_5_1/unity_Debouncer_5_1.xci">
+          <Proxy FileSetName="unity_Debouncer_5_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity.hwh"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_inverter_0_1/unity_inverter_0_1.xci">
+          <Proxy FileSetName="unity_inverter_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_period_smoother_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.hwdef"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_1_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_1_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_1_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_CONTROLLER_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_1_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_CONTROLLER_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_vector_mux_0_0/unity_vector_mux_0_0.xci">
+          <Proxy FileSetName="unity_vector_mux_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_CONTROLLER_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_OL_BLDC_Stepper_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_period_smoother_0_0/unity_period_smoother_0_0.xci">
+          <Proxy FileSetName="unity_period_smoother_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_period_smoother_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_BLDC_DIR_CTRL_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_period_smoother_0_0.vhd"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/unity/hdl/unity_wrapper.vhd">
         <FileInfo>
@@ -380,7 +501,81 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/Toggler.vhd">
+      <File Path="$PSRCDIR/sources_1/bd/unfuck/unfuck.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_Toggler_0_0/unfuck_Toggler_0_0.xci">
+          <Proxy FileSetName="unfuck_Toggler_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_inverter_0_0/unfuck_inverter_0_0.xci">
+          <Proxy FileSetName="unfuck_inverter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_inverter_1_0/unfuck_inverter_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_processing_system7_0_0/unfuck_processing_system7_0_0.xci">
+          <Proxy FileSetName="unfuck_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_unity_ctrl_0_0/unfuck_unity_ctrl_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_vector_splitter_0_0/unfuck_vector_splitter_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_xlconcat_0_0/unfuck_xlconcat_0_0.xci">
+          <Proxy FileSetName="unfuck_xlconcat_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_xlconstant_1_0/unfuck_xlconstant_1_0.xci">
+          <Proxy FileSetName="unfuck_xlconstant_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="hdl/unfuck.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="hw_handoff/unfuck.hwh"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="hw_handoff/unfuck_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="hdl/unfuck.hwdef"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_BLDC_CONTROLLER_0_0/unfuck_BLDC_CONTROLLER_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_BLDC_DIR_CTRL_0_0/unfuck_BLDC_DIR_CTRL_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_Debouncer_2_0/unfuck_Debouncer_2_0.xci">
+          <Proxy FileSetName="unfuck_Debouncer_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_Debouncer_5_0/unfuck_Debouncer_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="ip/unfuck_PWM_generator_0_0/unfuck_PWM_generator_0_0.xci">
+          <Proxy FileSetName="unfuck_PWM_generator_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_unity_ctrl_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_vector_splitter_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_PWM_generator_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_PWM_generator_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="sim/unfuck_PWM_generator_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Debouncer_5_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Debouncer_2_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="synth/unfuck_Debouncer_2_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Debouncer_2_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Debouncer_2_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Debouncer_2_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Debouncer_2_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="sim/unfuck_Debouncer_2_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_BLDC_DIR_CTRL_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_BLDC_CONTROLLER_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_inverter_1_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_inverter_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="synth/unfuck_inverter_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_inverter_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_inverter_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_inverter_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_inverter_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="sim/unfuck_inverter_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Toggler_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="synth/unfuck_Toggler_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Toggler_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Toggler_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Toggler_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_Toggler_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="sim/unfuck_Toggler_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_PWM_generator_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="synth/unfuck_PWM_generator_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_PWM_generator_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unfuck.bd" FileRelPathName="unfuck_PWM_generator_0_0_sim_netlist.v"/>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/unfuck/hdl/unfuck_wrapper.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -408,66 +603,27 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_2_1/design_1_Debouncer_2_1.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci">
-          <Proxy FileSetName="design_1_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_inverter_0_0/design_1_inverter_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Rotary_counter_0_0/design_1_Rotary_counter_0_0.xci">
-          <Proxy FileSetName="design_1_Rotary_counter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Rotary_Encoder_0_0/design_1_Rotary_Encoder_0_0.xci">
-          <Proxy FileSetName="design_1_Rotary_Encoder_0_0"/>
-        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Rotary_Encoder_0_0/design_1_Rotary_Encoder_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Rotary_counter_0_0/design_1_Rotary_counter_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_1_0/design_1_Debouncer_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_2_0/design_1_Debouncer_2_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_3_0/design_1_Debouncer_3_0.xci">
-          <Proxy FileSetName="design_1_Debouncer_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PWM_generator_0_0/design_1_PWM_generator_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Toggler_0_0/design_1_Toggler_0_0.xci">
-          <Proxy FileSetName="design_1_Toggler_0_0"/>
-        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Toggler_0_0/design_1_Toggler_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_2_1/design_1_Debouncer_2_1.xci"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_inverter_0_1/design_1_inverter_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_PWM_generator_0_0/design_1_PWM_generator_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_3_0/design_1_Debouncer_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Debouncer_2_0/design_1_Debouncer_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_inverter_0_0/design_1_inverter_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_counter_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_1.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_1.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Toggler_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Toggler_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Toggler_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Toggler_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Toggler_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Toggler_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Toggler_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_PWM_generator_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_3_0.xml"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Debouncer_3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_3_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_3_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_3_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_3_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Debouncer_3_0.vhd"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_2_0.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Debouncer_1_0.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Rotary_Encoder_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_Encoder_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Rotary_Encoder_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_counter_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="synth/design_1_Rotary_counter_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_counter_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_counter_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_counter_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_Rotary_counter_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_Rotary_counter_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_inverter_0_0.xml"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
         <FileInfo>
@@ -480,14 +636,6 @@
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/ADC/ADC.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -517,6 +665,12 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/new/PWM_tb.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/new/unity_tb_sim.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -547,7 +701,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="unity_ctrl"/>
+        <Option Name="TopModule" Val="PWM_generator_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -557,45 +711,21 @@
         <Option Name="xsim.simulate.runtime" Val="100000ns"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_processing_system7_0_0">
+    <FileSet Name="unity_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_processing_system7_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_processing_system7_0_0"/>
+        <Option Name="TopModule" Val="unity_processing_system7_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_Debouncer_3_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_Debouncer_3_0">
+    <FileSet Name="unity_unity_ctrl_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_unity_ctrl_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_Debouncer_3_0"/>
+        <Option Name="TopModule" Val="unity_unity_ctrl_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_Toggler_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_Toggler_0_0">
+    <FileSet Name="unity_xlconstant_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_xlconstant_1_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_Toggler_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_Rotary_counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_Rotary_counter_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_Rotary_counter_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_Rotary_Encoder_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_Rotary_Encoder_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_Rotary_Encoder_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="unity_Debouncer_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_Debouncer_2_0">
-      <Config>
-        <Option Name="TopModule" Val="unity_Debouncer_2_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="unity_inverter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_inverter_0_0">
-      <Config>
-        <Option Name="TopModule" Val="unity_inverter_0_0"/>
+        <Option Name="TopModule" Val="unity_xlconstant_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -608,6 +738,120 @@
     <FileSet Name="unity_vector_splitter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_vector_splitter_0_0">
       <Config>
         <Option Name="TopModule" Val="unity_vector_splitter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_xlconcat_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_xlconcat_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_xlconcat_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_Toggler_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_Toggler_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_Toggler_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unfuck_Debouncer_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unfuck_Debouncer_2_0">
+      <Config>
+        <Option Name="TopModule" Val="unfuck_Debouncer_2_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unfuck_PWM_generator_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unfuck_PWM_generator_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unfuck_PWM_generator_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unfuck_Toggler_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unfuck_Toggler_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unfuck_Toggler_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unfuck_inverter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unfuck_inverter_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unfuck_inverter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unfuck_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unfuck_processing_system7_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unfuck_processing_system7_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unfuck_xlconcat_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unfuck_xlconcat_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unfuck_xlconcat_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unfuck_xlconstant_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unfuck_xlconstant_1_0">
+      <Config>
+        <Option Name="TopModule" Val="unfuck_xlconstant_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_Debouncer_5_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_Debouncer_5_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_Debouncer_5_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_inverter_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_inverter_1_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_inverter_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_BLDC_STARTUP_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_BLDC_STARTUP_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_BLDC_STARTUP_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_Debouncer_5_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_Debouncer_5_1">
+      <Config>
+        <Option Name="TopModule" Val="unity_Debouncer_5_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_vector_mux_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_vector_mux_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_vector_mux_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_inverter_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_inverter_0_1">
+      <Config>
+        <Option Name="TopModule" Val="unity_inverter_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_BLDC_CONTROLLER_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_BLDC_CONTROLLER_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_BLDC_CONTROLLER_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_OL_BLDC_Stepper_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_OL_BLDC_Stepper_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_OL_BLDC_Stepper_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_BLDC_DIR_CTRL_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_BLDC_DIR_CTRL_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_BLDC_DIR_CTRL_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_period_smoother_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_period_smoother_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_period_smoother_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -634,19 +878,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg225-1" ConstrsSet="constrs_1" Description="Trades off Performance and Area for better Runtime." State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Flow_RuntimeOptimized" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design">
-          <Option Id="FsmExtraction">0</Option>
-          <Option Id="FlattenHierarchy">1</Option>
-          <Option Id="Directive">0</Option>
-        </Step>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_processing_system7_0_0" Part="xc7z010clg225-1" ConstrsSet="design_1_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/design_1_processing_system7_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="unity_synth" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg225-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/unity_synth" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
@@ -654,7 +886,7 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_Debouncer_3_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_Debouncer_3_0" Part="xc7z010clg225-1" ConstrsSet="design_1_Debouncer_3_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/design_1_Debouncer_3_0_synth_1" IncludeInArchive="true">
+    <Run Id="unity_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_processing_system7_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
@@ -662,7 +894,7 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_Toggler_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_Toggler_0_0" Part="xc7z010clg225-1" ConstrsSet="design_1_Toggler_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/design_1_Toggler_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="unity_unity_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_unity_ctrl_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_unity_ctrl_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_unity_ctrl_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
@@ -670,31 +902,7 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_Rotary_counter_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_Rotary_counter_0_0" Part="xc7z010clg225-1" ConstrsSet="design_1_Rotary_counter_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/design_1_Rotary_counter_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_Rotary_Encoder_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_Rotary_Encoder_0_0" Part="xc7z010clg225-1" ConstrsSet="design_1_Rotary_Encoder_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/design_1_Rotary_Encoder_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="unity_Debouncer_2_0_synth_1" Type="Ft3:Synth" SrcSet="unity_Debouncer_2_0" Part="xc7z010clg225-1" ConstrsSet="unity_Debouncer_2_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_Debouncer_2_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="unity_inverter_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_inverter_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_inverter_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="unity_xlconstant_1_0_synth_1" Type="Ft3:Synth" SrcSet="unity_xlconstant_1_0" Part="xc7z010clg225-1" ConstrsSet="unity_xlconstant_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_xlconstant_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
@@ -718,29 +926,195 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="constrs_1" Description="Each implementation step trades design performance for better runtime. Physical optimization (phys_opt_design) is disabled." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="unity_xlconcat_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_xlconcat_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_xlconcat_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_xlconcat_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Flow_RuntimeOptimized" Flow="Vivado Implementation 2016"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_Toggler_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_Toggler_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_Toggler_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_Toggler_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_Debouncer_2_0_synth_1" Type="Ft3:Synth" SrcSet="unfuck_Debouncer_2_0" Part="xc7z010clg225-1" ConstrsSet="unfuck_Debouncer_2_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unfuck_Debouncer_2_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_PWM_generator_0_0_synth_1" Type="Ft3:Synth" SrcSet="unfuck_PWM_generator_0_0" Part="xc7z010clg225-1" ConstrsSet="unfuck_PWM_generator_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unfuck_PWM_generator_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_Toggler_0_0_synth_1" Type="Ft3:Synth" SrcSet="unfuck_Toggler_0_0" Part="xc7z010clg225-1" ConstrsSet="unfuck_Toggler_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unfuck_Toggler_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_inverter_0_0_synth_1" Type="Ft3:Synth" SrcSet="unfuck_inverter_0_0" Part="xc7z010clg225-1" ConstrsSet="unfuck_inverter_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unfuck_inverter_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="unfuck_processing_system7_0_0" Part="xc7z010clg225-1" ConstrsSet="unfuck_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unfuck_processing_system7_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_xlconcat_0_0_synth_1" Type="Ft3:Synth" SrcSet="unfuck_xlconcat_0_0" Part="xc7z010clg225-1" ConstrsSet="unfuck_xlconcat_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unfuck_xlconcat_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_xlconstant_1_0_synth_1" Type="Ft3:Synth" SrcSet="unfuck_xlconstant_1_0" Part="xc7z010clg225-1" ConstrsSet="unfuck_xlconstant_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unfuck_xlconstant_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_Debouncer_5_0_synth_1" Type="Ft3:Synth" SrcSet="unity_Debouncer_5_0" Part="xc7z010clg225-1" ConstrsSet="unity_Debouncer_5_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_Debouncer_5_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_inverter_1_0_synth_1" Type="Ft3:Synth" SrcSet="unity_inverter_1_0" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_inverter_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_BLDC_STARTUP_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_BLDC_STARTUP_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_BLDC_STARTUP_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_BLDC_STARTUP_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_Debouncer_5_1_synth_1" Type="Ft3:Synth" SrcSet="unity_Debouncer_5_1" Part="xc7z010clg225-1" ConstrsSet="unity_Debouncer_5_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_Debouncer_5_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_vector_mux_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_vector_mux_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_vector_mux_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_vector_mux_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_inverter_0_1_synth_1" Type="Ft3:Synth" SrcSet="unity_inverter_0_1" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_inverter_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_BLDC_CONTROLLER_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_BLDC_CONTROLLER_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_BLDC_CONTROLLER_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_BLDC_CONTROLLER_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_OL_BLDC_Stepper_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_OL_BLDC_Stepper_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_OL_BLDC_Stepper_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_OL_BLDC_Stepper_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_BLDC_DIR_CTRL_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_BLDC_DIR_CTRL_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_BLDC_DIR_CTRL_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_BLDC_DIR_CTRL_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_period_smoother_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_period_smoother_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_period_smoother_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_period_smoother_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_impl" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/unity_impl" SynthRun="unity_synth" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
-        <Step Id="opt_design">
-          <Option Id="Directive">4</Option>
-        </Step>
+        <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
-        <Step Id="place_design">
-          <Option Id="Directive">15</Option>
-        </Step>
+        <Step Id="place_design"/>
         <Step Id="post_place_power_opt_design"/>
         <Step Id="phys_opt_design"/>
-        <Step Id="route_design">
-          <Option Id="Directive">5</Option>
-        </Step>
+        <Step Id="route_design"/>
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="design_1_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="design_1_processing_system7_0_0_synth_1" IncludeInArchive="false">
+    <Run Id="unity_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="unity_processing_system7_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
@@ -755,7 +1129,7 @@
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_Debouncer_3_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="design_1_Debouncer_3_0" Description="Default settings for Implementation." SynthRun="design_1_Debouncer_3_0_synth_1" IncludeInArchive="false">
+    <Run Id="unity_unity_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_unity_ctrl_0_0" Description="Default settings for Implementation." SynthRun="unity_unity_ctrl_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
@@ -770,67 +1144,7 @@
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_Toggler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="design_1_Toggler_0_0" Description="Default settings for Implementation." SynthRun="design_1_Toggler_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_Rotary_counter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="design_1_Rotary_counter_0_0" Description="Default settings for Implementation." SynthRun="design_1_Rotary_counter_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_Rotary_Encoder_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="design_1_Rotary_Encoder_0_0" Description="Default settings for Implementation." SynthRun="design_1_Rotary_Encoder_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="unity_Debouncer_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_Debouncer_2_0" Description="Default settings for Implementation." SynthRun="unity_Debouncer_2_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="unity_inverter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_0_0" Description="Default settings for Implementation." SynthRun="unity_inverter_0_0_synth_1" IncludeInArchive="false">
+    <Run Id="unity_xlconstant_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_xlconstant_1_0" Description="Default settings for Implementation." SynthRun="unity_xlconstant_1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
@@ -863,6 +1177,311 @@
     <Run Id="unity_vector_splitter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_vector_splitter_0_0" Description="Default settings for Implementation." SynthRun="unity_vector_splitter_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_xlconcat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_xlconcat_0_0" Description="Default settings for Implementation." SynthRun="unity_xlconcat_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_Toggler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_Toggler_0_0" Description="Default settings for Implementation." SynthRun="unity_Toggler_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_Debouncer_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unfuck_Debouncer_2_0" Description="Default settings for Implementation." SynthRun="unfuck_Debouncer_2_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_PWM_generator_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unfuck_PWM_generator_0_0" Description="Default settings for Implementation." SynthRun="unfuck_PWM_generator_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_Toggler_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unfuck_Toggler_0_0" Description="Default settings for Implementation." SynthRun="unfuck_Toggler_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_inverter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unfuck_inverter_0_0" Description="Default settings for Implementation." SynthRun="unfuck_inverter_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unfuck_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="unfuck_processing_system7_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_xlconcat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unfuck_xlconcat_0_0" Description="Default settings for Implementation." SynthRun="unfuck_xlconcat_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unfuck_xlconstant_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unfuck_xlconstant_1_0" Description="Default settings for Implementation." SynthRun="unfuck_xlconstant_1_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_Debouncer_5_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_Debouncer_5_0" Description="Default settings for Implementation." SynthRun="unity_Debouncer_5_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_inverter_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_1_0" Description="Default settings for Implementation." SynthRun="unity_inverter_1_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_BLDC_STARTUP_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_BLDC_STARTUP_0_0" Description="Default settings for Implementation." SynthRun="unity_BLDC_STARTUP_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_Debouncer_5_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_Debouncer_5_1" Description="Default settings for Implementation." SynthRun="unity_Debouncer_5_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_vector_mux_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_vector_mux_0_0" Description="Default settings for Implementation." SynthRun="unity_vector_mux_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_inverter_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_0_1" Description="Default settings for Implementation." SynthRun="unity_inverter_0_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_BLDC_CONTROLLER_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_BLDC_CONTROLLER_0_0" Description="Default settings for Implementation." SynthRun="unity_BLDC_CONTROLLER_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_OL_BLDC_Stepper_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_OL_BLDC_Stepper_0_0" Description="Default settings for Implementation." SynthRun="unity_OL_BLDC_Stepper_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_BLDC_DIR_CTRL_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_BLDC_DIR_CTRL_0_0" Description="Default settings for Implementation." SynthRun="unity_BLDC_DIR_CTRL_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_period_smoother_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_period_smoother_0_0" Description="Default settings for Implementation." SynthRun="unity_period_smoother_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -48,7 +48,6 @@ architecture Behavioral of PWM_generator is
     signal scaler_counter : integer := 0;
 begin
 
-
 --Prescaler process
 clck_scaler: process(clk_IN, reset_in)
 begin
@@ -76,15 +75,16 @@ begin
         if(reset_in = '1') then
             count <= 0;
         else
-            if  (count_direction = '0') then
+            if(count = 0) then
+                count_direction <= '0';
+                count <= count + 1;
+            elsif(count = 255) then
+                count_direction <= '1';
+                count <= count - 1;
+            elsif  (count_direction = '0') then
                 count <= count + 1;
             elsif(count_direction = '1') then
                 count <= count - 1;
-            end if;
-            if(count = 0) then
-                count_direction <= '0';
-            elsif(count = 255) then
-                count_direction <= '1';
             end if;
         end if;
      end if;
@@ -96,7 +96,7 @@ duty_compare: process(clk_IN, reset_in)
 begin
     if(reset_in = '1') then
         PWM_out <= '0';
-    elsif(count < to_integer(unsigned(pwm_duty_in))) then
+    elsif(count >= to_integer(unsigned(pwm_duty_in))) then
         PWM_out <= '0';
      else
         PWM_out <= '1';

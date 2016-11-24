@@ -35,3 +35,17 @@ set_property IOSTANDARD LVCMOS33 [get_ports PHASE_CH_out]
 
 set_property PACKAGE_PIN P15 [get_ports {leds_o[0]}]
 
+
+set_property SLEW FAST [get_ports PHASE_A_out]
+set_property SLEW FAST [get_ports PHASE_AH_out]
+set_property SLEW FAST [get_ports PHASE_B_out]
+set_property SLEW FAST [get_ports PHASE_BH_out]
+set_property SLEW FAST [get_ports PHASE_C_out]
+set_property SLEW FAST [get_ports PHASE_CH_out]
+set_property SLEW FAST [get_ports PWM_out]
+set_property SLEW FAST [get_ports tx_o]
+
+set_property PACKAGE_PIN J15 [get_ports DIR_IN]
+set_property IOSTANDARD LVCMOS33 [get_ports DIR_IN]
+set_property PACKAGE_PIN L15 [get_ports MTR_START]
+set_property IOSTANDARD LVCMOS33 [get_ports MTR_START]

@@ -39,7 +39,7 @@ preplace netloc reset_in_1 1 0 2 NJ 220 NJ
 preplace netloc SW_A_in_1 1 0 3 NJ 340 NJ 340 NJ
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 20 400
 preplace netloc processing_system7_0_FCLK_CLK1 1 1 5 420 70 630 70 860 70 1100 70 1360
-levelinfo -pg 1 -10 210 520 740 980 1230 1520 1680 -top -20 -bot 410
+levelinfo -pg 1 -10 210 520 740 980 1230 1550 1740 -top -20 -bot 410
 ",
 }
 {
