@@ -240,7 +240,6 @@
       <spirit:adHocConnection>
         <spirit:name>xlconstant_0_dout1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlconstant_0" spirit:portRef="dout"/>
-        <spirit:internalPortReference spirit:componentRef="BLDC_CONTROLLER_0" spirit:portRef="dir_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlconstant_1_dout</spirit:name>

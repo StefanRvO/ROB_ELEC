@@ -37,8 +37,7 @@ entity BLDC_CONTROLLER is
     GENERIC( CLK_FREQ : INTEGER := 200000000
          );
 
-    Port ( dir_in : in STD_LOGIC;
-           PHASE_A_out : out STD_LOGIC;
+    Port ( PHASE_A_out : out STD_LOGIC;
            PHASE_B_out : out STD_LOGIC;
            PHASE_C_out : out STD_LOGIC;
            clk_in : in STD_LOGIC;

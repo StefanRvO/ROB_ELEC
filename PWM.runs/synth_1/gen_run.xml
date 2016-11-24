@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg225-1" LaunchTime="1479933182">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg225-1" LaunchTime="1479934631">
   <File Type="VDS-TIMING-PB" Name="unity_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="unity_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="unity_wrapper.dcp"/>
@@ -367,13 +367,11 @@
       <Option Id="FsmExtraction">0</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="unity_xlconcat_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_unity_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_vector_splitter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_inverter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_Debouncer_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_xlconstant_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_CONTROLLER_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_unity_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_Rotary_counter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_PWM_generator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_Rotary_Encoder_0_0"/>
