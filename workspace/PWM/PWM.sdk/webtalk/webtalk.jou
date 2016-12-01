@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# 
+# Start of session at: Tue Nov 29 23:53:08 2016
+# Process ID: 11975
+# Current directory: /home/stefan/PWM_2/workspace/PWM/PWM.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/stefan/PWM_2/workspace/PWM/PWM.sdk/webtalk/webtalk.log
+# Journal file: /home/stefan/PWM_2/workspace/PWM/PWM.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

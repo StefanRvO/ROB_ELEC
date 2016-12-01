@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Thu Dec  1 21:32:11 2016
+# Process ID: 4698
+# Current directory: /home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_OL_BLDC_Stepper_0_0_synth_1
+# Command line: vivado -log BLDC_CONTROL_OL_BLDC_Stepper_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BLDC_CONTROL_OL_BLDC_Stepper_0_0.tcl
+# Log file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_OL_BLDC_Stepper_0_0_synth_1/BLDC_CONTROL_OL_BLDC_Stepper_0_0.vds
+# Journal file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_OL_BLDC_Stepper_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source BLDC_CONTROL_OL_BLDC_Stepper_0_0.tcl -notrace

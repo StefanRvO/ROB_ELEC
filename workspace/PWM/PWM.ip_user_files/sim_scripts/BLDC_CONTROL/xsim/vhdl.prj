@@ -1,0 +1,10 @@
+vhdl xil_defaultlib "../../../bd/BLDC_CONTROL/ip/BLDC_CONTROL_BLDC_STARTUP_0_0/BLDC_CONTROL_BLDC_STARTUP_0_0_sim_netlist.vhdl" 
+vhdl xil_defaultlib "../../../bd/BLDC_CONTROL/ip/BLDC_CONTROL_OL_BLDC_Stepper_0_0/BLDC_CONTROL_OL_BLDC_Stepper_0_0_sim_netlist.vhdl" 
+vhdl xil_defaultlib "../../../bd/BLDC_CONTROL/ip/BLDC_CONTROL_PWM_generator_0_0/BLDC_CONTROL_PWM_generator_0_0_sim_netlist.vhdl" 
+vhdl xil_defaultlib "../../../bd/BLDC_CONTROL/ip/BLDC_CONTROL_period_smoother_0_0/BLDC_CONTROL_period_smoother_0_0_sim_netlist.vhdl" 
+vhdl xil_defaultlib "../../../bd/BLDC_CONTROL/ipshared/e147/xlconstant.vhd" 
+vhdl xil_defaultlib "../../../bd/BLDC_CONTROL/ip/BLDC_CONTROL_xlconstant_0_0/sim/BLDC_CONTROL_xlconstant_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/BLDC_CONTROL/hdl/BLDC_CONTROL.vhd" 
+vhdl xil_defaultlib "../../../bd/BLDC_CONTROL/ip/BLDC_CONTROL_xlconstant_0_1/sim/BLDC_CONTROL_xlconstant_0_1.vhd" 
+
+nosort
