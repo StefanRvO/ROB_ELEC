@@ -34,14 +34,14 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity BLDC_STATE_CONTROLLER is
-    Port ( PHASE_A_out : out STD_LOGIC;
-           PHASE_B_out : out STD_LOGIC;
-           PHASE_C_out : out STD_LOGIC;
+    Port ( PHASE_A_out : out STD_LOGIC := '0';
+           PHASE_B_out : out STD_LOGIC := '0';
+           PHASE_C_out : out STD_LOGIC := '0';
            clk_in : in STD_LOGIC;
            PWM_in : in STD_LOGIC;
-           PHASE_AH_out : out STD_LOGIC;
-           PHASE_BH_out : out STD_LOGIC;
-           PHASE_CH_out : out STD_LOGIC;
+           PHASE_AH_out : out STD_LOGIC := '0';
+           PHASE_BH_out : out STD_LOGIC := '0';
+           PHASE_CH_out : out STD_LOGIC := '0';
            reset_in        : in  STD_LOGIC;
            SENSE_A_in   : in STD_LOGIC;
            SENSE_B_in   : in STD_LOGIC;
@@ -111,12 +111,6 @@ begin
              PHASE_B_out  <= '0';
              PHASE_C_out  <= PWM_in;
          when others => 
-            PHASE_AH_out <= '0';
-            PHASE_BH_out <= '0';
-            PHASE_CH_out <= '0';
-            PHASE_A_out  <= '0';
-            PHASE_B_out  <= '0';
-            PHASE_C_out  <= '0';
           end case;
        end if;
 end process;

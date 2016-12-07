@@ -58,7 +58,11 @@ ENTITY unity_unity_ctrl_0_0 IS
     clk_i : IN STD_LOGIC;
     rx_i : IN STD_LOGIC;
     tx_o : OUT STD_LOGIC;
-    addr4_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    addr4_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr5_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr0_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr2_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END unity_unity_ctrl_0_0;
 
@@ -70,7 +74,11 @@ ARCHITECTURE unity_unity_ctrl_0_0_arch OF unity_unity_ctrl_0_0 IS
       clk_i : IN STD_LOGIC;
       rx_i : IN STD_LOGIC;
       tx_o : OUT STD_LOGIC;
-      addr4_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+      addr4_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr5_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr0_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr2_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT unity_ctrl;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -83,6 +91,10 @@ BEGIN
       clk_i => clk_i,
       rx_i => rx_i,
       tx_o => tx_o,
-      addr4_out => addr4_out
+      addr4_out => addr4_out,
+      addr5_out => addr5_out,
+      addr0_in => addr0_in,
+      addr1_in => addr1_in,
+      addr2_in => addr2_in
     );
 END unity_unity_ctrl_0_0_arch;

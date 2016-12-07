@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Wed Nov 30 14:51:43 2016
+// Date        : Fri Dec  2 01:06:47 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ unity_period_smoother_0_0_sim_netlist.v
@@ -81,7 +81,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
   wire \counter[16]_i_3_n_0 ;
   wire \counter[16]_i_4_n_0 ;
   wire \counter[16]_i_5_n_0 ;
-  wire \counter[1]_i_1_n_0 ;
   wire \counter[20]_i_2_n_0 ;
   wire \counter[20]_i_3_n_0 ;
   wire \counter[20]_i_4_n_0 ;
@@ -94,12 +93,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
   wire \counter[28]_i_3_n_0 ;
   wire \counter[28]_i_4_n_0 ;
   wire \counter[28]_i_5_n_0 ;
-  wire \counter[2]_i_1_n_0 ;
   wire \counter[31]_i_1_n_0 ;
   wire \counter[31]_i_3_n_0 ;
   wire \counter[31]_i_4_n_0 ;
   wire \counter[31]_i_5_n_0 ;
-  wire \counter[3]_i_1_n_0 ;
   wire \counter[4]_i_2_n_0 ;
   wire \counter[4]_i_3_n_0 ;
   wire \counter[4]_i_4_n_0 ;
@@ -574,12 +571,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
        (.I0(\counter_reg_n_0_[0] ),
         .I1(\counter_reg_n_0_[1] ),
         .O(counter1_carry_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
+  LUT3 #(
+    .INIT(8'hF4)) 
     \counter[0]_i_1 
        (.I0(\counter_reg_n_0_[0] ),
         .I1(counter1_carry__2_n_0),
+        .I2(reset_in),
         .O(\counter[0]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -621,13 +618,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
     \counter[16]_i_5 
        (.I0(\counter_reg_n_0_[13] ),
         .O(\counter[16]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \counter[1]_i_1 
-       (.I0(counter0[1]),
-        .I1(counter1_carry__2_n_0),
-        .O(\counter[1]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \counter[20]_i_2 
@@ -690,12 +680,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
         .O(\counter[28]_i_5_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
-    \counter[2]_i_1 
-       (.I0(counter0[2]),
-        .I1(counter1_carry__2_n_0),
-        .O(\counter[2]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
     \counter[31]_i_1 
        (.I0(reset_in),
         .I1(counter1_carry__2_n_0),
@@ -715,12 +699,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
     \counter[31]_i_5 
        (.I0(\counter_reg_n_0_[29] ),
         .O(\counter[31]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \counter[3]_i_1 
-       (.I0(counter0[3]),
-        .I1(counter1_carry__2_n_0),
-        .O(\counter[3]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \counter[4]_i_2 
@@ -762,13 +740,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
        (.I0(\counter_reg_n_0_[5] ),
         .O(\counter[8]_i_5_n_0 ));
   FDRE #(
-    .INIT(1'b1)) 
+    .INIT(1'b0)) 
     \counter_reg[0] 
        (.C(clk_in),
         .CE(1'b1),
         .D(\counter[0]_i_1_n_0 ),
         .Q(\counter_reg_n_0_[0] ),
-        .R(reset_in));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[10] 
@@ -864,13 +842,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
         .Q(\counter_reg_n_0_[19] ),
         .R(\counter[31]_i_1_n_0 ));
   FDRE #(
-    .INIT(1'b1)) 
+    .INIT(1'b0)) 
     \counter_reg[1] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(\counter[1]_i_1_n_0 ),
+        .D(counter0[1]),
         .Q(\counter_reg_n_0_[1] ),
-        .R(reset_in));
+        .R(\counter[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[20] 
@@ -972,14 +950,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
         .D(counter0[29]),
         .Q(\counter_reg_n_0_[29] ),
         .R(\counter[31]_i_1_n_0 ));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \counter_reg[2] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(\counter[2]_i_1_n_0 ),
+        .D(counter0[2]),
         .Q(\counter_reg_n_0_[2] ),
-        .R(reset_in));
+        .S(\counter[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[30] 
@@ -1003,14 +981,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
         .DI({1'b0,1'b0,\counter_reg_n_0_[30] ,\counter_reg_n_0_[29] }),
         .O({\NLW_counter_reg[31]_i_2_O_UNCONNECTED [3],counter0[31:29]}),
         .S({1'b0,\counter[31]_i_3_n_0 ,\counter[31]_i_4_n_0 ,\counter[31]_i_5_n_0 }));
-  FDSE #(
+  FDRE #(
     .INIT(1'b0)) 
     \counter_reg[3] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(\counter[3]_i_1_n_0 ),
+        .D(counter0[3]),
         .Q(\counter_reg_n_0_[3] ),
-        .S(reset_in));
+        .R(\counter[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[4] 
@@ -1026,14 +1004,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_period_smoother
         .DI({\counter_reg_n_0_[4] ,\counter_reg_n_0_[3] ,\counter_reg_n_0_[2] ,\counter_reg_n_0_[1] }),
         .O(counter0[4:1]),
         .S({\counter[4]_i_2_n_0 ,\counter[4]_i_3_n_0 ,\counter[4]_i_4_n_0 ,\counter[4]_i_5_n_0 }));
-  FDSE #(
-    .INIT(1'b1)) 
+  FDRE #(
+    .INIT(1'b0)) 
     \counter_reg[5] 
        (.C(clk_in),
         .CE(1'b1),
         .D(counter0[5]),
         .Q(\counter_reg_n_0_[5] ),
-        .S(\counter[31]_i_1_n_0 ));
+        .R(\counter[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[6] 

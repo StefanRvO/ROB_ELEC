@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# BLDC_STARTUP, OL_BLDC_Stepper, PWM_generator, period_smoother
+# BLDC_STARTUP, OL_BLDC_Stepper, period_smoother
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -163,13 +163,12 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set PWM_out [ create_bd_port -dir O PWM_out ]
   set SENSE_A_out [ create_bd_port -dir O SENSE_A_out ]
   set SENSE_B_out [ create_bd_port -dir O SENSE_B_out ]
   set SENSE_C_out [ create_bd_port -dir O SENSE_C_out ]
-  set STARTUP [ create_bd_port -dir I -type rst STARTUP ]
   set clk_in [ create_bd_port -dir I clk_in ]
-  set dir_in [ create_bd_port -dir I dir_in ]
+  set reset_in [ create_bd_port -dir I -type rst reset_in ]
+  set startup_done_out [ create_bd_port -dir O startup_done_out ]
 
   # Create instance: BLDC_STARTUP_0, and set properties
   set block_name BLDC_STARTUP
@@ -181,12 +180,7 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-    set_property -dict [ list \
-CONFIG.END_PERIOD {100000} \
-CONFIG.SPEEDUP_INTERVAL {100} \
-CONFIG.START_PERIOD {2000000} \
- ] $BLDC_STARTUP_0
-
+  
   # Create instance: OL_BLDC_Stepper_0, and set properties
   set block_name OL_BLDC_Stepper
   set block_cell_name OL_BLDC_Stepper_0
@@ -194,17 +188,6 @@ CONFIG.START_PERIOD {2000000} \
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $OL_BLDC_Stepper_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: PWM_generator_0, and set properties
-  set block_name PWM_generator
-  set block_cell_name PWM_generator_0
-  if { [catch {set PWM_generator_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $PWM_generator_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -219,36 +202,16 @@ CONFIG.START_PERIOD {2000000} \
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-    set_property -dict [ list \
-CONFIG.SMOOTHING {40} \
- ] $period_smoother_0
-
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-CONFIG.CONST_VAL {0xA0} \
-CONFIG.CONST_WIDTH {8} \
- ] $xlconstant_0
-
-  # Create instance: xlconstant_1, and set properties
-  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
-  set_property -dict [ list \
-CONFIG.CONST_VAL {0} \
-CONFIG.CONST_WIDTH {1} \
- ] $xlconstant_1
-
+  
   # Create port connections
+  connect_bd_net -net BLDC_STARTUP_0_startup_done_out [get_bd_ports startup_done_out] [get_bd_pins BLDC_STARTUP_0/startup_done_out]
   connect_bd_net -net BLDC_STARTUP_0_stepper_period_out [get_bd_pins BLDC_STARTUP_0/stepper_period_out] [get_bd_pins period_smoother_0/period_desired]
   connect_bd_net -net OL_BLDC_Stepper_0_SENSE_A_out [get_bd_ports SENSE_A_out] [get_bd_pins OL_BLDC_Stepper_0/SENSE_A_out]
   connect_bd_net -net OL_BLDC_Stepper_0_SENSE_B_out [get_bd_ports SENSE_B_out] [get_bd_pins OL_BLDC_Stepper_0/SENSE_B_out]
   connect_bd_net -net OL_BLDC_Stepper_0_SENSE_C_out [get_bd_ports SENSE_C_out] [get_bd_pins OL_BLDC_Stepper_0/SENSE_C_out]
-  connect_bd_net -net PWM_generator_0_PWM_out [get_bd_ports PWM_out] [get_bd_pins PWM_generator_0/PWM_out]
   connect_bd_net -net clk_in_1 [get_bd_ports clk_in] [get_bd_pins BLDC_STARTUP_0/clk_in] [get_bd_pins OL_BLDC_Stepper_0/clk_in] [get_bd_pins period_smoother_0/clk_in]
-  connect_bd_net -net dir_in_1 [get_bd_ports dir_in] [get_bd_pins PWM_generator_0/clk_IN]
   connect_bd_net -net period_smoother_0_period_out [get_bd_pins OL_BLDC_Stepper_0/period_in] [get_bd_pins period_smoother_0/period_out]
-  connect_bd_net -net reset_in_1 [get_bd_pins OL_BLDC_Stepper_0/reset_in] [get_bd_pins PWM_generator_0/reset_in] [get_bd_pins period_smoother_0/reset_in] [get_bd_pins xlconstant_1/dout]
-  connect_bd_net -net reset_in_1_1 [get_bd_ports STARTUP] [get_bd_pins BLDC_STARTUP_0/reset_in]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins PWM_generator_0/PWM_duty_in] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net reset_in_1 [get_bd_ports reset_in] [get_bd_pins BLDC_STARTUP_0/reset_in] [get_bd_pins OL_BLDC_Stepper_0/reset_in] [get_bd_pins period_smoother_0/reset_in]
 
   # Create address segments
 
@@ -256,30 +219,24 @@ CONFIG.CONST_WIDTH {1} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port PWM_out -pg 1 -y 300 -defaultsOSRD
-preplace port STARTUP -pg 1 -y 50 -defaultsOSRD
-preplace port SENSE_A_out -pg 1 -y 160 -defaultsOSRD
-preplace port clk_in -pg 1 -y 160 -defaultsOSRD
-preplace port SENSE_C_out -pg 1 -y 200 -defaultsOSRD
-preplace port SENSE_B_out -pg 1 -y 180 -defaultsOSRD
-preplace port dir_in -pg 1 -y 350 -defaultsOSRD
-preplace inst period_smoother_0 -pg 1 -lvl 2 -y 90 -defaultsOSRD
-preplace inst PWM_generator_0 -pg 1 -lvl 3 -y 300 -defaultsOSRD
-preplace inst BLDC_STARTUP_0 -pg 1 -lvl 1 -y 60 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 2 -y 300 -defaultsOSRD
-preplace inst OL_BLDC_Stepper_0 -pg 1 -lvl 3 -y 180 -defaultsOSRD
-preplace netloc OL_BLDC_Stepper_0_SENSE_A_out 1 3 1 NJ
-preplace netloc reset_in_1_1 1 0 1 NJ
-preplace netloc OL_BLDC_Stepper_0_SENSE_B_out 1 3 1 NJ
-preplace netloc dir_in_1 1 0 3 NJ 350 NJ 350 710J
-preplace netloc clk_in_1 1 0 3 20 160 340 160 NJ
-preplace netloc period_smoother_0_period_out 1 2 1 690
-preplace netloc xlconstant_0_dout 1 2 1 NJ
-preplace netloc PWM_generator_0_PWM_out 1 3 1 NJ
-preplace netloc OL_BLDC_Stepper_0_SENSE_C_out 1 3 1 NJ
-preplace netloc reset_in_1 1 1 2 350 180 700
-preplace netloc BLDC_STARTUP_0_stepper_period_out 1 1 1 N
-levelinfo -pg 1 0 180 520 850 1010 -top 0 -bot 370
+preplace port SENSE_A_out -pg 1 -y 50 -defaultsOSRD
+preplace port clk_in -pg 1 -y 190 -defaultsOSRD
+preplace port SENSE_C_out -pg 1 -y 90 -defaultsOSRD
+preplace port SENSE_B_out -pg 1 -y 70 -defaultsOSRD
+preplace port startup_done_out -pg 1 -y 170 -defaultsOSRD
+preplace port reset_in -pg 1 -y 170 -defaultsOSRD
+preplace inst period_smoother_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace inst BLDC_STARTUP_0 -pg 1 -lvl 2 -y 180 -defaultsOSRD
+preplace inst OL_BLDC_Stepper_0 -pg 1 -lvl 2 -y 70 -defaultsOSRD
+preplace netloc OL_BLDC_Stepper_0_SENSE_A_out 1 2 1 NJ
+preplace netloc OL_BLDC_Stepper_0_SENSE_B_out 1 2 1 NJ
+preplace netloc period_smoother_0_period_out 1 1 1 N
+preplace netloc clk_in_1 1 0 2 20 190 380
+preplace netloc BLDC_STARTUP_0_startup_done_out 1 2 1 NJ
+preplace netloc OL_BLDC_Stepper_0_SENSE_C_out 1 2 1 NJ
+preplace netloc reset_in_1 1 0 2 30 170 390
+preplace netloc BLDC_STARTUP_0_stepper_period_out 1 0 3 40 240 NJ 240 710
+levelinfo -pg 1 0 210 550 730 -top 0 -bot 250
 ",
 }
 

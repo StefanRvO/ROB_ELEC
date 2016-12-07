@@ -43,9 +43,9 @@ signal DIR_REV : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');
 signal DIR_NORM : STD_LOGIC_VECTOR(2 downto 0) := (others => '0');
 
 begin
-DIR_REV <= SENSE_in(1) & SENSE_in(0) & SENSE_in(2);
-DIR_NORM <= SENSE_in;
-SENSE_out <= DIR_NORM when(dir_in = '0') else DIR_REV;
+DIR_REV <= SENSE_in(1) & SENSE_in(2) & SENSE_in(0);
+DIR_NORM <= SENSE_in(0) & SENSE_in(2) & SENSE_in(1);
+SENSE_out <= DIR_NORM when(dir_in = '1') else DIR_REV;
 
 
 end Behavioral;

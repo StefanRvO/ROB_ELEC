@@ -85,7 +85,7 @@ ARCHITECTURE unity_period_smoother_0_0_arch OF unity_period_smoother_0_0 IS
 BEGIN
   U0 : period_smoother
     GENERIC MAP (
-      SMOOTHING => 40
+      SMOOTHING => 5
     )
     PORT MAP (
       period_desired => period_desired,

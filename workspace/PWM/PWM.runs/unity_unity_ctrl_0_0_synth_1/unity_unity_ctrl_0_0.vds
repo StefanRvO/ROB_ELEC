@@ -2,12 +2,12 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Thu Nov 24 19:22:19 2016
-# Process ID: 18377
-# Current directory: /home/stefan/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1
+# Start of session at: Wed Dec  7 00:15:08 2016
+# Process ID: 17866
+# Current directory: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1
 # Command line: vivado -log unity_unity_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_unity_ctrl_0_0.tcl
-# Log file: /home/stefan/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.vds
-# Journal file: /home/stefan/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/vivado.jou
+# Log file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.vds
+# Journal file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source unity_unity_ctrl_0_0.tcl -notrace
 Command: synth_design -top unity_unity_ctrl_0_0 -part xc7z010clg225-1 -mode out_of_context
@@ -15,15 +15,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18399 
+INFO: Helper process launched with PID 18082 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1060.668 ; gain = 157.301 ; free physical = 593 ; free virtual = 20020
+Starting Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 1059.672 ; gain = 156.301 ; free physical = 434 ; free virtual = 17522
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'unity_unity_ctrl_0_0' [/home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/synth/unity_unity_ctrl_0_0.vhd:65]
-INFO: [Synth 8-3491] module 'unity_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:34' bound to instance 'U0' of component 'unity_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/synth/unity_unity_ctrl_0_0.vhd:81]
-INFO: [Synth 8-638] synthesizing module 'unity_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:43]
-INFO: [Synth 8-3491] module 'wrap_unity' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wrap_unity.vhd:40' bound to instance 'UNITY' of component 'wrap_unity' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'wrap_unity' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wrap_unity.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'unity_unity_ctrl_0_0' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/synth/unity_unity_ctrl_0_0.vhd:69]
+INFO: [Synth 8-3491] module 'unity_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:34' bound to instance 'U0' of component 'unity_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/synth/unity_unity_ctrl_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'unity_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:48]
+INFO: [Synth 8-3491] module 'wrap_unity' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wrap_unity.vhd:40' bound to instance 'UNITY' of component 'wrap_unity' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'wrap_unity' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wrap_unity.vhd:77]
 	Parameter C_FPGA_FAMILY bound to: ZYNQ - type: string 
 	Parameter C_INPUT_CLK_PERIOD_NS bound to: 5.000000 - type: float 
 	Parameter C_INPUT_CLK_MULTIPLY_96M bound to: 12 - type: integer 
@@ -63,8 +63,8 @@ INFO: [Synth 8-638] synthesizing module 'wrap_unity' [/home/stefan/PWM/PWM.srcs/
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
 	Parameter STARTUP_WAIT bound to: 0 - type: bool 
-INFO: [Synth 8-113] binding component instance 'zynq_clk_mmcm' to cell 'MMCME2_BASE' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wrap_unity.vhd:174]
-INFO: [Synth 8-638] synthesizing module 'uart_wb_link' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_wb_link.vhd:67]
+INFO: [Synth 8-113] binding component instance 'zynq_clk_mmcm' to cell 'MMCME2_BASE' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wrap_unity.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'uart_wb_link' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_wb_link.vhd:67]
 	Parameter C_PL_TICKS_PR_BIT bound to: 16 - type: integer 
 	Parameter C_PL_BAUD_RATE_DVSR bound to: 2 - type: integer 
 	Parameter C_PL_STOPBITS bound to: 1 - type: integer 
@@ -81,7 +81,7 @@ INFO: [Synth 8-638] synthesizing module 'uart_wb_link' [/home/stefan/PWM/PWM.src
 	Parameter C_WB_CLK_FREQ bound to: 50000000 - type: integer 
 	Parameter C_WB_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_WB_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'uart_gab_link' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'uart_gab_link' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link.vhd:75]
 	Parameter C_PL_TICKS_PR_BIT bound to: 16 - type: integer 
 	Parameter C_PL_BAUD_RATE_DVSR bound to: 2 - type: integer 
 	Parameter C_PL_RX_FIFO_ADDR_W bound to: 2 - type: integer 
@@ -102,7 +102,7 @@ INFO: [Synth 8-638] synthesizing module 'uart_gab_link' [/home/stefan/PWM/PWM.sr
 	Parameter C_BII_CLK_FREQ bound to: 50000000 - type: integer 
 	Parameter C_BII_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_BII_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'uart_asynch' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'uart_asynch' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:101]
 	Parameter C_ERROR_CNT_WIDTH bound to: 0 - type: integer 
 	Parameter C_BIT_TXRX_ORDER bound to: 0 - type: integer 
 	Parameter C_TICKS_PR_BIT bound to: 16 - type: integer 
@@ -112,24 +112,24 @@ INFO: [Synth 8-638] synthesizing module 'uart_asynch' [/home/stefan/PWM/PWM.srcs
 	Parameter C_DATABITS bound to: 8 - type: integer 
 	Parameter C_STOPBITS bound to: 1 - type: integer 
 	Parameter C_PARITY bound to: 0 - type: integer 
-WARNING: [Synth 8-506] null port 'framing_err_cnt_o' ignored [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:86]
-WARNING: [Synth 8-506] null port 'parity_err_cnt_o' ignored [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:87]
-WARNING: [Synth 8-506] null port 'overrun_err_cnt_o' ignored [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:88]
-WARNING: [Synth 8-3919] null assignment ignored [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:148]
-WARNING: [Synth 8-3919] null assignment ignored [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:151]
-WARNING: [Synth 8-3919] null assignment ignored [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:154]
-INFO: [Synth 8-638] synthesizing module 'mod_m_counter' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/mod_m_counter.vhd:40]
+WARNING: [Synth 8-506] null port 'framing_err_cnt_o' ignored [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:86]
+WARNING: [Synth 8-506] null port 'parity_err_cnt_o' ignored [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:87]
+WARNING: [Synth 8-506] null port 'overrun_err_cnt_o' ignored [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:88]
+WARNING: [Synth 8-3919] null assignment ignored [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:148]
+WARNING: [Synth 8-3919] null assignment ignored [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:151]
+WARNING: [Synth 8-3919] null assignment ignored [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'mod_m_counter' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/mod_m_counter.vhd:40]
 	Parameter C_WIDTH bound to: 1 - type: integer 
 	Parameter C_MOD bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'mod_m_counter' (1#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/mod_m_counter.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_rx.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'mod_m_counter' (1#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/mod_m_counter.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_rx.vhd:50]
 	Parameter C_BIT_RX_ORDER bound to: 0 - type: integer 
 	Parameter C_TICKS_PR_BIT bound to: 16 - type: integer 
 	Parameter C_DATABITS bound to: 8 - type: integer 
 	Parameter C_STOPBITS bound to: 1 - type: integer 
 	Parameter C_PARITY bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'uart_rx' (2#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_rx.vhd:50]
-INFO: [Synth 8-638] synthesizing module 'fifo' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (2#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_rx.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'fifo' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
 	Parameter ADDR_WIDTH bound to: 2 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter MODE_ASYNC bound to: 1 - type: integer 
@@ -140,72 +140,72 @@ INFO: [Synth 8-638] synthesizing module 'fifo' [/home/stefan/PWM/PWM.srcs/source
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter MODE_ASYNC bound to: 1 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
-INFO: [Synth 8-638] synthesizing module 'fifo_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'fifo_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 2 - type: integer 
 	Parameter MODE_ASYNC bound to: 1 - type: integer 
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
 	Parameter N bound to: 2 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
-INFO: [Synth 8-638] synthesizing module 'fifo_read_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
+INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'fifo_read_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
 	Parameter N bound to: 2 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_read_ctrl' (3#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'fifo_read_ctrl' (3#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
 	Parameter N bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
-INFO: [Synth 8-638] synthesizing module 'fifo_write_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
+INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'fifo_write_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
 	Parameter N bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_write_ctrl' (4#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
-INFO: [Synth 8-638] synthesizing module 'synchronizer_synchdepth_2p' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Synchronizer.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'fifo_write_ctrl' (4#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'synchronizer_synchdepth_2p' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Synchronizer.vhd:96]
 	Parameter N bound to: 3 - type: integer 
 	Parameter D bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'synchronizer_synchdepth_2p' (5#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Synchronizer.vhd:96]
-INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl' (6#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'synchronizer_synchdepth_2p' (5#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Synchronizer.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl' (6#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 2 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'rams_09' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
+INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'rams_09' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
 	Parameter ADDR_WIDTH bound to: 2 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rams_09' (7#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'fifo' (8#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'uart_tx' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_tx.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'rams_09' (7#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'fifo' (8#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_tx.vhd:49]
 	Parameter C_BIT_TX_ORDER bound to: 0 - type: integer 
 	Parameter C_DATABITS bound to: 8 - type: integer 
 	Parameter C_TICKS_PR_BIT bound to: 16 - type: integer 
 	Parameter C_STOPBITS bound to: 1 - type: integer 
 	Parameter C_PARITY bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'uart_tx' (9#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_tx.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'uart_asynch' (10#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:101]
-INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (9#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_tx.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'uart_asynch' (10#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_asynch.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl.vhd:74]
 	Parameter C_FULL_DL bound to: 1 - type: integer 
 	Parameter C_RXFIFO_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_TXFIFO_A_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_TXFIFO_B_ADDR_WIDTH bound to: 2 - type: integer 
 	Parameter C_UART_PARITY_EN bound to: 0 - type: integer 
 	Parameter C_CHECKSUM bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl_ascii_dec' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_ascii_dec.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl_ascii_dec' (11#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_ascii_dec.vhd:50]
-INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl_rx_fsm_full' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_rx_fsm.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl_ascii_dec' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_ascii_dec.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl_ascii_dec' (11#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_ascii_dec.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl_rx_fsm_full' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_rx_fsm.vhd:86]
 	Parameter C_UART_PARITY_EN bound to: 0 - type: integer 
 	Parameter C_CHECKSUM bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'checksum_crc' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/checksum.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'checksum_crc' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/checksum.vhd:108]
 	Parameter C_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_CHKS_WIDTH bound to: 8 - type: integer 
 	Parameter C_CRC_POLYNOMIAL bound to: 7 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'checksum_crc' (12#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/checksum.vhd:108]
-INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl_rx_fsm_full' (13#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_rx_fsm.vhd:86]
-INFO: [Synth 8-638] synthesizing module 'dual_fifo_mux' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/dual_fifo_mux.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'checksum_crc' (12#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/checksum.vhd:108]
+INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl_rx_fsm_full' (13#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_rx_fsm.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'dual_fifo_mux' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/dual_fifo_mux.vhd:53]
 	Parameter C_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 9 - type: integer 
 	Parameter C_PRE_LOAD bound to: 0 - type: integer 
 	Parameter C_EN_WRT_ACK bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'fifo_in_mux' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/fifo_in_mux.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'fifo_in_mux' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/fifo_in_mux.vhd:56]
 	Parameter C_DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_in_mux' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/fifo_in_mux.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'fifo__parameterized0' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'fifo_in_mux' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/fifo_in_mux.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'fifo__parameterized0' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
@@ -216,34 +216,34 @@ INFO: [Synth 8-638] synthesizing module 'fifo__parameterized0' [/home/stefan/PWM
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
-INFO: [Synth 8-638] synthesizing module 'fifo_ctrl__parameterized1' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'fifo_ctrl__parameterized1' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
 	Parameter N bound to: 6 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
-INFO: [Synth 8-638] synthesizing module 'fifo_read_ctrl__parameterized1' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
+INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'fifo_read_ctrl__parameterized1' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
 	Parameter N bound to: 6 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_read_ctrl__parameterized1' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'fifo_read_ctrl__parameterized1' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
 	Parameter N bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
-INFO: [Synth 8-638] synthesizing module 'fifo_write_ctrl__parameterized1' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
+INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'fifo_write_ctrl__parameterized1' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
 	Parameter N bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_write_ctrl__parameterized1' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
-INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl__parameterized1' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'fifo_write_ctrl__parameterized1' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl__parameterized1' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'rams_09__parameterized1' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
+INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'rams_09__parameterized1' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rams_09__parameterized1' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized0' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'fifo__parameterized1' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'rams_09__parameterized1' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized0' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'fifo__parameterized1' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
@@ -254,38 +254,38 @@ INFO: [Synth 8-638] synthesizing module 'fifo__parameterized1' [/home/stefan/PWM
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
-INFO: [Synth 8-638] synthesizing module 'fifo_ctrl__parameterized3' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'fifo_ctrl__parameterized3' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
 	Parameter N bound to: 6 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
-INFO: [Synth 8-638] synthesizing module 'fifo_read_ctrl__parameterized3' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
+INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'fifo_read_ctrl__parameterized3' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
 	Parameter N bound to: 6 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_read_ctrl__parameterized3' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'fifo_read_ctrl__parameterized3' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
 	Parameter N bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
-INFO: [Synth 8-638] synthesizing module 'fifo_write_ctrl__parameterized3' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
+INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'fifo_write_ctrl__parameterized3' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
 	Parameter N bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_write_ctrl__parameterized3' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
-INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl__parameterized3' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'fifo_write_ctrl__parameterized3' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl__parameterized3' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'rams_09__parameterized3' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
+INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'rams_09__parameterized3' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rams_09__parameterized3' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized1' (14#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'fifo_out_mux' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/fifo_out_mux.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'rams_09__parameterized3' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized1' (14#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'fifo_out_mux' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/fifo_out_mux.vhd:49]
 	Parameter C_DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_out_mux' (15#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/fifo_out_mux.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'dual_fifo_mux' (16#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/dual_fifo_mux.vhd:53]
-INFO: [Synth 8-638] synthesizing module 'fifo__parameterized2' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'fifo_out_mux' (15#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/fifo_out_mux.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'dual_fifo_mux' (16#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/dual_fifo_mux.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'fifo__parameterized2' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
 	Parameter ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
@@ -296,34 +296,34 @@ INFO: [Synth 8-638] synthesizing module 'fifo__parameterized2' [/home/stefan/PWM
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
-INFO: [Synth 8-638] synthesizing module 'fifo_ctrl__parameterized5' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'fifo_ctrl__parameterized5' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
 	Parameter N bound to: 4 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
-INFO: [Synth 8-638] synthesizing module 'fifo_read_ctrl__parameterized5' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
+INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'fifo_read_ctrl__parameterized5' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
 	Parameter N bound to: 4 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_read_ctrl__parameterized5' (16#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'fifo_read_ctrl__parameterized5' (16#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:76]
 	Parameter N bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
-INFO: [Synth 8-638] synthesizing module 'fifo_write_ctrl__parameterized5' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
+INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'fifo_write_ctrl__parameterized5' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
 	Parameter N bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'fifo_write_ctrl__parameterized5' (16#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
-INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl__parameterized5' (16#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'fifo_write_ctrl__parameterized5' (16#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl__parameterized5' (16#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
-INFO: [Synth 8-638] synthesizing module 'rams_09__parameterized5' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
+INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'rams_09__parameterized5' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
 	Parameter ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DATA_WIDTH bound to: 9 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rams_09__parameterized5' (16#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized2' (16#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'fifo__parameterized3' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-256] done synthesizing module 'rams_09__parameterized5' (16#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized2' (16#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'fifo__parameterized3' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
 	Parameter ADDR_WIDTH bound to: 2 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
@@ -334,29 +334,29 @@ INFO: [Synth 8-638] synthesizing module 'fifo__parameterized3' [/home/stefan/PWM
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
-INFO: [Synth 8-638] synthesizing module 'fifo_ctrl__parameterized7' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-3491] module 'fifo_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:63' bound to instance 'fifo_ctrl_inst' of component 'fifo_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'fifo_ctrl__parameterized7' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 2 - type: integer 
 	Parameter MODE_ASYNC bound to: 0 - type: integer 
 	Parameter SYNC_DEPTH bound to: 2 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
 	Parameter N bound to: 2 - type: integer 
 	Parameter PRE_LOAD bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
+INFO: [Synth 8-3491] module 'fifo_read_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoReadPort.vhd:59' bound to instance 'read_ctrl' of component 'fifo_read_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:159]
 	Parameter N bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
-INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl__parameterized7' (16#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
+INFO: [Synth 8-3491] module 'fifo_write_ctrl' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoWritePort.vhd:55' bound to instance 'write_ctrl' of component 'fifo_write_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:170]
+INFO: [Synth 8-256] done synthesizing module 'fifo_ctrl__parameterized7' (16#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/FifoCtrl.vhd:85]
 	Parameter ADDR_WIDTH bound to: 2 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
-INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized3' (16#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl_tx_fsm' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_tx_fsm.vhd:57]
+INFO: [Synth 8-3491] module 'rams_09' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/RegFile2.vhd:53' bound to instance 'regfile' of component 'rams_09' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:168]
+INFO: [Synth 8-256] done synthesizing module 'fifo__parameterized3' (16#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/Fifo.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl_tx_fsm' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_tx_fsm.vhd:57]
 	Parameter C_CHECKSUM bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl_tx_fsm' (17#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_tx_fsm.vhd:57]
-INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl_ascii_enc' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_ascii_enc.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl_ascii_enc' (18#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_ascii_enc.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl' (19#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl.vhd:74]
-INFO: [Synth 8-638] synthesizing module 'gab_link_al_fsm' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_fsm.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl_tx_fsm' (17#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_tx_fsm.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'uart_gab_link_dl_ascii_enc' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_ascii_enc.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl_ascii_enc' (18#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl_ascii_enc.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'uart_gab_link_dl' (19#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link_dl.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'gab_link_al_fsm' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_fsm.vhd:73]
 	Parameter C_RLC_EN bound to: 1 - type: integer 
 	Parameter C_RM_SIZE bound to: 32 - type: integer 
 	Parameter C_PUB_MODE bound to: 2 - type: integer 
@@ -367,51 +367,51 @@ INFO: [Synth 8-638] synthesizing module 'gab_link_al_fsm' [/home/stefan/PWM/PWM.
 	Parameter C_SUBGRP_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_BII_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_BII_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'rr_prio_enc' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/rr_prio_enc.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'rr_prio_enc' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/rr_prio_enc.vhd:40]
 	Parameter C_REQ_SIZE bound to: 2 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rr_prio_enc' (20#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/rr_prio_enc.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'subscription_manager' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_submngr.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'rr_prio_enc' (20#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/rr_prio_enc.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'subscription_manager' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_submngr.vhd:70]
 	Parameter C_CLK_FREQ bound to: 50000000 - type: integer 
 	Parameter C_PUBLISH_SYNC_FREQ bound to: 1000 - type: integer 
 	Parameter C_SUBMNGR_SGID_SIZE bound to: 1 - type: integer 
 	Parameter C_SUBGRP_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_SUBGRP_DATA_SIZE bound to: 6 - type: integer 
 	Parameter C_SUBGRP_RATE_SIZE bound to: 16 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'pulse_gen' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/pulse_gen.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'pulse_gen' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/pulse_gen.vhd:35]
 	Parameter C_PULSE_WIDTH bound to: 1 - type: integer 
 	Parameter C_PULSE_PERIOD bound to: 50000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'pulse_gen' (21#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/pulse_gen.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'pulse_gen' (21#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/pulse_gen.vhd:35]
 	Parameter C_SG_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_SG_DATA_SIZE bound to: 6 - type: integer 
 	Parameter C_SG_RATE_SIZE bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'subscription_group' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_subgrp.vhd:28' bound to instance 'sg' of component 'subscription_group' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_submngr.vhd:200]
-INFO: [Synth 8-638] synthesizing module 'subscription_group' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_subgrp.vhd:60]
+INFO: [Synth 8-3491] module 'subscription_group' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_subgrp.vhd:28' bound to instance 'sg' of component 'subscription_group' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_submngr.vhd:200]
+INFO: [Synth 8-638] synthesizing module 'subscription_group' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_subgrp.vhd:60]
 	Parameter C_SG_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_SG_DATA_SIZE bound to: 6 - type: integer 
 	Parameter C_SG_RATE_SIZE bound to: 16 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'subscription_group' (22#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_subgrp.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'subscription_group' (22#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_subgrp.vhd:60]
 	Parameter C_SG_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_SG_DATA_SIZE bound to: 6 - type: integer 
 	Parameter C_SG_RATE_SIZE bound to: 16 - type: integer 
-INFO: [Synth 8-3491] module 'subscription_group' declared at '/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_subgrp.vhd:28' bound to instance 'sg' of component 'subscription_group' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_submngr.vhd:200]
-INFO: [Synth 8-256] done synthesizing module 'subscription_manager' (23#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_submngr.vhd:70]
-INFO: [Synth 8-256] done synthesizing module 'gab_link_al_fsm' (24#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_fsm.vhd:73]
-INFO: [Synth 8-256] done synthesizing module 'uart_gab_link' (25#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link.vhd:75]
-INFO: [Synth 8-638] synthesizing module 'wb_mst_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wb_mst_ctrl.vhd:51]
+INFO: [Synth 8-3491] module 'subscription_group' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_subgrp.vhd:28' bound to instance 'sg' of component 'subscription_group' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_submngr.vhd:200]
+INFO: [Synth 8-256] done synthesizing module 'subscription_manager' (23#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_submngr.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'gab_link_al_fsm' (24#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/gab_link_al_fsm.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'uart_gab_link' (25#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_gab_link.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'wb_mst_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wb_mst_ctrl.vhd:51]
 	Parameter C_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'wb_mst_ctrl' (26#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wb_mst_ctrl.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'uart_wb_link' (27#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_wb_link.vhd:67]
-INFO: [Synth 8-638] synthesizing module 'wb_mem' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wb_mem.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'wb_mst_ctrl' (26#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wb_mst_ctrl.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'uart_wb_link' (27#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_wb_link.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'wb_mem' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wb_mem.vhd:51]
 	Parameter C_MEM_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RAMSTYLE bound to: AUTO - type: string 
 	Parameter C_IO_ADDR_BIT bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'wb_slv_mem_ctrl' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wb_slv_mem_ctrl.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'wb_slv_mem_ctrl' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wb_slv_mem_ctrl.vhd:48]
 	Parameter C_MEM_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'wb_slv_mem_ctrl' (28#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wb_slv_mem_ctrl.vhd:48]
-INFO: [Synth 8-638] synthesizing module 'ram_rwrw' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/ram_rwrw.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'wb_slv_mem_ctrl' (28#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wb_slv_mem_ctrl.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'ram_rwrw' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/ram_rwrw.vhd:95]
 	Parameter ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter RAMSTYLE bound to: AUTO - type: string 
@@ -420,11 +420,11 @@ INFO: [Synth 8-638] synthesizing module 'ram_rwrw' [/home/stefan/PWM/PWM.srcs/so
 	Parameter WRITE_MODE_A bound to: 0 - type: integer 
 	Parameter WRITE_MODE_B bound to: 0 - type: integer 
 	Parameter INIT_DATA bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'ram_rwrw' (29#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/ram_rwrw.vhd:95]
-INFO: [Synth 8-256] done synthesizing module 'wb_mem' (30#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wb_mem.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'wrap_unity' (31#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/wrap_unity.vhd:77]
-INFO: [Synth 8-256] done synthesizing module 'unity_ctrl' (32#1) [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'unity_unity_ctrl_0_0' (33#1) [/home/stefan/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/synth/unity_unity_ctrl_0_0.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'ram_rwrw' (29#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/ram_rwrw.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'wb_mem' (30#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wb_mem.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'wrap_unity' (31#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/wrap_unity.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'unity_ctrl' (32#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'unity_unity_ctrl_0_0' (33#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/synth/unity_unity_ctrl_0_0.vhd:69]
 WARNING: [Synth 8-3331] design wb_slv_mem_ctrl has unconnected port wb_i[adr][31]
 WARNING: [Synth 8-3331] design wb_slv_mem_ctrl has unconnected port wb_i[adr][30]
 WARNING: [Synth 8-3331] design wb_slv_mem_ctrl has unconnected port wb_i[adr][29]
@@ -464,17 +464,17 @@ WARNING: [Synth 8-3331] design uart_asynch has unconnected port clr_err_cnt_i[2]
 WARNING: [Synth 8-3331] design uart_asynch has unconnected port clr_err_cnt_i[1]
 WARNING: [Synth 8-3331] design uart_asynch has unconnected port clr_err_cnt_i[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1123.137 ; gain = 219.770 ; free physical = 516 ; free virtual = 19944
+Finished Synthesize : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 1122.141 ; gain = 218.770 ; free physical = 463 ; free virtual = 17580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1123.137 ; gain = 219.770 ; free physical = 515 ; free virtual = 19943
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 1122.141 ; gain = 218.770 ; free physical = 460 ; free virtual = 17579
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1131.141 ; gain = 227.773 ; free physical = 515 ; free virtual = 19943
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 1130.145 ; gain = 226.773 ; free physical = 460 ; free virtual = 17579
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg225-1
 INFO: [Synth 8-5544] ROM "rx_done_tick_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -545,6 +545,7 @@ INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because addres
 INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "mem_data_in" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "addr4_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "addr5_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "Umem_addr_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -619,9 +620,8 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'wb_mst_ctrl'
 INFO: [Synth 8-3971] The signal bram_reg was recognized as a true dual port RAM template.
-WARNING: [Synth 8-327] inferring latch for variable 'mem_data_in_reg' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:92]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1216.305 ; gain = 312.938 ; free physical = 423 ; free virtual = 19858
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1221.340 ; gain = 317.969 ; free physical = 169 ; free virtual = 17346
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -653,7 +653,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 71    
 +---Registers : 
 	               40 Bit    Registers := 1     
-	               32 Bit    Registers := 4     
+	               32 Bit    Registers := 6     
 	               16 Bit    Registers := 2     
 	                8 Bit    Registers := 14    
 	                7 Bit    Registers := 6     
@@ -673,6 +673,7 @@ Detailed RTL Component Info :
 	   7 Input     32 Bit        Muxes := 1     
 	   5 Input     32 Bit        Muxes := 4     
 	   4 Input     32 Bit        Muxes := 1     
+	   9 Input     32 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 17    
 	  20 Input      9 Bit        Muxes := 1     
@@ -708,10 +709,11 @@ Detailed RTL Component Info :
 	  13 Input      3 Bit        Muxes := 1     
 	  63 Input      3 Bit        Muxes := 3     
 	  11 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 4     
 	  63 Input      2 Bit        Muxes := 6     
 	   6 Input      1 Bit        Muxes := 18    
-	   2 Input      1 Bit        Muxes := 73    
+	   2 Input      1 Bit        Muxes := 76    
 	   3 Input      1 Bit        Muxes := 16    
 	   8 Input      1 Bit        Muxes := 14    
 	   4 Input      1 Bit        Muxes := 4     
@@ -1064,12 +1066,14 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
 	                6 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 +---Muxes : 
+	   9 Input     32 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
 	   4 Input      1 Bit        Muxes := 1     
 	   9 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -1088,7 +1092,7 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/uart_tx_inst/parity_reg_reg' into 'U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/uart_rx_inst/parity_reg_reg' [/home/stefan/PWM/PWM.srcs/sources_1/new/unity_link/uart_tx.vhd:104]
+INFO: [Synth 8-4471] merging register 'U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/uart_tx_inst/parity_reg_reg' into 'U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/uart_rx_inst/parity_reg_reg' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/unity_link/uart_tx.vhd:104]
 INFO: [Synth 8-5546] ROM "U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_RX_GEN.uart_gab_link_dl_rx_fsm_inst/star_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3971] The signal U0/UNITY/wb_mem_inst/ram_rwrw_inst/bram_reg was recognized as a true dual port RAM template.
 INFO: [Synth 8-3886] merging instance 'U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/gab_link_al_fsm_inst/SUB_GEN.subscription_manager_inst/SG_GEN[0].sg/sync_strobe_reg_reg[0]' (FDS) to 'U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/gab_link_al_fsm_inst/SUB_GEN.subscription_manager_inst/SG_GEN[1].sg/sync_strobe_reg_reg[0]'
@@ -1122,41 +1126,11 @@ INFO: [Synth 8-3886] merging instance 'U0/UNITY/uart_wb_link_inst/uart_gab_link_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/gab_link_al_fsm_inst/error_reg_reg[15] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/uart_gab_link_dl_ascii_enc_inst/ascii_hb_reg_reg[5] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/uart_gab_link_dl_ascii_enc_inst/ascii_lb_reg_reg[5] )
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[2]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[4]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[5]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[6]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[7]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[8]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[9]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[10]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[11]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[12]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[13]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[14]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[15]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[16]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[17]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[18]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[19]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[20]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[21]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[22]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[23]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[24]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[25]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[26]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[27]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[28]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[29]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/mem_data_in_reg[30]' (LD) to 'U0/mem_data_in_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/mem_data_in_reg[31] )
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/lsr_o_reg[7]) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/lsr_o_reg[6]) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/lsr_o_reg[2]) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/lsr_o_reg[0]) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/gab_link_al_fsm_inst/error_reg_reg[15]) is unused and will be removed from module unity_unity_ctrl_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/mem_data_in_reg[31]) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/uart_gab_link_dl_ascii_enc_inst/ascii_hb_reg_reg[5]) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/uart_gab_link_dl_ascii_enc_inst/ascii_lb_reg_reg[5]) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/rx_fifo_inst/fifo_ctrl_inst/read_ctrl/empty_flag_reg_reg) is unused and will be removed from module unity_unity_ctrl_0_0.
@@ -1165,7 +1139,7 @@ INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_lin
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_TX_GEN.txfifo_a_inst/fifo_ctrl_inst/read_ctrl/empty_flag_reg_reg) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_TX_GEN.txfifo_b_inst/fifo_ctrl_inst/read_ctrl/empty_flag_reg_reg) is unused and will be removed from module unity_unity_ctrl_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 350 ; free virtual = 19786
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 137 ; free virtual = 17004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1209,7 +1183,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 350 ; free virtual = 19786
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 137 ; free virtual = 17004
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1221,8 +1195,9 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance U0/UNITY/wb_mem_inst/ram_rwrw_inst/bram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance U0/UNITY/wb_mem_inst/ram_rwrw_inst/bram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 349 ; free virtual = 19785
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 160 ; free virtual = 16945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1246,7 +1221,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 349 ; free virtual = 19785
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 132 ; free virtual = 16914
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1259,7 +1234,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 349 ; free virtual = 19785
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 131 ; free virtual = 16913
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1271,25 +1246,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 348 ; free virtual = 19784
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 132 ; free virtual = 16897
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 348 ; free virtual = 19784
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 144 ; free virtual = 16881
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 345 ; free virtual = 19781
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 134 ; free virtual = 16838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 345 ; free virtual = 19781
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 131 ; free virtual = 16835
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1307,66 +1282,65 @@ Report Cell Usage:
 +------+------------+------+
 |1     |CARRY4      |    26|
 |2     |LUT1        |    54|
-|3     |LUT2        |   148|
-|4     |LUT3        |   103|
-|5     |LUT4        |   224|
-|6     |LUT5        |   250|
-|7     |LUT6        |   631|
+|3     |LUT2        |   142|
+|4     |LUT3        |   110|
+|5     |LUT4        |   234|
+|6     |LUT5        |   246|
+|7     |LUT6        |   647|
 |8     |MMCME2_BASE |     1|
-|9     |MUXF7       |     5|
+|9     |MUXF7       |     8|
 |10    |RAM16X1S    |    12|
 |11    |RAM32M      |     8|
 |12    |RAM64M      |     6|
 |13    |RAMB36E1    |     1|
 |14    |FDCE        |    46|
-|15    |FDRE        |   390|
+|15    |FDRE        |   488|
 |16    |FDSE        |     7|
-|17    |LD          |     3|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+----------------------------------------------------------+--------------------------------+------+
 |      |Instance                                                  |Module                          |Cells |
 +------+----------------------------------------------------------+--------------------------------+------+
-|1     |top                                                       |                                |  1915|
-|2     |  U0                                                      |unity_ctrl                      |  1915|
-|3     |    UNITY                                                 |wrap_unity                      |  1896|
-|4     |      uart_wb_link_inst                                   |uart_wb_link                    |  1887|
-|5     |        uart_gab_link_inst                                |uart_gab_link                   |  1837|
-|6     |          gab_link_al_fsm_inst                            |gab_link_al_fsm                 |   926|
-|7     |            \SUB_GEN.subscription_manager_inst            |subscription_manager            |   459|
-|8     |              \SG_GEN[0].sg                               |subscription_group              |   153|
-|9     |              \SG_GEN[1].sg                               |subscription_group_12           |   231|
+|1     |top                                                       |                                |  2036|
+|2     |  U0                                                      |unity_ctrl                      |  2036|
+|3     |    UNITY                                                 |wrap_unity                      |  1888|
+|4     |      uart_wb_link_inst                                   |uart_wb_link                    |  1882|
+|5     |        uart_gab_link_inst                                |uart_gab_link                   |  1832|
+|6     |          gab_link_al_fsm_inst                            |gab_link_al_fsm                 |   933|
+|7     |            \SUB_GEN.subscription_manager_inst            |subscription_manager            |   462|
+|8     |              \SG_GEN[0].sg                               |subscription_group              |   149|
+|9     |              \SG_GEN[1].sg                               |subscription_group_12           |   239|
 |10    |              synct_strobe_gen_inst                       |pulse_gen                       |    54|
-|11    |          uart_gab_link_dl_inst                           |uart_gab_link_dl                |   736|
-|12    |            \FULL_DL_RX_GEN.dual_rxfifo_mux_inst          |dual_fifo_mux                   |   247|
-|13    |              fifo_1_inst                                 |fifo__parameterized0            |    70|
-|14    |                fifo_ctrl_inst                            |fifo_ctrl__parameterized1       |    66|
-|15    |                  read_ctrl                               |fifo_read_ctrl__parameterized1  |    43|
-|16    |                  write_ctrl                              |fifo_write_ctrl__parameterized1 |    23|
-|17    |                regfile                                   |rams_09__parameterized1         |     4|
-|18    |              fifo_2_inst                                 |fifo__parameterized1            |   177|
-|19    |                fifo_ctrl_inst                            |fifo_ctrl__parameterized3       |   120|
-|20    |                  read_ctrl                               |fifo_read_ctrl__parameterized3  |    93|
-|21    |                  write_ctrl                              |fifo_write_ctrl__parameterized3 |    27|
-|22    |                regfile                                   |rams_09__parameterized3         |    57|
-|23    |            \FULL_DL_RX_GEN.uart_gab_link_dl_rx_fsm_inst  |uart_gab_link_dl_rx_fsm_full    |   146|
+|11    |          uart_gab_link_dl_inst                           |uart_gab_link_dl                |   723|
+|12    |            \FULL_DL_RX_GEN.dual_rxfifo_mux_inst          |dual_fifo_mux                   |   238|
+|13    |              fifo_1_inst                                 |fifo__parameterized0            |    78|
+|14    |                fifo_ctrl_inst                            |fifo_ctrl__parameterized1       |    64|
+|15    |                  read_ctrl                               |fifo_read_ctrl__parameterized1  |    37|
+|16    |                  write_ctrl                              |fifo_write_ctrl__parameterized1 |    27|
+|17    |                regfile                                   |rams_09__parameterized1         |    14|
+|18    |              fifo_2_inst                                 |fifo__parameterized1            |   160|
+|19    |                fifo_ctrl_inst                            |fifo_ctrl__parameterized3       |   135|
+|20    |                  read_ctrl                               |fifo_read_ctrl__parameterized3  |   106|
+|21    |                  write_ctrl                              |fifo_write_ctrl__parameterized3 |    29|
+|22    |                regfile                                   |rams_09__parameterized3         |    25|
+|23    |            \FULL_DL_RX_GEN.uart_gab_link_dl_rx_fsm_inst  |uart_gab_link_dl_rx_fsm_full    |   143|
 |24    |              \CHECKSUM_CRC_GEN.checksum_crc8             |checksum_crc_11                 |    30|
-|25    |            \FULL_DL_TX_GEN.txfifo_a_inst                 |fifo__parameterized2            |    71|
-|26    |              fifo_ctrl_inst                              |fifo_ctrl__parameterized5       |    27|
+|25    |            \FULL_DL_TX_GEN.txfifo_a_inst                 |fifo__parameterized2            |    70|
+|26    |              fifo_ctrl_inst                              |fifo_ctrl__parameterized5       |    26|
 |27    |                read_ctrl                                 |fifo_read_ctrl__parameterized5  |    11|
-|28    |                write_ctrl                                |fifo_write_ctrl__parameterized5 |    16|
+|28    |                write_ctrl                                |fifo_write_ctrl__parameterized5 |    15|
 |29    |              regfile                                     |rams_09__parameterized5         |    44|
 |30    |            \FULL_DL_TX_GEN.txfifo_b_inst                 |fifo__parameterized3            |    18|
 |31    |              fifo_ctrl_inst                              |fifo_ctrl__parameterized7       |    16|
 |32    |                read_ctrl                                 |fifo_read_ctrl_9                |     7|
 |33    |                write_ctrl                                |fifo_write_ctrl_10              |     9|
 |34    |              regfile                                     |rams_09_8                       |     2|
-|35    |            uart_gab_link_dl_ascii_dec_inst               |uart_gab_link_dl_ascii_dec      |   109|
+|35    |            uart_gab_link_dl_ascii_dec_inst               |uart_gab_link_dl_ascii_dec      |   108|
 |36    |            uart_gab_link_dl_ascii_enc_inst               |uart_gab_link_dl_ascii_enc      |    50|
-|37    |            uart_gab_link_dl_tx_fsm_inst                  |uart_gab_link_dl_tx_fsm         |    95|
-|38    |              \CHECKSUM_CRC_GEN.checksum_crc8             |checksum_crc                    |    52|
-|39    |          uart_inst                                       |uart_asynch                     |   175|
+|37    |            uart_gab_link_dl_tx_fsm_inst                  |uart_gab_link_dl_tx_fsm         |    96|
+|38    |              \CHECKSUM_CRC_GEN.checksum_crc8             |checksum_crc                    |    53|
+|39    |          uart_inst                                       |uart_asynch                     |   176|
 |40    |            baudrate_gen_inst                             |mod_m_counter                   |     2|
 |41    |            rx_fifo_inst                                  |fifo                            |    31|
 |42    |              fifo_ctrl_inst                              |fifo_ctrl_2                     |    29|
@@ -1383,39 +1357,38 @@ Report Instance Areas:
 |53    |                write_ctrl                                |fifo_write_ctrl                 |     8|
 |54    |              regfile                                     |rams_09                         |     3|
 |55    |            uart_rx_inst                                  |uart_rx                         |    52|
-|56    |            uart_tx_inst                                  |uart_tx                         |    47|
+|56    |            uart_tx_inst                                  |uart_tx                         |    48|
 |57    |        wb_mst_ctrl_inst                                  |wb_mst_ctrl                     |    50|
-|58    |      wb_mem_inst                                         |wb_mem                          |     8|
-|59    |        ram_rwrw_inst                                     |ram_rwrw                        |     5|
+|58    |      wb_mem_inst                                         |wb_mem                          |     5|
+|59    |        ram_rwrw_inst                                     |ram_rwrw                        |     2|
 |60    |        wb_slv_mem_ctrl_inst                              |wb_slv_mem_ctrl                 |     3|
 +------+----------------------------------------------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.336 ; gain = 407.969 ; free physical = 345 ; free virtual = 19781
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1313.371 ; gain = 410.000 ; free physical = 130 ; free virtual = 16834
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 45 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1311.336 ; gain = 308.668 ; free physical = 345 ; free virtual = 19781
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 1311.344 ; gain = 407.977 ; free physical = 345 ; free virtual = 19781
+Synthesis finished with 0 errors, 0 critical warnings and 44 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:40 . Memory (MB): peak = 1313.371 ; gain = 310.699 ; free physical = 148 ; free virtual = 16831
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 1313.379 ; gain = 410.008 ; free physical = 148 ; free virtual = 16831
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 30 instances were transformed.
-  LD => LDCE: 3 instances
+  A total of 27 instances were transformed.
   MMCME2_BASE => MMCME2_ADV: 1 instances
   RAM16X1S => RAM32X1S (RAMS32): 12 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 6 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-362 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+334 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 1388.363 ; gain = 398.277 ; free physical = 328 ; free virtual = 19767
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 1390.398 ; gain = 400.309 ; free physical = 139 ; free virtual = 15965
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1854.547 ; gain = 466.184 ; free physical = 136 ; free virtual = 19426
+INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:01:39 . Memory (MB): peak = 1847.582 ; gain = 457.184 ; free physical = 1643 ; free virtual = 16781
 INFO: [Coretcl 2-1174] Renamed 59 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1854.547 ; gain = 0.000 ; free physical = 143 ; free virtual = 19415
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 24 19:23:15 2016...
+INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.49 . Memory (MB): peak = 1847.582 ; gain = 0.000 ; free physical = 1585 ; free virtual = 16797
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  7 00:18:34 2016...

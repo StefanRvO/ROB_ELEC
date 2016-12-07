@@ -56,3 +56,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {SENSE[0]}]
 set_property PACKAGE_PIN M12 [get_ports {SENSE[0]}]
 set_property PACKAGE_PIN N13 [get_ports {SENSE[1]}]
 set_property PACKAGE_PIN J11 [get_ports {SENSE[2]}]
+
+set_property PACKAGE_PIN N14 [get_ports SW_A_in]
+set_property PACKAGE_PIN L14 [get_ports SW_B_in]
+set_property IOSTANDARD LVCMOS33 [get_ports SW_B_in]
+set_property IOSTANDARD LVCMOS33 [get_ports SW_A_in]

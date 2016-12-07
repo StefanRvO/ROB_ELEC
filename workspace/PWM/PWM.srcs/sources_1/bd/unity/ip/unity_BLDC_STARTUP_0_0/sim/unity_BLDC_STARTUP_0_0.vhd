@@ -83,9 +83,9 @@ ARCHITECTURE unity_BLDC_STARTUP_0_0_arch OF unity_BLDC_STARTUP_0_0 IS
 BEGIN
   U0 : BLDC_STARTUP
     GENERIC MAP (
-      START_PERIOD => 2000000,
-      END_PERIOD => 100000,
-      SPEEDUP_INTERVAL => 100
+      START_PERIOD => 750000,
+      END_PERIOD => 250000,
+      SPEEDUP_INTERVAL => 50
     )
     PORT MAP (
       reset_in => reset_in,

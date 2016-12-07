@@ -1,0 +1,16 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port PWM_out -pg 1 -y 70 -defaultsOSRD
+preplace port clk_IN -pg 1 -y 20 -defaultsOSRD
+preplace port reset_in -pg 1 -y 40 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 1 -y 70 -defaultsOSRD
+preplace inst STARTUP_PWM -pg 1 -lvl 2 -y 70 -defaultsOSRD
+preplace netloc STARTUP_PWM_PWM_out 1 2 1 N
+preplace netloc reset_in_1 1 0 2 20J 20 160J
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 2 10J 10 170J
+preplace netloc xlconstant_3_dout 1 1 1 NJ
+levelinfo -pg 1 -10 90 310 470 -top 0 -bot 200
+",
+}
+0

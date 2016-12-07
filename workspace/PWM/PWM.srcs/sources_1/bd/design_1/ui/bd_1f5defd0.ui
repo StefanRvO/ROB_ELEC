@@ -10,10 +10,10 @@ preplace port FIXED_IO -pg 1 -y 0 -defaultsOSRD
 preplace port MOTOR_OUT -pg 1 -y 160 -defaultsOSRD
 preplace port reset_in -pg 1 -y 220 -defaultsOSRD
 preplace portBus counter_out -pg 1 -y 90 -defaultsOSRD
-preplace inst PWM_generator_0 -pg 1 -lvl 6 -y 160 -defaultsOSRD
 preplace inst Rotary_Encoder_0 -pg 1 -lvl 4 -y 150 -defaultsOSRD
-preplace inst Debouncer_2 -pg 1 -lvl 2 -y 230 -defaultsOSRD
+preplace inst PWM_generator_0 -pg 1 -lvl 6 -y 160 -defaultsOSRD
 preplace inst Rotary_counter_0 -pg 1 -lvl 5 -y 150 -defaultsOSRD
+preplace inst Debouncer_2 -pg 1 -lvl 2 -y 230 -defaultsOSRD
 preplace inst Debouncer_3 -pg 1 -lvl 3 -y 130 -defaultsOSRD
 preplace inst inverter_0 -pg 1 -lvl 3 -y 240 -defaultsOSRD
 preplace inst Debouncer_4 -pg 1 -lvl 3 -y 350 -defaultsOSRD

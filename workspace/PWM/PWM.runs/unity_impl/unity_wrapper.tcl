@@ -57,6 +57,7 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir /home/stefan/PWM_2/workspace/PWM/PWM.cache/wt [current_project]
   set_property parent.project_path /home/stefan/PWM_2/workspace/PWM/PWM.xpr [current_project]
+  set_property ip_repo_paths /home/stefan/ip_repo [current_project]
   set_property ip_output_repo /home/stefan/PWM_2/workspace/PWM/PWM.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_synth/unity_wrapper.dcp
@@ -64,18 +65,10 @@ set rc [catch {
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.dcp]
-  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_CONTROLLER_0_0/unity_BLDC_CONTROLLER_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_CONTROLLER_0_0/unity_BLDC_CONTROLLER_0_0.dcp]
-  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_0/unity_xlconstant_1_0.dcp
-  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_0/unity_xlconstant_1_0.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_splitter_0_0/unity_vector_splitter_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_splitter_0_0/unity_vector_splitter_0_0.dcp]
-  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp]
-  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_0/unity_Debouncer_5_0.dcp
@@ -86,8 +79,6 @@ set rc [catch {
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_1_0/unity_inverter_1_0.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.dcp]
-  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_1/unity_Debouncer_5_1.dcp
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_1/unity_Debouncer_5_1.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_0_1/unity_inverter_0_1.dcp
@@ -108,6 +99,40 @@ set rc [catch {
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_VECTOR_INV_0_0/unity_VECTOR_INV_0_0.dcp]
   add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STATE_CONTROLLER_0_0/unity_BLDC_STATE_CONTROLLER_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STATE_CONTROLLER_0_0/unity_BLDC_STATE_CONTROLLER_0_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_0/unity_vector_mux_1_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_0/unity_vector_mux_1_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_SPEED_OBSERVER_0_1/unity_BLDC_SPEED_OBSERVER_0_1.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_SPEED_OBSERVER_0_1/unity_BLDC_SPEED_OBSERVER_0_1.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_1/unity_xlconstant_0_1.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_1/unity_xlconstant_0_1.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_3_0/unity_Debouncer_3_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_3_0/unity_Debouncer_3_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_4_0/unity_Debouncer_4_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_4_0/unity_Debouncer_4_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Rotary_Encoder_0_0/unity_Rotary_Encoder_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Rotary_Encoder_0_0/unity_Rotary_Encoder_0_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Rotary_counter_0_0/unity_Rotary_counter_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Rotary_counter_0_0/unity_Rotary_counter_0_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_2/unity_xlconstant_0_2.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_2/unity_xlconstant_0_2.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/unity_PULSER_0_1.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/unity_PULSER_0_1.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_RUNNING_AVG_0_0/unity_RUNNING_AVG_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_RUNNING_AVG_0_0/unity_RUNNING_AVG_0_0.dcp]
+  add_files -quiet /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIFF_PULSER_0_0/unity_DIFF_PULSER_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIFF_PULSER_0_0/unity_DIFF_PULSER_0_0.dcp]
   read_xdc -ref unity_processing_system7_0_0 -cells inst /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc
   set_property processing_order EARLY [get_files /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc]
   read_xdc /home/stefan/PWM_2/workspace/PWM/PWM.srcs/constrs_1/new/constraints.xdc

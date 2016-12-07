@@ -17,6 +17,7 @@ set_property parent.project_path /home/stefan/PWM_2/workspace/PWM/PWM.xpr [curre
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part trenz.biz:te0726_m:part0:3.1 [current_project]
+set_property ip_repo_paths /home/stefan/ip_repo [current_project]
 set_property ip_output_repo /home/stefan/PWM_2/workspace/PWM/PWM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/BLDC_STARTUP.vhd

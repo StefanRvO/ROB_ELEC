@@ -37,7 +37,12 @@ entity unity_ctrl is
            rx_i     : in STD_LOGIC;
            tx_o     : out STD_LOGIC;
            
-           addr4_out   : out STD_LOGIC_VECTOR (31 downto 0));
+           addr4_out   : out STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+           addr5_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr0_in : in STD_LOGIC_VECTOR(31 downto 0);
+           addr1_in : in STD_LOGIC_VECTOR(31 downto 0);
+           addr2_in : in STD_LOGIC_VECTOR(31 downto 0));
+
 end unity_ctrl;
 
 architecture Behavioral of unity_ctrl is
@@ -98,21 +103,23 @@ begin
 ----------------------------------------------------------------------
 -- This process handles data to memory
 ----------------------------------------------------------------------
-process (Umem_addr_i)
+process (unity_clk, Umem_addr_i)
 begin
+    if(rising_edge(unity_clk)) then
         case Umem_addr_i is
-          when "000000" => mem_data_in <= "00000000000000000000000000000000";			--00
-          when "000001" => mem_data_in <= "00000000000000000000000000000001";           --01
-          when "000010" => mem_data_in <= "00000000000000000000000000000010";           --02
+          when "000000" => mem_data_in <= addr0_in;			--00
+          when "000001" => mem_data_in <= addr1_in;           --01
+          when "000010" => mem_data_in <= addr2_in;           --02
           when "000011" => mem_data_in <= "00000000000000000000000000000011";           --03
-    -------------------------------------------------------------------------
+        -------------------------------------------------------------------------
           when "001000" => mem_data_in <= "00000000000000000000000000001000";           --08
           when "001001" => mem_data_in <= "00000000000000000000000000001001";           --09
           when "001010" => mem_data_in <= "00000000000000000000000000001010";           --0A
           when "001011" => mem_data_in <= "00000000000000000000000000001011";           --0B
-    -------------------------------------------------------------------------
+        -------------------------------------------------------------------------
           when others =>
         end case;
+    end if;
 end process;
 
 ----------------------------------------------------------------------
@@ -125,7 +132,8 @@ if(rising_edge(unity_clk)) then
 --    if(write_mem = '0') then
     if(write_mem = '1') then
         case Umem_addr_i is
-          when "000100" => addr4_out						<= mem_data_out;	--04
+          when "000100" => addr4_out <= mem_data_out;	--04
+          when "000101" => addr5_out <= mem_data_out;   --05
           when others =>
         end case;
     end if;
