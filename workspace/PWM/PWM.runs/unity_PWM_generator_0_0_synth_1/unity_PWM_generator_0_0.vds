@@ -1,0 +1,266 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Dec  6 20:55:18 2016
+# Process ID: 25643
+# Current directory: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1
+# Command line: vivado -log unity_PWM_generator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_PWM_generator_0_0.tcl
+# Log file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1/unity_PWM_generator_0_0.vds
+# Journal file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source unity_PWM_generator_0_0.tcl -notrace
+Command: synth_design -top unity_PWM_generator_0_0 -part xc7z010clg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25698 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1062.664 ; gain = 159.301 ; free physical = 139 ; free virtual = 18646
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'unity_PWM_generator_0_0' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/synth/unity_PWM_generator_0_0.vhd:65]
+	Parameter CLK_FREQ bound to: 200000000 - type: integer 
+	Parameter PWM_FREQ bound to: 80000 - type: integer 
+INFO: [Synth 8-3491] module 'PWM_generator' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/PWM_generator.vhd:32' bound to instance 'U0' of component 'PWM_generator' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/synth/unity_PWM_generator_0_0.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'PWM_generator' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/PWM_generator.vhd:42]
+	Parameter CLK_FREQ bound to: 200000000 - type: integer 
+	Parameter PWM_FREQ bound to: 80000 - type: integer 
+WARNING: [Synth 8-614] signal 'count' is read in the process but is not in the sensitivity list [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/PWM_generator.vhd:95]
+WARNING: [Synth 8-614] signal 'PWM_duty_in' is read in the process but is not in the sensitivity list [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/PWM_generator.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'PWM_generator' (1#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/PWM_generator.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'unity_PWM_generator_0_0' (2#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/synth/unity_PWM_generator_0_0.vhd:65]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1103.133 ; gain = 199.770 ; free physical = 131 ; free virtual = 18528
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1103.133 ; gain = 199.770 ; free physical = 145 ; free virtual = 18516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1111.137 ; gain = 207.773 ; free physical = 143 ; free virtual = 18515
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "scaler_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count_direction" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count_direction" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1127.152 ; gain = 223.789 ; free physical = 170 ; free virtual = 18476
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PWM_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "U0/scaler_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "U0/scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "U0/count_direction" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "U0/count_direction" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1222.504 ; gain = 319.141 ; free physical = 150 ; free virtual = 18089
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1222.504 ; gain = 319.141 ; free physical = 147 ; free virtual = 18086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1230.512 ; gain = 327.148 ; free physical = 134 ; free virtual = 18073
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1230.512 ; gain = 327.148 ; free physical = 138 ; free virtual = 18068
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1230.512 ; gain = 327.148 ; free physical = 138 ; free virtual = 18068
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1230.512 ; gain = 327.148 ; free physical = 138 ; free virtual = 18068
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1230.512 ; gain = 327.148 ; free physical = 138 ; free virtual = 18068
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1230.512 ; gain = 327.148 ; free physical = 140 ; free virtual = 18071
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1230.512 ; gain = 327.148 ; free physical = 140 ; free virtual = 18071
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    28|
+|2     |LUT1   |    94|
+|3     |LUT2   |    35|
+|4     |LUT3   |     1|
+|5     |LUT4   |    13|
+|6     |LUT5   |    36|
+|7     |LUT6   |    37|
+|8     |FDRE   |    66|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   310|
+|2     |  U0     |PWM_generator |   310|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1230.512 ; gain = 327.148 ; free physical = 140 ; free virtual = 18071
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1230.512 ; gain = 227.848 ; free physical = 140 ; free virtual = 18070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1230.520 ; gain = 327.156 ; free physical = 140 ; free virtual = 18070
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1349.539 ; gain = 359.457 ; free physical = 140 ; free virtual = 17899
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1/unity_PWM_generator_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1838.074 ; gain = 488.535 ; free physical = 139 ; free virtual = 16831
+INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1/unity_PWM_generator_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.22 . Memory (MB): peak = 1838.074 ; gain = 0.000 ; free physical = 145 ; free virtual = 16818
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  6 20:56:14 2016...
