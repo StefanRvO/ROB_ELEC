@@ -81,7 +81,7 @@ BEGIN
   U0 : RUNNING_AVG
     GENERIC MAP (
       IN_SIZE => 32,
-      AVG_SIZE => 300
+      AVG_SIZE => 120
     )
     PORT MAP (
       clk_in => clk_in,

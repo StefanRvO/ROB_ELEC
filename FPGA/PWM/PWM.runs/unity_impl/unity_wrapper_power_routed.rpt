@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date             : Wed Dec  7 01:04:53 2016
+| Date             : Wed Dec  7 22:25:07 2016
 | Host             : Leviathan running 64-bit Arch Linux
 | Command          : report_power -file unity_wrapper_power_routed.rpt -pb unity_wrapper_power_summary_routed.pb -rpx unity_wrapper_power_routed.rpx
 | Design           : unity_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.095 |
-| Dynamic (W)              | 0.975 |
-| Device Static (W)        | 0.120 |
+| Total On-Chip Power (W)  | 1.280 |
+| Dynamic (W)              | 1.158 |
+| Device Static (W)        | 0.123 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 72.4  |
-| Junction Temperature (C) | 37.6  |
+| Max Ambient (C)          | 70.2  |
+| Junction Temperature (C) | 39.8  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,21 +49,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.025 |        8 |       --- |             --- |
-| Slice Logic              |     0.063 |    26675 |       --- |             --- |
-|   LUT as Logic           |     0.056 |     8376 |     17600 |           47.59 |
-|   CARRY4                 |     0.006 |     1776 |      4400 |           40.36 |
-|   Register               |    <0.001 |    10627 |     35200 |           30.19 |
+| Clocks                   |     0.022 |        8 |       --- |             --- |
+| Slice Logic              |     0.149 |    21923 |       --- |             --- |
+|   LUT as Logic           |     0.120 |    10854 |     17600 |           61.67 |
+|   CARRY4                 |     0.027 |     2655 |      4400 |           60.34 |
+|   Register               |     0.001 |     5278 |     35200 |           14.99 |
+|   F7/F8 Muxes            |    <0.001 |       38 |     17600 |            0.22 |
 |   LUT as Distributed RAM |    <0.001 |       68 |      6000 |            1.13 |
-|   F7/F8 Muxes            |    <0.001 |        8 |     17600 |            0.05 |
-|   Others                 |     0.000 |      198 |       --- |             --- |
-| Signals                  |     0.088 |    25228 |       --- |             --- |
+|   Others                 |     0.000 |      230 |       --- |             --- |
+| Signals                  |     0.195 |    19983 |       --- |             --- |
 | Block RAM                |    <0.001 |        1 |        60 |            1.67 |
 | MMCM                     |     0.117 |        1 |         2 |           50.00 |
-| I/O                      |     0.039 |       24 |        54 |           44.44 |
+| DSPs                     |     0.018 |       10 |        80 |           12.50 |
+| I/O                      |     0.014 |       24 |        54 |           44.44 |
 | PS7                      |     0.642 |        1 |       --- |             --- |
-| Static Power             |     0.120 |          |           |                 |
-| Total                    |     1.095 |          |           |                 |
+| Static Power             |     0.123 |          |           |                 |
+| Total                    |     1.280 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.183 |       0.178 |      0.005 |
-| Vccaux    |       1.800 |     0.077 |       0.066 |      0.011 |
-| Vcco33    |       3.300 |     0.012 |       0.011 |      0.001 |
+| Vccint    |       1.000 |     0.391 |       0.385 |      0.006 |
+| Vccaux    |       1.800 |     0.076 |       0.065 |      0.011 |
+| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -86,7 +87,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.633 |       0.609 |      0.024 |
+| Vccpint   |       1.000 |     0.634 |       0.609 |      0.026 |
 | Vccpaux   |       1.800 |     0.011 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -153,12 +154,12 @@ Table of Contents
 +-------------------------------------------------------------+-----------+
 | Name                                                        | Power (W) |
 +-------------------------------------------------------------+-----------+
-| unity_wrapper                                               |     0.975 |
-|   unity_i                                                   |     0.936 |
-|     BLDC_MOTOR_CONTROL                                      |     0.022 |
+| unity_wrapper                                               |     1.158 |
+|   unity_i                                                   |     1.143 |
+|     BLDC_MOTOR_CONTROL                                      |     0.012 |
 |       BLDC_DIR_CTRL_0                                       |    <0.001 |
-|       BLDC_SPEED_OBSERVER_0                                 |     0.010 |
-|         U0                                                  |     0.010 |
+|       BLDC_SPEED_OBSERVER_0                                 |     0.003 |
+|         U0                                                  |     0.003 |
 |       BLDC_STARTUP_0                                        |     0.002 |
 |         U0                                                  |     0.002 |
 |       BLDC_STATE_CONTROLLER_0                               |    <0.001 |
@@ -167,20 +168,19 @@ Table of Contents
 |         U0                                                  |    <0.001 |
 |       OL_BLDC_Stepper_0                                     |    <0.001 |
 |         U0                                                  |    <0.001 |
-|       PWM_generator_0                                       |     0.004 |
-|         U0                                                  |     0.004 |
-|       STARTUP_PWM_MOD                                       |     0.004 |
-|         STARTUP_PWM                                         |     0.004 |
-|           U0                                                |     0.004 |
+|       PWM_generator_0                                       |     0.002 |
+|         U0                                                  |     0.002 |
+|       STARTUP_PWM_MOD                                       |     0.002 |
+|         STARTUP_PWM                                         |     0.002 |
+|           U0                                                |     0.002 |
 |       VECTOR_INV_0                                          |     0.000 |
 |         U0                                                  |     0.000 |
-|       period_smoother_0                                     |     0.003 |
-|         U0                                                  |     0.003 |
+|       period_smoother_0                                     |     0.002 |
+|         U0                                                  |     0.002 |
 |       vector_mux_1                                          |    <0.001 |
 |         U0                                                  |    <0.001 |
 |       vector_mux_2                                          |    <0.001 |
 |       xlconcat_1                                            |     0.000 |
-|       xlconstant_0                                          |     0.000 |
 |       xlslice_0                                             |     0.000 |
 |       xlslice_1                                             |     0.000 |
 |       xlslice_2                                             |     0.000 |
@@ -194,26 +194,30 @@ Table of Contents
 |       U0                                                    |    <0.001 |
 |     Debouncer_6                                             |    <0.001 |
 |       U0                                                    |    <0.001 |
+|     PID_0                                                   |     0.298 |
+|       U0                                                    |     0.297 |
 |     PULSER_0                                                |    <0.001 |
 |       U0                                                    |    <0.001 |
-|     RUNNING_AVG_0                                           |     0.145 |
-|       U0                                                    |     0.113 |
+|     RUNNING_AVG_0                                           |     0.059 |
+|       U0                                                    |     0.059 |
 |     Rotary_Encoder_0                                        |    <0.001 |
 |       U0                                                    |    <0.001 |
 |     Rotary_counter_0                                        |    <0.001 |
 |       U0                                                    |    <0.001 |
 |     Toggler_0                                               |    <0.001 |
 |       U0                                                    |    <0.001 |
+|     UNSIGNED_TO_SIGNED_CONV_0                               |     0.006 |
+|       U0                                                    |     0.006 |
 |     inverter_1                                              |    <0.001 |
 |     inverter_2                                              |    <0.001 |
 |     processing_system7_0                                    |     0.642 |
 |       inst                                                  |     0.642 |
-|     unity_ctrl_0                                            |     0.124 |
-|       U0                                                    |     0.124 |
-|         UNITY                                               |     0.123 |
+|     unity_ctrl_0                                            |     0.125 |
+|       U0                                                    |     0.125 |
+|         UNITY                                               |     0.124 |
 |           uart_wb_link_inst                                 |     0.006 |
 |             uart_gab_link_inst                              |     0.006 |
-|               gab_link_al_fsm_inst                          |     0.002 |
+|               gab_link_al_fsm_inst                          |     0.003 |
 |                 SUB_GEN.subscription_manager_inst           |    <0.001 |
 |                   SG_GEN[0].sg                              |    <0.001 |
 |                     ram_reg_0_15_0_0                        |    <0.001 |
@@ -294,8 +298,15 @@ Table of Contents
 |           wb_mem_inst                                       |    <0.001 |
 |             ram_rwrw_inst                                   |    <0.001 |
 |             wb_slv_mem_ctrl_inst                            |    <0.001 |
-|     vector_splitter_0                                       |     0.000 |
-|     xlconstant_0                                            |     0.000 |
+|     vector_mux_1                                            |    <0.001 |
+|       U0                                                    |    <0.001 |
+|     xlslice_1                                               |     0.000 |
+|     xlslice_2                                               |     0.000 |
+|     xlslice_3                                               |     0.000 |
+|     xlslice_4                                               |     0.000 |
+|     xlslice_5                                               |     0.000 |
+|     xlslice_6                                               |     0.000 |
+|     xlslice_7                                               |     0.000 |
 +-------------------------------------------------------------+-----------+
 
 

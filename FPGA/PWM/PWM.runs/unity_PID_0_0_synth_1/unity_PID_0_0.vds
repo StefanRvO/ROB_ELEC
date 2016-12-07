@@ -1,0 +1,445 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Dec  7 22:11:54 2016
+# Process ID: 17672
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1
+# Command line: vivado -log unity_PID_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_PID_0_0.tcl
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1/unity_PID_0_0.vds
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source unity_PID_0_0.tcl -notrace
+Command: synth_design -top unity_PID_0_0 -part xc7z010clg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17683 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1058.672 ; gain = 155.301 ; free physical = 4604 ; free virtual = 17762
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'unity_PID_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:69]
+	Parameter SIZE bound to: 32 - type: integer 
+	Parameter K_MULT bound to: 1 - type: integer 
+	Parameter K_DIV bound to: 1 - type: integer 
+	Parameter MAX bound to: 255 - type: integer 
+	Parameter MIN bound to: -255 - type: integer 
+INFO: [Synth 8-3491] module 'PID' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:36' bound to instance 'U0' of component 'PID' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'PID' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:55]
+	Parameter SIZE bound to: 32 - type: integer 
+	Parameter K_MULT bound to: 1 - type: integer 
+	Parameter K_DIV bound to: 1 - type: integer 
+	Parameter MAX bound to: 255 - type: integer 
+	Parameter MIN bound to: -255 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PID' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'unity_PID_0_0' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:69]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1099.141 ; gain = 195.770 ; free physical = 4561 ; free virtual = 17720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1099.141 ; gain = 195.770 ; free physical = 4561 ; free virtual = 17720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1107.145 ; gain = 203.773 ; free physical = 4561 ; free virtual = 17720
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1115.152 ; gain = 211.781 ; free physical = 4554 ; free virtual = 17713
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    256 Bit       Adders := 2     
+	   2 Input     64 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	              144 Bit    Registers := 1     
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
++---Multipliers : 
+	               16x128  Multipliers := 1     
+	                16x32  Multipliers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PID 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    256 Bit       Adders := 2     
+	   2 Input     64 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	              144 Bit    Registers := 1     
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
++---Multipliers : 
+	               16x128  Multipliers := 1     
+	                16x32  Multipliers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 8 [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:75]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:77]
+DSP Report: Generating DSP ARG, operation Mode is: A2*B.
+DSP Report: register A is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP I_TMP_MULT_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register B is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: register I_TMP_MULT_reg is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: operator ARG is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: operator ARG is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: Generating DSP ARG, operation Mode is: A2*B.
+DSP Report: register A is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register A is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP I_TMP_MULT_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register A is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: register I_TMP_MULT_reg is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: operator ARG is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: operator ARG is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: Generating DSP ARG, operation Mode is: A2*B.
+DSP Report: register A is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP ARG, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register A is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP I_TMP_MULT_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register A is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: register I_TMP_MULT_reg is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: operator ARG is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: operator ARG is absorbed into DSP I_TMP_MULT_reg.
+DSP Report: Generating DSP ARG, operation Mode is: A*B.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: Generating DSP P_TMP_MULT_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register P_TMP_MULT_reg is absorbed into DSP P_TMP_MULT_reg.
+DSP Report: operator ARG is absorbed into DSP P_TMP_MULT_reg.
+DSP Report: operator ARG is absorbed into DSP P_TMP_MULT_reg.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[47]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[46]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[45]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[44]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[43]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[42]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[41]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[40]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[39]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[38]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[37]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[36]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[35]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[34]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[33]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[32]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[31]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[30]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[29]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[28]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[27]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[26]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[25]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[24]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[23]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[22]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[21]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[20]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[19]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[18]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[17]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[47]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[46]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[45]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[44]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[43]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[42]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[41]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[40]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[39]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[38]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[37]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[36]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[35]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[34]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[33]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[32]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[31]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[30]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[29]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[28]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[27]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[26]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[25]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[24]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[23]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[22]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[21]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[20]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[19]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[18]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[17]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[47]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[46]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[45]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[44]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[43]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[42]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[41]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[40]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[39]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[38]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[37]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[36]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[35]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[34]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[33]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[32]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[31]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[30]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[29]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[28]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[27]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[26]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[25]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[24]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[23]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[22]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[21]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[20]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[19]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[18]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[17]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[47]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[46]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[45]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[44]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[43]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[42]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[41]__2) is unused and will be removed from module PID.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1252.520 ; gain = 349.148 ; free physical = 4417 ; free virtual = 17578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|PID         | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|PID         | (PCIN>>17)+A*B2 | 16     | 9      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|PID         | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|PID         | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|PID         | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|PID         | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|PID         | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|PID         | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|PID         | A*B             | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|PID         | (PCIN>>17)+A*B  | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1252.520 ; gain = 349.148 ; free physical = 4427 ; free virtual = 17578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1255.051 ; gain = 351.680 ; free physical = 4421 ; free virtual = 17573
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.051 ; gain = 351.680 ; free physical = 4421 ; free virtual = 17573
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.051 ; gain = 351.680 ; free physical = 4421 ; free virtual = 17573
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.051 ; gain = 351.680 ; free physical = 4421 ; free virtual = 17573
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.051 ; gain = 351.680 ; free physical = 4421 ; free virtual = 17573
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.051 ; gain = 351.680 ; free physical = 4421 ; free virtual = 17573
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.051 ; gain = 351.680 ; free physical = 4422 ; free virtual = 17573
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |  1860|
+|2     |DSP48E1 |    10|
+|3     |LUT1    |   614|
+|4     |LUT2    |   846|
+|5     |LUT3    |   324|
+|6     |LUT4    |    94|
+|7     |LUT5    |  5086|
+|8     |FDRE    |   294|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  9128|
+|2     |  U0     |PID    |  9081|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.051 ; gain = 351.680 ; free physical = 4422 ; free virtual = 17573
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 186 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1255.051 ; gain = 252.379 ; free physical = 4422 ; free virtual = 17573
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1255.059 ; gain = 351.688 ; free physical = 4422 ; free virtual = 17573
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1870 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'unity_PID_0_0' is not ideal for floorplanning, since the cellview 'PID' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1370.078 ; gain = 379.988 ; free physical = 4359 ; free virtual = 17512
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1/unity_PID_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1852.613 ; gain = 482.535 ; free physical = 4002 ; free virtual = 17158
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1/unity_PID_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1857.613 ; gain = 0.000 ; free physical = 3986 ; free virtual = 17151
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  7 22:12:44 2016...

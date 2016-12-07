@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Dec  7 22:01:57 2016
+# Process ID: 31511
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_xlslice_1_2_synth_1
+# Command line: vivado -log unity_xlslice_1_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_xlslice_1_2.tcl
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_xlslice_1_2_synth_1/unity_xlslice_1_2.vds
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_xlslice_1_2_synth_1/vivado.jou
+#-----------------------------------------------------------
+source unity_xlslice_1_2.tcl -notrace
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1056.672 ; gain = 153.301 ; free physical = 4145 ; free virtual = 17032
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_1_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_2/synth/unity_xlslice_1_2.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'xlslice' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ipshared/c49f/xlslice.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'xlslice' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ipshared/c49f/xlslice.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'unity_xlslice_1_2' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_2/synth/unity_xlslice_1_2.vhd:66]
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1097.141 ; gain = 193.770 ; free physical = 4162 ; free virtual = 16975
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1097.141 ; gain = 193.770 ; free physical = 4161 ; free virtual = 16974
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.145 ; gain = 201.773 ; free physical = 4161 ; free virtual = 16974
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.145 ; gain = 201.773 ; free physical = 4161 ; free virtual = 16974
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1171.465 ; gain = 268.094 ; free physical = 4807 ; free virtual = 17602
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1171.465 ; gain = 268.094 ; free physical = 4807 ; free virtual = 17602
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1179.473 ; gain = 276.102 ; free physical = 4799 ; free virtual = 17594
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1179.473 ; gain = 276.102 ; free physical = 4784 ; free virtual = 17584
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1179.473 ; gain = 276.102 ; free physical = 4784 ; free virtual = 17584
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1179.473 ; gain = 276.102 ; free physical = 4784 ; free virtual = 17584
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1179.473 ; gain = 276.102 ; free physical = 4784 ; free virtual = 17584
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1179.473 ; gain = 276.102 ; free physical = 4779 ; free virtual = 17582
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1179.473 ; gain = 276.102 ; free physical = 4779 ; free virtual = 17582
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1179.473 ; gain = 276.102 ; free physical = 4779 ; free virtual = 17582
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1261.473 ; gain = 271.383 ; free physical = 4648 ; free virtual = 17441
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1687.008 ; gain = 425.535 ; free physical = 4514 ; free virtual = 17287

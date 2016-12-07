@@ -37,26 +37,26 @@ entity RUNNING_AVG is
             AVG_SIZE : integer range 1 to 1000000 := 10
             );
     Port ( clk_in : in STD_LOGIC;
-           input_in : in STD_LOGIC_VECTOR(IN_SIZE - 1 downto 0);
+           input_in : in STD_LOGIC_VECTOR(IN_SIZE - 1 downto 0) := (others => '0');
            output_out : out STD_LOGIC_VECTOR(IN_SIZE - 1 downto 0) := (others => '0');
-           do_sample_in : in STD_LOGIC);
+           do_sample_in : in STD_LOGIC := '0');
 end RUNNING_AVG;
 
 architecture Behavioral of RUNNING_AVG is
 type UNSIGNED_ARR is array(0 to AVG_SIZE - 1) of unsigned(IN_SIZE - 1 downto 0);
 signal AVG_LIST : UNSIGNED_ARR := ( others => unsigned(input_in));
-signal index_counter : integer range 0 to AVG_SIZE := 0;
+signal index_counter : integer range -1 to AVG_SIZE := 0;
 signal sum : unsigned(IN_SIZE * 2 - 1 downto 0) := (others => '0');
 begin
-
 
 save_input : process(clk_in, do_sample_in)
 begin
     if(rising_edge(clk_in)) then
         if(do_sample_in = '1') then
-            index_counter <= index_counter + 1;
-            if(index_counter = AVG_SIZE) then
+            if(index_counter + 1 = AVG_SIZE) then
                 index_counter <= 0;
+            else
+                index_counter <= index_counter + 1;
             end if;
             AVG_LIST(index_counter) <= unsigned(input_in);
         end if;
@@ -65,7 +65,6 @@ end process;
 
 calc_avg : process(clk_in)
     variable sum_var : unsigned(IN_SIZE * 2 - 1 downto 0) := (others => '0');
-
 begin
     if(rising_edge(clk_in)) then
         sum_var := (others => '0');

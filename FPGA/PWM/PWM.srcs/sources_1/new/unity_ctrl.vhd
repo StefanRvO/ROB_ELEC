@@ -39,9 +39,24 @@ entity unity_ctrl is
            
            addr4_out   : out STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
            addr5_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr6_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr7_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+
+           addr12_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr13_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr14_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr15_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+
            addr0_in : in STD_LOGIC_VECTOR(31 downto 0);
            addr1_in : in STD_LOGIC_VECTOR(31 downto 0);
-           addr2_in : in STD_LOGIC_VECTOR(31 downto 0));
+           addr2_in : in STD_LOGIC_VECTOR(31 downto 0);
+           addr3_in : in STD_LOGIC_VECTOR(31 downto 0);
+           addr8_in : in STD_LOGIC_VECTOR(31 downto 0);
+           addr9_in : in STD_LOGIC_VECTOR(31 downto 0);
+           addr10_in : in STD_LOGIC_VECTOR(31 downto 0)
+
+           );
+      
 
 end unity_ctrl;
 
@@ -110,11 +125,11 @@ begin
           when "000000" => mem_data_in <= addr0_in;			--00
           when "000001" => mem_data_in <= addr1_in;           --01
           when "000010" => mem_data_in <= addr2_in;           --02
-          when "000011" => mem_data_in <= "00000000000000000000000000000011";           --03
+          when "000011" => mem_data_in <= addr3_in;           --03
         -------------------------------------------------------------------------
-          when "001000" => mem_data_in <= "00000000000000000000000000001000";           --08
-          when "001001" => mem_data_in <= "00000000000000000000000000001001";           --09
-          when "001010" => mem_data_in <= "00000000000000000000000000001010";           --0A
+          when "001000" => mem_data_in <= addr8_in;           --08
+          when "001001" => mem_data_in <= addr9_in;           --09
+          when "001010" => mem_data_in <= addr10_in;           --0A
           when "001011" => mem_data_in <= "00000000000000000000000000001011";           --0B
         -------------------------------------------------------------------------
           when others =>
@@ -134,6 +149,13 @@ if(rising_edge(unity_clk)) then
         case Umem_addr_i is
           when "000100" => addr4_out <= mem_data_out;	--04
           when "000101" => addr5_out <= mem_data_out;   --05
+          when "000110" => addr6_out <= mem_data_out;   --06
+          when "000111" => addr7_out <= mem_data_out;   --07
+          when "001100" => addr12_out <= mem_data_out;   --12
+          when "001101" => addr13_out <= mem_data_out;   --13
+          when "001110" => addr14_out <= mem_data_out;   --14
+          when "001111" => addr15_out <= mem_data_out;   --15
+
           when others =>
         end case;
     end if;

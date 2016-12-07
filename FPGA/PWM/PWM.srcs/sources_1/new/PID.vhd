@@ -36,7 +36,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity PID is
     GENERIC(SIZE : integer range 0 to 1000 := 64;
             K_MULT : integer range 0 to 100000000 := 1;
-            K_DIV  : integer range 0 to 100000000 := 1 );
+            K_DIV  : integer range 0 to 100000000 := 1;
+            MAX : integer range -1000000000 to 1000000000 := 1000000000;
+            MIN : integer range -1000000000 to 1000000000 := 1000000000 );
     
     Port ( set_point : in signed (SIZE - 1 downto 0) ;
            feedback : in signed (SIZE - 1 downto 0);
@@ -58,17 +60,21 @@ signal error_signal : signed(SIZE -1 downto 0) := (others => '0');
 signal I_PART : signed(SIZE -1 downto 0) := (others => '0');
 signal I_SUM : signed(SIZE * 4 -1 downto 0) := (others => '0');
 signal I_TMP_MULT : signed(SIZE * 8 -1 downto 0) := (others => '0');
+signal tmp_min_out : signed(SIZE -1 downto 0) := (others => '0');
+signal tmp_max_out : signed(SIZE -1 downto 0) := (others => '0');
 
 begin
 error_signal <= set_point - feedback;
-output <= P_PART + I_PART;
+tmp_min_out <=  P_PART + I_PART when(P_PART + I_PART > to_signed(MIN, tmp_min_out'length)) else to_signed(MIN, tmp_min_out'length);
+output <= tmp_min_out when(tmp_min_out < to_signed(MAX, output'length)) else to_signed(MAX, output'length);
+
 set_output: process(clk_in)
 begin
     if(rising_edge(clk_in)) then
         I_SUM <= I_SUM + resize(error_signal,I_SUM'length);
-        I_TMP_MULT <= I_SUM * I_MULT;
+        I_TMP_MULT <= resize(I_SUM * I_MULT, I_TMP_MULT'length);
         I_PART <= resize(I_TMP_MULT / I_DIV, I_PART'length);
-        P_TMP_MULT <= error_signal * P_MULT;
+        P_TMP_MULT <= resize(error_signal * P_MULT,P_TMP_MULT'length);
         P_PART <= resize(P_TMP_MULT / P_DIV, P_PART'length);
     end if;
 end process;
