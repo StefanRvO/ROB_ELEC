@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="BLDC_CONTROL_BLDC_DIR_CTRL_0_0_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_BLDC_DIR_CTRL_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_BLDC_STARTUP_0_0_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_BLDC_STARTUP_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_BLDC_STATE_CONTROLLER_0_0_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_BLDC_STATE_CONTROLLER_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_OL_BLDC_Stepper_0_0_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_OL_BLDC_Stepper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_PWM_generator_0_0_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_PWM_generator_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_period_smoother_0_0_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_period_smoother_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_vector_mux_1_0_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_vector_mux_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_PWM_generator_0_1_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_PWM_generator_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_vector_mux_1_2_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_vector_mux_1_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BLDC_CONTROL_xlconstant_0_0_synth_1" LaunchDir="/home/stefan/PWM_2/workspace/PWM/PWM.runs/BLDC_CONTROL_xlconstant_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+
