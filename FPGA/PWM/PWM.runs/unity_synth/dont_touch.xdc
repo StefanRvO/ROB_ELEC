@@ -92,12 +92,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_Rotary_En
 # IP: bd/unity/ip/unity_Rotary_counter_0_0/unity_Rotary_counter_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_Rotary_counter_0_0 || ORIG_REF_NAME==unity_Rotary_counter_0_0}]
 
-# IP: bd/unity/ip/unity_xlconstant_0_2/unity_xlconstant_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconstant_0_2 || ORIG_REF_NAME==unity_xlconstant_0_2}]
-
-# IP: bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconcat_0_0 || ORIG_REF_NAME==unity_xlconcat_0_0}]
-
 # IP: bd/unity/ip/unity_PULSER_0_1/unity_PULSER_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PULSER_0_1 || ORIG_REF_NAME==unity_PULSER_0_1}]
 
@@ -113,20 +107,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_UNSIGNED_
 # IP: bd/unity/ip/unity_xlslice_1_1/unity_xlslice_1_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_1_1 || ORIG_REF_NAME==unity_xlslice_1_1}]
 
-# IP: bd/unity/ip/unity_xlslice_1_2/unity_xlslice_1_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_1_2 || ORIG_REF_NAME==unity_xlslice_1_2}]
-
 # IP: bd/unity/ip/unity_PID_0_0/unity_PID_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PID_0_0 || ORIG_REF_NAME==unity_PID_0_0}]
-
-# IP: bd/unity/ip/unity_xlslice_2_0/unity_xlslice_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_2_0 || ORIG_REF_NAME==unity_xlslice_2_0}]
-
-# IP: bd/unity/ip/unity_xlslice_2_1/unity_xlslice_2_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_2_1 || ORIG_REF_NAME==unity_xlslice_2_1}]
-
-# IP: bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_3_0 || ORIG_REF_NAME==unity_xlslice_3_0}]
 
 # IP: bd/unity/ip/unity_xlslice_5_0/unity_xlslice_5_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_5_0 || ORIG_REF_NAME==unity_xlslice_5_0}]
@@ -137,7 +119,13 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_1
 # IP: bd/unity/ip/unity_vector_mux_1_1/unity_vector_mux_1_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_vector_mux_1_1 || ORIG_REF_NAME==unity_vector_mux_1_1}]
 
-# IP: bd/unity/ip/unity_vector_splitter_0_1/unity_vector_splitter_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_vector_splitter_0_1 || ORIG_REF_NAME==unity_vector_splitter_0_1}]
+# IP: bd/unity/ip/unity_PERIOD_TO_RPM_0_0/unity_PERIOD_TO_RPM_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PERIOD_TO_RPM_0_0 || ORIG_REF_NAME==unity_PERIOD_TO_RPM_0_0}]
+
+# IP: bd/unity/ip/unity_xlslice_7_0/unity_xlslice_7_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_7_0 || ORIG_REF_NAME==unity_xlslice_7_0}]
+
+# IP: bd/unity/ip/unity_xlslice_8_0/unity_xlslice_8_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_8_0 || ORIG_REF_NAME==unity_xlslice_8_0}]
 
 # XDC: bd/unity/unity_ooc.xdc

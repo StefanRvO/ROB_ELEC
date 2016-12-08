@@ -57,12 +57,13 @@ ENTITY unity_PID_0_0 IS
   PORT (
     set_point : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     feedback : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    output_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     clk_in : IN STD_LOGIC;
-    P_MULT : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    P_DIV : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    I_MULT : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    I_DIV : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
+    P_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    P_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    I_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    I_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    reset_in : IN STD_LOGIC
   );
 END unity_PID_0_0;
 
@@ -75,23 +76,29 @@ ARCHITECTURE unity_PID_0_0_arch OF unity_PID_0_0 IS
       K_MULT : INTEGER;
       K_DIV : INTEGER;
       MAX : INTEGER;
-      MIN : INTEGER
+      MIN : INTEGER;
+      CONST_SIZE : INTEGER;
+      SAMPLE_FREQ : INTEGER;
+      CLK_FREQ : INTEGER
     );
     PORT (
       set_point : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       feedback : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      output_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       clk_in : IN STD_LOGIC;
-      P_MULT : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      P_DIV : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      I_MULT : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      I_DIV : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
+      P_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      P_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      I_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      I_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      reset_in : IN STD_LOGIC
     );
   END COMPONENT PID;
   ATTRIBUTE X_CORE_INFO : STRING;
   ATTRIBUTE X_CORE_INFO OF unity_PID_0_0_arch: ARCHITECTURE IS "PID,Vivado 2016.3";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF unity_PID_0_0_arch : ARCHITECTURE IS "unity_PID_0_0,PID,{}";
+  ATTRIBUTE X_INTERFACE_INFO : STRING;
+  ATTRIBUTE X_INTERFACE_INFO OF reset_in: SIGNAL IS "xilinx.com:signal:reset:1.0 reset_in RST";
 BEGIN
   U0 : PID
     GENERIC MAP (
@@ -99,16 +106,20 @@ BEGIN
       K_MULT => 1,
       K_DIV => 1,
       MAX => 255,
-      MIN => -255
+      MIN => -255,
+      CONST_SIZE => 32,
+      SAMPLE_FREQ => 100000,
+      CLK_FREQ => 200000000
     )
     PORT MAP (
       set_point => set_point,
       feedback => feedback,
-      output => output,
+      output_out => output_out,
       clk_in => clk_in,
       P_MULT => P_MULT,
       P_DIV => P_DIV,
       I_MULT => I_MULT,
-      I_DIV => I_DIV
+      I_DIV => I_DIV,
+      reset_in => reset_in
     );
 END unity_PID_0_0_arch;

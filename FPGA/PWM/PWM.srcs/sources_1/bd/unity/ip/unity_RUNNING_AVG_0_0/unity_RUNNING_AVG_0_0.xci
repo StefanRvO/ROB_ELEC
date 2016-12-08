@@ -9,9 +9,9 @@
       <spirit:instanceName>unity_RUNNING_AVG_0_0</spirit:instanceName>
       <spirit:componentRef spirit:vendor="user.org" spirit:library="module_ref" spirit:name="RUNNING_AVG" spirit:version="1.0"/>
       <spirit:configurableElementValues>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.AVG_SIZE">120</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.AVG_SIZE_BITS">8</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.IN_SIZE">32</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.AVG_SIZE">120</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.AVG_SIZE_BITS">8</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Component_Name">unity_RUNNING_AVG_0_0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.IN_SIZE">32</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.ARCHITECTURE">zynq</spirit:configurableElementValue>
@@ -37,7 +37,7 @@
       <spirit:vendorExtensions>
         <xilinx:componentInstanceExtensions>
           <xilinx:configElementInfos>
-            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.AVG_SIZE" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.AVG_SIZE_BITS" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN_SIZE" xilinx:valueSource="user"/>
           </xilinx:configElementInfos>
         </xilinx:componentInstanceExtensions>

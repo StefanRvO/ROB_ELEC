@@ -34,7 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RUNNING_AVG is
     GENERIC(IN_SIZE : integer range 1 to 10000 := 8;
-            AVG_SIZE : integer range 1 to 1000000 := 10
+            AVG_SIZE_BITS : integer range 1 to 1000000 := 4 -- A
             );
     Port ( clk_in : in STD_LOGIC;
            input_in : in STD_LOGIC_VECTOR(IN_SIZE - 1 downto 0) := (others => '0');
@@ -43,9 +43,9 @@ entity RUNNING_AVG is
 end RUNNING_AVG;
 
 architecture Behavioral of RUNNING_AVG is
-type UNSIGNED_ARR is array(0 to AVG_SIZE - 1) of unsigned(IN_SIZE - 1 downto 0);
+type UNSIGNED_ARR is array(0 to 2 ** AVG_SIZE_BITS - 1) of unsigned(IN_SIZE - 1 downto 0);
 signal AVG_LIST : UNSIGNED_ARR := ( others => unsigned(input_in));
-signal index_counter : integer range -1 to AVG_SIZE := 0;
+signal index_counter : integer range -1 to 2 ** AVG_SIZE_BITS := 0;
 signal sum : unsigned(IN_SIZE * 2 - 1 downto 0) := (others => '0');
 begin
 
@@ -53,7 +53,7 @@ save_input : process(clk_in, do_sample_in)
 begin
     if(rising_edge(clk_in)) then
         if(do_sample_in = '1') then
-            if(index_counter + 1 = AVG_SIZE) then
+            if(index_counter + 1 = 2 ** AVG_SIZE_BITS) then
                 index_counter <= 0;
             else
                 index_counter <= index_counter + 1;
@@ -68,11 +68,11 @@ calc_avg : process(clk_in)
 begin
     if(rising_edge(clk_in)) then
         sum_var := (others => '0');
-        for n in 0 to AVG_SIZE - 1 loop
+        for n in 0 to 2 ** AVG_SIZE_BITS - 1 loop
             sum_var := sum_var +  AVG_LIST(n);
         end loop;
     end if; 
-    sum <= sum_var / AVG_SIZE;
+    sum <= sum_var srl AVG_SIZE_BITS;
     output_out <= std_logic_vector(resize(sum, output_out'length));
 end process;
 

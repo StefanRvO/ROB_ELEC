@@ -1,98 +1,94 @@
 {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port DIR_IN -pg 1 -y 50 -defaultsOSRD
-preplace port tx_o -pg 1 -y 1010 -defaultsOSRD
-preplace port PHASE_C_out -pg 1 -y 300 -defaultsOSRD
-preplace port SW_B_in -pg 1 -y 470 -defaultsOSRD
-preplace port PHASE_CH_out -pg 1 -y 360 -defaultsOSRD
-preplace port rx_i -pg 1 -y 850 -defaultsOSRD
-preplace port SW_A_in -pg 1 -y 350 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 120 -defaultsOSRD
-preplace port PHASE_A_out -pg 1 -y 260 -defaultsOSRD
-preplace port PHASE_AH_out -pg 1 -y 320 -defaultsOSRD
-preplace port PHASE_B_out -pg 1 -y 280 -defaultsOSRD
-preplace port MTR_START -pg 1 -y 30 -defaultsOSRD
-preplace port PHASE_BH_out -pg 1 -y 340 -defaultsOSRD
+preplace port DIR_IN -pg 1 -y 840 -defaultsOSRD
+preplace port tx_o -pg 1 -y 330 -defaultsOSRD
+preplace port PHASE_C_out -pg 1 -y 670 -defaultsOSRD
+preplace port SW_B_in -pg 1 -y 1050 -defaultsOSRD
+preplace port PHASE_CH_out -pg 1 -y 730 -defaultsOSRD
+preplace port rx_i -pg 1 -y 100 -defaultsOSRD
+preplace port SW_A_in -pg 1 -y 930 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 220 -defaultsOSRD
+preplace port PHASE_A_out -pg 1 -y 630 -defaultsOSRD
+preplace port PHASE_AH_out -pg 1 -y 690 -defaultsOSRD
+preplace port PHASE_B_out -pg 1 -y 650 -defaultsOSRD
+preplace port MTR_START -pg 1 -y 720 -defaultsOSRD
+preplace port PHASE_BH_out -pg 1 -y 710 -defaultsOSRD
 preplace portBus PWM_out -pg 1 -y 10 -defaultsOSRD
-preplace portBus SENSE -pg 1 -y 300 -defaultsOSRD
-preplace portBus leds_o -pg 1 -y 450 -defaultsOSRD
-preplace inst UNSIGNED_TO_SIGNED_CONV_0 -pg 1 -lvl 5 -y 540 -defaultsOSRD
-preplace inst RUNNING_AVG_0 -pg 1 -lvl 3 -y 550 -defaultsOSRD
-preplace inst Rotary_Encoder_0 -pg 1 -lvl 8 -y 380 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 7 -y 870 -defaultsOSRD
-preplace inst vector_splitter_1 -pg 1 -lvl 4 -y 260 -defaultsOSRD
-preplace inst xlslice_2 -pg 1 -lvl 8 -y 730 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 9 -y 520 -defaultsOSRD
-preplace inst Rotary_counter_0 -pg 1 -lvl 9 -y 380 -defaultsOSRD
-preplace inst xlslice_3 -pg 1 -lvl 8 -y 630 -defaultsOSRD
-preplace inst Debouncer_3 -pg 1 -lvl 7 -y 480 -defaultsOSRD
-preplace inst xlslice_4 -pg 1 -lvl 8 -y 810 -defaultsOSRD
-preplace inst Debouncer_4 -pg 1 -lvl 7 -y 360 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 10 -y 510 -defaultsOSRD
-preplace inst BLDC_MOTOR_CONTROL -pg 1 -lvl 10 -y 330 -defaultsOSRD
-preplace inst PID_0 -pg 1 -lvl 9 -y 740 -defaultsOSRD
-preplace inst xlslice_5 -pg 1 -lvl 8 -y 890 -defaultsOSRD
-preplace inst inverter_1 -pg 1 -lvl 8 -y 240 -defaultsOSRD
-preplace inst Debouncer_5 -pg 1 -lvl 7 -y 240 -defaultsOSRD
-preplace inst unity_ctrl_0 -pg 1 -lvl 6 -y 910 -defaultsOSRD
-preplace inst xlslice_6 -pg 1 -lvl 4 -y 540 -defaultsOSRD
-preplace inst Debouncer_6 -pg 1 -lvl 7 -y 60 -defaultsOSRD
-preplace inst inverter_2 -pg 1 -lvl 8 -y 70 -defaultsOSRD
-preplace inst Toggler_0 -pg 1 -lvl 9 -y 230 -defaultsOSRD
-preplace inst vector_mux_1 -pg 1 -lvl 10 -y 690 -defaultsOSRD
-preplace inst xlslice_7 -pg 1 -lvl 7 -y 1060 -defaultsOSRD
-preplace inst DIFF_PULSER_0 -pg 1 -lvl 2 -y 570 -defaultsOSRD
-preplace inst PULSER_0 -pg 1 -lvl 9 -y 60 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 170 -defaultsOSRD
-preplace netloc xlconstant_1_dout 1 9 1 NJ
-preplace netloc Rotary_Encoder_0_cw_out 1 8 1 N
-preplace netloc xlslice_4_Dout 1 8 1 2510J
-preplace netloc xlslice_3_Dout 1 8 1 2510J
-preplace netloc xlslice_1_Dout 1 7 3 2260 460 2520 460 2850
-preplace netloc BLDC_MOTOR_CONTROL_speed_out 1 1 10 400 630 710 630 NJ 630 NJ 630 1640 630 NJ 630 2270J 550 2510J 590 NJ 590 3130
+preplace portBus SENSE -pg 1 -y 670 -defaultsOSRD
+preplace portBus leds_o -pg 1 -y 1020 -defaultsOSRD
+preplace inst RUNNING_AVG_0 -pg 1 -lvl 3 -y 390 -defaultsOSRD
+preplace inst UNSIGNED_TO_SIGNED_CONV_0 -pg 1 -lvl 5 -y 220 -defaultsOSRD
+preplace inst Rotary_Encoder_0 -pg 1 -lvl 9 -y 1020 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 8 -y 540 -defaultsOSRD
+preplace inst Rotary_counter_0 -pg 1 -lvl 10 -y 1020 -defaultsOSRD
+preplace inst Debouncer_3 -pg 1 -lvl 8 -y 1060 -defaultsOSRD
+preplace inst PERIOD_TO_RPM_0 -pg 1 -lvl 1 -y 510 -defaultsOSRD
+preplace inst Debouncer_4 -pg 1 -lvl 8 -y 940 -defaultsOSRD
+preplace inst BLDC_MOTOR_CONTROL -pg 1 -lvl 10 -y 700 -defaultsOSRD
+preplace inst PID_0 -pg 1 -lvl 6 -y 120 -defaultsOSRD
+preplace inst inverter_1 -pg 1 -lvl 8 -y 850 -defaultsOSRD
+preplace inst Debouncer_5 -pg 1 -lvl 7 -y 850 -defaultsOSRD
+preplace inst Debouncer_6 -pg 1 -lvl 7 -y 730 -defaultsOSRD
+preplace inst unity_ctrl_0 -pg 1 -lvl 7 -y 440 -defaultsOSRD
+preplace inst xlslice_6 -pg 1 -lvl 4 -y 370 -defaultsOSRD
+preplace inst inverter_2 -pg 1 -lvl 8 -y 740 -defaultsOSRD
+preplace inst Toggler_0 -pg 1 -lvl 9 -y 860 -defaultsOSRD
+preplace inst vector_mux_1 -pg 1 -lvl 9 -y 600 -defaultsOSRD
+preplace inst xlslice_7 -pg 1 -lvl 8 -y 460 -defaultsOSRD
+preplace inst xlslice_8 -pg 1 -lvl 8 -y 620 -defaultsOSRD
+preplace inst DIFF_PULSER_0 -pg 1 -lvl 2 -y 410 -defaultsOSRD
+preplace inst PULSER_0 -pg 1 -lvl 9 -y 730 -defaultsOSRD
+preplace inst xlslice_9 -pg 1 -lvl 8 -y 380 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 260 -defaultsOSRD
+preplace netloc Rotary_Encoder_0_cw_out 1 9 1 N
+preplace netloc xlslice_9_Dout 1 8 1 2660
+preplace netloc BLDC_MOTOR_CONTROL_speed_out 1 0 11 0 770 NJ 770 NJ 770 NJ 770 NJ 770 NJ 770 1980J 230 NJ 230 NJ 230 NJ 230 3240
+preplace netloc xlslice_1_Dout 1 5 5 1670 260 NJ 260 NJ 260 2640 260 2920
 preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_A_out 1 10 1 NJ
-preplace netloc Rotary_counter_0_counter_out 1 9 2 2840 450 NJ
-preplace netloc Debouncer_4_OUT_SIG 1 7 1 2250
-preplace netloc Toggler_0_signal_out 1 9 1 2830
+preplace netloc unity_ctrl_0_addr14_out 1 5 3 1630 310 NJ 310 2360
+preplace netloc Rotary_counter_0_counter_out 1 10 1 NJ
+preplace netloc Debouncer_4_OUT_SIG 1 8 1 2630
+preplace netloc Toggler_0_signal_out 1 9 1 2930
 preplace netloc Debouncer_5_OUT_SIG 1 7 1 NJ
-preplace netloc xlslice_7_Dout 1 7 3 N 1060 NJ 1060 2850J
-preplace netloc xlslice_5_Dout 1 8 1 2530J
-preplace netloc BLDC_MOTOR_CONTROL_dir_out 1 4 7 1300 610 1660J 580 NJ 580 NJ 580 NJ 580 NJ 580 3140
+preplace netloc xlslice_7_Dout 1 8 1 2650
+preplace netloc BLDC_MOTOR_CONTROL_dir_out 1 4 7 1250 -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 3250
 preplace netloc DIFF_PULSER_0_PULSE_out 1 2 1 N
-preplace netloc Rotary_Encoder_0_ccw_out 1 8 1 N
+preplace netloc Rotary_Encoder_0_ccw_out 1 9 1 N
 preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_B_out 1 10 1 NJ
-preplace netloc Debouncer_6_OUT_SIG 1 7 1 2250
-preplace netloc MOTOR_BTN_IN_1 1 0 7 NJ 50 NJ 50 NJ 50 NJ 50 NJ 50 NJ 50 2000J
-preplace netloc inverter_1_out_sig 1 8 1 2520
-preplace netloc PID_0_output 1 5 5 1680 570 NJ 570 NJ 570 NJ 570 2830
-preplace netloc UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT 1 5 4 1650 540 NJ 540 NJ 540 2520
-preplace netloc PULSER_0_PULSE_out 1 9 1 2840
-preplace netloc SW_B_in_1 1 0 7 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ
-preplace netloc unity_ctrl_0_addr12_out 1 6 3 2040J 680 NJ 680 N
-preplace netloc RUNNING_AVG_0_output_out 1 3 3 1010 910 NJ 910 N
-preplace netloc unity_ctrl_0_addr7_out 1 6 2 2050J 810 2250
-preplace netloc unity_ctrl_0_addr6_out 1 6 2 2030J 730 2280
+preplace netloc Debouncer_6_OUT_SIG 1 7 1 2390
+preplace netloc MOTOR_BTN_IN_1 1 0 7 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ
+preplace netloc inverter_1_out_sig 1 8 1 2630
+preplace netloc PID_0_output 1 6 2 1990 120 2420J
+preplace netloc UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT 1 5 2 1610 420 NJ
+preplace netloc PULSER_0_PULSE_out 1 9 1 2940
+preplace netloc SW_B_in_1 1 0 8 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ 1050 NJ
+preplace netloc unity_ctrl_0_addr12_out 1 5 3 1650 280 NJ 280 2380
+preplace netloc RUNNING_AVG_0_output_out 1 3 4 1030 440 NJ 440 NJ 440 NJ
+preplace netloc unity_ctrl_0_addr7_out 1 5 3 1640 270 NJ 270 2390
+preplace netloc unity_ctrl_0_addr6_out 1 5 3 1670 0 NJ 0 2400
 preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_C_out 1 10 1 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 10 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ 120 NJ
-preplace netloc xlslice_2_Dout 1 8 1 2500J
-preplace netloc unity_ctrl_0_addr5_out 1 6 1 2020J
+preplace netloc processing_system7_0_FIXED_IO 1 1 10 410J 150 NJ 150 NJ 150 NJ 150 1590J 240 NJ 240 NJ 240 NJ 240 NJ 240 3260J
+preplace netloc unity_ctrl_0_addr5_out 1 7 1 2410
 preplace netloc inverter_2_out_sig 1 8 1 NJ
-preplace netloc Debouncer_3_OUT_SIG 1 7 1 2250
+preplace netloc Debouncer_3_OUT_SIG 1 8 1 2660
 preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_BH_out 1 10 1 NJ
-preplace netloc DIR_IN1_1 1 0 7 NJ 30 NJ 30 NJ 30 NJ 30 NJ 30 NJ 30 2050J
-preplace netloc vector_mux_1_out_vec 1 9 2 2850 200 3150
-preplace netloc unity_ctrl_0_addr4_out 1 6 4 2000 950 NJ 950 NJ 950 2840J
-preplace netloc unity_ctrl_0_tx_o 1 6 5 2010J 960 NJ 960 NJ 960 NJ 960 3140J
-preplace netloc SW_A_in_1 1 0 7 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ
+preplace netloc DIR_IN1_1 1 0 7 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ
+preplace netloc unity_ctrl_0_addr13_out 1 5 3 1660 300 NJ 300 2370
+preplace netloc unity_ctrl_0_addr4_out 1 7 1 NJ
+preplace netloc vector_mux_1_out_vec 1 9 1 2950
+preplace netloc unity_ctrl_0_tx_o 1 7 4 2410J 330 NJ 330 NJ 330 NJ
+preplace netloc xlslice_8_Dout 1 8 1 2630J
+preplace netloc Net 1 1 6 410 510 730 510 NJ 510 NJ 510 NJ 510 2000J
+preplace netloc SW_A_in_1 1 0 8 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ
 preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_AH_out 1 10 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 70 400
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 0 160 400
 preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_CH_out 1 10 1 NJ
-preplace netloc SENSE_1 1 0 10 NJ 300 NJ 300 NJ 300 1010J 340 1300J 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 9 400 180 710 180 NJ 180 1290 180 1670 180 2050 180 2250 180 2530 470 2830
-preplace netloc xlslice_6_Dout 1 4 1 N
-preplace netloc rx_i_1 1 0 6 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ
-levelinfo -pg 1 0 210 560 860 1150 1470 1840 2150 2390 2690 2990 3170 -top -10 -bot 1110
+preplace netloc SENSE_1 1 0 10 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 10 10 790 400 790 720 790 NJ 790 1230 790 1620 790 2010 790 2390 790 2660 790 2960
+preplace netloc xlslice_6_Dout 1 4 1 1240
+preplace netloc rx_i_1 1 0 7 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 1600J 380 NJ
+levelinfo -pg 1 -20 210 570 880 1130 1420 1830 2200 2530 2790 3100 3280 -top -20 -bot 1120
 ",
 }
 {

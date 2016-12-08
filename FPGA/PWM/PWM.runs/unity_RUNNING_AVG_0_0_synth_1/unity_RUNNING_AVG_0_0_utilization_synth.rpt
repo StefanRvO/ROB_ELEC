@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date         : Wed Dec  7 22:00:06 2016
+| Date         : Thu Dec  8 01:24:27 2016
 | Host         : Leviathan running 64-bit Arch Linux
 | Command      : report_utilization -file unity_RUNNING_AVG_0_0_utilization_synth.rpt -pb unity_RUNNING_AVG_0_0_utilization_synth.pb
 | Design       : unity_RUNNING_AVG_0_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 2554 |     0 |     17600 | 14.51 |
-|   LUT as Logic          | 2554 |     0 |     17600 | 14.51 |
+| Slice LUTs*             | 4665 |     0 |     17600 | 26.51 |
+|   LUT as Logic          | 4665 |     0 |     17600 | 26.51 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         | 3887 |     0 |     35200 | 11.04 |
-|   Register as Flip Flop | 3887 |     0 |     35200 | 11.04 |
+| Slice Registers         | 8234 |     0 |     35200 | 23.39 |
+|   Register as Flip Flop | 8234 |     0 |     35200 | 23.39 |
 |   Register as Latch     |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 3887  |          Yes |       Reset |            - |
+| 8234  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,14 +146,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 3887 |        Flop & Latch |
-| LUT3     | 2077 |                 LUT |
-| LUT4     | 2026 |                 LUT |
-| CARRY4   |  614 |          CarryLogic |
-| LUT5     |  199 |                 LUT |
-| LUT2     |  115 |                 LUT |
-| LUT1     |   64 |                 LUT |
-| LUT6     |   46 |                 LUT |
+| FDRE     | 8234 |        Flop & Latch |
+| LUT3     | 4343 |                 LUT |
+| LUT4     | 4260 |                 LUT |
+| CARRY4   | 1157 |          CarryLogic |
+| LUT6     |   72 |                 LUT |
+| LUT5     |   48 |                 LUT |
+| LUT2     |   11 |                 LUT |
+| LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 
 

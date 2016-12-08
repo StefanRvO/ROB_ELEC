@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="unity" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1481145110"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1481145110"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1481145110"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1481156602"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1481156602"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1481156602"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -236,22 +236,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/unity_xlconstant_0_2/unity_xlconstant_0_2.xci" Type="IP">
-        <Instance HierarchyPath="xlconstant_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/unity_xlconcat_0_0/unity_xlconcat_0_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconcat_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/unity_PULSER_0_1/unity_PULSER_0_1.xci" Type="IP">
         <Instance HierarchyPath="PULSER_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -292,40 +276,8 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/unity_xlslice_1_2/unity_xlslice_1_2.xci" Type="IP">
-        <Instance HierarchyPath="xlslice_2"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/unity_PID_0_0/unity_PID_0_0.xci" Type="IP">
         <Instance HierarchyPath="PID_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/unity_xlslice_2_0/unity_xlslice_2_0.xci" Type="IP">
-        <Instance HierarchyPath="xlslice_3"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/unity_xlslice_2_1/unity_xlslice_2_1.xci" Type="IP">
-        <Instance HierarchyPath="xlslice_4"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/unity_xlslice_3_0/unity_xlslice_3_0.xci" Type="IP">
-        <Instance HierarchyPath="xlslice_5"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -356,8 +308,24 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/unity_vector_splitter_0_1/unity_vector_splitter_0_1.xci" Type="IP">
-        <Instance HierarchyPath="vector_splitter_1"/>
+      <File Name="ip/unity_PERIOD_TO_RPM_0_0/unity_PERIOD_TO_RPM_0_0.xci" Type="IP">
+        <Instance HierarchyPath="PERIOD_TO_RPM_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlslice_7_0/unity_xlslice_7_0.xci" Type="IP">
+        <Instance HierarchyPath="xlslice_8"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlslice_8_0/unity_xlslice_8_0.xci" Type="IP">
+        <Instance HierarchyPath="xlslice_9"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

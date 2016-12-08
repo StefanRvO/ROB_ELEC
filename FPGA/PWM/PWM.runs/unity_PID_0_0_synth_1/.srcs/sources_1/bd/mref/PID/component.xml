@@ -4,6 +4,24 @@
   <spirit:library>module_ref</spirit:library>
   <spirit:name>PID</spirit:name>
   <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>reset_in</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>reset_in</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
   <spirit:model>
     <spirit:views>
       <spirit:view>
@@ -15,7 +33,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f5d7db4c</spirit:value>
+            <spirit:value>eb4f0632</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -28,7 +46,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f5d7db4c</spirit:value>
+            <spirit:value>eb4f0632</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -77,7 +95,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>output</spirit:name>
+        <spirit:name>output_out</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -114,7 +132,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CONST_SIZE&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -131,7 +149,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CONST_SIZE&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -148,7 +166,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CONST_SIZE&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -165,7 +183,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">15</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.CONST_SIZE&apos;)) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -175,6 +193,22 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>reset_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>STD_LOGIC</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:defaultValue>
+          </spirit:driver>
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
@@ -204,6 +238,21 @@
         <spirit:displayName>Min</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MIN" spirit:maximum="1000000000" spirit:rangeType="long">1000000000</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CONST_SIZE</spirit:name>
+        <spirit:displayName>Const Size</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CONST_SIZE" spirit:maximum="1000" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>SAMPLE_FREQ</spirit:name>
+        <spirit:displayName>Sample Freq</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SAMPLE_FREQ" spirit:maximum="200000000" spirit:rangeType="long">100000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CLK_FREQ</spirit:name>
+        <spirit:displayName>Clk Freq</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLK_FREQ" spirit:maximum="1000000000" spirit:rangeType="long">200000000</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
@@ -212,7 +261,7 @@
       <spirit:file>
         <spirit:name>xgui/PID_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_6b5a4c1d</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_ad22d9b2</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -245,6 +294,21 @@
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MIN">1000000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>CONST_SIZE</spirit:name>
+      <spirit:displayName>Const Size</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CONST_SIZE">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SAMPLE_FREQ</spirit:name>
+      <spirit:displayName>Sample Freq</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SAMPLE_FREQ">100000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CLK_FREQ</spirit:name>
+      <spirit:displayName>Clk Freq</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CLK_FREQ">200000000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">PID_v1_0</spirit:value>
     </spirit:parameter>
@@ -264,7 +328,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-12-07T21:12:05Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-12-08T00:03:00Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2016.3</xilinx:xilinxVersion>

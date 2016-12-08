@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Wed Dec  7 14:52:08 2016
+// Date        : Wed Dec  7 23:20:45 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ unity_Debouncer_5_1_stub.v

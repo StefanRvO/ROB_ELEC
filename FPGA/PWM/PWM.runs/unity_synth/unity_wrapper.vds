@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Wed Dec  7 22:12:44 2016
-# Process ID: 18914
+# Start of session at: Thu Dec  8 01:24:30 2016
+# Process ID: 13038
 # Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth
 # Command line: vivado -log unity_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_wrapper.tcl
 # Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/unity_wrapper.vds
@@ -18,109 +18,101 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19427 
+INFO: Helper process launched with PID 13051 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1072.672 ; gain = 169.301 ; free physical = 4457 ; free virtual = 17664
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1070.676 ; gain = 167.301 ; free physical = 1355 ; free virtual = 16702
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'unity_wrapper' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity_wrapper.vhd:38]
 INFO: [Synth 8-3491] module 'unity' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:379' bound to instance 'unity_i' of component 'unity' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity_wrapper.vhd:63]
 INFO: [Synth 8-638] synthesizing module 'unity' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:407]
 INFO: [Synth 8-638] synthesizing module 'BLDC_MOTOR_CONTROL_imp_8MH9GC' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:79]
-INFO: [Synth 8-3491] module 'unity_BLDC_DIR_CTRL_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_BLDC_DIR_CTRL_0_0_stub.vhdl:5' bound to instance 'BLDC_DIR_CTRL_0' of component 'unity_BLDC_DIR_CTRL_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:256]
-INFO: [Synth 8-638] synthesizing module 'unity_BLDC_DIR_CTRL_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_BLDC_DIR_CTRL_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'unity_BLDC_SPEED_OBSERVER_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_BLDC_SPEED_OBSERVER_0_1_stub.vhdl:5' bound to instance 'BLDC_SPEED_OBSERVER_0' of component 'unity_BLDC_SPEED_OBSERVER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:268]
-INFO: [Synth 8-638] synthesizing module 'unity_BLDC_SPEED_OBSERVER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_BLDC_SPEED_OBSERVER_0_1_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'unity_BLDC_STARTUP_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_BLDC_STARTUP_0_0_stub.vhdl:5' bound to instance 'BLDC_STARTUP_0' of component 'unity_BLDC_STARTUP_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:276]
-INFO: [Synth 8-638] synthesizing module 'unity_BLDC_STARTUP_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_BLDC_STARTUP_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_BLDC_STATE_CONTROLLER_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_BLDC_STATE_CONTROLLER_0_0_stub.vhdl:5' bound to instance 'BLDC_STATE_CONTROLLER_0' of component 'unity_BLDC_STATE_CONTROLLER_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:283]
-INFO: [Synth 8-638] synthesizing module 'unity_BLDC_STATE_CONTROLLER_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_BLDC_STATE_CONTROLLER_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'unity_DIR_SENSE_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_DIR_SENSE_0_0_stub.vhdl:5' bound to instance 'DIR_SENSE_0' of component 'unity_DIR_SENSE_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:298]
-INFO: [Synth 8-638] synthesizing module 'unity_DIR_SENSE_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_DIR_SENSE_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'unity_OL_BLDC_Stepper_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_OL_BLDC_Stepper_0_0_stub.vhdl:5' bound to instance 'OL_BLDC_Stepper_0' of component 'unity_OL_BLDC_Stepper_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:304]
-INFO: [Synth 8-638] synthesizing module 'unity_OL_BLDC_Stepper_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_OL_BLDC_Stepper_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'unity_PWM_generator_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_PWM_generator_0_0_stub.vhdl:5' bound to instance 'PWM_generator_0' of component 'unity_PWM_generator_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:313]
-INFO: [Synth 8-638] synthesizing module 'unity_PWM_generator_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_PWM_generator_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_BLDC_DIR_CTRL_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_BLDC_DIR_CTRL_0_0_stub.vhdl:5' bound to instance 'BLDC_DIR_CTRL_0' of component 'unity_BLDC_DIR_CTRL_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:256]
+INFO: [Synth 8-638] synthesizing module 'unity_BLDC_DIR_CTRL_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_BLDC_DIR_CTRL_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'unity_BLDC_SPEED_OBSERVER_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_BLDC_SPEED_OBSERVER_0_1_stub.vhdl:5' bound to instance 'BLDC_SPEED_OBSERVER_0' of component 'unity_BLDC_SPEED_OBSERVER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'unity_BLDC_SPEED_OBSERVER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_BLDC_SPEED_OBSERVER_0_1_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'unity_BLDC_STARTUP_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_BLDC_STARTUP_0_0_stub.vhdl:5' bound to instance 'BLDC_STARTUP_0' of component 'unity_BLDC_STARTUP_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:276]
+INFO: [Synth 8-638] synthesizing module 'unity_BLDC_STARTUP_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_BLDC_STARTUP_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_BLDC_STATE_CONTROLLER_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_BLDC_STATE_CONTROLLER_0_0_stub.vhdl:5' bound to instance 'BLDC_STATE_CONTROLLER_0' of component 'unity_BLDC_STATE_CONTROLLER_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'unity_BLDC_STATE_CONTROLLER_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_BLDC_STATE_CONTROLLER_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'unity_DIR_SENSE_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_DIR_SENSE_0_0_stub.vhdl:5' bound to instance 'DIR_SENSE_0' of component 'unity_DIR_SENSE_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:298]
+INFO: [Synth 8-638] synthesizing module 'unity_DIR_SENSE_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_DIR_SENSE_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'unity_OL_BLDC_Stepper_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_OL_BLDC_Stepper_0_0_stub.vhdl:5' bound to instance 'OL_BLDC_Stepper_0' of component 'unity_OL_BLDC_Stepper_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'unity_OL_BLDC_Stepper_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_OL_BLDC_Stepper_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'unity_PWM_generator_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PWM_generator_0_0_stub.vhdl:5' bound to instance 'PWM_generator_0' of component 'unity_PWM_generator_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:313]
+INFO: [Synth 8-638] synthesizing module 'unity_PWM_generator_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PWM_generator_0_0_stub.vhdl:15]
 INFO: [Synth 8-638] synthesizing module 'STARTUP_PWM_MOD_imp_VO3X8O' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:22]
-INFO: [Synth 8-3491] module 'unity_PWM_generator_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_PWM_generator_0_1_stub.vhdl:5' bound to instance 'STARTUP_PWM' of component 'unity_PWM_generator_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:44]
-INFO: [Synth 8-638] synthesizing module 'unity_PWM_generator_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_PWM_generator_0_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_xlconstant_1_2' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlconstant_1_2_stub.vhdl:5' bound to instance 'xlconstant_3' of component 'unity_xlconstant_1_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'unity_xlconstant_1_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlconstant_1_2_stub.vhdl:12]
+INFO: [Synth 8-3491] module 'unity_PWM_generator_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PWM_generator_0_1_stub.vhdl:5' bound to instance 'STARTUP_PWM' of component 'unity_PWM_generator_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'unity_PWM_generator_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PWM_generator_0_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_xlconstant_1_2' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlconstant_1_2_stub.vhdl:5' bound to instance 'xlconstant_3' of component 'unity_xlconstant_1_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'unity_xlconstant_1_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlconstant_1_2_stub.vhdl:12]
 INFO: [Synth 8-256] done synthesizing module 'STARTUP_PWM_MOD_imp_VO3X8O' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:22]
-INFO: [Synth 8-3491] module 'unity_VECTOR_INV_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_VECTOR_INV_0_0_stub.vhdl:5' bound to instance 'VECTOR_INV_0' of component 'unity_VECTOR_INV_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:326]
-INFO: [Synth 8-638] synthesizing module 'unity_VECTOR_INV_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_VECTOR_INV_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_period_smoother_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_period_smoother_0_0_stub.vhdl:5' bound to instance 'period_smoother_0' of component 'unity_period_smoother_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:331]
-INFO: [Synth 8-638] synthesizing module 'unity_period_smoother_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_period_smoother_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_vector_mux_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_vector_mux_0_1_stub.vhdl:5' bound to instance 'vector_mux_1' of component 'unity_vector_mux_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:338]
-INFO: [Synth 8-638] synthesizing module 'unity_vector_mux_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_vector_mux_0_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_vector_mux_1_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_vector_mux_1_0_stub.vhdl:5' bound to instance 'vector_mux_2' of component 'unity_vector_mux_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:345]
-INFO: [Synth 8-638] synthesizing module 'unity_vector_mux_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_vector_mux_1_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_xlconcat_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlconcat_0_1_stub.vhdl:5' bound to instance 'xlconcat_1' of component 'unity_xlconcat_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:352]
-INFO: [Synth 8-638] synthesizing module 'unity_xlconcat_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlconcat_0_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_xlslice_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_0_0_stub.vhdl:5' bound to instance 'xlslice_0' of component 'unity_xlslice_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:359]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_xlslice_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_0_1_stub.vhdl:5' bound to instance 'xlslice_1' of component 'unity_xlslice_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:364]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_0_1_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_xlslice_1_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_1_0_stub.vhdl:5' bound to instance 'xlslice_2' of component 'unity_xlslice_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:369]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_1_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_VECTOR_INV_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_VECTOR_INV_0_0_stub.vhdl:5' bound to instance 'VECTOR_INV_0' of component 'unity_VECTOR_INV_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:326]
+INFO: [Synth 8-638] synthesizing module 'unity_VECTOR_INV_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_VECTOR_INV_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_period_smoother_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_period_smoother_0_0_stub.vhdl:5' bound to instance 'period_smoother_0' of component 'unity_period_smoother_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:331]
+INFO: [Synth 8-638] synthesizing module 'unity_period_smoother_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_period_smoother_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_vector_mux_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_vector_mux_0_1_stub.vhdl:5' bound to instance 'vector_mux_1' of component 'unity_vector_mux_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:338]
+INFO: [Synth 8-638] synthesizing module 'unity_vector_mux_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_vector_mux_0_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_vector_mux_1_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_vector_mux_1_0_stub.vhdl:5' bound to instance 'vector_mux_2' of component 'unity_vector_mux_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:345]
+INFO: [Synth 8-638] synthesizing module 'unity_vector_mux_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_vector_mux_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_xlconcat_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlconcat_0_1_stub.vhdl:5' bound to instance 'xlconcat_1' of component 'unity_xlconcat_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:352]
+INFO: [Synth 8-638] synthesizing module 'unity_xlconcat_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlconcat_0_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_xlslice_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_0_0_stub.vhdl:5' bound to instance 'xlslice_0' of component 'unity_xlslice_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:359]
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_xlslice_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_0_1_stub.vhdl:5' bound to instance 'xlslice_1' of component 'unity_xlslice_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:364]
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_0_1_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_xlslice_1_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_1_0_stub.vhdl:5' bound to instance 'xlslice_2' of component 'unity_xlslice_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_1_0_stub.vhdl:13]
 INFO: [Synth 8-256] done synthesizing module 'BLDC_MOTOR_CONTROL_imp_8MH9GC' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:79]
-INFO: [Synth 8-3491] module 'unity_DIFF_PULSER_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_DIFF_PULSER_0_0_stub.vhdl:5' bound to instance 'DIFF_PULSER_0' of component 'unity_DIFF_PULSER_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:781]
-INFO: [Synth 8-638] synthesizing module 'unity_DIFF_PULSER_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_DIFF_PULSER_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'unity_Debouncer_3_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Debouncer_3_0_stub.vhdl:5' bound to instance 'Debouncer_3' of component 'unity_Debouncer_3_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:787]
-INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_3_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Debouncer_3_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'unity_Debouncer_4_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Debouncer_4_0_stub.vhdl:5' bound to instance 'Debouncer_4' of component 'unity_Debouncer_4_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:793]
-INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_4_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Debouncer_4_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'unity_Debouncer_5_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Debouncer_5_0_stub.vhdl:5' bound to instance 'Debouncer_5' of component 'unity_Debouncer_5_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:799]
-INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_5_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Debouncer_5_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'unity_Debouncer_5_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Debouncer_5_1_stub.vhdl:5' bound to instance 'Debouncer_6' of component 'unity_Debouncer_5_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:805]
-INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_5_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Debouncer_5_1_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'unity_PID_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_PID_0_0_stub.vhdl:5' bound to instance 'PID_0' of component 'unity_PID_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:811]
-INFO: [Synth 8-638] synthesizing module 'unity_PID_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_PID_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'unity_PULSER_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_PULSER_0_1_stub.vhdl:5' bound to instance 'PULSER_0' of component 'unity_PULSER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:822]
-INFO: [Synth 8-638] synthesizing module 'unity_PULSER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_PULSER_0_1_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'unity_RUNNING_AVG_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_RUNNING_AVG_0_0_stub.vhdl:5' bound to instance 'RUNNING_AVG_0' of component 'unity_RUNNING_AVG_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:828]
-INFO: [Synth 8-638] synthesizing module 'unity_RUNNING_AVG_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_RUNNING_AVG_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_Rotary_Encoder_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Rotary_Encoder_0_0_stub.vhdl:5' bound to instance 'Rotary_Encoder_0' of component 'unity_Rotary_Encoder_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:835]
-INFO: [Synth 8-638] synthesizing module 'unity_Rotary_Encoder_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Rotary_Encoder_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'unity_Rotary_counter_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Rotary_counter_0_0_stub.vhdl:5' bound to instance 'Rotary_counter_0' of component 'unity_Rotary_counter_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:844]
-INFO: [Synth 8-638] synthesizing module 'unity_Rotary_counter_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Rotary_counter_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'unity_Toggler_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Toggler_0_0_stub.vhdl:5' bound to instance 'Toggler_0' of component 'unity_Toggler_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:852]
-INFO: [Synth 8-638] synthesizing module 'unity_Toggler_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_Toggler_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_UNSIGNED_TO_SIGNED_CONV_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_UNSIGNED_TO_SIGNED_CONV_0_0_stub.vhdl:5' bound to instance 'UNSIGNED_TO_SIGNED_CONV_0' of component 'unity_UNSIGNED_TO_SIGNED_CONV_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:859]
-INFO: [Synth 8-638] synthesizing module 'unity_UNSIGNED_TO_SIGNED_CONV_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_UNSIGNED_TO_SIGNED_CONV_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_inverter_1_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_inverter_1_0_stub.vhdl:5' bound to instance 'inverter_1' of component 'unity_inverter_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:866]
-INFO: [Synth 8-638] synthesizing module 'unity_inverter_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_inverter_1_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_inverter_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_inverter_0_1_stub.vhdl:5' bound to instance 'inverter_2' of component 'unity_inverter_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:871]
-INFO: [Synth 8-638] synthesizing module 'unity_inverter_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_inverter_0_1_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_processing_system7_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'unity_processing_system7_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:876]
-INFO: [Synth 8-638] synthesizing module 'unity_processing_system7_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_processing_system7_0_0_stub.vhdl:58]
-INFO: [Synth 8-3491] module 'unity_unity_ctrl_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_unity_ctrl_0_0_stub.vhdl:5' bound to instance 'unity_ctrl_0' of component 'unity_unity_ctrl_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:926]
-INFO: [Synth 8-638] synthesizing module 'unity_unity_ctrl_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_unity_ctrl_0_0_stub.vhdl:29]
-INFO: [Synth 8-3491] module 'unity_vector_mux_1_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_vector_mux_1_1_stub.vhdl:5' bound to instance 'vector_mux_1' of component 'unity_vector_mux_1_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:947]
-INFO: [Synth 8-638] synthesizing module 'unity_vector_mux_1_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_vector_mux_1_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'unity_vector_splitter_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_vector_splitter_0_1_stub.vhdl:5' bound to instance 'vector_splitter_1' of component 'unity_vector_splitter_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:954]
-INFO: [Synth 8-638] synthesizing module 'unity_vector_splitter_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_vector_splitter_0_1_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'unity_xlconcat_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlconcat_0_0_stub.vhdl:5' bound to instance 'xlconcat_0' of component 'unity_xlconcat_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:962]
-INFO: [Synth 8-638] synthesizing module 'unity_xlconcat_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlconcat_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'unity_xlconstant_0_2' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlconstant_0_2_stub.vhdl:5' bound to instance 'xlconstant_1' of component 'unity_xlconstant_0_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:968]
-INFO: [Synth 8-638] synthesizing module 'unity_xlconstant_0_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlconstant_0_2_stub.vhdl:12]
-INFO: [Synth 8-3491] module 'unity_xlslice_1_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_1_1_stub.vhdl:5' bound to instance 'xlslice_1' of component 'unity_xlslice_1_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:972]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_1_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_1_1_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_xlslice_1_2' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_1_2_stub.vhdl:5' bound to instance 'xlslice_2' of component 'unity_xlslice_1_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:977]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_1_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_1_2_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_xlslice_2_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_2_0_stub.vhdl:5' bound to instance 'xlslice_3' of component 'unity_xlslice_2_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:982]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_2_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_2_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_xlslice_2_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_2_1_stub.vhdl:5' bound to instance 'xlslice_4' of component 'unity_xlslice_2_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:987]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_2_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_2_1_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_xlslice_3_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_3_0_stub.vhdl:5' bound to instance 'xlslice_5' of component 'unity_xlslice_3_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:992]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_3_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_3_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_xlslice_5_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_5_0_stub.vhdl:5' bound to instance 'xlslice_6' of component 'unity_xlslice_5_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:997]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_5_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_5_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'unity_xlslice_1_3' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_1_3_stub.vhdl:5' bound to instance 'xlslice_7' of component 'unity_xlslice_1_3' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:1002]
-INFO: [Synth 8-638] synthesizing module 'unity_xlslice_1_3' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/realtime/unity_xlslice_1_3_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_DIFF_PULSER_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_DIFF_PULSER_0_0_stub.vhdl:5' bound to instance 'DIFF_PULSER_0' of component 'unity_DIFF_PULSER_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:749]
+INFO: [Synth 8-638] synthesizing module 'unity_DIFF_PULSER_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_DIFF_PULSER_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'unity_Debouncer_3_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Debouncer_3_0_stub.vhdl:5' bound to instance 'Debouncer_3' of component 'unity_Debouncer_3_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:755]
+INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_3_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Debouncer_3_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'unity_Debouncer_4_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Debouncer_4_0_stub.vhdl:5' bound to instance 'Debouncer_4' of component 'unity_Debouncer_4_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:761]
+INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_4_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Debouncer_4_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'unity_Debouncer_5_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Debouncer_5_0_stub.vhdl:5' bound to instance 'Debouncer_5' of component 'unity_Debouncer_5_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:767]
+INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_5_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Debouncer_5_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'unity_Debouncer_5_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Debouncer_5_1_stub.vhdl:5' bound to instance 'Debouncer_6' of component 'unity_Debouncer_5_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:773]
+INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_5_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Debouncer_5_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'unity_PERIOD_TO_RPM_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PERIOD_TO_RPM_0_0_stub.vhdl:5' bound to instance 'PERIOD_TO_RPM_0' of component 'unity_PERIOD_TO_RPM_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:779]
+INFO: [Synth 8-638] synthesizing module 'unity_PERIOD_TO_RPM_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PERIOD_TO_RPM_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'unity_PID_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PID_0_0_stub.vhdl:5' bound to instance 'PID_0' of component 'unity_PID_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:785]
+INFO: [Synth 8-638] synthesizing module 'unity_PID_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PID_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'unity_PULSER_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PULSER_0_1_stub.vhdl:5' bound to instance 'PULSER_0' of component 'unity_PULSER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:797]
+INFO: [Synth 8-638] synthesizing module 'unity_PULSER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_PULSER_0_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'unity_RUNNING_AVG_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_RUNNING_AVG_0_0_stub.vhdl:5' bound to instance 'RUNNING_AVG_0' of component 'unity_RUNNING_AVG_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:803]
+INFO: [Synth 8-638] synthesizing module 'unity_RUNNING_AVG_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_RUNNING_AVG_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_Rotary_Encoder_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Rotary_Encoder_0_0_stub.vhdl:5' bound to instance 'Rotary_Encoder_0' of component 'unity_Rotary_Encoder_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:810]
+INFO: [Synth 8-638] synthesizing module 'unity_Rotary_Encoder_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Rotary_Encoder_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'unity_Rotary_counter_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Rotary_counter_0_0_stub.vhdl:5' bound to instance 'Rotary_counter_0' of component 'unity_Rotary_counter_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:819]
+INFO: [Synth 8-638] synthesizing module 'unity_Rotary_counter_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Rotary_counter_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'unity_Toggler_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Toggler_0_0_stub.vhdl:5' bound to instance 'Toggler_0' of component 'unity_Toggler_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:827]
+INFO: [Synth 8-638] synthesizing module 'unity_Toggler_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_Toggler_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_UNSIGNED_TO_SIGNED_CONV_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_UNSIGNED_TO_SIGNED_CONV_0_0_stub.vhdl:5' bound to instance 'UNSIGNED_TO_SIGNED_CONV_0' of component 'unity_UNSIGNED_TO_SIGNED_CONV_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:834]
+INFO: [Synth 8-638] synthesizing module 'unity_UNSIGNED_TO_SIGNED_CONV_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_UNSIGNED_TO_SIGNED_CONV_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_inverter_1_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_inverter_1_0_stub.vhdl:5' bound to instance 'inverter_1' of component 'unity_inverter_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:841]
+INFO: [Synth 8-638] synthesizing module 'unity_inverter_1_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_inverter_1_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_inverter_0_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_inverter_0_1_stub.vhdl:5' bound to instance 'inverter_2' of component 'unity_inverter_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:846]
+INFO: [Synth 8-638] synthesizing module 'unity_inverter_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_inverter_0_1_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_processing_system7_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'unity_processing_system7_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:851]
+INFO: [Synth 8-638] synthesizing module 'unity_processing_system7_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_processing_system7_0_0_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'unity_unity_ctrl_0_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_unity_ctrl_0_0_stub.vhdl:5' bound to instance 'unity_ctrl_0' of component 'unity_unity_ctrl_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:901]
+INFO: [Synth 8-638] synthesizing module 'unity_unity_ctrl_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_unity_ctrl_0_0_stub.vhdl:29]
+INFO: [Synth 8-3491] module 'unity_vector_mux_1_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_vector_mux_1_1_stub.vhdl:5' bound to instance 'vector_mux_1' of component 'unity_vector_mux_1_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:922]
+INFO: [Synth 8-638] synthesizing module 'unity_vector_mux_1_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_vector_mux_1_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'unity_xlslice_1_1' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_1_1_stub.vhdl:5' bound to instance 'xlslice_1' of component 'unity_xlslice_1_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:929]
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_1_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_1_1_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_xlslice_5_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_5_0_stub.vhdl:5' bound to instance 'xlslice_6' of component 'unity_xlslice_5_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:934]
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_5_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_5_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_xlslice_1_3' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_1_3_stub.vhdl:5' bound to instance 'xlslice_7' of component 'unity_xlslice_1_3' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:939]
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_1_3' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_1_3_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_xlslice_7_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_7_0_stub.vhdl:5' bound to instance 'xlslice_8' of component 'unity_xlslice_7_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:944]
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_7_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_7_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'unity_xlslice_8_0' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_8_0_stub.vhdl:5' bound to instance 'xlslice_9' of component 'unity_xlslice_8_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:949]
+INFO: [Synth 8-638] synthesizing module 'unity_xlslice_8_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/realtime/unity_xlslice_8_0_stub.vhdl:13]
 INFO: [Synth 8-256] done synthesizing module 'unity' (3#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:407]
 INFO: [Synth 8-256] done synthesizing module 'unity_wrapper' (4#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity_wrapper.vhd:38]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1114.141 ; gain = 210.770 ; free physical = 4419 ; free virtual = 17618
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1113.145 ; gain = 209.770 ; free physical = 1312 ; free virtual = 16659
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -130,145 +122,133 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1114.141 ; gain = 210.770 ; free physical = 4419 ; free virtual = 17618
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1113.145 ; gain = 209.770 ; free physical = 1309 ; free virtual = 16657
 ---------------------------------------------------------------------------------
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_BLDC_DIR_CTRL_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/BLDC_DIR_CTRL_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:256]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_BLDC_SPEED_OBSERVER_0_1' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/BLDC_SPEED_OBSERVER_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:268]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_BLDC_STARTUP_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STARTUP_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:276]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_BLDC_STATE_CONTROLLER_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STATE_CONTROLLER_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:283]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_DIFF_PULSER_0_0' instantiated as 'unity_i/DIFF_PULSER_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:781]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_DIFF_PULSER_0_0' instantiated as 'unity_i/DIFF_PULSER_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:749]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_DIR_SENSE_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/DIR_SENSE_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:298]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Debouncer_3_0' instantiated as 'unity_i/Debouncer_3' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:787]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Debouncer_4_0' instantiated as 'unity_i/Debouncer_4' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:793]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Debouncer_5_0' instantiated as 'unity_i/Debouncer_5' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:799]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Debouncer_5_1' instantiated as 'unity_i/Debouncer_6' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:805]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Debouncer_3_0' instantiated as 'unity_i/Debouncer_3' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:755]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Debouncer_4_0' instantiated as 'unity_i/Debouncer_4' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:761]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Debouncer_5_0' instantiated as 'unity_i/Debouncer_5' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:767]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Debouncer_5_1' instantiated as 'unity_i/Debouncer_6' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:773]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_OL_BLDC_Stepper_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/OL_BLDC_Stepper_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:304]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_PID_0_0' instantiated as 'unity_i/PID_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:811]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_PULSER_0_1' instantiated as 'unity_i/PULSER_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:822]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_PERIOD_TO_RPM_0_0' instantiated as 'unity_i/PERIOD_TO_RPM_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:779]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_PID_0_0' instantiated as 'unity_i/PID_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:785]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_PULSER_0_1' instantiated as 'unity_i/PULSER_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:797]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_PWM_generator_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/PWM_generator_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:313]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_PWM_generator_0_1' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/STARTUP_PWM' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:44]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_RUNNING_AVG_0_0' instantiated as 'unity_i/RUNNING_AVG_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:828]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Rotary_Encoder_0_0' instantiated as 'unity_i/Rotary_Encoder_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:835]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Rotary_counter_0_0' instantiated as 'unity_i/Rotary_counter_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:844]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Toggler_0_0' instantiated as 'unity_i/Toggler_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:852]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_UNSIGNED_TO_SIGNED_CONV_0_0' instantiated as 'unity_i/UNSIGNED_TO_SIGNED_CONV_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:859]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_RUNNING_AVG_0_0' instantiated as 'unity_i/RUNNING_AVG_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:803]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Rotary_Encoder_0_0' instantiated as 'unity_i/Rotary_Encoder_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:810]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Rotary_counter_0_0' instantiated as 'unity_i/Rotary_counter_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:819]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_Toggler_0_0' instantiated as 'unity_i/Toggler_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:827]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_UNSIGNED_TO_SIGNED_CONV_0_0' instantiated as 'unity_i/UNSIGNED_TO_SIGNED_CONV_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:834]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_VECTOR_INV_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/VECTOR_INV_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:326]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_inverter_0_1' instantiated as 'unity_i/inverter_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:871]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_inverter_1_0' instantiated as 'unity_i/inverter_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:866]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_inverter_0_1' instantiated as 'unity_i/inverter_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:846]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_inverter_1_0' instantiated as 'unity_i/inverter_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:841]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_period_smoother_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/period_smoother_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:331]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_processing_system7_0_0' instantiated as 'unity_i/processing_system7_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:876]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_unity_ctrl_0_0' instantiated as 'unity_i/unity_ctrl_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:926]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_processing_system7_0_0' instantiated as 'unity_i/processing_system7_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:851]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_unity_ctrl_0_0' instantiated as 'unity_i/unity_ctrl_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:901]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_vector_mux_0_1' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:338]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_vector_mux_1_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:345]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_vector_mux_1_1' instantiated as 'unity_i/vector_mux_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:947]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_vector_splitter_0_1' instantiated as 'unity_i/vector_splitter_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:954]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlconcat_0_0' instantiated as 'unity_i/xlconcat_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:962]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_vector_mux_1_1' instantiated as 'unity_i/vector_mux_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:922]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlconcat_0_1' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/xlconcat_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:352]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlconstant_0_2' instantiated as 'unity_i/xlconstant_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:968]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlconstant_1_2' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/xlconstant_3' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:51]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_0_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/xlslice_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:359]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_0_1' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/xlslice_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:364]
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_1_0' instantiated as 'unity_i/BLDC_MOTOR_CONTROL/xlslice_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:369]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_1_1' instantiated as 'unity_i/xlslice_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:972]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_1_2' instantiated as 'unity_i/xlslice_2' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:977]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_1_3' instantiated as 'unity_i/xlslice_7' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:1002]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_2_0' instantiated as 'unity_i/xlslice_3' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:982]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_2_1' instantiated as 'unity_i/xlslice_4' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:987]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_3_0' instantiated as 'unity_i/xlslice_5' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:992]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_5_0' instantiated as 'unity_i/xlslice_6' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:997]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_1_1' instantiated as 'unity_i/xlslice_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:929]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_1_3' instantiated as 'unity_i/xlslice_7' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:939]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_5_0' instantiated as 'unity_i/xlslice_6' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:934]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_7_0' instantiated as 'unity_i/xlslice_8' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:944]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'unity_xlslice_8_0' instantiated as 'unity_i/xlslice_9' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/hdl/unity.vhd:949]
 INFO: [Device 21-403] Loading part xc7z010clg225-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc] for cell 'unity_i/processing_system7_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc] for cell 'unity_i/processing_system7_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_2/unity_unity_ctrl_0_0_in_context.xdc] for cell 'unity_i/unity_ctrl_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_2/unity_unity_ctrl_0_0_in_context.xdc] for cell 'unity_i/unity_ctrl_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_3/unity_PWM_generator_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/PWM_generator_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_3/unity_PWM_generator_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/PWM_generator_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_4/unity_OL_BLDC_Stepper_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/OL_BLDC_Stepper_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_4/unity_OL_BLDC_Stepper_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/OL_BLDC_Stepper_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_5/unity_Debouncer_5_0_in_context.xdc] for cell 'unity_i/Debouncer_5'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_5/unity_Debouncer_5_0_in_context.xdc] for cell 'unity_i/Debouncer_5'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_6/unity_Toggler_0_0_in_context.xdc] for cell 'unity_i/Toggler_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_6/unity_Toggler_0_0_in_context.xdc] for cell 'unity_i/Toggler_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_7/unity_inverter_1_0_in_context.xdc] for cell 'unity_i/inverter_1'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_7/unity_inverter_1_0_in_context.xdc] for cell 'unity_i/inverter_1'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_8/unity_BLDC_STARTUP_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STARTUP_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_8/unity_BLDC_STARTUP_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STARTUP_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_9/unity_Debouncer_5_1_in_context.xdc] for cell 'unity_i/Debouncer_6'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_9/unity_Debouncer_5_1_in_context.xdc] for cell 'unity_i/Debouncer_6'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_10/unity_inverter_0_1_in_context.xdc] for cell 'unity_i/inverter_2'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_10/unity_inverter_0_1_in_context.xdc] for cell 'unity_i/inverter_2'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_11/unity_period_smoother_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/period_smoother_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_11/unity_period_smoother_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/period_smoother_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_12/unity_vector_mux_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_1'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_12/unity_vector_mux_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_1'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_13/unity_xlconcat_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlconcat_1'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_13/unity_xlconcat_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlconcat_1'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_14/unity_xlslice_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_14/unity_xlslice_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_15/unity_xlslice_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_1'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_15/unity_xlslice_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_1'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_16/unity_xlslice_1_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_2'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_16/unity_xlslice_1_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_2'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_17/unity_VECTOR_INV_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/VECTOR_INV_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_17/unity_VECTOR_INV_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/VECTOR_INV_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_18/unity_DIR_SENSE_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/DIR_SENSE_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_18/unity_DIR_SENSE_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/DIR_SENSE_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_19/unity_BLDC_STATE_CONTROLLER_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STATE_CONTROLLER_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_19/unity_BLDC_STATE_CONTROLLER_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STATE_CONTROLLER_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_20/unity_PWM_generator_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/STARTUP_PWM'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_20/unity_PWM_generator_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/STARTUP_PWM'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_21/unity_xlconstant_1_2_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/xlconstant_3'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_21/unity_xlconstant_1_2_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/xlconstant_3'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_22/unity_vector_mux_1_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_2'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_22/unity_vector_mux_1_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_2'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_23/unity_BLDC_DIR_CTRL_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_DIR_CTRL_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_23/unity_BLDC_DIR_CTRL_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_DIR_CTRL_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_24/unity_BLDC_SPEED_OBSERVER_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_SPEED_OBSERVER_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_24/unity_BLDC_SPEED_OBSERVER_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_SPEED_OBSERVER_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_25/unity_Debouncer_3_0_in_context.xdc] for cell 'unity_i/Debouncer_3'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_25/unity_Debouncer_3_0_in_context.xdc] for cell 'unity_i/Debouncer_3'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_26/unity_Debouncer_4_0_in_context.xdc] for cell 'unity_i/Debouncer_4'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_26/unity_Debouncer_4_0_in_context.xdc] for cell 'unity_i/Debouncer_4'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_27/unity_Rotary_Encoder_0_0_in_context.xdc] for cell 'unity_i/Rotary_Encoder_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_27/unity_Rotary_Encoder_0_0_in_context.xdc] for cell 'unity_i/Rotary_Encoder_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_28/unity_Rotary_counter_0_0_in_context.xdc] for cell 'unity_i/Rotary_counter_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_28/unity_Rotary_counter_0_0_in_context.xdc] for cell 'unity_i/Rotary_counter_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_29/unity_xlconstant_0_2_in_context.xdc] for cell 'unity_i/xlconstant_1'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_29/unity_xlconstant_0_2_in_context.xdc] for cell 'unity_i/xlconstant_1'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_30/unity_xlconcat_0_0_in_context.xdc] for cell 'unity_i/xlconcat_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_30/unity_xlconcat_0_0_in_context.xdc] for cell 'unity_i/xlconcat_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_31/unity_PULSER_0_1_in_context.xdc] for cell 'unity_i/PULSER_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_31/unity_PULSER_0_1_in_context.xdc] for cell 'unity_i/PULSER_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_32/unity_RUNNING_AVG_0_0_in_context.xdc] for cell 'unity_i/RUNNING_AVG_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_32/unity_RUNNING_AVG_0_0_in_context.xdc] for cell 'unity_i/RUNNING_AVG_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_33/unity_DIFF_PULSER_0_0_in_context.xdc] for cell 'unity_i/DIFF_PULSER_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_33/unity_DIFF_PULSER_0_0_in_context.xdc] for cell 'unity_i/DIFF_PULSER_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_34/unity_UNSIGNED_TO_SIGNED_CONV_0_0_in_context.xdc] for cell 'unity_i/UNSIGNED_TO_SIGNED_CONV_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_34/unity_UNSIGNED_TO_SIGNED_CONV_0_0_in_context.xdc] for cell 'unity_i/UNSIGNED_TO_SIGNED_CONV_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_35/unity_xlslice_1_1_in_context.xdc] for cell 'unity_i/xlslice_1'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_35/unity_xlslice_1_1_in_context.xdc] for cell 'unity_i/xlslice_1'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_36/unity_xlslice_1_2_in_context.xdc] for cell 'unity_i/xlslice_2'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_36/unity_xlslice_1_2_in_context.xdc] for cell 'unity_i/xlslice_2'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_37/unity_PID_0_0_in_context.xdc] for cell 'unity_i/PID_0'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_37/unity_PID_0_0_in_context.xdc] for cell 'unity_i/PID_0'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_38/unity_xlslice_2_0_in_context.xdc] for cell 'unity_i/xlslice_3'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_38/unity_xlslice_2_0_in_context.xdc] for cell 'unity_i/xlslice_3'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_39/unity_xlslice_2_1_in_context.xdc] for cell 'unity_i/xlslice_4'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_39/unity_xlslice_2_1_in_context.xdc] for cell 'unity_i/xlslice_4'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_40/unity_xlslice_2_0_in_context.xdc] for cell 'unity_i/xlslice_5'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_40/unity_xlslice_2_0_in_context.xdc] for cell 'unity_i/xlslice_5'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_41/unity_xlslice_5_0_in_context.xdc] for cell 'unity_i/xlslice_6'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_41/unity_xlslice_5_0_in_context.xdc] for cell 'unity_i/xlslice_6'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_42/unity_xlslice_1_3_in_context.xdc] for cell 'unity_i/xlslice_7'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_42/unity_xlslice_1_3_in_context.xdc] for cell 'unity_i/xlslice_7'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_43/unity_vector_mux_1_1_in_context.xdc] for cell 'unity_i/vector_mux_1'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_43/unity_vector_mux_1_1_in_context.xdc] for cell 'unity_i/vector_mux_1'
-Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_44/unity_vector_splitter_0_1_in_context.xdc] for cell 'unity_i/vector_splitter_1'
-Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp_44/unity_vector_splitter_0_1_in_context.xdc] for cell 'unity_i/vector_splitter_1'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc] for cell 'unity_i/processing_system7_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc] for cell 'unity_i/processing_system7_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_2/unity_unity_ctrl_0_0_in_context.xdc] for cell 'unity_i/unity_ctrl_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_2/unity_unity_ctrl_0_0_in_context.xdc] for cell 'unity_i/unity_ctrl_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_3/unity_PWM_generator_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/PWM_generator_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_3/unity_PWM_generator_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/PWM_generator_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_4/unity_OL_BLDC_Stepper_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/OL_BLDC_Stepper_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_4/unity_OL_BLDC_Stepper_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/OL_BLDC_Stepper_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_5/unity_Debouncer_5_0_in_context.xdc] for cell 'unity_i/Debouncer_5'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_5/unity_Debouncer_5_0_in_context.xdc] for cell 'unity_i/Debouncer_5'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_6/unity_Toggler_0_0_in_context.xdc] for cell 'unity_i/Toggler_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_6/unity_Toggler_0_0_in_context.xdc] for cell 'unity_i/Toggler_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_7/unity_inverter_1_0_in_context.xdc] for cell 'unity_i/inverter_1'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_7/unity_inverter_1_0_in_context.xdc] for cell 'unity_i/inverter_1'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_8/unity_BLDC_STARTUP_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STARTUP_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_8/unity_BLDC_STARTUP_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STARTUP_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_9/unity_Debouncer_5_1_in_context.xdc] for cell 'unity_i/Debouncer_6'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_9/unity_Debouncer_5_1_in_context.xdc] for cell 'unity_i/Debouncer_6'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_10/unity_inverter_0_1_in_context.xdc] for cell 'unity_i/inverter_2'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_10/unity_inverter_0_1_in_context.xdc] for cell 'unity_i/inverter_2'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_11/unity_period_smoother_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/period_smoother_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_11/unity_period_smoother_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/period_smoother_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_12/unity_vector_mux_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_1'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_12/unity_vector_mux_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_1'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_13/unity_xlconcat_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlconcat_1'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_13/unity_xlconcat_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlconcat_1'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_14/unity_xlslice_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_14/unity_xlslice_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_15/unity_xlslice_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_1'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_15/unity_xlslice_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_1'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_16/unity_xlslice_1_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_2'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_16/unity_xlslice_1_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_2'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_17/unity_VECTOR_INV_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/VECTOR_INV_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_17/unity_VECTOR_INV_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/VECTOR_INV_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_18/unity_DIR_SENSE_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/DIR_SENSE_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_18/unity_DIR_SENSE_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/DIR_SENSE_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_19/unity_BLDC_STATE_CONTROLLER_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STATE_CONTROLLER_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_19/unity_BLDC_STATE_CONTROLLER_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_STATE_CONTROLLER_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_20/unity_PWM_generator_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/STARTUP_PWM'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_20/unity_PWM_generator_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/STARTUP_PWM'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_21/unity_xlconstant_1_2_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/xlconstant_3'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_21/unity_xlconstant_1_2_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/xlconstant_3'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_22/unity_vector_mux_1_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_2'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_22/unity_vector_mux_1_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_2'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_23/unity_BLDC_DIR_CTRL_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_DIR_CTRL_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_23/unity_BLDC_DIR_CTRL_0_0_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_DIR_CTRL_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_24/unity_BLDC_SPEED_OBSERVER_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_SPEED_OBSERVER_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_24/unity_BLDC_SPEED_OBSERVER_0_1_in_context.xdc] for cell 'unity_i/BLDC_MOTOR_CONTROL/BLDC_SPEED_OBSERVER_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_25/unity_Debouncer_3_0_in_context.xdc] for cell 'unity_i/Debouncer_3'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_25/unity_Debouncer_3_0_in_context.xdc] for cell 'unity_i/Debouncer_3'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_26/unity_Debouncer_4_0_in_context.xdc] for cell 'unity_i/Debouncer_4'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_26/unity_Debouncer_4_0_in_context.xdc] for cell 'unity_i/Debouncer_4'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_27/unity_Rotary_Encoder_0_0_in_context.xdc] for cell 'unity_i/Rotary_Encoder_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_27/unity_Rotary_Encoder_0_0_in_context.xdc] for cell 'unity_i/Rotary_Encoder_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_28/unity_Rotary_counter_0_0_in_context.xdc] for cell 'unity_i/Rotary_counter_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_28/unity_Rotary_counter_0_0_in_context.xdc] for cell 'unity_i/Rotary_counter_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_29/unity_PULSER_0_1_in_context.xdc] for cell 'unity_i/PULSER_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_29/unity_PULSER_0_1_in_context.xdc] for cell 'unity_i/PULSER_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_30/unity_RUNNING_AVG_0_0_in_context.xdc] for cell 'unity_i/RUNNING_AVG_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_30/unity_RUNNING_AVG_0_0_in_context.xdc] for cell 'unity_i/RUNNING_AVG_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_31/unity_DIFF_PULSER_0_0_in_context.xdc] for cell 'unity_i/DIFF_PULSER_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_31/unity_DIFF_PULSER_0_0_in_context.xdc] for cell 'unity_i/DIFF_PULSER_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_32/unity_UNSIGNED_TO_SIGNED_CONV_0_0_in_context.xdc] for cell 'unity_i/UNSIGNED_TO_SIGNED_CONV_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_32/unity_UNSIGNED_TO_SIGNED_CONV_0_0_in_context.xdc] for cell 'unity_i/UNSIGNED_TO_SIGNED_CONV_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_33/unity_xlslice_1_1_in_context.xdc] for cell 'unity_i/xlslice_1'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_33/unity_xlslice_1_1_in_context.xdc] for cell 'unity_i/xlslice_1'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_34/unity_PID_0_0_in_context.xdc] for cell 'unity_i/PID_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_34/unity_PID_0_0_in_context.xdc] for cell 'unity_i/PID_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_35/unity_xlslice_5_0_in_context.xdc] for cell 'unity_i/xlslice_6'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_35/unity_xlslice_5_0_in_context.xdc] for cell 'unity_i/xlslice_6'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_36/unity_xlslice_1_3_in_context.xdc] for cell 'unity_i/xlslice_7'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_36/unity_xlslice_1_3_in_context.xdc] for cell 'unity_i/xlslice_7'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_37/unity_vector_mux_1_1_in_context.xdc] for cell 'unity_i/vector_mux_1'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_37/unity_vector_mux_1_1_in_context.xdc] for cell 'unity_i/vector_mux_1'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_38/unity_PERIOD_TO_RPM_0_0_in_context.xdc] for cell 'unity_i/PERIOD_TO_RPM_0'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_38/unity_PERIOD_TO_RPM_0_0_in_context.xdc] for cell 'unity_i/PERIOD_TO_RPM_0'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_39/unity_xlslice_7_0_in_context.xdc] for cell 'unity_i/xlslice_8'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_39/unity_xlslice_7_0_in_context.xdc] for cell 'unity_i/xlslice_8'
+Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_40/unity_xlslice_8_0_in_context.xdc] for cell 'unity_i/xlslice_9'
+Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp_40/unity_xlslice_8_0_in_context.xdc] for cell 'unity_i/xlslice_9'
 Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc]
 WARNING: [Vivado 12-584] No ports matched 'reset_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:2]
 WARNING: [Vivado 12-584] No ports matched 'reset_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:3]
@@ -321,90 +301,90 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1423.039 ; gain = 0.000 ; free physical = 4241 ; free virtual = 17442
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1426.051 ; gain = 0.000 ; free physical = 1133 ; free virtual = 16491
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4253 ; free virtual = 17456
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1160 ; free virtual = 16496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4253 ; free virtual = 17456
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1160 ; free virtual = 16496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 7).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 8).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 9).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 10).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 11).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 12).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 13).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 14).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 15).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 16).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 17).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 18).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 19).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 20).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 21).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 22).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 23).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 24).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 25).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 26).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 27).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 28).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 29).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 30).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 31).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 32).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 33).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 34).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 35).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 36).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 37).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 38).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 39).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 40).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 41).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 42).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 43).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 44).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 45).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 46).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 47).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 48).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 49).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 50).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 51).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 52).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 53).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 54).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 55).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 56).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 57).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 58).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 59).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 60).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 61).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 62).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 63).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 64).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 65).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 66).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 67).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 68).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 69).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 70).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 71).
-Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 72).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-18914-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/.Xil/Vivado-13038-Leviathan/dcp/unity_processing_system7_0_0_in_context.xdc, line 73).
 Applied set_property DONT_TOUCH = true for unity_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/BLDC_MOTOR_CONTROL/BLDC_DIR_CTRL_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/BLDC_MOTOR_CONTROL/BLDC_SPEED_OBSERVER_0. (constraint file  auto generated constraint, line ).
@@ -428,6 +408,7 @@ Applied set_property DONT_TOUCH = true for unity_i/Debouncer_3. (constraint file
 Applied set_property DONT_TOUCH = true for unity_i/Debouncer_4. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/Debouncer_5. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/Debouncer_6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for unity_i/PERIOD_TO_RPM_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/PID_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/PULSER_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/RUNNING_AVG_0. (constraint file  auto generated constraint, line ).
@@ -440,21 +421,16 @@ Applied set_property DONT_TOUCH = true for unity_i/inverter_2. (constraint file 
 Applied set_property DONT_TOUCH = true for unity_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/unity_ctrl_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/vector_mux_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for unity_i/vector_splitter_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for unity_i/xlconcat_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for unity_i/xlconstant_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/xlslice_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for unity_i/xlslice_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for unity_i/xlslice_3. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for unity_i/xlslice_4. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for unity_i/xlslice_5. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/xlslice_6. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for unity_i/xlslice_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for unity_i/xlslice_8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for unity_i/xlslice_9. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4253 ; free virtual = 17456
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1160 ; free virtual = 16496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4251 ; free virtual = 17454
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1153 ; free virtual = 16488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -489,7 +465,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4251 ; free virtual = 17454
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1153 ; free virtual = 16488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -508,10 +484,10 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'unity_i/processing_system
 INFO: [Synth 8-5578] Moved timing constraint from pin 'unity_i/processing_system7_0/FCLK_CLK2' to pin 'unity_i/processing_system7_0/bbstub_FCLK_CLK2/O'
 INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4229 ; free virtual = 17423
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1136 ; free virtual = 16471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4229 ; free virtual = 17423
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1136 ; free virtual = 16471
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -523,7 +499,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4222 ; free virtual = 17416
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1127 ; free virtual = 16462
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -547,7 +523,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4224 ; free virtual = 17418
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1128 ; free virtual = 16464
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -560,7 +536,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4224 ; free virtual = 17418
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1128 ; free virtual = 16464
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -572,25 +548,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4224 ; free virtual = 17418
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1128 ; free virtual = 16464
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4224 ; free virtual = 17418
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1128 ; free virtual = 16464
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4224 ; free virtual = 17417
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1128 ; free virtual = 16464
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4224 ; free virtual = 17417
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1128 ; free virtual = 16464
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -605,45 +581,41 @@ Report BlackBoxes:
 |3     |unity_Debouncer_4_0               |         1|
 |4     |unity_Debouncer_5_0               |         1|
 |5     |unity_Debouncer_5_1               |         1|
-|6     |unity_PID_0_0                     |         1|
-|7     |unity_PULSER_0_1                  |         1|
-|8     |unity_RUNNING_AVG_0_0             |         1|
-|9     |unity_Rotary_Encoder_0_0          |         1|
-|10    |unity_Rotary_counter_0_0          |         1|
-|11    |unity_Toggler_0_0                 |         1|
-|12    |unity_UNSIGNED_TO_SIGNED_CONV_0_0 |         1|
-|13    |unity_inverter_1_0                |         1|
-|14    |unity_inverter_0_1                |         1|
-|15    |unity_processing_system7_0_0      |         1|
-|16    |unity_unity_ctrl_0_0              |         1|
-|17    |unity_vector_mux_1_1              |         1|
-|18    |unity_vector_splitter_0_1         |         1|
-|19    |unity_xlconcat_0_0                |         1|
-|20    |unity_xlconstant_0_2              |         1|
-|21    |unity_xlslice_1_1                 |         1|
-|22    |unity_xlslice_1_2                 |         1|
-|23    |unity_xlslice_2_0                 |         1|
-|24    |unity_xlslice_2_1                 |         1|
-|25    |unity_xlslice_3_0                 |         1|
-|26    |unity_xlslice_5_0                 |         1|
-|27    |unity_xlslice_1_3                 |         1|
-|28    |unity_BLDC_DIR_CTRL_0_0           |         1|
-|29    |unity_BLDC_SPEED_OBSERVER_0_1     |         1|
-|30    |unity_BLDC_STARTUP_0_0            |         1|
-|31    |unity_BLDC_STATE_CONTROLLER_0_0   |         1|
-|32    |unity_DIR_SENSE_0_0               |         1|
-|33    |unity_OL_BLDC_Stepper_0_0         |         1|
-|34    |unity_PWM_generator_0_0           |         1|
-|35    |unity_VECTOR_INV_0_0              |         1|
-|36    |unity_period_smoother_0_0         |         1|
-|37    |unity_vector_mux_0_1              |         1|
-|38    |unity_vector_mux_1_0              |         1|
-|39    |unity_xlconcat_0_1                |         1|
-|40    |unity_xlslice_0_0                 |         1|
-|41    |unity_xlslice_0_1                 |         1|
-|42    |unity_xlslice_1_0                 |         1|
-|43    |unity_PWM_generator_0_1           |         1|
-|44    |unity_xlconstant_1_2              |         1|
+|6     |unity_PERIOD_TO_RPM_0_0           |         1|
+|7     |unity_PID_0_0                     |         1|
+|8     |unity_PULSER_0_1                  |         1|
+|9     |unity_RUNNING_AVG_0_0             |         1|
+|10    |unity_Rotary_Encoder_0_0          |         1|
+|11    |unity_Rotary_counter_0_0          |         1|
+|12    |unity_Toggler_0_0                 |         1|
+|13    |unity_UNSIGNED_TO_SIGNED_CONV_0_0 |         1|
+|14    |unity_inverter_1_0                |         1|
+|15    |unity_inverter_0_1                |         1|
+|16    |unity_processing_system7_0_0      |         1|
+|17    |unity_unity_ctrl_0_0              |         1|
+|18    |unity_vector_mux_1_1              |         1|
+|19    |unity_xlslice_1_1                 |         1|
+|20    |unity_xlslice_5_0                 |         1|
+|21    |unity_xlslice_1_3                 |         1|
+|22    |unity_xlslice_7_0                 |         1|
+|23    |unity_xlslice_8_0                 |         1|
+|24    |unity_BLDC_DIR_CTRL_0_0           |         1|
+|25    |unity_BLDC_SPEED_OBSERVER_0_1     |         1|
+|26    |unity_BLDC_STARTUP_0_0            |         1|
+|27    |unity_BLDC_STATE_CONTROLLER_0_0   |         1|
+|28    |unity_DIR_SENSE_0_0               |         1|
+|29    |unity_OL_BLDC_Stepper_0_0         |         1|
+|30    |unity_PWM_generator_0_0           |         1|
+|31    |unity_VECTOR_INV_0_0              |         1|
+|32    |unity_period_smoother_0_0         |         1|
+|33    |unity_vector_mux_0_1              |         1|
+|34    |unity_vector_mux_1_0              |         1|
+|35    |unity_xlconcat_0_1                |         1|
+|36    |unity_xlslice_0_0                 |         1|
+|37    |unity_xlslice_0_1                 |         1|
+|38    |unity_xlslice_1_0                 |         1|
+|39    |unity_PWM_generator_0_1           |         1|
+|40    |unity_xlconstant_1_2              |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
@@ -661,61 +633,57 @@ Report Cell Usage:
 |9     |unity_Debouncer_5_0_bbox               |     1|
 |10    |unity_Debouncer_5_1_bbox               |     1|
 |11    |unity_OL_BLDC_Stepper_0_0_bbox         |     1|
-|12    |unity_PID_0_0_bbox                     |     1|
-|13    |unity_PULSER_0_1_bbox                  |     1|
-|14    |unity_PWM_generator_0_0_bbox           |     1|
-|15    |unity_PWM_generator_0_1_bbox           |     1|
-|16    |unity_RUNNING_AVG_0_0_bbox             |     1|
-|17    |unity_Rotary_Encoder_0_0_bbox          |     1|
-|18    |unity_Rotary_counter_0_0_bbox          |     1|
-|19    |unity_Toggler_0_0_bbox                 |     1|
-|20    |unity_UNSIGNED_TO_SIGNED_CONV_0_0_bbox |     1|
-|21    |unity_VECTOR_INV_0_0_bbox              |     1|
-|22    |unity_inverter_0_1_bbox                |     1|
-|23    |unity_inverter_1_0_bbox                |     1|
-|24    |unity_period_smoother_0_0_bbox         |     1|
-|25    |unity_processing_system7_0_0_bbox      |     1|
-|26    |unity_unity_ctrl_0_0_bbox              |     1|
-|27    |unity_vector_mux_0_1_bbox              |     1|
-|28    |unity_vector_mux_1_0_bbox              |     1|
-|29    |unity_vector_mux_1_1_bbox              |     1|
-|30    |unity_vector_splitter_0_1_bbox         |     1|
-|31    |unity_xlconcat_0_0_bbox                |     1|
-|32    |unity_xlconcat_0_1_bbox                |     1|
-|33    |unity_xlconstant_0_2_bbox              |     1|
-|34    |unity_xlconstant_1_2_bbox              |     1|
-|35    |unity_xlslice_0_0_bbox                 |     1|
-|36    |unity_xlslice_0_1_bbox                 |     1|
-|37    |unity_xlslice_1_0_bbox                 |     1|
-|38    |unity_xlslice_1_1_bbox                 |     1|
-|39    |unity_xlslice_1_2_bbox                 |     1|
-|40    |unity_xlslice_1_3_bbox                 |     1|
-|41    |unity_xlslice_2_0_bbox                 |     1|
-|42    |unity_xlslice_2_1_bbox                 |     1|
-|43    |unity_xlslice_3_0_bbox                 |     1|
-|44    |unity_xlslice_5_0_bbox                 |     1|
-|45    |LUT1                                   |     1|
-|46    |LUT6                                   |     1|
-|47    |IBUF                                   |     8|
-|48    |OBUF                                   |    15|
-|49    |OBUFT                                  |     1|
+|12    |unity_PERIOD_TO_RPM_0_0_bbox           |     1|
+|13    |unity_PID_0_0_bbox                     |     1|
+|14    |unity_PULSER_0_1_bbox                  |     1|
+|15    |unity_PWM_generator_0_0_bbox           |     1|
+|16    |unity_PWM_generator_0_1_bbox           |     1|
+|17    |unity_RUNNING_AVG_0_0_bbox             |     1|
+|18    |unity_Rotary_Encoder_0_0_bbox          |     1|
+|19    |unity_Rotary_counter_0_0_bbox          |     1|
+|20    |unity_Toggler_0_0_bbox                 |     1|
+|21    |unity_UNSIGNED_TO_SIGNED_CONV_0_0_bbox |     1|
+|22    |unity_VECTOR_INV_0_0_bbox              |     1|
+|23    |unity_inverter_0_1_bbox                |     1|
+|24    |unity_inverter_1_0_bbox                |     1|
+|25    |unity_period_smoother_0_0_bbox         |     1|
+|26    |unity_processing_system7_0_0_bbox      |     1|
+|27    |unity_unity_ctrl_0_0_bbox              |     1|
+|28    |unity_vector_mux_0_1_bbox              |     1|
+|29    |unity_vector_mux_1_0_bbox              |     1|
+|30    |unity_vector_mux_1_1_bbox              |     1|
+|31    |unity_xlconcat_0_1_bbox                |     1|
+|32    |unity_xlconstant_1_2_bbox              |     1|
+|33    |unity_xlslice_0_0_bbox                 |     1|
+|34    |unity_xlslice_0_1_bbox                 |     1|
+|35    |unity_xlslice_1_0_bbox                 |     1|
+|36    |unity_xlslice_1_1_bbox                 |     1|
+|37    |unity_xlslice_1_3_bbox                 |     1|
+|38    |unity_xlslice_5_0_bbox                 |     1|
+|39    |unity_xlslice_7_0_bbox                 |     1|
+|40    |unity_xlslice_8_0_bbox                 |     1|
+|41    |LUT1                                   |     1|
+|42    |LUT6                                   |     1|
+|43    |IBUF                                   |     8|
+|44    |OBUF                                   |    15|
+|45    |OBUFT                                  |     1|
 +------+---------------------------------------+------+
 
 Report Instance Areas: 
 +------+-----------------------+------------------------------+------+
 |      |Instance               |Module                        |Cells |
 +------+-----------------------+------------------------------+------+
-|1     |top                    |                              |   902|
-|2     |  unity_i              |unity                         |   877|
+|1     |top                    |                              |   798|
+|2     |  unity_i              |unity                         |   773|
 |3     |    BLDC_MOTOR_CONTROL |BLDC_MOTOR_CONTROL_imp_8MH9GC |   121|
 |4     |      STARTUP_PWM_MOD  |STARTUP_PWM_MOD_imp_VO3X8O    |     9|
 +------+-----------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4224 ; free virtual = 17417
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1128 ; free virtual = 16464
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1423.039 ; gain = 107.469 ; free physical = 4224 ; free virtual = 17417
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1423.039 ; gain = 519.668 ; free physical = 4225 ; free virtual = 17419
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1426.051 ; gain = 106.469 ; free physical = 1128 ; free virtual = 16464
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1426.051 ; gain = 522.676 ; free physical = 1128 ; free virtual = 16464
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -725,9 +693,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-178 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
+170 Infos, 77 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1423.039 ; gain = 432.949 ; free physical = 4220 ; free virtual = 17414
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1426.051 ; gain = 435.957 ; free physical = 1124 ; free virtual = 16459
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/unity_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1423.039 ; gain = 0.000 ; free physical = 4219 ; free virtual = 17413
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  7 22:13:27 2016...
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1426.051 ; gain = 0.000 ; free physical = 1123 ; free virtual = 16459
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 01:25:12 2016...
