@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Wed Dec  7 23:19:37 2016
-# Process ID: 20830
+# Start of session at: Thu Dec  8 17:14:31 2016
+# Process ID: 18476
 # Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_Debouncer_4_0_synth_1
 # Command line: vivado -log unity_Debouncer_4_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_Debouncer_4_0.tcl
 # Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_Debouncer_4_0_synth_1/unity_Debouncer_4_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21200 
+INFO: Helper process launched with PID 18830 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1062.672 ; gain = 159.301 ; free physical = 2913 ; free virtual = 17895
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1061.664 ; gain = 158.301 ; free physical = 1597 ; free virtual = 18531
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'unity_Debouncer_4_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_4_0/synth/unity_Debouncer_4_0.vhd:64]
 	Parameter THRESHOLD bound to: 100000 - type: integer 
@@ -27,21 +27,21 @@ INFO: [Synth 8-638] synthesizing module 'Debouncer' [/home/stefan/Dropbox/ROB_EL
 INFO: [Synth 8-256] done synthesizing module 'Debouncer' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/Debouncer.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'unity_Debouncer_4_0' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_4_0/synth/unity_Debouncer_4_0.vhd:64]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1102.141 ; gain = 198.770 ; free physical = 2772 ; free virtual = 17754
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1102.133 ; gain = 198.770 ; free physical = 1502 ; free virtual = 18436
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1102.141 ; gain = 198.770 ; free physical = 2767 ; free virtual = 17750
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1102.133 ; gain = 198.770 ; free physical = 1502 ; free virtual = 18436
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1110.145 ; gain = 206.773 ; free physical = 2767 ; free virtual = 17750
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1110.137 ; gain = 206.773 ; free physical = 1502 ; free virtual = 18436
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1118.152 ; gain = 214.781 ; free physical = 2759 ; free virtual = 17741
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1118.145 ; gain = 214.781 ; free physical = 1494 ; free virtual = 18429
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -84,7 +84,7 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2441 ; free virtual = 17424
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1137 ; free virtual = 18071
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -97,7 +97,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2441 ; free virtual = 17423
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1136 ; free virtual = 18071
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -109,7 +109,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2424 ; free virtual = 17406
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1134 ; free virtual = 18068
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -133,7 +133,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2395 ; free virtual = 17378
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1115 ; free virtual = 18049
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -146,7 +146,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2395 ; free virtual = 17378
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1115 ; free virtual = 18049
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -158,25 +158,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2395 ; free virtual = 17378
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1115 ; free virtual = 18049
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2395 ; free virtual = 17378
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1115 ; free virtual = 18049
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2387 ; free virtual = 17370
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1112 ; free virtual = 18047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2387 ; free virtual = 17370
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1112 ; free virtual = 18046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -208,11 +208,11 @@ Report Instance Areas:
 |2     |  U0     |Debouncer |    47|
 +------+---------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.496 ; gain = 308.125 ; free physical = 2387 ; free virtual = 17370
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1211.488 ; gain = 308.125 ; free physical = 1112 ; free virtual = 18046
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1211.496 ; gain = 208.824 ; free physical = 2387 ; free virtual = 17369
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.504 ; gain = 308.133 ; free physical = 2387 ; free virtual = 17369
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1211.488 ; gain = 208.824 ; free physical = 1112 ; free virtual = 18046
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1211.496 ; gain = 308.133 ; free physical = 1112 ; free virtual = 18046
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -224,10 +224,10 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1283.496 ; gain = 293.406 ; free physical = 2135 ; free virtual = 17118
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1283.488 ; gain = 293.406 ; free physical = 892 ; free virtual = 17817
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_Debouncer_4_0_synth_1/unity_Debouncer_4_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1749.031 ; gain = 465.535 ; free physical = 1124 ; free virtual = 16106
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1749.023 ; gain = 465.535 ; free physical = 137 ; free virtual = 16968
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_Debouncer_4_0_synth_1/unity_Debouncer_4_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1749.031 ; gain = 0.000 ; free physical = 1067 ; free virtual = 16049
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  7 23:20:11 2016...
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1749.023 ; gain = 0.000 ; free physical = 149 ; free virtual = 16832
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 17:15:08 2016...

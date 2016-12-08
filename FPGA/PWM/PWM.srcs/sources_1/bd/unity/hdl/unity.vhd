@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
---Date        : Thu Dec  8 01:23:19 2016
+--Date        : Thu Dec  8 17:27:00 2016
 --Host        : Leviathan running 64-bit Arch Linux
 --Command     : generate_target unity.bd
 --Design      : unity
@@ -188,14 +188,6 @@ architecture STRUCTURE of BLDC_MOTOR_CONTROL_imp_8MH9GC is
     reset_in : in STD_LOGIC
   );
   end component unity_BLDC_SPEED_OBSERVER_0_1;
-  component unity_vector_mux_1_0 is
-  port (
-    in_vec1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    in_vec2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    out_vec : out STD_LOGIC_VECTOR ( 0 to 0 );
-    sel_in : in STD_LOGIC
-  );
-  end component unity_vector_mux_1_0;
   component unity_PWM_generator_0_0 is
   port (
     clk_IN : in STD_LOGIC;
@@ -204,6 +196,14 @@ architecture STRUCTURE of BLDC_MOTOR_CONTROL_imp_8MH9GC is
     PWM_out : out STD_LOGIC
   );
   end component unity_PWM_generator_0_0;
+  component unity_vector_mux_1_0 is
+  port (
+    in_vec1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    in_vec2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    out_vec : out STD_LOGIC_VECTOR ( 0 to 0 );
+    sel_in : in STD_LOGIC
+  );
+  end component unity_vector_mux_1_0;
   signal BLDC_DIR_CTRL_0_PHASE_AH_out : STD_LOGIC;
   signal BLDC_DIR_CTRL_0_PHASE_A_out : STD_LOGIC;
   signal BLDC_DIR_CTRL_0_PHASE_BH_out : STD_LOGIC;
@@ -571,6 +571,25 @@ architecture STRUCTURE of unity is
     Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component unity_xlslice_1_3;
+  component unity_xlslice_7_0 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component unity_xlslice_7_0;
+  component unity_xlslice_8_0 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component unity_xlslice_8_0;
+  component unity_PERIOD_TO_RPM_0_0 is
+  port (
+    PERIOD_IN : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    clk_in : in STD_LOGIC;
+    RPM_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component unity_PERIOD_TO_RPM_0_0;
   component unity_Debouncer_5_1 is
   port (
     IN_SIG : in STD_LOGIC;
@@ -593,25 +612,14 @@ architecture STRUCTURE of unity is
     OUT_SIG : out STD_LOGIC
   );
   end component unity_Debouncer_4_0;
-  component unity_xlslice_7_0 is
+  component unity_RUNNING_AVG_0_0 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component unity_xlslice_7_0;
-  component unity_xlslice_8_0 is
-  port (
-    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component unity_xlslice_8_0;
-  component unity_PERIOD_TO_RPM_0_0 is
-  port (
-    PERIOD_IN : in STD_LOGIC_VECTOR ( 31 downto 0 );
     clk_in : in STD_LOGIC;
-    RPM_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    input_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    output_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    do_sample_in : in STD_LOGIC
   );
-  end component unity_PERIOD_TO_RPM_0_0;
+  end component unity_RUNNING_AVG_0_0;
   component unity_PID_0_0 is
   port (
     set_point : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -625,14 +633,6 @@ architecture STRUCTURE of unity is
     reset_in : in STD_LOGIC
   );
   end component unity_PID_0_0;
-  component unity_RUNNING_AVG_0_0 is
-  port (
-    clk_in : in STD_LOGIC;
-    input_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    output_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    do_sample_in : in STD_LOGIC
-  );
-  end component unity_RUNNING_AVG_0_0;
   signal BLDC_MOTOR_CONTROL_dir_out : STD_LOGIC;
   signal BLDC_MOTOR_CONTROL_speed_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal BLDC_STATE_CONTROLLER_0_PHASE_AH_out : STD_LOGIC;

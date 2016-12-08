@@ -21,9 +21,9 @@ architecture bench of PID_tb is
              output_out : out signed (SIZE - 1 downto 0) := (others => '0');
              clk_in : in STD_LOGIC;
              P_MULT : in signed(CONST_SIZE - 1 downto 0);
-             P_DIV  : in signed(CONST_SIZE - 1 downto 0);
+             P_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
              I_MULT : in signed(CONST_SIZE - 1 downto 0);
-             I_DIV  : in signed(CONST_SIZE - 1 downto 0);
+             I_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
              reset_in : in STD_LOGIC := '0'
              );
   end component;
@@ -35,9 +35,9 @@ architecture bench of PID_tb is
   signal output_out: signed (SIZE - 1 downto 0) := (others => '0');
   signal clk_in: STD_LOGIC := '0';
   signal P_MULT: signed(CONST_SIZE - 1 downto 0) := to_signed(1, CONST_SIZE);
-  signal P_DIV: signed(CONST_SIZE - 1 downto 0)  := to_signed(1000, CONST_SIZE);
+  signal P_DIV: unsigned(CONST_SIZE - 1 downto 0)  := to_unsigned(10, CONST_SIZE);
   signal I_MULT: signed(CONST_SIZE - 1 downto 0)  := to_signed(1, CONST_SIZE);
-  signal I_DIV: signed(CONST_SIZE - 1 downto 0)  := to_signed(1000000, CONST_SIZE);
+  signal I_DIV: unsigned(CONST_SIZE - 1 downto 0)  := to_unsigned(16, CONST_SIZE);
   signal reset_in: STD_LOGIC := '0' ;
 
   constant clock_period: time := 10 ns;

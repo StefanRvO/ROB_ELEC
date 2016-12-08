@@ -9,18 +9,18 @@ end;
 architecture bench of RUNNING_AVG_tb is
 
   component RUNNING_AVG
-      GENERIC(IN_SIZE : integer range 1 to 10000 := 8;
-              AVG_SIZE : integer range 1 to 1000000 := 10
-              );
-      Port ( clk_in : in STD_LOGIC;
-             input_in : in STD_LOGIC_VECTOR(IN_SIZE - 1 downto 0);
-             output_out : out STD_LOGIC_VECTOR(IN_SIZE - 1 downto 0) := (others => '0');
-             do_sample_in : in STD_LOGIC);
+    GENERIC(IN_SIZE : integer range 1 to 10000 := 8;
+          AVG_SIZE_BITS: integer range 1 to 1000000 := 4 -- A
+          );
+  Port ( clk_in : in STD_LOGIC;
+         input_in : in unsigned(IN_SIZE - 1 downto 0) := (others => '0');
+         output_out : out unsigned(IN_SIZE - 1 downto 0) := (others => '0');
+         do_sample_in : in STD_LOGIC := '0');
   end component;
   
   signal clk_in: STD_LOGIC := '0';
-  signal input_in: STD_LOGIC_VECTOR(8 - 1 downto 0) := (others => '0');
-  signal output_out: STD_LOGIC_VECTOR(8 - 1 downto 0) := (others => '0');
+  signal input_in: unsigned(8 - 1 downto 0) := (others => '0');
+  signal output_out: unsigned(8 - 1 downto 0) := (others => '0');
   signal do_sample_in: STD_LOGIC := '0';
 
   constant clock_period: time := 10 ns;
@@ -30,7 +30,7 @@ begin
 
   -- Insert values for generic parameters !!
   uut: RUNNING_AVG generic map ( IN_SIZE      => 8,
-                                 AVG_SIZE     =>  16)
+                                 AVG_SIZE_BITS     =>  16)
                       port map ( clk_in       => clk_in,
                                  input_in     => input_in,
                                  output_out   => output_out,
@@ -54,7 +54,7 @@ end process;
 
 input_process: process
 begin
-   input_in <= std_logic_vector(unsigned(input_in) + 30);
+   input_in <= input_in + 30;
    wait for 100ns;
 end process;
 

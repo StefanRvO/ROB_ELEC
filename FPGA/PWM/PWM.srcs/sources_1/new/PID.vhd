@@ -48,9 +48,9 @@ entity PID is
            output_out : out signed (SIZE - 1 downto 0) := (others => '0');
            clk_in : in STD_LOGIC;
            P_MULT : in signed(CONST_SIZE - 1 downto 0);
-           P_DIV  : in signed(CONST_SIZE - 1 downto 0);
+           P_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
            I_MULT : in signed(CONST_SIZE - 1 downto 0);
-           I_DIV  : in signed(CONST_SIZE - 1 downto 0);
+           I_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
            reset_in : in STD_LOGIC := '0'
            );
 end PID;
@@ -110,9 +110,9 @@ begin
         end if;
             I_SUM <= I_SUM + resize(error_signal,I_SUM'length);
             I_TMP_MULT <= resize(I_SUM * I_MULT, I_TMP_MULT'length);
-            I_PART <= resize(I_TMP_MULT / I_DIV, I_PART'length);
+            I_PART <= resize(I_TMP_MULT srl to_integer(I_DIV), I_PART'length);
             P_TMP_MULT <= resize(error_signal * P_MULT,P_TMP_MULT'length);
-            P_PART <= resize(P_TMP_MULT / P_DIV, P_PART'length);
+            P_PART <= resize(P_TMP_MULT srl to_integer(P_DIV), P_PART'length);
     end if;
 end process;
 

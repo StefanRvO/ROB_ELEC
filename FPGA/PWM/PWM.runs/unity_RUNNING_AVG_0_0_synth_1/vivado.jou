@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Thu Dec  8 01:23:25 2016
-# Process ID: 12767
+# Start of session at: Thu Dec  8 17:14:31 2016
+# Process ID: 18471
 # Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_RUNNING_AVG_0_0_synth_1
 # Command line: vivado -log unity_RUNNING_AVG_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_RUNNING_AVG_0_0.tcl
 # Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_RUNNING_AVG_0_0_synth_1/unity_RUNNING_AVG_0_0.vds
