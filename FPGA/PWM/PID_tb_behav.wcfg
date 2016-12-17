@@ -3,72 +3,101 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="PID_tb_behav.wdb" id="1">
+      <db_ref path="SPI_Master_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="PID_tb" />
+            <top_module name="SPI_Master_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="314000001fs"></ZoomEndTime>
-      <Cursor1Time time="100000000000fs"></Cursor1Time>
+      <ZoomEndTime time="135600000001fs"></ZoomEndTime>
+      <Cursor1Time time="22321000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="149"></NameColumnWidth>
-      <ValueColumnWidth column_width="525"></ValueColumnWidth>
+      <NameColumnWidth column_width="173"></NameColumnWidth>
+      <ValueColumnWidth column_width="159"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
-   <wvobject type="array" fp_name="/PID_tb/set_point">
-      <obj_property name="ElementShortName">set_point[31:0]</obj_property>
-      <obj_property name="ObjectShortName">set_point[31:0]</obj_property>
+   <WVObjectSize size="20" />
+   <wvobject type="array" fp_name="/SPI_Master_tb/uut/IN_DATA">
+      <obj_property name="ElementShortName">IN_DATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">IN_DATA[15:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/feedback">
-      <obj_property name="ElementShortName">feedback[31:0]</obj_property>
-      <obj_property name="ObjectShortName">feedback[31:0]</obj_property>
+   <wvobject type="array" fp_name="/SPI_Master_tb/uut/OUT_DATA">
+      <obj_property name="ElementShortName">OUT_DATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">OUT_DATA[15:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/output_out">
-      <obj_property name="ElementShortName">output_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">output_out[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/CLK_in">
+      <obj_property name="ElementShortName">CLK_in</obj_property>
+      <obj_property name="ObjectShortName">CLK_in</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/PID_tb/clk_in">
-      <obj_property name="ElementShortName">clk_in</obj_property>
-      <obj_property name="ObjectShortName">clk_in</obj_property>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/START_TRANSFER">
+      <obj_property name="ElementShortName">START_TRANSFER</obj_property>
+      <obj_property name="ObjectShortName">START_TRANSFER</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/PID_tb/uut/scaled_CLK">
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/MISO">
+      <obj_property name="ElementShortName">MISO</obj_property>
+      <obj_property name="ObjectShortName">MISO</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/MOSI">
+      <obj_property name="ElementShortName">MOSI</obj_property>
+      <obj_property name="ObjectShortName">MOSI</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SS">
+      <obj_property name="ElementShortName">SS</obj_property>
+      <obj_property name="ObjectShortName">SS</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SCLK">
+      <obj_property name="ElementShortName">SCLK</obj_property>
+      <obj_property name="ObjectShortName">SCLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/reset_in">
+      <obj_property name="ElementShortName">reset_in</obj_property>
+      <obj_property name="ObjectShortName">reset_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/Transfer_done">
+      <obj_property name="ElementShortName">Transfer_done</obj_property>
+      <obj_property name="ObjectShortName">Transfer_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SPI_Master_tb/uut/DATA_IN_BUF">
+      <obj_property name="ElementShortName">DATA_IN_BUF[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_IN_BUF[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/SPI_Master_tb/uut/DATA_OUT_BUF">
+      <obj_property name="ElementShortName">DATA_OUT_BUF[15:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_OUT_BUF[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/scaled_CLK">
       <obj_property name="ElementShortName">scaled_CLK</obj_property>
       <obj_property name="ObjectShortName">scaled_CLK</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/P_MULT">
-      <obj_property name="ElementShortName">P_MULT[31:0]</obj_property>
-      <obj_property name="ObjectShortName">P_MULT[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SS_buf">
+      <obj_property name="ElementShortName">SS_buf</obj_property>
+      <obj_property name="ObjectShortName">SS_buf</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/P_DIV">
-      <obj_property name="ElementShortName">P_DIV[31:0]</obj_property>
-      <obj_property name="ObjectShortName">P_DIV[31:0]</obj_property>
+   <wvobject type="other" fp_name="/SPI_Master_tb/uut/bit_counter">
+      <obj_property name="ElementShortName">bit_counter</obj_property>
+      <obj_property name="ObjectShortName">bit_counter</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/I_MULT">
-      <obj_property name="ElementShortName">I_MULT[31:0]</obj_property>
-      <obj_property name="ObjectShortName">I_MULT[31:0]</obj_property>
+   <wvobject type="other" fp_name="/SPI_Master_tb/uut/SCLK_counter_delay">
+      <obj_property name="ElementShortName">SCLK_counter_delay</obj_property>
+      <obj_property name="ObjectShortName">SCLK_counter_delay</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/I_DIV">
-      <obj_property name="ElementShortName">I_DIV[31:0]</obj_property>
-      <obj_property name="ObjectShortName">I_DIV[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SCLK_buf">
+      <obj_property name="ElementShortName">SCLK_buf</obj_property>
+      <obj_property name="ObjectShortName">SCLK_buf</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/uut/P_PART">
-      <obj_property name="ElementShortName">P_PART[31:0]</obj_property>
-      <obj_property name="ObjectShortName">P_PART[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SCLK_prev">
+      <obj_property name="ElementShortName">SCLK_prev</obj_property>
+      <obj_property name="ObjectShortName">SCLK_prev</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/uut/I_PART">
-      <obj_property name="ElementShortName">I_PART[31:0]</obj_property>
-      <obj_property name="ObjectShortName">I_PART[31:0]</obj_property>
+   <wvobject type="other" fp_name="/SPI_Master_tb/uut/scaler_counter">
+      <obj_property name="ElementShortName">scaler_counter</obj_property>
+      <obj_property name="ObjectShortName">scaler_counter</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/uut/I_SUM">
-      <obj_property name="ElementShortName">I_SUM[127:0]</obj_property>
-      <obj_property name="ObjectShortName">I_SUM[127:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/PID_tb/uut/I_TMP_MULT">
-      <obj_property name="ElementShortName">I_TMP_MULT[255:0]</obj_property>
-      <obj_property name="ObjectShortName">I_TMP_MULT[255:0]</obj_property>
+   <wvobject type="array" fp_name="/SPI_Master_tb/IN_DATA">
+      <obj_property name="ElementShortName">IN_DATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">IN_DATA[15:0]</obj_property>
    </wvobject>
 </wave_config>

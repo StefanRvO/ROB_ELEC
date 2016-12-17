@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Wed Dec  7 15:16:04 2016
+// Date        : Fri Dec 16 17:21:20 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0_sim_netlist.v
@@ -106,6 +106,7 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
   wire \counter[16]_i_3_n_0 ;
   wire \counter[16]_i_4_n_0 ;
   wire \counter[16]_i_5_n_0 ;
+  wire \counter[1]_i_1_n_0 ;
   wire \counter[20]_i_2_n_0 ;
   wire \counter[20]_i_3_n_0 ;
   wire \counter[20]_i_4_n_0 ;
@@ -118,6 +119,7 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
   wire \counter[28]_i_3_n_0 ;
   wire \counter[28]_i_4_n_0 ;
   wire \counter[28]_i_5_n_0 ;
+  wire \counter[2]_i_1_n_0 ;
   wire \counter[31]_i_1_n_0 ;
   wire \counter[31]_i_3_n_0 ;
   wire \counter[31]_i_4_n_0 ;
@@ -325,6 +327,7 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
   wire startup_done_out1_carry_i_5_n_0;
   wire startup_done_out1_carry_i_6__0_n_0;
   wire startup_done_out1_carry_i_6__1_n_0;
+  wire startup_done_out1_carry_i_6__2_n_0;
   wire startup_done_out1_carry_i_6_n_0;
   wire startup_done_out1_carry_i_7__0_n_0;
   wire startup_done_out1_carry_i_7__1_n_0;
@@ -568,13 +571,11 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
        (.I0(\counter_reg_n_0_[0] ),
         .I1(\counter_reg_n_0_[1] ),
         .O(counter1_carry_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'hF4)) 
+  LUT2 #(
+    .INIT(4'h7)) 
     \counter[0]_i_1 
        (.I0(\counter_reg_n_0_[0] ),
         .I1(counter1_carry__2_n_0),
-        .I2(reset_in),
         .O(\counter[0]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -616,6 +617,13 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
     \counter[16]_i_5 
        (.I0(\counter_reg_n_0_[13] ),
         .O(\counter[16]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \counter[1]_i_1 
+       (.I0(counter0[1]),
+        .I1(counter1_carry__2_n_0),
+        .O(\counter[1]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \counter[20]_i_2 
@@ -676,6 +684,12 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
     \counter[28]_i_5 
        (.I0(\counter_reg_n_0_[25] ),
         .O(\counter[28]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h8)) 
+    \counter[2]_i_1 
+       (.I0(counter0[2]),
+        .I1(counter1_carry__2_n_0),
+        .O(\counter[2]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
     \counter[31]_i_1 
@@ -738,13 +752,13 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
        (.I0(\counter_reg_n_0_[5] ),
         .O(\counter[8]_i_5_n_0 ));
   FDRE #(
-    .INIT(1'b0)) 
+    .INIT(1'b1)) 
     \counter_reg[0] 
        (.C(clk_in),
         .CE(1'b1),
         .D(\counter[0]_i_1_n_0 ),
         .Q(\counter_reg_n_0_[0] ),
-        .R(1'b0));
+        .R(reset_in));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[10] 
@@ -839,14 +853,14 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .D(counter0[19]),
         .Q(\counter_reg_n_0_[19] ),
         .R(\counter[31]_i_1_n_0 ));
-  FDSE #(
+  FDRE #(
     .INIT(1'b1)) 
     \counter_reg[1] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(counter0[1]),
+        .D(\counter[1]_i_1_n_0 ),
         .Q(\counter_reg_n_0_[1] ),
-        .S(\counter[31]_i_1_n_0 ));
+        .R(reset_in));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[20] 
@@ -949,13 +963,13 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .Q(\counter_reg_n_0_[29] ),
         .R(\counter[31]_i_1_n_0 ));
   FDSE #(
-    .INIT(1'b1)) 
+    .INIT(1'b0)) 
     \counter_reg[2] 
        (.C(clk_in),
         .CE(1'b1),
-        .D(counter0[2]),
+        .D(\counter[2]_i_1_n_0 ),
         .Q(\counter_reg_n_0_[2] ),
-        .S(\counter[31]_i_1_n_0 ));
+        .S(reset_in));
   FDRE #(
     .INIT(1'b0)) 
     \counter_reg[30] 
@@ -979,22 +993,22 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .DI({1'b0,1'b0,\counter_reg_n_0_[30] ,\counter_reg_n_0_[29] }),
         .O({\NLW_counter_reg[31]_i_2_O_UNCONNECTED [3],counter0[31:29]}),
         .S({1'b0,\counter[31]_i_3_n_0 ,\counter[31]_i_4_n_0 ,\counter[31]_i_5_n_0 }));
-  FDSE #(
-    .INIT(1'b1)) 
+  FDRE #(
+    .INIT(1'b0)) 
     \counter_reg[3] 
        (.C(clk_in),
         .CE(1'b1),
         .D(counter0[3]),
         .Q(\counter_reg_n_0_[3] ),
-        .S(\counter[31]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
+        .R(\counter[31]_i_1_n_0 ));
+  FDSE #(
+    .INIT(1'b1)) 
     \counter_reg[4] 
        (.C(clk_in),
         .CE(1'b1),
         .D(counter0[4]),
         .Q(\counter_reg_n_0_[4] ),
-        .R(\counter[31]_i_1_n_0 ));
+        .S(\counter[31]_i_1_n_0 ));
   CARRY4 \counter_reg[4]_i_1 
        (.CI(1'b0),
         .CO({\counter_reg[4]_i_1_n_0 ,\counter_reg[4]_i_1_n_1 ,\counter_reg[4]_i_1_n_2 ,\counter_reg[4]_i_1_n_3 }),
@@ -1223,22 +1237,22 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .D(\period_reg[3]_i_1_n_7 ),
         .Q(stepper_period_out[0]),
         .R(reset_in));
-  FDSE #(
-    .INIT(1'b1)) 
+  FDRE #(
+    .INIT(1'b0)) 
     \period_reg[10] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[11]_i_1_n_5 ),
         .Q(stepper_period_out[10]),
-        .S(reset_in));
-  FDRE #(
-    .INIT(1'b0)) 
+        .R(reset_in));
+  FDSE #(
+    .INIT(1'b1)) 
     \period_reg[11] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[11]_i_1_n_4 ),
         .Q(stepper_period_out[11]),
-        .R(reset_in));
+        .S(reset_in));
   CARRY4 \period_reg[11]_i_1 
        (.CI(\period_reg[7]_i_1_n_0 ),
         .CO({\period_reg[11]_i_1_n_0 ,\period_reg[11]_i_1_n_1 ,\period_reg[11]_i_1_n_2 ,\period_reg[11]_i_1_n_3 }),
@@ -1262,22 +1276,22 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .D(\period_reg[15]_i_1_n_6 ),
         .Q(stepper_period_out[13]),
         .R(reset_in));
-  FDRE #(
-    .INIT(1'b0)) 
+  FDSE #(
+    .INIT(1'b1)) 
     \period_reg[14] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[15]_i_1_n_5 ),
         .Q(stepper_period_out[14]),
-        .R(reset_in));
-  FDSE #(
-    .INIT(1'b1)) 
+        .S(reset_in));
+  FDRE #(
+    .INIT(1'b0)) 
     \period_reg[15] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[15]_i_1_n_4 ),
         .Q(stepper_period_out[15]),
-        .S(reset_in));
+        .R(reset_in));
   CARRY4 \period_reg[15]_i_1 
        (.CI(\period_reg[11]_i_1_n_0 ),
         .CO({\period_reg[15]_i_1_n_0 ,\period_reg[15]_i_1_n_1 ,\period_reg[15]_i_1_n_2 ,\period_reg[15]_i_1_n_3 }),
@@ -1293,14 +1307,14 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .D(\period_reg[19]_i_1_n_7 ),
         .Q(stepper_period_out[16]),
         .R(reset_in));
-  FDSE #(
-    .INIT(1'b1)) 
+  FDRE #(
+    .INIT(1'b0)) 
     \period_reg[17] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[19]_i_1_n_6 ),
         .Q(stepper_period_out[17]),
-        .S(reset_in));
+        .R(reset_in));
   FDSE #(
     .INIT(1'b1)) 
     \period_reg[18] 
@@ -1332,14 +1346,14 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .D(\period_reg[3]_i_1_n_6 ),
         .Q(stepper_period_out[1]),
         .R(reset_in));
-  FDSE #(
-    .INIT(1'b1)) 
+  FDRE #(
+    .INIT(1'b0)) 
     \period_reg[20] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[23]_i_2_n_7 ),
         .Q(stepper_period_out[20]),
-        .S(reset_in));
+        .R(reset_in));
   FDRE #(
     .INIT(1'b0)) 
     \period_reg[21] 
@@ -1348,14 +1362,14 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .D(\period_reg[23]_i_2_n_6 ),
         .Q(stepper_period_out[21]),
         .R(reset_in));
-  FDRE #(
-    .INIT(1'b0)) 
+  FDSE #(
+    .INIT(1'b1)) 
     \period_reg[22] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[23]_i_2_n_5 ),
         .Q(stepper_period_out[22]),
-        .R(reset_in));
+        .S(reset_in));
   FDRE #(
     .INIT(1'b0)) 
     \period_reg[23] 
@@ -1488,22 +1502,22 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .D(\period_reg[7]_i_1_n_6 ),
         .Q(stepper_period_out[5]),
         .R(reset_in));
-  FDRE #(
-    .INIT(1'b0)) 
+  FDSE #(
+    .INIT(1'b1)) 
     \period_reg[6] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[7]_i_1_n_5 ),
         .Q(stepper_period_out[6]),
-        .R(reset_in));
-  FDSE #(
-    .INIT(1'b1)) 
+        .S(reset_in));
+  FDRE #(
+    .INIT(1'b0)) 
     \period_reg[7] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[7]_i_1_n_4 ),
         .Q(stepper_period_out[7]),
-        .S(reset_in));
+        .R(reset_in));
   CARRY4 \period_reg[7]_i_1 
        (.CI(\period_reg[3]_i_1_n_0 ),
         .CO({\period_reg[7]_i_1_n_0 ,\period_reg[7]_i_1_n_1 ,\period_reg[7]_i_1_n_2 ,\period_reg[7]_i_1_n_3 }),
@@ -1511,61 +1525,61 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .DI({1'b1,1'b1,1'b1,1'b1}),
         .O({\period_reg[7]_i_1_n_4 ,\period_reg[7]_i_1_n_5 ,\period_reg[7]_i_1_n_6 ,\period_reg[7]_i_1_n_7 }),
         .S({\period[7]_i_2_n_0 ,\period[7]_i_3_n_0 ,\period[7]_i_4_n_0 ,\period[7]_i_5_n_0 }));
-  FDRE #(
-    .INIT(1'b0)) 
+  FDSE #(
+    .INIT(1'b1)) 
     \period_reg[8] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[11]_i_1_n_7 ),
         .Q(stepper_period_out[8]),
-        .R(reset_in));
-  FDRE #(
-    .INIT(1'b0)) 
+        .S(reset_in));
+  FDSE #(
+    .INIT(1'b1)) 
     \period_reg[9] 
        (.C(clk_in),
         .CE(\period[23]_i_1_n_0 ),
         .D(\period_reg[11]_i_1_n_6 ),
         .Q(stepper_period_out[9]),
-        .R(reset_in));
+        .S(reset_in));
   CARRY4 startup_done_out1_carry
        (.CI(1'b0),
         .CO({startup_done_out1_carry_n_0,startup_done_out1_carry_n_1,startup_done_out1_carry_n_2,startup_done_out1_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({startup_done_out1_carry_i_1_n_0,1'b0,startup_done_out1_carry_i_2_n_0,startup_done_out1_carry_i_3_n_0}),
+        .DI({stepper_period_out[7],startup_done_out1_carry_i_1_n_0,startup_done_out1_carry_i_2_n_0,startup_done_out1_carry_i_3_n_0}),
         .O(NLW_startup_done_out1_carry_O_UNCONNECTED[3:0]),
-        .S({startup_done_out1_carry_i_4__2_n_0,startup_done_out1_carry_i_5_n_0,startup_done_out1_carry_i_6__1_n_0,startup_done_out1_carry_i_7__1_n_0}));
+        .S({startup_done_out1_carry_i_4__2_n_0,startup_done_out1_carry_i_5__2_n_0,startup_done_out1_carry_i_6__2_n_0,startup_done_out1_carry_i_7__1_n_0}));
   CARRY4 startup_done_out1_carry__0
        (.CI(startup_done_out1_carry_n_0),
         .CO({startup_done_out1_carry__0_n_0,startup_done_out1_carry__0_n_1,startup_done_out1_carry__0_n_2,startup_done_out1_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({stepper_period_out[15],1'b0,startup_done_out1_carry_i_1__0_n_0,stepper_period_out[9]}),
+        .DI({stepper_period_out[15],startup_done_out1_carry_i_1__0_n_0,startup_done_out1_carry_i_2__0_n_0,startup_done_out1_carry_i_3__0_n_0}),
         .O(NLW_startup_done_out1_carry__0_O_UNCONNECTED[3:0]),
-        .S({startup_done_out1_carry_i_2__2_n_0,startup_done_out1_carry_i_3__0_n_0,startup_done_out1_carry_i_4__1_n_0,startup_done_out1_carry_i_5__2_n_0}));
+        .S({startup_done_out1_carry_i_4__1_n_0,startup_done_out1_carry_i_5__1_n_0,startup_done_out1_carry_i_6__1_n_0,startup_done_out1_carry_i_7__0_n_0}));
   CARRY4 startup_done_out1_carry__1
        (.CI(startup_done_out1_carry__0_n_0),
         .CO({startup_done_out1_carry__1_n_0,startup_done_out1_carry__1_n_1,startup_done_out1_carry__1_n_2,startup_done_out1_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI({startup_done_out1_carry_i_1__1_n_0,startup_done_out1_carry_i_2__0_n_0,startup_done_out1_carry_i_3__1_n_0,1'b0}),
+        .DI({startup_done_out1_carry_i_1__1_n_0,startup_done_out1_carry_i_2__1_n_0,1'b0,1'b0}),
         .O(NLW_startup_done_out1_carry__1_O_UNCONNECTED[3:0]),
-        .S({startup_done_out1_carry_i_4__0_n_0,startup_done_out1_carry_i_5__1_n_0,startup_done_out1_carry_i_6__0_n_0,startup_done_out1_carry_i_7_n_0}));
+        .S({startup_done_out1_carry_i_3__2_n_0,startup_done_out1_carry_i_4__0_n_0,startup_done_out1_carry_i_5_n_0,startup_done_out1_carry_i_6_n_0}));
   CARRY4 startup_done_out1_carry__2
        (.CI(startup_done_out1_carry__1_n_0),
         .CO({startup_done_out1_carry__2_n_0,startup_done_out1_carry__2_n_1,startup_done_out1_carry__2_n_2,startup_done_out1_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI({startup_done_out1_carry_i_1__2_n_0,startup_done_out1_carry_i_2__1_n_0,startup_done_out1_carry_i_3__2_n_0,startup_done_out1_carry_i_4_n_0}),
+        .DI({startup_done_out1_carry_i_1__2_n_0,startup_done_out1_carry_i_2__2_n_0,startup_done_out1_carry_i_3__1_n_0,startup_done_out1_carry_i_4_n_0}),
         .O(NLW_startup_done_out1_carry__2_O_UNCONNECTED[3:0]),
-        .S({startup_done_out1_carry_i_5__0_n_0,startup_done_out1_carry_i_6_n_0,startup_done_out1_carry_i_7__0_n_0,startup_done_out1_carry_i_8_n_0}));
+        .S({startup_done_out1_carry_i_5__0_n_0,startup_done_out1_carry_i_6__0_n_0,startup_done_out1_carry_i_7_n_0,startup_done_out1_carry_i_8_n_0}));
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'hE)) 
     startup_done_out1_carry_i_1
-       (.I0(stepper_period_out[6]),
-        .I1(stepper_period_out[7]),
+       (.I0(stepper_period_out[4]),
+        .I1(stepper_period_out[5]),
         .O(startup_done_out1_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     startup_done_out1_carry_i_1__0
-       (.I0(stepper_period_out[10]),
-        .I1(stepper_period_out[11]),
+       (.I0(stepper_period_out[12]),
+        .I1(stepper_period_out[13]),
         .O(startup_done_out1_carry_i_1__0_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -1588,20 +1602,20 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
   LUT2 #(
     .INIT(4'hE)) 
     startup_done_out1_carry_i_2__0
-       (.I0(stepper_period_out[20]),
-        .I1(stepper_period_out[21]),
+       (.I0(stepper_period_out[10]),
+        .I1(stepper_period_out[11]),
         .O(startup_done_out1_carry_i_2__0_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     startup_done_out1_carry_i_2__1
-       (.I0(period_reg[28]),
-        .I1(period_reg[29]),
+       (.I0(stepper_period_out[20]),
+        .I1(stepper_period_out[21]),
         .O(startup_done_out1_carry_i_2__1_n_0));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'hE)) 
     startup_done_out1_carry_i_2__2
-       (.I0(stepper_period_out[14]),
-        .I1(stepper_period_out[15]),
+       (.I0(period_reg[28]),
+        .I1(period_reg[29]),
         .O(startup_done_out1_carry_i_2__2_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -1612,20 +1626,20 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
   LUT2 #(
     .INIT(4'h8)) 
     startup_done_out1_carry_i_3__0
-       (.I0(stepper_period_out[12]),
-        .I1(stepper_period_out[13]),
+       (.I0(stepper_period_out[8]),
+        .I1(stepper_period_out[9]),
         .O(startup_done_out1_carry_i_3__0_n_0));
   LUT2 #(
-    .INIT(4'h8)) 
-    startup_done_out1_carry_i_3__1
-       (.I0(stepper_period_out[18]),
-        .I1(stepper_period_out[19]),
-        .O(startup_done_out1_carry_i_3__1_n_0));
-  LUT2 #(
     .INIT(4'hE)) 
-    startup_done_out1_carry_i_3__2
+    startup_done_out1_carry_i_3__1
        (.I0(period_reg[26]),
         .I1(period_reg[27]),
+        .O(startup_done_out1_carry_i_3__1_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    startup_done_out1_carry_i_3__2
+       (.I0(stepper_period_out[22]),
+        .I1(stepper_period_out[23]),
         .O(startup_done_out1_carry_i_3__2_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -1636,26 +1650,26 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
   LUT2 #(
     .INIT(4'h1)) 
     startup_done_out1_carry_i_4__0
-       (.I0(stepper_period_out[22]),
-        .I1(stepper_period_out[23]),
+       (.I0(stepper_period_out[20]),
+        .I1(stepper_period_out[21]),
         .O(startup_done_out1_carry_i_4__0_n_0));
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'h2)) 
     startup_done_out1_carry_i_4__1
-       (.I0(stepper_period_out[10]),
-        .I1(stepper_period_out[11]),
+       (.I0(stepper_period_out[14]),
+        .I1(stepper_period_out[15]),
         .O(startup_done_out1_carry_i_4__1_n_0));
   LUT2 #(
     .INIT(4'h2)) 
     startup_done_out1_carry_i_4__2
-       (.I0(stepper_period_out[7]),
-        .I1(stepper_period_out[6]),
+       (.I0(stepper_period_out[6]),
+        .I1(stepper_period_out[7]),
         .O(startup_done_out1_carry_i_4__2_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     startup_done_out1_carry_i_5
-       (.I0(stepper_period_out[4]),
-        .I1(stepper_period_out[5]),
+       (.I0(stepper_period_out[18]),
+        .I1(stepper_period_out[19]),
         .O(startup_done_out1_carry_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1666,44 +1680,50 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
   LUT2 #(
     .INIT(4'h1)) 
     startup_done_out1_carry_i_5__1
-       (.I0(stepper_period_out[20]),
-        .I1(stepper_period_out[21]),
+       (.I0(stepper_period_out[12]),
+        .I1(stepper_period_out[13]),
         .O(startup_done_out1_carry_i_5__1_n_0));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h1)) 
     startup_done_out1_carry_i_5__2
-       (.I0(stepper_period_out[8]),
-        .I1(stepper_period_out[9]),
+       (.I0(stepper_period_out[4]),
+        .I1(stepper_period_out[5]),
         .O(startup_done_out1_carry_i_5__2_n_0));
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'h8)) 
     startup_done_out1_carry_i_6
-       (.I0(period_reg[28]),
-        .I1(period_reg[29]),
+       (.I0(stepper_period_out[16]),
+        .I1(stepper_period_out[17]),
         .O(startup_done_out1_carry_i_6_n_0));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h1)) 
     startup_done_out1_carry_i_6__0
-       (.I0(stepper_period_out[19]),
-        .I1(stepper_period_out[18]),
+       (.I0(period_reg[28]),
+        .I1(period_reg[29]),
         .O(startup_done_out1_carry_i_6__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     startup_done_out1_carry_i_6__1
-       (.I0(stepper_period_out[2]),
-        .I1(stepper_period_out[3]),
+       (.I0(stepper_period_out[10]),
+        .I1(stepper_period_out[11]),
         .O(startup_done_out1_carry_i_6__1_n_0));
   LUT2 #(
-    .INIT(4'h8)) 
-    startup_done_out1_carry_i_7
-       (.I0(stepper_period_out[16]),
-        .I1(stepper_period_out[17]),
-        .O(startup_done_out1_carry_i_7_n_0));
+    .INIT(4'h1)) 
+    startup_done_out1_carry_i_6__2
+       (.I0(stepper_period_out[2]),
+        .I1(stepper_period_out[3]),
+        .O(startup_done_out1_carry_i_6__2_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    startup_done_out1_carry_i_7__0
+    startup_done_out1_carry_i_7
        (.I0(period_reg[26]),
         .I1(period_reg[27]),
+        .O(startup_done_out1_carry_i_7_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    startup_done_out1_carry_i_7__0
+       (.I0(stepper_period_out[9]),
+        .I1(stepper_period_out[8]),
         .O(startup_done_out1_carry_i_7__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1718,13 +1738,12 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .I1(period_reg[25]),
         .O(startup_done_out1_carry_i_8_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h00AB)) 
+  LUT3 #(
+    .INIT(8'hF1)) 
     startup_done_out_i_1
-       (.I0(startup_done_out),
+       (.I0(counter1_carry__2_n_0),
         .I1(startup_done_out1_carry__2_n_0),
-        .I2(counter1_carry__2_n_0),
-        .I3(reset_in),
+        .I2(startup_done_out),
         .O(startup_done_out_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1733,7 +1752,7 @@ module unity_BLDC_STARTUP_0_0_BLDC_STARTUP
         .CE(1'b1),
         .D(startup_done_out_i_1_n_0),
         .Q(startup_done_out),
-        .R(1'b0));
+        .R(reset_in));
 endmodule
 `ifndef GLBL
 `define GLBL

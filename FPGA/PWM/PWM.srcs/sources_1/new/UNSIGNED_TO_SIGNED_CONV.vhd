@@ -35,8 +35,8 @@ use IEEE.NUMERIC_STD.ALL;
 entity UNSIGNED_TO_SIGNED_CONV is
     GENERIC( SIZE : integer range 0 to 1000 := 8);
     Port ( clk_in : in STD_LOGIC;
-           UNSIGNED_in : in STD_LOGIC_VECTOR (SIZE -1 downto 0);
-           SIGNED_OUT : out STD_LOGIC_VECTOR (SIZE downto 0) := (others => '0');
+           UNSIGNED_in : in unsigned (SIZE -1 downto 0);
+           SIGNED_OUT : out signed (SIZE downto 0) := (others => '0');
            SIGN_in : in STD_LOGIC);
 end UNSIGNED_TO_SIGNED_CONV;
 
@@ -47,8 +47,9 @@ the_crazy_shit : process(clk_in)
 begin
     if(rising_edge(clk_in)) then
         case SIGN_in is
-        when '0' => SIGNED_OUT <= std_logic_vector(signed('0' & UNSIGNED_in));
-        when '1' => SIGNED_OUT <= std_logic_vector(-signed('0' & UNSIGNED_in));
+        when '0' => SIGNED_OUT <= signed('0' & UNSIGNED_in);
+        when '1' => SIGNED_OUT <= -signed('0' & UNSIGNED_in);
+        when others => SIGNED_OUT <= signed('0' & UNSIGNED_in);
         end case;
     end if;
 end process;

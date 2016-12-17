@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date         : Thu Dec  8 17:28:36 2016
+| Date         : Fri Dec 16 17:43:27 2016
 | Host         : Leviathan running 64-bit Arch Linux
 | Command      : report_utilization -file unity_wrapper_utilization_synth.rpt -pb unity_wrapper_utilization_synth.pb
 | Design       : unity_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   24 |     0 |        54 | 44.44 |
+| Bonded IOB                  |   22 |     0 |        54 | 40.74 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -147,7 +147,7 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |   15 |                  IO |
-| IBUF     |    8 |                  IO |
+| IBUF     |    6 |                  IO |
 | OBUFT    |    1 |                  IO |
 | LUT6     |    1 |                 LUT |
 | LUT1     |    1 |                 LUT |
@@ -162,7 +162,6 @@ Table of Contents
 +-----------------------------------+------+
 | unity_xlslice_8_0                 |    1 |
 | unity_xlslice_7_0                 |    1 |
-| unity_xlslice_5_0                 |    1 |
 | unity_xlslice_1_3                 |    1 |
 | unity_xlslice_1_1                 |    1 |
 | unity_xlslice_1_0                 |    1 |
@@ -181,21 +180,16 @@ Table of Contents
 | unity_VECTOR_INV_0_0              |    1 |
 | unity_UNSIGNED_TO_SIGNED_CONV_0_0 |    1 |
 | unity_Toggler_0_0                 |    1 |
-| unity_Rotary_counter_0_0          |    1 |
-| unity_Rotary_Encoder_0_0          |    1 |
-| unity_RUNNING_AVG_0_0             |    1 |
+| unity_SIGNED_TO_UNSIGNED_CONV_0_0 |    1 |
+| unity_PWM_smoother_0_0            |    1 |
 | unity_PWM_generator_0_1           |    1 |
 | unity_PWM_generator_0_0           |    1 |
 | unity_PULSER_0_1                  |    1 |
 | unity_PID_0_0                     |    1 |
-| unity_PERIOD_TO_RPM_0_0           |    1 |
 | unity_OL_BLDC_Stepper_0_0         |    1 |
 | unity_Debouncer_5_1               |    1 |
 | unity_Debouncer_5_0               |    1 |
-| unity_Debouncer_4_0               |    1 |
-| unity_Debouncer_3_0               |    1 |
 | unity_DIR_SENSE_0_0               |    1 |
-| unity_DIFF_PULSER_0_0             |    1 |
 | unity_BLDC_STATE_CONTROLLER_0_0   |    1 |
 | unity_BLDC_STARTUP_0_0            |    1 |
 | unity_BLDC_SPEED_OBSERVER_0_1     |    1 |

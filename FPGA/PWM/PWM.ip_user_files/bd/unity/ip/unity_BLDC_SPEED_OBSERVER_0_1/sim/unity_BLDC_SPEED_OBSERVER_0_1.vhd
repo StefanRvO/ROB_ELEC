@@ -58,7 +58,7 @@ ENTITY unity_BLDC_SPEED_OBSERVER_0_1 IS
     SENSE_in : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     clk_in : IN STD_LOGIC;
     dir_out : OUT STD_LOGIC;
-    speed_out : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
+    speed_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     reset_in : IN STD_LOGIC
   );
 END unity_BLDC_SPEED_OBSERVER_0_1;
@@ -71,7 +71,7 @@ ARCHITECTURE unity_BLDC_SPEED_OBSERVER_0_1_arch OF unity_BLDC_SPEED_OBSERVER_0_1
       SENSE_in : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       clk_in : IN STD_LOGIC;
       dir_out : OUT STD_LOGIC;
-      speed_out : OUT STD_LOGIC_VECTOR(47 DOWNTO 0);
+      speed_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       reset_in : IN STD_LOGIC
     );
   END COMPONENT BLDC_SPEED_OBSERVER;

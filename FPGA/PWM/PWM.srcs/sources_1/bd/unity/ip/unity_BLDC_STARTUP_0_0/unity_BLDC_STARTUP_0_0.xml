@@ -45,7 +45,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>244a9aea</spirit:value>
+            <spirit:value>514ef943</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -64,7 +64,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 14:15:22 UTC 2016</spirit:value>
+            <spirit:value>Fri Dec 16 16:20:32 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -76,7 +76,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>244a9aea</spirit:value>
+            <spirit:value>514ef943</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -99,7 +99,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>11344953</spirit:value>
+            <spirit:value>b05213f1</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -118,7 +118,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 14:15:22 UTC 2016</spirit:value>
+            <spirit:value>Fri Dec 16 16:20:32 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -130,7 +130,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>11344953</spirit:value>
+            <spirit:value>b05213f1</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -148,7 +148,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Dec 07 14:16:04 UTC 2016</spirit:value>
+            <spirit:value>Fri Dec 16 16:21:20 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -160,7 +160,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>244a9aea</spirit:value>
+            <spirit:value>514ef943</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -237,17 +237,17 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>START_PERIOD</spirit:name>
         <spirit:displayName>Start Period</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.START_PERIOD" spirit:maximum="16777215" spirit:rangeType="long">2000000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.START_PERIOD" spirit:maximum="16777215" spirit:rangeType="long">5000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>END_PERIOD</spirit:name>
         <spirit:displayName>End Period</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.END_PERIOD" spirit:maximum="16777215" spirit:rangeType="long">750000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.END_PERIOD" spirit:maximum="16777215" spirit:rangeType="long">1000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SPEEDUP_INTERVAL</spirit:name>
         <spirit:displayName>Speedup Interval</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SPEEDUP_INTERVAL" spirit:maximum="1000000000" spirit:rangeType="long">15</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SPEEDUP_INTERVAL" spirit:maximum="1000000000" spirit:rangeType="long">20</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -310,17 +310,17 @@
     <spirit:parameter>
       <spirit:name>START_PERIOD</spirit:name>
       <spirit:displayName>Start Period</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.START_PERIOD">2000000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.START_PERIOD">5000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>END_PERIOD</spirit:name>
       <spirit:displayName>End Period</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.END_PERIOD">750000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.END_PERIOD">1000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SPEEDUP_INTERVAL</spirit:name>
       <spirit:displayName>Speedup Interval</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SPEEDUP_INTERVAL">15</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SPEEDUP_INTERVAL">20</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>

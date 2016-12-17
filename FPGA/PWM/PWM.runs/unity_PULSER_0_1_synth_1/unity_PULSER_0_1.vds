@@ -2,12 +2,12 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Dec  6 22:58:27 2016
-# Process ID: 2078
-# Current directory: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PULSER_0_1_synth_1
+# Start of session at: Thu Dec  8 22:06:59 2016
+# Process ID: 28459
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PULSER_0_1_synth_1
 # Command line: vivado -log unity_PULSER_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_PULSER_0_1.tcl
-# Log file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PULSER_0_1_synth_1/unity_PULSER_0_1.vds
-# Journal file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PULSER_0_1_synth_1/vivado.jou
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PULSER_0_1_synth_1/unity_PULSER_0_1.vds
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PULSER_0_1_synth_1/vivado.jou
 #-----------------------------------------------------------
 source unity_PULSER_0_1.tcl -notrace
 Command: synth_design -top unity_PULSER_0_1 -part xc7z010clg225-1 -mode out_of_context
@@ -15,31 +15,31 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2091 
+INFO: Helper process launched with PID 28621 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1058.672 ; gain = 155.301 ; free physical = 1581 ; free virtual = 18607
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1057.676 ; gain = 154.301 ; free physical = 1895 ; free virtual = 17283
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'unity_PULSER_0_1' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/synth/unity_PULSER_0_1.vhd:64]
-INFO: [Synth 8-3491] module 'PULSER' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/PULSER.vhd:34' bound to instance 'U0' of component 'PULSER' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/synth/unity_PULSER_0_1.vhd:79]
-INFO: [Synth 8-638] synthesizing module 'PULSER' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/PULSER.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'PULSER' (1#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/PULSER.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'unity_PULSER_0_1' (2#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/synth/unity_PULSER_0_1.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'unity_PULSER_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/synth/unity_PULSER_0_1.vhd:64]
+INFO: [Synth 8-3491] module 'PULSER' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PULSER.vhd:34' bound to instance 'U0' of component 'PULSER' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/synth/unity_PULSER_0_1.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'PULSER' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PULSER.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'PULSER' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PULSER.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'unity_PULSER_0_1' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/synth/unity_PULSER_0_1.vhd:64]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1099.141 ; gain = 195.770 ; free physical = 1540 ; free virtual = 18568
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1098.145 ; gain = 194.770 ; free physical = 1807 ; free virtual = 17196
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1099.141 ; gain = 195.770 ; free physical = 1534 ; free virtual = 18562
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1098.145 ; gain = 194.770 ; free physical = 1805 ; free virtual = 17195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1106.148 ; gain = 202.773 ; free physical = 1805 ; free virtual = 17195
+---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1107.145 ; gain = 203.773 ; free physical = 1533 ; free virtual = 18561
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1115.152 ; gain = 211.781 ; free physical = 1525 ; free virtual = 18553
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1114.156 ; gain = 210.781 ; free physical = 1798 ; free virtual = 17187
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -86,7 +86,7 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1198.488 ; gain = 295.117 ; free physical = 1345 ; free virtual = 18388
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1197.492 ; gain = 294.117 ; free physical = 1522 ; free virtual = 16912
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -99,7 +99,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1198.488 ; gain = 295.117 ; free physical = 1345 ; free virtual = 18388
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1197.492 ; gain = 294.117 ; free physical = 1522 ; free virtual = 16912
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -111,7 +111,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.496 ; gain = 303.125 ; free physical = 1335 ; free virtual = 18378
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1205.500 ; gain = 302.125 ; free physical = 1513 ; free virtual = 16903
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -135,7 +135,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.496 ; gain = 303.125 ; free physical = 1321 ; free virtual = 18360
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.500 ; gain = 302.125 ; free physical = 1477 ; free virtual = 16871
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -148,7 +148,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.496 ; gain = 303.125 ; free physical = 1321 ; free virtual = 18360
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.500 ; gain = 302.125 ; free physical = 1476 ; free virtual = 16871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -160,25 +160,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.496 ; gain = 303.125 ; free physical = 1321 ; free virtual = 18359
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.500 ; gain = 302.125 ; free physical = 1476 ; free virtual = 16871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.496 ; gain = 303.125 ; free physical = 1321 ; free virtual = 18359
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.500 ; gain = 302.125 ; free physical = 1476 ; free virtual = 16871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.496 ; gain = 303.125 ; free physical = 1319 ; free virtual = 18357
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.500 ; gain = 302.125 ; free physical = 1475 ; free virtual = 16867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.496 ; gain = 303.125 ; free physical = 1319 ; free virtual = 18357
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.500 ; gain = 302.125 ; free physical = 1475 ; free virtual = 16867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -206,11 +206,11 @@ Report Instance Areas:
 |2     |  U0     |PULSER |     3|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.496 ; gain = 303.125 ; free physical = 1319 ; free virtual = 18357
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.500 ; gain = 302.125 ; free physical = 1475 ; free virtual = 16867
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1206.496 ; gain = 203.824 ; free physical = 1318 ; free virtual = 18357
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1206.504 ; gain = 303.133 ; free physical = 1318 ; free virtual = 18357
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1205.500 ; gain = 202.824 ; free physical = 1475 ; free virtual = 16867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1205.508 ; gain = 302.133 ; free physical = 1475 ; free virtual = 16867
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -220,10 +220,10 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 16 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1281.496 ; gain = 291.406 ; free physical = 1208 ; free virtual = 18251
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1280.500 ; gain = 290.406 ; free physical = 1184 ; free virtual = 16576
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PULSER_0_1_synth_1/unity_PULSER_0_1.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1699.031 ; gain = 417.535 ; free physical = 510 ; free virtual = 17580
-INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_PULSER_0_1_synth_1/unity_PULSER_0_1.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1700.031 ; gain = 0.000 ; free physical = 504 ; free virtual = 17574
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  6 22:59:10 2016...
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PULSER_0_1_synth_1/unity_PULSER_0_1.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1698.035 ; gain = 417.535 ; free physical = 1023 ; free virtual = 16416
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PULSER_0_1_synth_1/unity_PULSER_0_1.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1699.035 ; gain = 0.000 ; free physical = 975 ; free virtual = 16367
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 22:07:36 2016...

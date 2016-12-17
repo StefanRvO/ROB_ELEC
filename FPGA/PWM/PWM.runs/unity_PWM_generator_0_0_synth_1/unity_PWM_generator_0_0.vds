@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Thu Dec  8 00:21:51 2016
-# Process ID: 24417
+# Start of session at: Thu Dec  8 22:07:54 2016
+# Process ID: 29882
 # Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1
 # Command line: vivado -log unity_PWM_generator_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_PWM_generator_0_0.tcl
 # Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1/unity_PWM_generator_0_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24498 
+INFO: Helper process launched with PID 29908 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1061.672 ; gain = 158.301 ; free physical = 2274 ; free virtual = 17542
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1061.668 ; gain = 158.301 ; free physical = 936 ; free virtual = 16330
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'unity_PWM_generator_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/synth/unity_PWM_generator_0_0.vhd:65]
 	Parameter CLK_FREQ bound to: 200000000 - type: integer 
@@ -31,17 +31,17 @@ WARNING: [Synth 8-614] signal 'PWM_duty_in' is read in the process but is not in
 INFO: [Synth 8-256] done synthesizing module 'PWM_generator' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PWM_generator.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'unity_PWM_generator_0_0' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/synth/unity_PWM_generator_0_0.vhd:65]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1103.141 ; gain = 199.770 ; free physical = 2166 ; free virtual = 17433
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1103.137 ; gain = 199.770 ; free physical = 578 ; free virtual = 15972
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1103.141 ; gain = 199.770 ; free physical = 2161 ; free virtual = 17429
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1103.137 ; gain = 199.770 ; free physical = 576 ; free virtual = 15969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1111.145 ; gain = 207.773 ; free physical = 2161 ; free virtual = 17428
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1111.141 ; gain = 207.773 ; free physical = 576 ; free virtual = 15969
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "scaler_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -50,7 +50,7 @@ INFO: [Synth 8-5545] ROM "count_direction" won't be mapped to RAM because addres
 INFO: [Synth 8-5545] ROM "count_direction" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Device 21-403] Loading part xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1127.160 ; gain = 223.789 ; free physical = 2111 ; free virtual = 17379
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1127.156 ; gain = 223.789 ; free physical = 517 ; free virtual = 15911
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -115,7 +115,7 @@ INFO: [Synth 8-5545] ROM "U0/scaled_CLK" won't be mapped to RAM because address 
 INFO: [Synth 8-5545] ROM "U0/count_direction" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "U0/count_direction" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1222.512 ; gain = 319.141 ; free physical = 1846 ; free virtual = 17122
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1222.508 ; gain = 319.141 ; free physical = 2207 ; free virtual = 17611
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -128,7 +128,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1222.512 ; gain = 319.141 ; free physical = 1846 ; free virtual = 17122
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1222.508 ; gain = 319.141 ; free physical = 2207 ; free virtual = 17611
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,7 +140,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.520 ; gain = 327.148 ; free physical = 1830 ; free virtual = 17105
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1230.516 ; gain = 327.148 ; free physical = 2199 ; free virtual = 17602
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -164,7 +164,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.520 ; gain = 327.148 ; free physical = 1848 ; free virtual = 17105
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1230.516 ; gain = 327.148 ; free physical = 2196 ; free virtual = 17600
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -177,7 +177,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.520 ; gain = 327.148 ; free physical = 1848 ; free virtual = 17105
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1230.516 ; gain = 327.148 ; free physical = 2196 ; free virtual = 17600
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -189,25 +189,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.520 ; gain = 327.148 ; free physical = 1848 ; free virtual = 17105
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1230.516 ; gain = 327.148 ; free physical = 2196 ; free virtual = 17600
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.520 ; gain = 327.148 ; free physical = 1848 ; free virtual = 17105
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1230.516 ; gain = 327.148 ; free physical = 2196 ; free virtual = 17600
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.520 ; gain = 327.148 ; free physical = 1848 ; free virtual = 17105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1230.516 ; gain = 327.148 ; free physical = 2196 ; free virtual = 17600
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.520 ; gain = 327.148 ; free physical = 1848 ; free virtual = 17105
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1230.516 ; gain = 327.148 ; free physical = 2196 ; free virtual = 17600
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -241,11 +241,11 @@ Report Instance Areas:
 |2     |  U0     |PWM_generator |   310|
 +------+---------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.520 ; gain = 327.148 ; free physical = 1848 ; free virtual = 17105
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1230.516 ; gain = 327.148 ; free physical = 2196 ; free virtual = 17600
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1230.520 ; gain = 227.848 ; free physical = 1850 ; free virtual = 17107
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1230.527 ; gain = 327.156 ; free physical = 1850 ; free virtual = 17107
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1230.516 ; gain = 227.848 ; free physical = 2196 ; free virtual = 17600
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1230.523 ; gain = 327.156 ; free physical = 2196 ; free virtual = 17600
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -257,10 +257,10 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 27 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1349.547 ; gain = 359.457 ; free physical = 1742 ; free virtual = 16999
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1348.543 ; gain = 358.457 ; free physical = 2086 ; free virtual = 17489
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1/unity_PWM_generator_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1837.082 ; gain = 487.535 ; free physical = 1100 ; free virtual = 16348
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1837.078 ; gain = 488.535 ; free physical = 1519 ; free virtual = 16921
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PWM_generator_0_0_synth_1/unity_PWM_generator_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1837.082 ; gain = 0.000 ; free physical = 1021 ; free virtual = 16270
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 00:22:26 2016...
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1837.078 ; gain = 0.000 ; free physical = 1514 ; free virtual = 16919
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 22:08:34 2016...

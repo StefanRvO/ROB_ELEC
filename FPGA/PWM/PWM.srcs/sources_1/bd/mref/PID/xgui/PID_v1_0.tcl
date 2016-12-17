@@ -5,8 +5,6 @@ proc init_gui { IPINST } {
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "CLK_FREQ" -parent ${Page_0}
   ipgui::add_param $IPINST -name "CONST_SIZE" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "K_DIV" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "K_MULT" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MAX" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MIN" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SAMPLE_FREQ" -parent ${Page_0}
@@ -30,24 +28,6 @@ proc update_PARAM_VALUE.CONST_SIZE { PARAM_VALUE.CONST_SIZE } {
 
 proc validate_PARAM_VALUE.CONST_SIZE { PARAM_VALUE.CONST_SIZE } {
 	# Procedure called to validate CONST_SIZE
-	return true
-}
-
-proc update_PARAM_VALUE.K_DIV { PARAM_VALUE.K_DIV } {
-	# Procedure called to update K_DIV when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.K_DIV { PARAM_VALUE.K_DIV } {
-	# Procedure called to validate K_DIV
-	return true
-}
-
-proc update_PARAM_VALUE.K_MULT { PARAM_VALUE.K_MULT } {
-	# Procedure called to update K_MULT when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.K_MULT { PARAM_VALUE.K_MULT } {
-	# Procedure called to validate K_MULT
 	return true
 }
 
@@ -91,16 +71,6 @@ proc validate_PARAM_VALUE.SIZE { PARAM_VALUE.SIZE } {
 proc update_MODELPARAM_VALUE.SIZE { MODELPARAM_VALUE.SIZE PARAM_VALUE.SIZE } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.SIZE}] ${MODELPARAM_VALUE.SIZE}
-}
-
-proc update_MODELPARAM_VALUE.K_MULT { MODELPARAM_VALUE.K_MULT PARAM_VALUE.K_MULT } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.K_MULT}] ${MODELPARAM_VALUE.K_MULT}
-}
-
-proc update_MODELPARAM_VALUE.K_DIV { MODELPARAM_VALUE.K_DIV PARAM_VALUE.K_DIV } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.K_DIV}] ${MODELPARAM_VALUE.K_DIV}
 }
 
 proc update_MODELPARAM_VALUE.MAX { MODELPARAM_VALUE.MAX PARAM_VALUE.MAX } {

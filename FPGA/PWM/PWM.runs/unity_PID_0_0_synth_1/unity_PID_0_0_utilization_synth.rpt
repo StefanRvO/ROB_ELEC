@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date         : Thu Dec  8 17:27:54 2016
+| Date         : Fri Dec 16 16:17:28 2016
 | Host         : Leviathan running 64-bit Arch Linux
 | Command      : report_utilization -file unity_PID_0_0_utilization_synth.rpt -pb unity_PID_0_0_utilization_synth.pb
 | Design       : unity_PID_0_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  896 |     0 |     17600 |  5.09 |
-|   LUT as Logic          |  896 |     0 |     17600 |  5.09 |
+| Slice LUTs*             | 1028 |     0 |     17600 |  5.84 |
+|   LUT as Logic          | 1028 |     0 |     17600 |  5.84 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         |  395 |     0 |     35200 |  1.12 |
-|   Register as Flip Flop |  395 |     0 |     35200 |  1.12 |
+| Slice Registers         |  427 |     0 |     35200 |  1.21 |
+|   Register as Flip Flop |  427 |     0 |     35200 |  1.21 |
 |   Register as Latch     |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 395   |          Yes |       Reset |            - |
+| 427   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,13 +147,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  395 |        Flop & Latch |
-| LUT2     |  337 |                 LUT |
-| LUT6     |  281 |                 LUT |
-| LUT5     |  135 |                 LUT |
+| FDRE     |  427 |        Flop & Latch |
+| LUT6     |  346 |                 LUT |
+| LUT2     |  307 |                 LUT |
+| LUT5     |  185 |                 LUT |
+| LUT3     |  145 |                 LUT |
+| LUT4     |  120 |                 LUT |
 | CARRY4   |  108 |          CarryLogic |
-| LUT3     |   91 |                 LUT |
-| LUT4     |   81 |                 LUT |
 | LUT1     |   35 |                 LUT |
 | DSP48E1  |   20 |    Block Arithmetic |
 +----------+------+---------------------+

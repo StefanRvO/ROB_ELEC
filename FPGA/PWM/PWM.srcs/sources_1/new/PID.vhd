@@ -35,8 +35,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity PID is
     GENERIC(SIZE : integer range 0 to 1000 := 64;
-            K_MULT : integer range 0 to 100000000 := 1;
-            K_DIV  : integer range 0 to 100000000 := 1;
             MAX : integer range -1000000000 to 1000000000 := 1000000000;
             MIN : integer range -1000000000 to 1000000000 := 1000000000;
             CONST_SIZE : integer range 0 to 1000 := 32;
@@ -49,6 +47,8 @@ entity PID is
            clk_in : in STD_LOGIC;
            P_MULT : in signed(CONST_SIZE - 1 downto 0);
            P_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
+           D_MULT : in signed(CONST_SIZE - 1 downto 0);
+           D_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
            I_MULT : in signed(CONST_SIZE - 1 downto 0);
            I_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
            reset_in : in STD_LOGIC := '0'
@@ -65,16 +65,20 @@ signal error_signal : signed(SIZE -1 downto 0) := (others => '0');
 signal I_PART : signed(SIZE -1 downto 0) := (others => '0');
 signal I_SUM : signed(SIZE * 4 -1 downto 0) := (others => '0');
 signal I_TMP_MULT : signed(SIZE * 8 -1 downto 0) := (others => '0');
+signal D_PART : signed(SIZE -1 downto 0) := (others => '0');
+signal D_TMP_MULT : signed(SIZE * 2- 1  downto 0) := (others => '0');
 signal tmp_min_out : signed(SIZE -1 downto 0) := (others => '0');
-
+signal error_prev : signed(SIZE -1 downto 0) := (others => '0');
 signal scaled_CLK : STD_LOGIC := '0';
 signal scaler_counter : integer := 0;
+signal error_diff : signed(SIZE -1 downto 0) := (others => '0');
 
 
 begin
 error_signal <= set_point - feedback;
-tmp_min_out <=  P_PART + I_PART when(P_PART + I_PART > to_signed(MIN, tmp_min_out'length)) else to_signed(MIN, tmp_min_out'length);
+tmp_min_out <=  P_PART + I_PART + D_PART when(P_PART + I_PART +D_PART > to_signed(MIN, tmp_min_out'length)) else to_signed(MIN, tmp_min_out'length);
 output_out <= tmp_min_out when(tmp_min_out < to_signed(MAX, output_out'length)) else to_signed(MAX, output_out'length);
+error_diff <= error_prev - error_signal;
 
 
 
@@ -113,6 +117,9 @@ begin
             I_PART <= resize(I_TMP_MULT srl to_integer(I_DIV), I_PART'length);
             P_TMP_MULT <= resize(error_signal * P_MULT,P_TMP_MULT'length);
             P_PART <= resize(P_TMP_MULT srl to_integer(P_DIV), P_PART'length);
+            D_TMP_MULT <= resize(error_diff * D_MULT,D_TMP_MULT'length);
+            D_PART <= resize(P_TMP_MULT srl to_integer(D_DIV), D_PART'length);
+            error_prev <= error_signal;
     end if;
 end process;
 

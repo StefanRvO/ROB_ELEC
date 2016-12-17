@@ -59,8 +59,20 @@ ENTITY unity_unity_ctrl_0_0 IS
     rx_i : IN STD_LOGIC;
     tx_o : OUT STD_LOGIC;
     addr4_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr5_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr6_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr7_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr12_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr13_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr14_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr15_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     addr0_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
+    addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr2_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr3_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr8_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr9_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr10_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END unity_unity_ctrl_0_0;
 
@@ -73,8 +85,20 @@ ARCHITECTURE unity_unity_ctrl_0_0_arch OF unity_unity_ctrl_0_0 IS
       rx_i : IN STD_LOGIC;
       tx_o : OUT STD_LOGIC;
       addr4_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr5_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr6_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr7_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr12_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr13_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr14_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr15_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       addr0_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-      addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
+      addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr2_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr3_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr8_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr9_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr10_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT unity_ctrl;
 BEGIN
@@ -84,7 +108,19 @@ BEGIN
       rx_i => rx_i,
       tx_o => tx_o,
       addr4_out => addr4_out,
+      addr5_out => addr5_out,
+      addr6_out => addr6_out,
+      addr7_out => addr7_out,
+      addr12_out => addr12_out,
+      addr13_out => addr13_out,
+      addr14_out => addr14_out,
+      addr15_out => addr15_out,
       addr0_in => addr0_in,
-      addr1_in => addr1_in
+      addr1_in => addr1_in,
+      addr2_in => addr2_in,
+      addr3_in => addr3_in,
+      addr8_in => addr8_in,
+      addr9_in => addr9_in,
+      addr10_in => addr10_in
     );
 END unity_unity_ctrl_0_0_arch;

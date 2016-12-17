@@ -9,8 +9,6 @@ architecture bench of PID_tb is
 
   component PID
       GENERIC(SIZE : integer range 0 to 1000 := 64;
-              K_MULT : integer range 0 to 100000000 := 1;
-              K_DIV  : integer range 0 to 100000000 := 1;
               MAX : integer range -1000000000 to 1000000000 := 1000000000;
               MIN : integer range -1000000000 to 1000000000 := 1000000000;
               CONST_SIZE : integer range 0 to 1000 := 32;
@@ -22,22 +20,24 @@ architecture bench of PID_tb is
              clk_in : in STD_LOGIC;
              P_MULT : in signed(CONST_SIZE - 1 downto 0);
              P_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
+             D_MULT : in signed(CONST_SIZE - 1 downto 0);
+             D_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
              I_MULT : in signed(CONST_SIZE - 1 downto 0);
              I_DIV  : in unsigned(CONST_SIZE - 1 downto 0);
              reset_in : in STD_LOGIC := '0'
              );
   end component;
-  constant SIZE : integer := 32;
-  constant CONST_SIZE : integer := 32;
 
-  signal set_point: signed (SIZE - 1 downto 0) := to_signed(50000, SIZE);
-  signal feedback: signed (SIZE - 1 downto 0) := to_signed(10000, SIZE);
+  signal set_point: signed (SIZE - 1 downto 0);
+  signal feedback: signed (SIZE - 1 downto 0);
   signal output_out: signed (SIZE - 1 downto 0) := (others => '0');
-  signal clk_in: STD_LOGIC := '0';
-  signal P_MULT: signed(CONST_SIZE - 1 downto 0) := to_signed(1, CONST_SIZE);
-  signal P_DIV: unsigned(CONST_SIZE - 1 downto 0)  := to_unsigned(10, CONST_SIZE);
-  signal I_MULT: signed(CONST_SIZE - 1 downto 0)  := to_signed(1, CONST_SIZE);
-  signal I_DIV: unsigned(CONST_SIZE - 1 downto 0)  := to_unsigned(16, CONST_SIZE);
+  signal clk_in: STD_LOGIC;
+  signal P_MULT: signed(CONST_SIZE - 1 downto 0);
+  signal P_DIV: unsigned(CONST_SIZE - 1 downto 0);
+  signal D_MULT: signed(CONST_SIZE - 1 downto 0);
+  signal D_DIV: unsigned(CONST_SIZE - 1 downto 0);
+  signal I_MULT: signed(CONST_SIZE - 1 downto 0);
+  signal I_DIV: unsigned(CONST_SIZE - 1 downto 0);
   signal reset_in: STD_LOGIC := '0' ;
 
   constant clock_period: time := 10 ns;
@@ -46,20 +46,20 @@ architecture bench of PID_tb is
 begin
 
   -- Insert values for generic parameters !!
-  uut: PID generic map ( SIZE        => 32,
-                         K_MULT      => 32,
-                         K_DIV       => 1,
-                         MAX         => 255,
-                         MIN         => -255,
-                         CONST_SIZE  => 32,
-                         SAMPLE_FREQ => 10000000,
-                         CLK_FREQ    => 200000000 )
+  uut: PID generic map ( SIZE        => ,
+                         MAX         => ,
+                         MIN         => ,
+                         CONST_SIZE  => ,
+                         SAMPLE_FREQ => ,
+                         CLK_FREQ    =>  )
               port map ( set_point   => set_point,
                          feedback    => feedback,
                          output_out  => output_out,
                          clk_in      => clk_in,
                          P_MULT      => P_MULT,
                          P_DIV       => P_DIV,
+                         D_MULT      => D_MULT,
+                         D_DIV       => D_DIV,
                          I_MULT      => I_MULT,
                          I_DIV       => I_DIV,
                          reset_in    => reset_in );
@@ -72,7 +72,7 @@ begin
 
     -- Put test bench stimulus code here
 
-    stop_the_clock <= false;
+    stop_the_clock <= true;
     wait;
   end process;
 
@@ -86,3 +86,4 @@ begin
   end process;
 
 end;
+  
