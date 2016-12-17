@@ -2,12 +2,12 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Dec  6 23:10:47 2016
-# Process ID: 8867
-# Current directory: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1
+# Start of session at: Wed Dec  7 15:15:30 2016
+# Process ID: 5554
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1
 # Command line: vivado -log unity_BLDC_STARTUP_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_BLDC_STARTUP_0_0.tcl
-# Log file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/unity_BLDC_STARTUP_0_0.vds
-# Journal file: /home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/vivado.jou
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/unity_BLDC_STARTUP_0_0.vds
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source unity_BLDC_STARTUP_0_0.tcl -notrace
 Command: synth_design -top unity_BLDC_STARTUP_0_0 -part xc7z010clg225-1 -mode out_of_context
@@ -15,37 +15,37 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8884 
+INFO: Helper process launched with PID 5594 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1062.672 ; gain = 159.301 ; free physical = 2061 ; free virtual = 18569
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1062.676 ; gain = 159.301 ; free physical = 1758 ; free virtual = 20259
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'unity_BLDC_STARTUP_0_0' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/synth/unity_BLDC_STARTUP_0_0.vhd:65]
-	Parameter START_PERIOD bound to: 750000 - type: integer 
-	Parameter END_PERIOD bound to: 250000 - type: integer 
-	Parameter SPEEDUP_INTERVAL bound to: 50 - type: integer 
-INFO: [Synth 8-3491] module 'BLDC_STARTUP' declared at '/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/BLDC_STARTUP.vhd:40' bound to instance 'U0' of component 'BLDC_STARTUP' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/synth/unity_BLDC_STARTUP_0_0.vhd:88]
-INFO: [Synth 8-638] synthesizing module 'BLDC_STARTUP' [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/BLDC_STARTUP.vhd:51]
-	Parameter START_PERIOD bound to: 750000 - type: integer 
-	Parameter END_PERIOD bound to: 250000 - type: integer 
-	Parameter SPEEDUP_INTERVAL bound to: 50 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'BLDC_STARTUP' (1#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/new/BLDC_STARTUP.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'unity_BLDC_STARTUP_0_0' (2#1) [/home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/synth/unity_BLDC_STARTUP_0_0.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'unity_BLDC_STARTUP_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/synth/unity_BLDC_STARTUP_0_0.vhd:65]
+	Parameter START_PERIOD bound to: 2000000 - type: integer 
+	Parameter END_PERIOD bound to: 750000 - type: integer 
+	Parameter SPEEDUP_INTERVAL bound to: 15 - type: integer 
+INFO: [Synth 8-3491] module 'BLDC_STARTUP' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/BLDC_STARTUP.vhd:40' bound to instance 'U0' of component 'BLDC_STARTUP' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/synth/unity_BLDC_STARTUP_0_0.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'BLDC_STARTUP' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/BLDC_STARTUP.vhd:51]
+	Parameter START_PERIOD bound to: 2000000 - type: integer 
+	Parameter END_PERIOD bound to: 750000 - type: integer 
+	Parameter SPEEDUP_INTERVAL bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'BLDC_STARTUP' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/BLDC_STARTUP.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'unity_BLDC_STARTUP_0_0' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/synth/unity_BLDC_STARTUP_0_0.vhd:65]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1103.141 ; gain = 199.770 ; free physical = 2019 ; free virtual = 18528
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1104.145 ; gain = 200.770 ; free physical = 1675 ; free virtual = 20176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1103.141 ; gain = 199.770 ; free physical = 2019 ; free virtual = 18528
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1104.145 ; gain = 200.770 ; free physical = 1675 ; free virtual = 20176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1111.145 ; gain = 207.773 ; free physical = 2018 ; free virtual = 18528
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1112.148 ; gain = 208.773 ; free physical = 1675 ; free virtual = 20176
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1119.152 ; gain = 215.781 ; free physical = 2010 ; free virtual = 18520
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.156 ; gain = 216.781 ; free physical = 1668 ; free virtual = 20169
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -65,7 +65,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -82,7 +82,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1204.488 ; gain = 301.117 ; free physical = 1876 ; free virtual = 18433
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1203.492 ; gain = 300.117 ; free physical = 1491 ; free virtual = 19993
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -113,7 +113,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1204.488 ; gain = 301.117 ; free physical = 1876 ; free virtual = 18433
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1203.492 ; gain = 300.117 ; free physical = 1490 ; free virtual = 19993
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -125,7 +125,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1212.496 ; gain = 309.125 ; free physical = 1867 ; free virtual = 18425
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1211.500 ; gain = 308.125 ; free physical = 1480 ; free virtual = 19982
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -149,7 +149,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1212.496 ; gain = 309.125 ; free physical = 1867 ; free virtual = 18424
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.500 ; gain = 308.125 ; free physical = 1465 ; free virtual = 19967
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -162,7 +162,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1212.496 ; gain = 309.125 ; free physical = 1867 ; free virtual = 18424
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.500 ; gain = 308.125 ; free physical = 1465 ; free virtual = 19967
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -174,25 +174,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1212.496 ; gain = 309.125 ; free physical = 1866 ; free virtual = 18424
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.500 ; gain = 308.125 ; free physical = 1465 ; free virtual = 19967
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1212.496 ; gain = 309.125 ; free physical = 1867 ; free virtual = 18424
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.500 ; gain = 308.125 ; free physical = 1465 ; free virtual = 19967
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1212.496 ; gain = 309.125 ; free physical = 1867 ; free virtual = 18424
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.500 ; gain = 308.125 ; free physical = 1465 ; free virtual = 19967
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1212.496 ; gain = 309.125 ; free physical = 1867 ; free virtual = 18424
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.500 ; gain = 308.125 ; free physical = 1465 ; free virtual = 19967
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -210,26 +210,26 @@ Report Cell Usage:
 +------+-------+------+
 |1     |CARRY4 |    24|
 |2     |LUT1   |    63|
-|3     |LUT2   |    62|
-|4     |LUT3   |     2|
+|3     |LUT2   |    61|
+|4     |LUT3   |     1|
 |5     |LUT4   |     1|
-|6     |FDRE   |    53|
-|7     |FDSE   |    12|
+|6     |FDRE   |    55|
+|7     |FDSE   |    10|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------------+------+
 |      |Instance |Module       |Cells |
 +------+---------+-------------+------+
-|1     |top      |             |   217|
-|2     |  U0     |BLDC_STARTUP |   217|
+|1     |top      |             |   215|
+|2     |  U0     |BLDC_STARTUP |   215|
 +------+---------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1212.496 ; gain = 309.125 ; free physical = 1867 ; free virtual = 18424
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.500 ; gain = 308.125 ; free physical = 1465 ; free virtual = 19967
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1212.496 ; gain = 209.824 ; free physical = 1867 ; free virtual = 18424
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1212.504 ; gain = 309.133 ; free physical = 1867 ; free virtual = 18424
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1211.500 ; gain = 208.824 ; free physical = 1464 ; free virtual = 19967
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1211.508 ; gain = 308.133 ; free physical = 1464 ; free virtual = 19967
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -241,10 +241,10 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1340.523 ; gain = 350.434 ; free physical = 1779 ; free virtual = 18353
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1339.527 ; gain = 349.434 ; free physical = 1399 ; free virtual = 19894
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/unity_BLDC_STARTUP_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1818.059 ; gain = 477.535 ; free physical = 1416 ; free virtual = 18019
-INFO: [Common 17-1381] The checkpoint '/home/stefan/PWM_2/workspace/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/unity_BLDC_STARTUP_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1819.059 ; gain = 0.000 ; free physical = 1413 ; free virtual = 18016
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  6 23:11:50 2016...
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/unity_BLDC_STARTUP_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1818.062 ; gain = 478.535 ; free physical = 969 ; free virtual = 19466
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/unity_BLDC_STARTUP_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1818.062 ; gain = 0.000 ; free physical = 967 ; free virtual = 19464
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  7 15:16:04 2016...

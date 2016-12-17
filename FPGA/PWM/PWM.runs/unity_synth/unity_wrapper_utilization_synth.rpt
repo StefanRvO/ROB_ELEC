@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date         : Wed Dec  7 00:52:58 2016
+| Date         : Thu Dec  8 17:28:36 2016
 | Host         : Leviathan running 64-bit Arch Linux
 | Command      : report_utilization -file unity_wrapper_utilization_synth.rpt -pb unity_wrapper_utilization_synth.pb
 | Design       : unity_wrapper
@@ -157,46 +157,50 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+---------------------------------+------+
-|             Ref Name            | Used |
-+---------------------------------+------+
-| unity_xlslice_1_0               |    1 |
-| unity_xlslice_0_1               |    1 |
-| unity_xlslice_0_0               |    1 |
-| unity_xlconstant_1_2            |    1 |
-| unity_xlconstant_0_2            |    1 |
-| unity_xlconstant_0_1            |    1 |
-| unity_xlconstant_0_0            |    1 |
-| unity_xlconcat_0_1              |    1 |
-| unity_xlconcat_0_0              |    1 |
-| unity_vector_splitter_0_0       |    1 |
-| unity_vector_mux_1_0            |    1 |
-| unity_vector_mux_0_1            |    1 |
-| unity_unity_ctrl_0_0            |    1 |
-| unity_processing_system7_0_0    |    1 |
-| unity_period_smoother_0_0       |    1 |
-| unity_inverter_1_0              |    1 |
-| unity_inverter_0_1              |    1 |
-| unity_VECTOR_INV_0_0            |    1 |
-| unity_Toggler_0_0               |    1 |
-| unity_Rotary_counter_0_0        |    1 |
-| unity_Rotary_Encoder_0_0        |    1 |
-| unity_RUNNING_AVG_0_0           |    1 |
-| unity_PWM_generator_0_1         |    1 |
-| unity_PWM_generator_0_0         |    1 |
-| unity_PULSER_0_1                |    1 |
-| unity_OL_BLDC_Stepper_0_0       |    1 |
-| unity_Debouncer_5_1             |    1 |
-| unity_Debouncer_5_0             |    1 |
-| unity_Debouncer_4_0             |    1 |
-| unity_Debouncer_3_0             |    1 |
-| unity_DIR_SENSE_0_0             |    1 |
-| unity_DIFF_PULSER_0_0           |    1 |
-| unity_BLDC_STATE_CONTROLLER_0_0 |    1 |
-| unity_BLDC_STARTUP_0_0          |    1 |
-| unity_BLDC_SPEED_OBSERVER_0_1   |    1 |
-| unity_BLDC_DIR_CTRL_0_0         |    1 |
-+---------------------------------+------+
++-----------------------------------+------+
+|              Ref Name             | Used |
++-----------------------------------+------+
+| unity_xlslice_8_0                 |    1 |
+| unity_xlslice_7_0                 |    1 |
+| unity_xlslice_5_0                 |    1 |
+| unity_xlslice_1_3                 |    1 |
+| unity_xlslice_1_1                 |    1 |
+| unity_xlslice_1_0                 |    1 |
+| unity_xlslice_0_1                 |    1 |
+| unity_xlslice_0_0                 |    1 |
+| unity_xlconstant_1_2              |    1 |
+| unity_xlconcat_0_1                |    1 |
+| unity_vector_mux_1_1              |    1 |
+| unity_vector_mux_1_0              |    1 |
+| unity_vector_mux_0_1              |    1 |
+| unity_unity_ctrl_0_0              |    1 |
+| unity_processing_system7_0_0      |    1 |
+| unity_period_smoother_0_0         |    1 |
+| unity_inverter_1_0                |    1 |
+| unity_inverter_0_1                |    1 |
+| unity_VECTOR_INV_0_0              |    1 |
+| unity_UNSIGNED_TO_SIGNED_CONV_0_0 |    1 |
+| unity_Toggler_0_0                 |    1 |
+| unity_Rotary_counter_0_0          |    1 |
+| unity_Rotary_Encoder_0_0          |    1 |
+| unity_RUNNING_AVG_0_0             |    1 |
+| unity_PWM_generator_0_1           |    1 |
+| unity_PWM_generator_0_0           |    1 |
+| unity_PULSER_0_1                  |    1 |
+| unity_PID_0_0                     |    1 |
+| unity_PERIOD_TO_RPM_0_0           |    1 |
+| unity_OL_BLDC_Stepper_0_0         |    1 |
+| unity_Debouncer_5_1               |    1 |
+| unity_Debouncer_5_0               |    1 |
+| unity_Debouncer_4_0               |    1 |
+| unity_Debouncer_3_0               |    1 |
+| unity_DIR_SENSE_0_0               |    1 |
+| unity_DIFF_PULSER_0_0             |    1 |
+| unity_BLDC_STATE_CONTROLLER_0_0   |    1 |
+| unity_BLDC_STARTUP_0_0            |    1 |
+| unity_BLDC_SPEED_OBSERVER_0_1     |    1 |
+| unity_BLDC_DIR_CTRL_0_0           |    1 |
++-----------------------------------+------+
 
 
 9. Instantiated Netlists

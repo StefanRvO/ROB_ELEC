@@ -68,7 +68,7 @@ ARCHITECTURE unity_RUNNING_AVG_0_0_arch OF unity_RUNNING_AVG_0_0 IS
   COMPONENT RUNNING_AVG IS
     GENERIC (
       IN_SIZE : INTEGER;
-      AVG_SIZE : INTEGER
+      AVG_SIZE_BITS : INTEGER
     );
     PORT (
       clk_in : IN STD_LOGIC;
@@ -81,7 +81,7 @@ BEGIN
   U0 : RUNNING_AVG
     GENERIC MAP (
       IN_SIZE => 32,
-      AVG_SIZE => 300
+      AVG_SIZE_BITS => 8
     )
     PORT MAP (
       clk_in => clk_in,

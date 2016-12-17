@@ -1,0 +1,236 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Thu Dec  8 00:44:09 2016
+# Process ID: 505
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PERIOD_TO_RPM_0_0_synth_1
+# Command line: vivado -log unity_PERIOD_TO_RPM_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_PERIOD_TO_RPM_0_0.tcl
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PERIOD_TO_RPM_0_0_synth_1/unity_PERIOD_TO_RPM_0_0.vds
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PERIOD_TO_RPM_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source unity_PERIOD_TO_RPM_0_0.tcl -notrace
+Command: synth_design -top unity_PERIOD_TO_RPM_0_0 -part xc7z010clg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 514 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1057.672 ; gain = 154.301 ; free physical = 2387 ; free virtual = 17786
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'unity_PERIOD_TO_RPM_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PERIOD_TO_RPM_0_0/synth/unity_PERIOD_TO_RPM_0_0.vhd:64]
+	Parameter CLK_FREQ bound to: 200000000 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'PERIOD_TO_RPM' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PERIOD_TO_RPM.vhd:35' bound to instance 'U0' of component 'PERIOD_TO_RPM' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PERIOD_TO_RPM_0_0/synth/unity_PERIOD_TO_RPM_0_0.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'PERIOD_TO_RPM' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PERIOD_TO_RPM.vhd:43]
+	Parameter CLK_FREQ bound to: 200000000 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_reg' and it is trimmed from '64' to '32' bits. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PERIOD_TO_RPM.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'PERIOD_TO_RPM' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PERIOD_TO_RPM.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'unity_PERIOD_TO_RPM_0_0' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PERIOD_TO_RPM_0_0/synth/unity_PERIOD_TO_RPM_0_0.vhd:64]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1098.141 ; gain = 194.770 ; free physical = 2345 ; free virtual = 17745
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1098.141 ; gain = 194.770 ; free physical = 2345 ; free virtual = 17745
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1106.145 ; gain = 202.773 ; free physical = 2344 ; free virtual = 17744
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1114.152 ; gain = 210.781 ; free physical = 2337 ; free virtual = 17737
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PERIOD_TO_RPM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1190.168 ; gain = 286.797 ; free physical = 2261 ; free virtual = 17661
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1190.168 ; gain = 286.797 ; free physical = 2261 ; free virtual = 17661
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1199.184 ; gain = 295.812 ; free physical = 2252 ; free virtual = 17652
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.184 ; gain = 295.812 ; free physical = 2252 ; free virtual = 17652
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.184 ; gain = 295.812 ; free physical = 2252 ; free virtual = 17652
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.184 ; gain = 295.812 ; free physical = 2252 ; free virtual = 17652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.184 ; gain = 295.812 ; free physical = 2252 ; free virtual = 17652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.184 ; gain = 295.812 ; free physical = 2252 ; free virtual = 17652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.184 ; gain = 295.812 ; free physical = 2252 ; free virtual = 17652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   306|
+|2     |LUT1   |    64|
+|3     |LUT2   |    88|
+|4     |LUT3   |  1023|
+|5     |FDRE   |    64|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |  1545|
+|2     |  U0     |PERIOD_TO_RPM |  1545|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.184 ; gain = 295.812 ; free physical = 2252 ; free virtual = 17652
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1199.184 ; gain = 196.512 ; free physical = 2252 ; free virtual = 17652
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1199.191 ; gain = 295.820 ; free physical = 2252 ; free virtual = 17652
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 306 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'unity_PERIOD_TO_RPM_0_0' is not ideal for floorplanning, since the cellview 'PERIOD_TO_RPM' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1271.184 ; gain = 281.094 ; free physical = 2183 ; free virtual = 17582
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PERIOD_TO_RPM_0_0_synth_1/unity_PERIOD_TO_RPM_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1772.719 ; gain = 501.535 ; free physical = 1855 ; free virtual = 17254
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PERIOD_TO_RPM_0_0_synth_1/unity_PERIOD_TO_RPM_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1773.719 ; gain = 0.000 ; free physical = 1852 ; free virtual = 17253
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 00:44:44 2016...

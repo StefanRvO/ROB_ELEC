@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date             : Wed Dec  7 01:04:53 2016
+| Date             : Thu Dec  8 17:32:46 2016
 | Host             : Leviathan running 64-bit Arch Linux
 | Command          : report_power -file unity_wrapper_power_routed.rpt -pb unity_wrapper_power_summary_routed.pb -rpx unity_wrapper_power_routed.rpx
 | Design           : unity_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.095 |
-| Dynamic (W)              | 0.975 |
+| Total On-Chip Power (W)  | 1.045 |
+| Dynamic (W)              | 0.926 |
 | Device Static (W)        | 0.120 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 72.4  |
-| Junction Temperature (C) | 37.6  |
+| Max Ambient (C)          | 72.9  |
+| Junction Temperature (C) | 37.1  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,21 +49,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.025 |        8 |       --- |             --- |
-| Slice Logic              |     0.063 |    26675 |       --- |             --- |
-|   LUT as Logic           |     0.056 |     8376 |     17600 |           47.59 |
-|   CARRY4                 |     0.006 |     1776 |      4400 |           40.36 |
-|   Register               |    <0.001 |    10627 |     35200 |           30.19 |
-|   LUT as Distributed RAM |    <0.001 |       68 |      6000 |            1.13 |
-|   F7/F8 Muxes            |    <0.001 |        8 |     17600 |            0.05 |
-|   Others                 |     0.000 |      198 |       --- |             --- |
-| Signals                  |     0.088 |    25228 |       --- |             --- |
+| Clocks                   |     0.016 |        8 |       --- |             --- |
+| Slice Logic              |     0.046 |     7476 |       --- |             --- |
+|   LUT as Logic           |     0.034 |     3915 |     17600 |           22.24 |
+|   CARRY4                 |     0.007 |      605 |      4400 |           13.75 |
+|   LUT as Distributed RAM |     0.005 |      324 |      6000 |            5.40 |
+|   Register               |    <0.001 |     1694 |     35200 |            4.81 |
+|   F7/F8 Muxes            |    <0.001 |      166 |     17600 |            0.94 |
+|   Others                 |     0.000 |      231 |       --- |             --- |
+| Signals                  |     0.069 |     6956 |       --- |             --- |
 | Block RAM                |    <0.001 |        1 |        60 |            1.67 |
 | MMCM                     |     0.117 |        1 |         2 |           50.00 |
-| I/O                      |     0.039 |       24 |        54 |           44.44 |
+| DSPs                     |     0.020 |       20 |        80 |           25.00 |
+| I/O                      |     0.015 |       24 |        54 |           44.44 |
 | PS7                      |     0.642 |        1 |       --- |             --- |
 | Static Power             |     0.120 |          |           |                 |
-| Total                    |     1.095 |          |           |                 |
+| Total                    |     1.045 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.183 |       0.178 |      0.005 |
-| Vccaux    |       1.800 |     0.077 |       0.066 |      0.011 |
-| Vcco33    |       3.300 |     0.012 |       0.011 |      0.001 |
+| Vccint    |       1.000 |     0.158 |       0.153 |      0.005 |
+| Vccaux    |       1.800 |     0.076 |       0.065 |      0.011 |
+| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -86,7 +87,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.633 |       0.609 |      0.024 |
+| Vccpint   |       1.000 |     0.632 |       0.609 |      0.023 |
 | Vccpaux   |       1.800 |     0.011 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -99,17 +100,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                                       |                                                                                                            |
-| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
-| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
-| Device models               | High       | Device models are Production                           |                                                                                                            |
-|                             |            |                                                        |                                                                                                            |
-| Overall confidence level    | Low        |                                                        |                                                                                                            |
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -153,25 +154,25 @@ Table of Contents
 +-------------------------------------------------------------+-----------+
 | Name                                                        | Power (W) |
 +-------------------------------------------------------------+-----------+
-| unity_wrapper                                               |     0.975 |
-|   unity_i                                                   |     0.936 |
-|     BLDC_MOTOR_CONTROL                                      |     0.022 |
+| unity_wrapper                                               |     0.926 |
+|   unity_i                                                   |     0.910 |
+|     BLDC_MOTOR_CONTROL                                      |     0.015 |
 |       BLDC_DIR_CTRL_0                                       |    <0.001 |
-|       BLDC_SPEED_OBSERVER_0                                 |     0.010 |
-|         U0                                                  |     0.010 |
-|       BLDC_STARTUP_0                                        |     0.002 |
+|       BLDC_SPEED_OBSERVER_0                                 |     0.002 |
 |         U0                                                  |     0.002 |
+|       BLDC_STARTUP_0                                        |     0.003 |
+|         U0                                                  |     0.003 |
 |       BLDC_STATE_CONTROLLER_0                               |    <0.001 |
 |         U0                                                  |    <0.001 |
 |       DIR_SENSE_0                                           |    <0.001 |
 |         U0                                                  |    <0.001 |
 |       OL_BLDC_Stepper_0                                     |    <0.001 |
 |         U0                                                  |    <0.001 |
-|       PWM_generator_0                                       |     0.004 |
-|         U0                                                  |     0.004 |
-|       STARTUP_PWM_MOD                                       |     0.004 |
-|         STARTUP_PWM                                         |     0.004 |
-|           U0                                                |     0.004 |
+|       PWM_generator_0                                       |     0.003 |
+|         U0                                                  |     0.003 |
+|       STARTUP_PWM_MOD                                       |     0.003 |
+|         STARTUP_PWM                                         |     0.003 |
+|           U0                                                |     0.003 |
 |       VECTOR_INV_0                                          |     0.000 |
 |         U0                                                  |     0.000 |
 |       period_smoother_0                                     |     0.003 |
@@ -180,12 +181,11 @@ Table of Contents
 |         U0                                                  |    <0.001 |
 |       vector_mux_2                                          |    <0.001 |
 |       xlconcat_1                                            |     0.000 |
-|       xlconstant_0                                          |     0.000 |
 |       xlslice_0                                             |     0.000 |
 |       xlslice_1                                             |     0.000 |
 |       xlslice_2                                             |     0.000 |
-|     DIFF_PULSER_0                                           |    <0.001 |
-|       U0                                                    |    <0.001 |
+|     DIFF_PULSER_0                                           |     0.002 |
+|       U0                                                    |     0.002 |
 |     Debouncer_3                                             |    <0.001 |
 |       U0                                                    |    <0.001 |
 |     Debouncer_4                                             |    <0.001 |
@@ -194,27 +194,97 @@ Table of Contents
 |       U0                                                    |    <0.001 |
 |     Debouncer_6                                             |    <0.001 |
 |       U0                                                    |    <0.001 |
+|     PERIOD_TO_RPM_0                                         |     0.052 |
+|       U0                                                    |     0.052 |
+|     PID_0                                                   |     0.043 |
+|       U0                                                    |     0.043 |
 |     PULSER_0                                                |    <0.001 |
 |       U0                                                    |    <0.001 |
-|     RUNNING_AVG_0                                           |     0.145 |
-|       U0                                                    |     0.113 |
+|     RUNNING_AVG_0                                           |     0.024 |
+|       U0                                                    |     0.024 |
+|         AVG_LIST_reg_0_127_0_0                              |    <0.001 |
+|         AVG_LIST_reg_0_127_10_10                            |    <0.001 |
+|         AVG_LIST_reg_0_127_11_11                            |    <0.001 |
+|         AVG_LIST_reg_0_127_12_12                            |    <0.001 |
+|         AVG_LIST_reg_0_127_13_13                            |    <0.001 |
+|         AVG_LIST_reg_0_127_14_14                            |    <0.001 |
+|         AVG_LIST_reg_0_127_15_15                            |    <0.001 |
+|         AVG_LIST_reg_0_127_16_16                            |    <0.001 |
+|         AVG_LIST_reg_0_127_17_17                            |    <0.001 |
+|         AVG_LIST_reg_0_127_18_18                            |    <0.001 |
+|         AVG_LIST_reg_0_127_19_19                            |    <0.001 |
+|         AVG_LIST_reg_0_127_1_1                              |    <0.001 |
+|         AVG_LIST_reg_0_127_20_20                            |    <0.001 |
+|         AVG_LIST_reg_0_127_21_21                            |    <0.001 |
+|         AVG_LIST_reg_0_127_22_22                            |    <0.001 |
+|         AVG_LIST_reg_0_127_23_23                            |    <0.001 |
+|         AVG_LIST_reg_0_127_24_24                            |    <0.001 |
+|         AVG_LIST_reg_0_127_25_25                            |    <0.001 |
+|         AVG_LIST_reg_0_127_26_26                            |    <0.001 |
+|         AVG_LIST_reg_0_127_27_27                            |    <0.001 |
+|         AVG_LIST_reg_0_127_28_28                            |    <0.001 |
+|         AVG_LIST_reg_0_127_29_29                            |    <0.001 |
+|         AVG_LIST_reg_0_127_2_2                              |    <0.001 |
+|         AVG_LIST_reg_0_127_30_30                            |    <0.001 |
+|         AVG_LIST_reg_0_127_31_31                            |    <0.001 |
+|         AVG_LIST_reg_0_127_3_3                              |    <0.001 |
+|         AVG_LIST_reg_0_127_4_4                              |    <0.001 |
+|         AVG_LIST_reg_0_127_5_5                              |    <0.001 |
+|         AVG_LIST_reg_0_127_6_6                              |    <0.001 |
+|         AVG_LIST_reg_0_127_7_7                              |    <0.001 |
+|         AVG_LIST_reg_0_127_8_8                              |    <0.001 |
+|         AVG_LIST_reg_0_127_9_9                              |    <0.001 |
+|         AVG_LIST_reg_128_255_0_0                            |    <0.001 |
+|         AVG_LIST_reg_128_255_10_10                          |    <0.001 |
+|         AVG_LIST_reg_128_255_11_11                          |    <0.001 |
+|         AVG_LIST_reg_128_255_12_12                          |    <0.001 |
+|         AVG_LIST_reg_128_255_13_13                          |    <0.001 |
+|         AVG_LIST_reg_128_255_14_14                          |    <0.001 |
+|         AVG_LIST_reg_128_255_15_15                          |    <0.001 |
+|         AVG_LIST_reg_128_255_16_16                          |    <0.001 |
+|         AVG_LIST_reg_128_255_17_17                          |    <0.001 |
+|         AVG_LIST_reg_128_255_18_18                          |    <0.001 |
+|         AVG_LIST_reg_128_255_19_19                          |    <0.001 |
+|         AVG_LIST_reg_128_255_1_1                            |    <0.001 |
+|         AVG_LIST_reg_128_255_20_20                          |    <0.001 |
+|         AVG_LIST_reg_128_255_21_21                          |    <0.001 |
+|         AVG_LIST_reg_128_255_22_22                          |    <0.001 |
+|         AVG_LIST_reg_128_255_23_23                          |    <0.001 |
+|         AVG_LIST_reg_128_255_24_24                          |    <0.001 |
+|         AVG_LIST_reg_128_255_25_25                          |    <0.001 |
+|         AVG_LIST_reg_128_255_26_26                          |    <0.001 |
+|         AVG_LIST_reg_128_255_27_27                          |    <0.001 |
+|         AVG_LIST_reg_128_255_28_28                          |    <0.001 |
+|         AVG_LIST_reg_128_255_29_29                          |    <0.001 |
+|         AVG_LIST_reg_128_255_2_2                            |    <0.001 |
+|         AVG_LIST_reg_128_255_30_30                          |    <0.001 |
+|         AVG_LIST_reg_128_255_31_31                          |    <0.001 |
+|         AVG_LIST_reg_128_255_3_3                            |    <0.001 |
+|         AVG_LIST_reg_128_255_4_4                            |    <0.001 |
+|         AVG_LIST_reg_128_255_5_5                            |    <0.001 |
+|         AVG_LIST_reg_128_255_6_6                            |    <0.001 |
+|         AVG_LIST_reg_128_255_7_7                            |    <0.001 |
+|         AVG_LIST_reg_128_255_8_8                            |    <0.001 |
+|         AVG_LIST_reg_128_255_9_9                            |    <0.001 |
 |     Rotary_Encoder_0                                        |    <0.001 |
 |       U0                                                    |    <0.001 |
 |     Rotary_counter_0                                        |    <0.001 |
 |       U0                                                    |    <0.001 |
 |     Toggler_0                                               |    <0.001 |
 |       U0                                                    |    <0.001 |
+|     UNSIGNED_TO_SIGNED_CONV_0                               |     0.004 |
+|       U0                                                    |     0.004 |
 |     inverter_1                                              |    <0.001 |
 |     inverter_2                                              |    <0.001 |
 |     processing_system7_0                                    |     0.642 |
 |       inst                                                  |     0.642 |
-|     unity_ctrl_0                                            |     0.124 |
-|       U0                                                    |     0.124 |
-|         UNITY                                               |     0.123 |
-|           uart_wb_link_inst                                 |     0.006 |
+|     unity_ctrl_0                                            |     0.125 |
+|       U0                                                    |     0.125 |
+|         UNITY                                               |     0.124 |
+|           uart_wb_link_inst                                 |     0.007 |
 |             uart_gab_link_inst                              |     0.006 |
-|               gab_link_al_fsm_inst                          |     0.002 |
-|                 SUB_GEN.subscription_manager_inst           |    <0.001 |
+|               gab_link_al_fsm_inst                          |     0.003 |
+|                 SUB_GEN.subscription_manager_inst           |     0.001 |
 |                   SG_GEN[0].sg                              |    <0.001 |
 |                     ram_reg_0_15_0_0                        |    <0.001 |
 |                     ram_reg_0_15_1_1                        |    <0.001 |
@@ -294,8 +364,13 @@ Table of Contents
 |           wb_mem_inst                                       |    <0.001 |
 |             ram_rwrw_inst                                   |    <0.001 |
 |             wb_slv_mem_ctrl_inst                            |    <0.001 |
-|     vector_splitter_0                                       |     0.000 |
-|     xlconstant_0                                            |     0.000 |
+|     vector_mux_1                                            |    <0.001 |
+|       U0                                                    |    <0.001 |
+|     xlslice_1                                               |     0.000 |
+|     xlslice_6                                               |     0.000 |
+|     xlslice_7                                               |     0.000 |
+|     xlslice_8                                               |     0.000 |
+|     xlslice_9                                               |     0.000 |
 +-------------------------------------------------------------+-----------+
 
 

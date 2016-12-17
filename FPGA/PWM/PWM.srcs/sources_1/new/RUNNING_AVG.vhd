@@ -34,47 +34,47 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RUNNING_AVG is
     GENERIC(IN_SIZE : integer range 1 to 10000 := 8;
-            AVG_SIZE : integer range 1 to 1000000 := 10
+            AVG_SIZE_BITS: integer range 1 to 1000000 := 4 -- A
             );
     Port ( clk_in : in STD_LOGIC;
-           input_in : in STD_LOGIC_VECTOR(IN_SIZE - 1 downto 0);
-           output_out : out STD_LOGIC_VECTOR(IN_SIZE - 1 downto 0) := (others => '0');
-           do_sample_in : in STD_LOGIC);
+           input_in : in unsigned(IN_SIZE - 1 downto 0) := (others => '0');
+           output_out : out unsigned(IN_SIZE - 1 downto 0) := (others => '0');
+           do_sample_in : in STD_LOGIC := '0');
 end RUNNING_AVG;
 
 architecture Behavioral of RUNNING_AVG is
-type UNSIGNED_ARR is array(0 to AVG_SIZE - 1) of unsigned(IN_SIZE - 1 downto 0);
+type UNSIGNED_ARR is array(0 to 2 ** AVG_SIZE_BITS - 1) of unsigned(IN_SIZE - 1 downto 0);
 signal AVG_LIST : UNSIGNED_ARR := ( others => unsigned(input_in));
-signal index_counter : integer range 0 to AVG_SIZE := 0;
+signal index_counter : integer range 0 to 2 ** AVG_SIZE_BITS := 0;
+signal index_counter_last : integer range 0 to 2 ** AVG_SIZE_BITS := 0;
 signal sum : unsigned(IN_SIZE * 2 - 1 downto 0) := (others => '0');
+signal first_run: STD_LOGIC := '1';
+signal average : unsigned(IN_SIZE - 1 downto 0) := (others => '0');
+signal added : STD_LOGIC := '1';
 begin
 
-
+average <= resize(sum srl AVG_SIZE_BITS, average'length);
+output_out <= input_in when(first_run = '1') else average;
 save_input : process(clk_in, do_sample_in)
 begin
     if(rising_edge(clk_in)) then
         if(do_sample_in = '1') then
-            index_counter <= index_counter + 1;
-            if(index_counter = AVG_SIZE) then
+            added <= '0';
+            sum <= sum - AVG_LIST(index_counter);
+            AVG_LIST(index_counter) <= input_in;
+            index_counter_last <= index_counter;
+            if index_counter + 1 >= 2 ** AVG_SIZE_BITS then
                 index_counter <= 0;
+                first_run <= '0';
+            else
+                index_counter <= index_counter + 1;
             end if;
-            AVG_LIST(index_counter) <= unsigned(input_in);
+        end if;
+        if(do_sample_in = '0' and added = '0') then
+            added <= '1';
+            sum <= sum + AVG_LIST(index_counter_last);
         end if;
     end if; 
-end process;
-
-calc_avg : process(clk_in)
-    variable sum_var : unsigned(IN_SIZE * 2 - 1 downto 0) := (others => '0');
-
-begin
-    if(rising_edge(clk_in)) then
-        sum_var := (others => '0');
-        for n in 0 to AVG_SIZE - 1 loop
-            sum_var := sum_var +  AVG_LIST(n);
-        end loop;
-    end if; 
-    sum <= sum_var / AVG_SIZE;
-    output_out <= std_logic_vector(resize(sum, output_out'length));
 end process;
 
 
