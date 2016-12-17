@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
---Date        : Thu Dec  8 17:27:00 2016
+--Date        : Sat Dec 17 02:32:30 2016
 --Host        : Leviathan running 64-bit Arch Linux
 --Command     : generate_target unity.bd
 --Design      : unity
@@ -67,6 +67,7 @@ entity BLDC_MOTOR_CONTROL_imp_8MH9GC is
     PHASE_C_out : out STD_LOGIC;
     PWM_duty_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SENSE_in : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    UNSIGNED_OUT : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clk_IN : in STD_LOGIC;
     dir_in : in STD_LOGIC;
     dir_out : out STD_LOGIC;
@@ -196,6 +197,30 @@ architecture STRUCTURE of BLDC_MOTOR_CONTROL_imp_8MH9GC is
     PWM_out : out STD_LOGIC
   );
   end component unity_PWM_generator_0_0;
+  component unity_PWM_smoother_0_0 is
+  port (
+    PWM_Desired : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    PWM_OUT : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    clk_in : in STD_LOGIC;
+    reset_in : in STD_LOGIC
+  );
+  end component unity_PWM_smoother_0_0;
+  component unity_UNSIGNED_TO_SIGNED_CONV_0_0 is
+  port (
+    clk_in : in STD_LOGIC;
+    UNSIGNED_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    SIGNED_OUT : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    SIGN_in : in STD_LOGIC
+  );
+  end component unity_UNSIGNED_TO_SIGNED_CONV_0_0;
+  component unity_SIGNED_TO_UNSIGNED_CONV_0_0 is
+  port (
+    clk_in : in STD_LOGIC;
+    SIGNED_in : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    UNSIGNED_OUT : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    SIGN_out : out STD_LOGIC
+  );
+  end component unity_SIGNED_TO_UNSIGNED_CONV_0_0;
   component unity_vector_mux_1_0 is
   port (
     in_vec1 : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -220,18 +245,22 @@ architecture STRUCTURE of BLDC_MOTOR_CONTROL_imp_8MH9GC is
   signal BLDC_STATE_CONTROLLER_0_PHASE_C_out : STD_LOGIC;
   signal DIR_SENSE_0_SENSE_out : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal Net : STD_LOGIC;
+  signal Net1 : STD_LOGIC;
   signal OL_BLDC_Stepper_0_SENSE_A_out : STD_LOGIC;
   signal OL_BLDC_Stepper_0_SENSE_B_out : STD_LOGIC;
   signal OL_BLDC_Stepper_0_SENSE_C_out : STD_LOGIC;
+  signal PWM_duty_in_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal PWM_generator_0_PWM_out : STD_LOGIC;
+  signal PWM_smoother_0_PWM_OUT : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal SENSE_in_1 : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal SIGNED_TO_UNSIGNED_CONV_0_UNSIGNED_OUT : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal STARTUP_PWM_PWM_out : STD_LOGIC;
-  signal Toggler_0_signal_out : STD_LOGIC;
+  signal UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal VECTOR_INV_0_VEC_out : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal dir_in_1 : STD_LOGIC;
   signal inverter_2_out_sig : STD_LOGIC;
   signal period_smoother_0_period_out : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal processing_system7_0_FCLK_CLK1 : STD_LOGIC;
-  signal unity_ctrl_0_leds_o : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal vector_mux_1_out_vec : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal vector_mux_2_out_vec : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconcat_1_dout : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -246,13 +275,14 @@ begin
   PHASE_B_out <= BLDC_DIR_CTRL_0_PHASE_B_out;
   PHASE_CH_out <= BLDC_STATE_CONTROLLER_0_PHASE_CH_out;
   PHASE_C_out <= BLDC_STATE_CONTROLLER_0_PHASE_C_out;
+  PWM_duty_in_1(7 downto 0) <= PWM_duty_in(7 downto 0);
   SENSE_in_1(2 downto 0) <= SENSE_in(2 downto 0);
-  Toggler_0_signal_out <= dir_in;
+  UNSIGNED_OUT(7 downto 0) <= SIGNED_TO_UNSIGNED_CONV_0_UNSIGNED_OUT(7 downto 0);
+  dir_in_1 <= dir_in;
   dir_out <= BLDC_SPEED_OBSERVER_0_dir_out;
   inverter_2_out_sig <= startup_in;
   processing_system7_0_FCLK_CLK1 <= clk_IN;
   speed_out(31 downto 0) <= BLDC_SPEED_OBSERVER_0_speed_out(31 downto 0);
-  unity_ctrl_0_leds_o(7 downto 0) <= PWM_duty_in(7 downto 0);
 BLDC_DIR_CTRL_0: component unity_BLDC_DIR_CTRL_0_0
      port map (
       PHASE_AH_in => BLDC_STATE_CONTROLLER_0_PHASE_AH_out,
@@ -263,7 +293,7 @@ BLDC_DIR_CTRL_0: component unity_BLDC_DIR_CTRL_0_0
       PHASE_BH_out => BLDC_DIR_CTRL_0_PHASE_BH_out,
       PHASE_B_in => BLDC_STATE_CONTROLLER_0_PHASE_B_out,
       PHASE_B_out => BLDC_DIR_CTRL_0_PHASE_B_out,
-      dir_in => Toggler_0_signal_out
+      dir_in => Net1
     );
 BLDC_SPEED_OBSERVER_0: component unity_BLDC_SPEED_OBSERVER_0_1
      port map (
@@ -299,7 +329,7 @@ DIR_SENSE_0: component unity_DIR_SENSE_0_0
      port map (
       SENSE_in(2 downto 0) => VECTOR_INV_0_VEC_out(2 downto 0),
       SENSE_out(2 downto 0) => DIR_SENSE_0_SENSE_out(2 downto 0),
-      dir_in => Toggler_0_signal_out
+      dir_in => Net1
     );
 OL_BLDC_Stepper_0: component unity_OL_BLDC_Stepper_0_0
      port map (
@@ -312,16 +342,37 @@ OL_BLDC_Stepper_0: component unity_OL_BLDC_Stepper_0_0
     );
 PWM_generator_0: component unity_PWM_generator_0_0
      port map (
-      PWM_duty_in(7 downto 0) => unity_ctrl_0_leds_o(7 downto 0),
+      PWM_duty_in(7 downto 0) => SIGNED_TO_UNSIGNED_CONV_0_UNSIGNED_OUT(7 downto 0),
       PWM_out => PWM_generator_0_PWM_out,
       clk_IN => processing_system7_0_FCLK_CLK1,
       reset_in => Net
+    );
+PWM_smoother_0: component unity_PWM_smoother_0_0
+     port map (
+      PWM_Desired(8 downto 0) => UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT(8 downto 0),
+      PWM_OUT(8 downto 0) => PWM_smoother_0_PWM_OUT(8 downto 0),
+      clk_in => processing_system7_0_FCLK_CLK1,
+      reset_in => Net
+    );
+SIGNED_TO_UNSIGNED_CONV_0: component unity_SIGNED_TO_UNSIGNED_CONV_0_0
+     port map (
+      SIGNED_in(8 downto 0) => PWM_smoother_0_PWM_OUT(8 downto 0),
+      SIGN_out => Net1,
+      UNSIGNED_OUT(7 downto 0) => SIGNED_TO_UNSIGNED_CONV_0_UNSIGNED_OUT(7 downto 0),
+      clk_in => processing_system7_0_FCLK_CLK1
     );
 STARTUP_PWM_MOD: entity work.STARTUP_PWM_MOD_imp_VO3X8O
      port map (
       PWM_out => STARTUP_PWM_PWM_out,
       clk_IN => processing_system7_0_FCLK_CLK1,
       reset_in => Net
+    );
+UNSIGNED_TO_SIGNED_CONV_0: component unity_UNSIGNED_TO_SIGNED_CONV_0_0
+     port map (
+      SIGNED_OUT(8 downto 0) => UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT(8 downto 0),
+      SIGN_in => dir_in_1,
+      UNSIGNED_in(7 downto 0) => PWM_duty_in_1(7 downto 0),
+      clk_in => processing_system7_0_FCLK_CLK1
     );
 VECTOR_INV_0: component unity_VECTOR_INV_0_0
      port map (
@@ -392,14 +443,12 @@ entity unity is
     PHASE_C_out : out STD_LOGIC;
     PWM_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     SENSE : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    SW_A_in : in STD_LOGIC;
-    SW_B_in : in STD_LOGIC;
     leds_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     rx_i : in STD_LOGIC;
     tx_o : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of unity : entity is "unity,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=unity,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=42,numReposBlks=40,numNonXlnxBlks=29,numHierBlks=2,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=29,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of unity : entity is "unity,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=unity,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=36,numReposBlks=34,numNonXlnxBlks=24,numHierBlks=2,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=24,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of unity : entity is "unity.hwdef";
 end unity;
@@ -483,32 +532,6 @@ architecture STRUCTURE of unity is
     out_sig : out STD_LOGIC
   );
   end component unity_inverter_0_1;
-  component unity_Debouncer_3_0 is
-  port (
-    IN_SIG : in STD_LOGIC;
-    CLK : in STD_LOGIC;
-    OUT_SIG : out STD_LOGIC
-  );
-  end component unity_Debouncer_3_0;
-  component unity_Rotary_Encoder_0_0 is
-  port (
-    CLK_in : in STD_LOGIC;
-    SW_A_in : in STD_LOGIC;
-    SW_B_in : in STD_LOGIC;
-    reset_in : in STD_LOGIC;
-    cw_out : out STD_LOGIC;
-    ccw_out : out STD_LOGIC
-  );
-  end component unity_Rotary_Encoder_0_0;
-  component unity_Rotary_counter_0_0 is
-  port (
-    clk_in : in STD_LOGIC;
-    cw_in : in STD_LOGIC;
-    ccw_in : in STD_LOGIC;
-    reset_in : in STD_LOGIC;
-    counter_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component unity_Rotary_counter_0_0;
   component unity_PULSER_0_1 is
   port (
     clk_in : in STD_LOGIC;
@@ -516,33 +539,12 @@ architecture STRUCTURE of unity is
     PULSE_CREATE : in STD_LOGIC
   );
   end component unity_PULSER_0_1;
-  component unity_DIFF_PULSER_0_0 is
-  port (
-    clk_in : in STD_LOGIC;
-    PULSE_out : out STD_LOGIC;
-    PULSE_CREATE : in STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component unity_DIFF_PULSER_0_0;
-  component unity_UNSIGNED_TO_SIGNED_CONV_0_0 is
-  port (
-    clk_in : in STD_LOGIC;
-    UNSIGNED_in : in STD_LOGIC_VECTOR ( 30 downto 0 );
-    SIGNED_OUT : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    SIGN_in : in STD_LOGIC
-  );
-  end component unity_UNSIGNED_TO_SIGNED_CONV_0_0;
   component unity_xlslice_1_1 is
   port (
     Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component unity_xlslice_1_1;
-  component unity_xlslice_5_0 is
-  port (
-    Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Dout : out STD_LOGIC_VECTOR ( 30 downto 0 )
-  );
-  end component unity_xlslice_5_0;
   component unity_unity_ctrl_0_0 is
   port (
     clk_i : in STD_LOGIC;
@@ -583,13 +585,21 @@ architecture STRUCTURE of unity is
     Dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component unity_xlslice_8_0;
-  component unity_PERIOD_TO_RPM_0_0 is
+  component unity_PID_0_0 is
   port (
-    PERIOD_IN : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    set_point : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    feedback : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    output_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
     clk_in : in STD_LOGIC;
-    RPM_out : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    P_MULT : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    P_DIV : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    D_MULT : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    D_DIV : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    I_MULT : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    I_DIV : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    reset_in : in STD_LOGIC
   );
-  end component unity_PERIOD_TO_RPM_0_0;
+  end component unity_PID_0_0;
   component unity_Debouncer_5_1 is
   port (
     IN_SIG : in STD_LOGIC;
@@ -605,61 +615,22 @@ architecture STRUCTURE of unity is
     sel_in : in STD_LOGIC
   );
   end component unity_vector_mux_1_1;
-  component unity_Debouncer_4_0 is
-  port (
-    IN_SIG : in STD_LOGIC;
-    CLK : in STD_LOGIC;
-    OUT_SIG : out STD_LOGIC
-  );
-  end component unity_Debouncer_4_0;
-  component unity_RUNNING_AVG_0_0 is
-  port (
-    clk_in : in STD_LOGIC;
-    input_in : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    output_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    do_sample_in : in STD_LOGIC
-  );
-  end component unity_RUNNING_AVG_0_0;
-  component unity_PID_0_0 is
-  port (
-    set_point : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    feedback : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    output_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    clk_in : in STD_LOGIC;
-    P_MULT : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    P_DIV : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    I_MULT : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    I_DIV : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    reset_in : in STD_LOGIC
-  );
-  end component unity_PID_0_0;
-  signal BLDC_MOTOR_CONTROL_dir_out : STD_LOGIC;
-  signal BLDC_MOTOR_CONTROL_speed_out : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal BLDC_MOTOR_CONTROL_UNSIGNED_OUT : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal BLDC_STATE_CONTROLLER_0_PHASE_AH_out : STD_LOGIC;
   signal BLDC_STATE_CONTROLLER_0_PHASE_A_out : STD_LOGIC;
   signal BLDC_STATE_CONTROLLER_0_PHASE_BH_out : STD_LOGIC;
   signal BLDC_STATE_CONTROLLER_0_PHASE_B_out : STD_LOGIC;
   signal BLDC_STATE_CONTROLLER_0_PHASE_CH_out : STD_LOGIC;
   signal BLDC_STATE_CONTROLLER_0_PHASE_C_out : STD_LOGIC;
-  signal DIFF_PULSER_0_PULSE_out : STD_LOGIC;
   signal DIR_IN1_1 : STD_LOGIC;
-  signal Debouncer_3_OUT_SIG : STD_LOGIC;
-  signal Debouncer_4_OUT_SIG : STD_LOGIC;
   signal Debouncer_5_OUT_SIG : STD_LOGIC;
   signal Debouncer_6_OUT_SIG : STD_LOGIC;
   signal MOTOR_BTN_IN_1 : STD_LOGIC;
-  signal Net : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal PID_0_output : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal PULSER_0_PULSE_out : STD_LOGIC;
-  signal RUNNING_AVG_0_output_out : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal Rotary_Encoder_0_ccw_out : STD_LOGIC;
-  signal Rotary_Encoder_0_cw_out : STD_LOGIC;
-  signal Rotary_counter_0_counter_out : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal PWM_duty_in_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal SENSE_1 : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal SW_A_in_1 : STD_LOGIC;
-  signal SW_B_in_1 : STD_LOGIC;
   signal Toggler_0_signal_out : STD_LOGIC;
-  signal UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal inverter_1_out_sig : STD_LOGIC;
   signal inverter_2_out_sig : STD_LOGIC;
   signal processing_system7_0_FCLK_CLK0 : STD_LOGIC;
@@ -672,17 +643,18 @@ architecture STRUCTURE of unity is
   signal unity_ctrl_0_addr12_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_addr13_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_addr14_out : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal unity_ctrl_0_addr15_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_addr4_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_addr5_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_addr6_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_addr7_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal unity_ctrl_0_tx_o : STD_LOGIC;
-  signal vector_mux_1_out_vec : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal xlslice_6_Dout : STD_LOGIC_VECTOR ( 30 downto 0 );
   signal xlslice_7_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_8_Dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal xlslice_9_Dout : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal NLW_BLDC_MOTOR_CONTROL_dir_out_UNCONNECTED : STD_LOGIC;
+  signal NLW_BLDC_MOTOR_CONTROL_speed_out_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_processing_system7_0_FCLK_CLK2_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_M_AXI_GP0_ARVALID_UNCONNECTED : STD_LOGIC;
@@ -712,7 +684,6 @@ architecture STRUCTURE of unity is
   signal NLW_processing_system7_0_M_AXI_GP0_WDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_processing_system7_0_M_AXI_GP0_WID_UNCONNECTED : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal NLW_processing_system7_0_M_AXI_GP0_WSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_unity_ctrl_0_addr15_out_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
 begin
   DIR_IN1_1 <= MTR_START;
   MOTOR_BTN_IN_1 <= DIR_IN;
@@ -723,9 +694,7 @@ begin
   PHASE_CH_out <= BLDC_STATE_CONTROLLER_0_PHASE_CH_out;
   PHASE_C_out <= BLDC_STATE_CONTROLLER_0_PHASE_C_out;
   SENSE_1(2 downto 0) <= SENSE(2 downto 0);
-  SW_A_in_1 <= SW_A_in;
-  SW_B_in_1 <= SW_B_in;
-  leds_o(7 downto 0) <= Rotary_counter_0_counter_out(7 downto 0);
+  leds_o(7 downto 0) <= BLDC_MOTOR_CONTROL_UNSIGNED_OUT(7 downto 0);
   rx_i_1 <= rx_i;
   tx_o <= unity_ctrl_0_tx_o;
   PWM_out(0) <= 'Z';
@@ -737,32 +706,15 @@ BLDC_MOTOR_CONTROL: entity work.BLDC_MOTOR_CONTROL_imp_8MH9GC
       PHASE_B_out => BLDC_STATE_CONTROLLER_0_PHASE_B_out,
       PHASE_CH_out => BLDC_STATE_CONTROLLER_0_PHASE_CH_out,
       PHASE_C_out => BLDC_STATE_CONTROLLER_0_PHASE_C_out,
-      PWM_duty_in(7 downto 0) => vector_mux_1_out_vec(7 downto 0),
+      PWM_duty_in(7 downto 0) => PWM_duty_in_1(7 downto 0),
       SENSE_in(2 downto 0) => SENSE_1(2 downto 0),
+      UNSIGNED_OUT(7 downto 0) => BLDC_MOTOR_CONTROL_UNSIGNED_OUT(7 downto 0),
       clk_IN => processing_system7_0_FCLK_CLK1,
       dir_in => Toggler_0_signal_out,
-      dir_out => BLDC_MOTOR_CONTROL_dir_out,
+      dir_out => NLW_BLDC_MOTOR_CONTROL_dir_out_UNCONNECTED,
       reset_in => xlslice_1_Dout(0),
-      speed_out(31 downto 0) => BLDC_MOTOR_CONTROL_speed_out(31 downto 0),
+      speed_out(31 downto 0) => NLW_BLDC_MOTOR_CONTROL_speed_out_UNCONNECTED(31 downto 0),
       startup_in => PULSER_0_PULSE_out
-    );
-DIFF_PULSER_0: component unity_DIFF_PULSER_0_0
-     port map (
-      PULSE_CREATE(31 downto 0) => Net(31 downto 0),
-      PULSE_out => DIFF_PULSER_0_PULSE_out,
-      clk_in => processing_system7_0_FCLK_CLK1
-    );
-Debouncer_3: component unity_Debouncer_3_0
-     port map (
-      CLK => processing_system7_0_FCLK_CLK1,
-      IN_SIG => SW_B_in_1,
-      OUT_SIG => Debouncer_3_OUT_SIG
-    );
-Debouncer_4: component unity_Debouncer_4_0
-     port map (
-      CLK => processing_system7_0_FCLK_CLK1,
-      IN_SIG => SW_A_in_1,
-      OUT_SIG => Debouncer_4_OUT_SIG
     );
 Debouncer_5: component unity_Debouncer_5_0
      port map (
@@ -776,20 +728,47 @@ Debouncer_6: component unity_Debouncer_5_1
       IN_SIG => DIR_IN1_1,
       OUT_SIG => Debouncer_6_OUT_SIG
     );
-PERIOD_TO_RPM_0: component unity_PERIOD_TO_RPM_0_0
-     port map (
-      PERIOD_IN(31 downto 0) => BLDC_MOTOR_CONTROL_speed_out(31 downto 0),
-      RPM_out(31 downto 0) => Net(31 downto 0),
-      clk_in => processing_system7_0_FCLK_CLK1
-    );
 PID_0: component unity_PID_0_0
      port map (
+      D_DIV(31 downto 0) => unity_ctrl_0_addr7_out(31 downto 0),
+      D_MULT(31 downto 0) => unity_ctrl_0_addr6_out(31 downto 0),
       I_DIV(31 downto 0) => unity_ctrl_0_addr13_out(31 downto 0),
       I_MULT(31 downto 0) => unity_ctrl_0_addr12_out(31 downto 0),
       P_DIV(31 downto 0) => unity_ctrl_0_addr7_out(31 downto 0),
       P_MULT(31 downto 0) => unity_ctrl_0_addr6_out(31 downto 0),
       clk_in => processing_system7_0_FCLK_CLK1,
-      feedback(31 downto 0) => UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT(31 downto 0),
+      feedback(31) => processing_system7_0_FCLK_CLK1,
+      feedback(30) => processing_system7_0_FCLK_CLK1,
+      feedback(29) => processing_system7_0_FCLK_CLK1,
+      feedback(28) => processing_system7_0_FCLK_CLK1,
+      feedback(27) => processing_system7_0_FCLK_CLK1,
+      feedback(26) => processing_system7_0_FCLK_CLK1,
+      feedback(25) => processing_system7_0_FCLK_CLK1,
+      feedback(24) => processing_system7_0_FCLK_CLK1,
+      feedback(23) => processing_system7_0_FCLK_CLK1,
+      feedback(22) => processing_system7_0_FCLK_CLK1,
+      feedback(21) => processing_system7_0_FCLK_CLK1,
+      feedback(20) => processing_system7_0_FCLK_CLK1,
+      feedback(19) => processing_system7_0_FCLK_CLK1,
+      feedback(18) => processing_system7_0_FCLK_CLK1,
+      feedback(17) => processing_system7_0_FCLK_CLK1,
+      feedback(16) => processing_system7_0_FCLK_CLK1,
+      feedback(15) => processing_system7_0_FCLK_CLK1,
+      feedback(14) => processing_system7_0_FCLK_CLK1,
+      feedback(13) => processing_system7_0_FCLK_CLK1,
+      feedback(12) => processing_system7_0_FCLK_CLK1,
+      feedback(11) => processing_system7_0_FCLK_CLK1,
+      feedback(10) => processing_system7_0_FCLK_CLK1,
+      feedback(9) => processing_system7_0_FCLK_CLK1,
+      feedback(8) => processing_system7_0_FCLK_CLK1,
+      feedback(7) => processing_system7_0_FCLK_CLK1,
+      feedback(6) => processing_system7_0_FCLK_CLK1,
+      feedback(5) => processing_system7_0_FCLK_CLK1,
+      feedback(4) => processing_system7_0_FCLK_CLK1,
+      feedback(3) => processing_system7_0_FCLK_CLK1,
+      feedback(2) => processing_system7_0_FCLK_CLK1,
+      feedback(1) => processing_system7_0_FCLK_CLK1,
+      feedback(0) => processing_system7_0_FCLK_CLK1,
       output_out(31 downto 0) => PID_0_output(31 downto 0),
       reset_in => xlslice_1_Dout(0),
       set_point(31 downto 0) => unity_ctrl_0_addr14_out(31 downto 0)
@@ -800,43 +779,12 @@ PULSER_0: component unity_PULSER_0_1
       PULSE_out => PULSER_0_PULSE_out,
       clk_in => processing_system7_0_FCLK_CLK1
     );
-RUNNING_AVG_0: component unity_RUNNING_AVG_0_0
-     port map (
-      clk_in => processing_system7_0_FCLK_CLK1,
-      do_sample_in => DIFF_PULSER_0_PULSE_out,
-      input_in(31 downto 0) => Net(31 downto 0),
-      output_out(31 downto 0) => RUNNING_AVG_0_output_out(31 downto 0)
-    );
-Rotary_Encoder_0: component unity_Rotary_Encoder_0_0
-     port map (
-      CLK_in => processing_system7_0_FCLK_CLK1,
-      SW_A_in => Debouncer_4_OUT_SIG,
-      SW_B_in => Debouncer_3_OUT_SIG,
-      ccw_out => Rotary_Encoder_0_ccw_out,
-      cw_out => Rotary_Encoder_0_cw_out,
-      reset_in => xlslice_1_Dout(0)
-    );
-Rotary_counter_0: component unity_Rotary_counter_0_0
-     port map (
-      ccw_in => Rotary_Encoder_0_ccw_out,
-      clk_in => processing_system7_0_FCLK_CLK1,
-      counter_out(7 downto 0) => Rotary_counter_0_counter_out(7 downto 0),
-      cw_in => Rotary_Encoder_0_cw_out,
-      reset_in => xlslice_1_Dout(0)
-    );
 Toggler_0: component unity_Toggler_0_0
      port map (
       CLK_in => processing_system7_0_FCLK_CLK1,
       reset_in => xlslice_1_Dout(0),
       signal_in => inverter_1_out_sig,
       signal_out => Toggler_0_signal_out
-    );
-UNSIGNED_TO_SIGNED_CONV_0: component unity_UNSIGNED_TO_SIGNED_CONV_0_0
-     port map (
-      SIGNED_OUT(31 downto 0) => UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT(31 downto 0),
-      SIGN_in => BLDC_MOTOR_CONTROL_dir_out,
-      UNSIGNED_in(30 downto 0) => xlslice_6_Dout(30 downto 0),
-      clk_in => processing_system7_0_FCLK_CLK1
     );
 inverter_1: component unity_inverter_1_0
      port map (
@@ -900,21 +848,21 @@ processing_system7_0: component unity_processing_system7_0_0
     );
 unity_ctrl_0: component unity_unity_ctrl_0_0
      port map (
-      addr0_in(31 downto 0) => Net(31 downto 0),
-      addr10_in(31 downto 0) => B"00000000000000000000000000000000",
+      addr0_in(31 downto 0) => unity_ctrl_0_addr15_out(31 downto 0),
+      addr10_in(31 downto 0) => unity_ctrl_0_addr15_out(31 downto 0),
       addr12_out(31 downto 0) => unity_ctrl_0_addr12_out(31 downto 0),
       addr13_out(31 downto 0) => unity_ctrl_0_addr13_out(31 downto 0),
       addr14_out(31 downto 0) => unity_ctrl_0_addr14_out(31 downto 0),
-      addr15_out(31 downto 0) => NLW_unity_ctrl_0_addr15_out_UNCONNECTED(31 downto 0),
-      addr1_in(31 downto 0) => UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT(31 downto 0),
-      addr2_in(31 downto 0) => RUNNING_AVG_0_output_out(31 downto 0),
+      addr15_out(31 downto 0) => unity_ctrl_0_addr15_out(31 downto 0),
+      addr1_in(31 downto 0) => unity_ctrl_0_addr15_out(31 downto 0),
+      addr2_in(31 downto 0) => unity_ctrl_0_addr15_out(31 downto 0),
       addr3_in(31 downto 0) => PID_0_output(31 downto 0),
       addr4_out(31 downto 0) => unity_ctrl_0_addr4_out(31 downto 0),
       addr5_out(31 downto 0) => unity_ctrl_0_addr5_out(31 downto 0),
       addr6_out(31 downto 0) => unity_ctrl_0_addr6_out(31 downto 0),
       addr7_out(31 downto 0) => unity_ctrl_0_addr7_out(31 downto 0),
-      addr8_in(31 downto 0) => B"00000000000000000000000000000000",
-      addr9_in(31 downto 0) => B"00000000000000000000000000000000",
+      addr8_in(31 downto 0) => unity_ctrl_0_addr15_out(31 downto 0),
+      addr9_in(31 downto 0) => unity_ctrl_0_addr15_out(31 downto 0),
       clk_i => processing_system7_0_FCLK_CLK1,
       rx_i => rx_i_1,
       tx_o => unity_ctrl_0_tx_o
@@ -923,18 +871,13 @@ vector_mux_1: component unity_vector_mux_1_1
      port map (
       in_vec1(7 downto 0) => xlslice_9_Dout(7 downto 0),
       in_vec2(7 downto 0) => xlslice_8_Dout(7 downto 0),
-      out_vec(7 downto 0) => vector_mux_1_out_vec(7 downto 0),
+      out_vec(7 downto 0) => PWM_duty_in_1(7 downto 0),
       sel_in => xlslice_7_Dout(0)
     );
 xlslice_1: component unity_xlslice_1_1
      port map (
       Din(31 downto 0) => unity_ctrl_0_addr5_out(31 downto 0),
       Dout(0) => xlslice_1_Dout(0)
-    );
-xlslice_6: component unity_xlslice_5_0
-     port map (
-      Din(31 downto 0) => RUNNING_AVG_0_output_out(31 downto 0),
-      Dout(30 downto 0) => xlslice_6_Dout(30 downto 0)
     );
 xlslice_7: component unity_xlslice_1_3
      port map (

@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Thu Dec  1 23:34:03 2016
+// Date        : Wed Dec  7 00:16:25 2016
 // Host        : Leviathan running 64-bit Arch Linux
-// Command     : write_verilog -force -mode funcsim
-//               /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top unity_xlconstant_1_2 -prefix
+//               unity_xlconstant_1_2_ unity_xlconstant_1_2_sim_netlist.v
 // Design      : unity_xlconstant_1_2
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,19 +18,16 @@ module unity_xlconstant_1_2
    (dout);
   output [7:0]dout;
 
-  wire \<const0> ;
   wire \<const1> ;
 
   assign dout[7] = \<const1> ;
-  assign dout[6] = \<const0> ;
+  assign dout[6] = \<const1> ;
   assign dout[5] = \<const1> ;
-  assign dout[4] = \<const0> ;
-  assign dout[3] = \<const0> ;
-  assign dout[2] = \<const0> ;
-  assign dout[1] = \<const0> ;
-  assign dout[0] = \<const0> ;
-  GND GND
-       (.G(\<const0> ));
+  assign dout[4] = \<const1> ;
+  assign dout[3] = \<const1> ;
+  assign dout[2] = \<const1> ;
+  assign dout[1] = \<const1> ;
+  assign dout[0] = \<const1> ;
   VCC VCC
        (.P(\<const1> ));
 endmodule

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x257326D42EFEBF39" bd:device="xc7z010clg225-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2016.3" bd:top="unity" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x7BA955A809C3CD76" bd:device="xc7z010clg225-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2016.3" bd:top="unity" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -107,18 +107,6 @@
           <spirit:name>PHASE_BH_out</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>SW_A_in</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>SW_B_in</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
@@ -620,40 +608,6 @@
         <spirit:componentRef spirit:library="BlockDiagram/unity_imp" spirit:name="BLDC_MOTOR_CONTROL" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>Debouncer_3</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Debouncer" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_Debouncer_3_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="THRESHOLD">1000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Debouncer</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Rotary_Encoder_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Rotary_Encoder" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_Rotary_Encoder_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Rotary_Encoder</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Rotary_counter_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Rotary_counter" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_Rotary_counter_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Rotary_counter</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>PULSER_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="PULSER" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -665,44 +619,10 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>DIFF_PULSER_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="DIFF_PULSER" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_DIFF_PULSER_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SIZE">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">DIFF_PULSER</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>UNSIGNED_TO_SIGNED_CONV_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="UNSIGNED_TO_SIGNED_CONV" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_UNSIGNED_TO_SIGNED_CONV_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SIZE">31</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">UNSIGNED_TO_SIGNED_CONV</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>xlslice_1</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_xlslice_1_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>xlslice_6</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlslice" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_xlslice_5_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DOUT_WIDTH">31</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_TO">0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DIN_FROM">30</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -747,12 +667,15 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>PERIOD_TO_RPM_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="PERIOD_TO_RPM" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:instanceName>PID_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="PID" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_PERIOD_TO_RPM_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_PID_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SIZE">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">PERIOD_TO_RPM</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MAX">255</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MIN">-255</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_SIZE">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">PID</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -782,46 +705,6 @@
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>Debouncer_4</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="Debouncer" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_Debouncer_4_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="THRESHOLD">100000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Debouncer</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>RUNNING_AVG_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="RUNNING_AVG" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_RUNNING_AVG_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="IN_SIZE">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="AVG_SIZE_BITS">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">RUNNING_AVG</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>PID_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="PID" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_PID_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SIZE">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MAX">255</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MIN">-255</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CONST_SIZE">32</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">PID</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections/>
     <spirit:adHocConnections>
@@ -835,19 +718,12 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK1"/>
         <spirit:internalPortReference spirit:componentRef="Toggler_0" spirit:portRef="CLK_in"/>
         <spirit:internalPortReference spirit:componentRef="Debouncer_5" spirit:portRef="CLK"/>
-        <spirit:internalPortReference spirit:componentRef="Debouncer_3" spirit:portRef="CLK"/>
-        <spirit:internalPortReference spirit:componentRef="Rotary_Encoder_0" spirit:portRef="CLK_in"/>
-        <spirit:internalPortReference spirit:componentRef="Rotary_counter_0" spirit:portRef="clk_in"/>
         <spirit:internalPortReference spirit:componentRef="PULSER_0" spirit:portRef="clk_in"/>
-        <spirit:internalPortReference spirit:componentRef="DIFF_PULSER_0" spirit:portRef="clk_in"/>
-        <spirit:internalPortReference spirit:componentRef="UNSIGNED_TO_SIGNED_CONV_0" spirit:portRef="clk_in"/>
         <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="clk_i"/>
-        <spirit:internalPortReference spirit:componentRef="PERIOD_TO_RPM_0" spirit:portRef="clk_in"/>
+        <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="feedback"/>
+        <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="clk_in"/>
         <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="clk_IN"/>
         <spirit:internalPortReference spirit:componentRef="Debouncer_6" spirit:portRef="CLK"/>
-        <spirit:internalPortReference spirit:componentRef="Debouncer_4" spirit:portRef="CLK"/>
-        <spirit:internalPortReference spirit:componentRef="RUNNING_AVG_0" spirit:portRef="clk_in"/>
-        <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="clk_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>rx_i_1</spirit:name>
@@ -925,41 +801,6 @@
         <spirit:externalPortReference spirit:portRef="PHASE_BH_out"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>SW_A_in_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="SW_A_in"/>
-        <spirit:internalPortReference spirit:componentRef="Debouncer_4" spirit:portRef="IN_SIG"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>SW_B_in_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="SW_B_in"/>
-        <spirit:internalPortReference spirit:componentRef="Debouncer_3" spirit:portRef="IN_SIG"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Debouncer_4_OUT_SIG</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Debouncer_4" spirit:portRef="OUT_SIG"/>
-        <spirit:internalPortReference spirit:componentRef="Rotary_Encoder_0" spirit:portRef="SW_A_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Debouncer_3_OUT_SIG</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Debouncer_3" spirit:portRef="OUT_SIG"/>
-        <spirit:internalPortReference spirit:componentRef="Rotary_Encoder_0" spirit:portRef="SW_B_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Rotary_Encoder_0_cw_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Rotary_Encoder_0" spirit:portRef="cw_out"/>
-        <spirit:internalPortReference spirit:componentRef="Rotary_counter_0" spirit:portRef="cw_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Rotary_Encoder_0_ccw_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Rotary_Encoder_0" spirit:portRef="ccw_out"/>
-        <spirit:internalPortReference spirit:componentRef="Rotary_counter_0" spirit:portRef="ccw_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Rotary_counter_0_counter_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="Rotary_counter_0" spirit:portRef="counter_out"/>
-        <spirit:externalPortReference spirit:portRef="leds_o"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>inverter_2_out_sig</spirit:name>
         <spirit:internalPortReference spirit:componentRef="inverter_2" spirit:portRef="out_sig"/>
         <spirit:internalPortReference spirit:componentRef="PULSER_0" spirit:portRef="PULSE_CREATE"/>
@@ -968,22 +809,6 @@
         <spirit:name>PULSER_0_PULSE_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="PULSER_0" spirit:portRef="PULSE_out"/>
         <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="startup_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>DIFF_PULSER_0_PULSE_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="DIFF_PULSER_0" spirit:portRef="PULSE_out"/>
-        <spirit:internalPortReference spirit:componentRef="RUNNING_AVG_0" spirit:portRef="do_sample_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BLDC_MOTOR_CONTROL_dir_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="dir_out"/>
-        <spirit:internalPortReference spirit:componentRef="UNSIGNED_TO_SIGNED_CONV_0" spirit:portRef="SIGN_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="UNSIGNED_TO_SIGNED_CONV_0" spirit:portRef="SIGNED_OUT"/>
-        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr1_in"/>
-        <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="feedback"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>unity_ctrl_0_addr5_out</spirit:name>
@@ -995,43 +820,13 @@
         <spirit:name>xlslice_1_Dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlslice_1" spirit:portRef="Dout"/>
         <spirit:internalPortReference spirit:componentRef="Toggler_0" spirit:portRef="reset_in"/>
-        <spirit:internalPortReference spirit:componentRef="Rotary_counter_0" spirit:portRef="reset_in"/>
-        <spirit:internalPortReference spirit:componentRef="Rotary_Encoder_0" spirit:portRef="reset_in"/>
-        <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="reset_in"/>
         <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="reset_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>RUNNING_AVG_0_output_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="RUNNING_AVG_0" spirit:portRef="output_out"/>
-        <spirit:internalPortReference spirit:componentRef="xlslice_6" spirit:portRef="Din"/>
-        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr2_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>xlslice_6_Dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlslice_6" spirit:portRef="Dout"/>
-        <spirit:internalPortReference spirit:componentRef="UNSIGNED_TO_SIGNED_CONV_0" spirit:portRef="UNSIGNED_in"/>
+        <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="reset_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>xlslice_7_Dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlslice_7" spirit:portRef="Dout"/>
         <spirit:internalPortReference spirit:componentRef="vector_mux_1" spirit:portRef="sel_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>vector_mux_1_out_vec</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="vector_mux_1" spirit:portRef="out_vec"/>
-        <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="PWM_duty_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Net</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="PERIOD_TO_RPM_0" spirit:portRef="RPM_out"/>
-        <spirit:internalPortReference spirit:componentRef="DIFF_PULSER_0" spirit:portRef="PULSE_CREATE"/>
-        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr0_in"/>
-        <spirit:internalPortReference spirit:componentRef="RUNNING_AVG_0" spirit:portRef="input_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BLDC_MOTOR_CONTROL_speed_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="speed_out"/>
-        <spirit:internalPortReference spirit:componentRef="PERIOD_TO_RPM_0" spirit:portRef="PERIOD_IN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>PID_0_output</spirit:name>
@@ -1058,11 +853,13 @@
         <spirit:name>unity_ctrl_0_addr6_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr6_out"/>
         <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="P_MULT"/>
+        <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="D_MULT"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>unity_ctrl_0_addr7_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr7_out"/>
         <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="P_DIV"/>
+        <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="D_DIV"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>unity_ctrl_0_addr12_out</spirit:name>
@@ -1078,6 +875,26 @@
         <spirit:name>unity_ctrl_0_addr14_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr14_out"/>
         <spirit:internalPortReference spirit:componentRef="PID_0" spirit:portRef="set_point"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>unity_ctrl_0_addr15_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr15_out"/>
+        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr10_in"/>
+        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr9_in"/>
+        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr8_in"/>
+        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr2_in"/>
+        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr0_in"/>
+        <spirit:internalPortReference spirit:componentRef="unity_ctrl_0" spirit:portRef="addr1_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PWM_duty_in_1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="vector_mux_1" spirit:portRef="out_vec"/>
+        <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="PWM_duty_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BLDC_MOTOR_CONTROL_UNSIGNED_OUT</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BLDC_MOTOR_CONTROL" spirit:portRef="UNSIGNED_OUT"/>
+        <spirit:externalPortReference spirit:portRef="leds_o"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
@@ -1235,6 +1052,16 @@
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>UNSIGNED_OUT</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -1250,9 +1077,9 @@
         <spirit:componentRef spirit:library="module_ref" spirit:name="BLDC_STARTUP" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_BLDC_STARTUP_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="START_PERIOD">2000000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="END_PERIOD">750000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SPEEDUP_INTERVAL">15</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="START_PERIOD">5000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="END_PERIOD">1000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SPEEDUP_INTERVAL">20</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceName">BLDC_STARTUP</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
@@ -1411,6 +1238,40 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>PWM_smoother_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="PWM_smoother" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_PWM_smoother_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SMOOTHING">1000000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">PWM_smoother</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>UNSIGNED_TO_SIGNED_CONV_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="UNSIGNED_TO_SIGNED_CONV" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_UNSIGNED_TO_SIGNED_CONV_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">UNSIGNED_TO_SIGNED_CONV</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>SIGNED_TO_UNSIGNED_CONV_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="SIGNED_TO_UNSIGNED_CONV" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_SIGNED_TO_UNSIGNED_CONV_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">SIGNED_TO_UNSIGNED_CONV</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>vector_mux_2</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="vector_mux" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -1460,6 +1321,7 @@
         <spirit:internalPortReference spirit:componentRef="BLDC_STATE_CONTROLLER_0" spirit:portRef="reset_in"/>
         <spirit:internalPortReference spirit:componentRef="BLDC_SPEED_OBSERVER_0" spirit:portRef="reset_in"/>
         <spirit:internalPortReference spirit:componentRef="PWM_generator_0" spirit:portRef="reset_in"/>
+        <spirit:internalPortReference spirit:componentRef="PWM_smoother_0" spirit:portRef="reset_in"/>
         <spirit:internalPortReference spirit:componentRef="STARTUP_PWM_MOD" spirit:portRef="reset_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -1508,12 +1370,6 @@
         <spirit:internalPortReference spirit:componentRef="BLDC_STATE_CONTROLLER_0" spirit:portRef="PWM_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>Toggler_0_signal_out</spirit:name>
-        <spirit:externalPortReference spirit:portRef="dir_in"/>
-        <spirit:internalPortReference spirit:componentRef="BLDC_DIR_CTRL_0" spirit:portRef="dir_in"/>
-        <spirit:internalPortReference spirit:componentRef="DIR_SENSE_0" spirit:portRef="dir_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>inverter_2_out_sig</spirit:name>
         <spirit:externalPortReference spirit:portRef="startup_in"/>
         <spirit:internalPortReference spirit:componentRef="BLDC_STARTUP_0" spirit:portRef="reset_in"/>
@@ -1527,12 +1383,10 @@
         <spirit:internalPortReference spirit:componentRef="BLDC_STATE_CONTROLLER_0" spirit:portRef="clk_in"/>
         <spirit:internalPortReference spirit:componentRef="BLDC_SPEED_OBSERVER_0" spirit:portRef="clk_in"/>
         <spirit:internalPortReference spirit:componentRef="PWM_generator_0" spirit:portRef="clk_IN"/>
+        <spirit:internalPortReference spirit:componentRef="PWM_smoother_0" spirit:portRef="clk_in"/>
+        <spirit:internalPortReference spirit:componentRef="UNSIGNED_TO_SIGNED_CONV_0" spirit:portRef="clk_in"/>
+        <spirit:internalPortReference spirit:componentRef="SIGNED_TO_UNSIGNED_CONV_0" spirit:portRef="clk_in"/>
         <spirit:internalPortReference spirit:componentRef="STARTUP_PWM_MOD" spirit:portRef="clk_IN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>unity_ctrl_0_leds_o</spirit:name>
-        <spirit:externalPortReference spirit:portRef="PWM_duty_in"/>
-        <spirit:internalPortReference spirit:componentRef="PWM_generator_0" spirit:portRef="PWM_duty_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BLDC_STATE_CONTROLLER_0_PHASE_C_out</spirit:name>
@@ -1610,6 +1464,38 @@
         <spirit:internalPortReference spirit:componentRef="BLDC_SPEED_OBSERVER_0" spirit:portRef="speed_out"/>
         <spirit:externalPortReference spirit:portRef="speed_out"/>
       </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PWM_duty_in_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="PWM_duty_in"/>
+        <spirit:internalPortReference spirit:componentRef="UNSIGNED_TO_SIGNED_CONV_0" spirit:portRef="UNSIGNED_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="SIGNED_TO_UNSIGNED_CONV_0" spirit:portRef="SIGN_out"/>
+        <spirit:internalPortReference spirit:componentRef="BLDC_DIR_CTRL_0" spirit:portRef="dir_in"/>
+        <spirit:internalPortReference spirit:componentRef="DIR_SENSE_0" spirit:portRef="dir_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dir_in_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="dir_in"/>
+        <spirit:internalPortReference spirit:componentRef="UNSIGNED_TO_SIGNED_CONV_0" spirit:portRef="SIGN_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>UNSIGNED_TO_SIGNED_CONV_0_SIGNED_OUT</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="UNSIGNED_TO_SIGNED_CONV_0" spirit:portRef="SIGNED_OUT"/>
+        <spirit:internalPortReference spirit:componentRef="PWM_smoother_0" spirit:portRef="PWM_Desired"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PWM_smoother_0_PWM_OUT</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PWM_smoother_0" spirit:portRef="PWM_OUT"/>
+        <spirit:internalPortReference spirit:componentRef="SIGNED_TO_UNSIGNED_CONV_0" spirit:portRef="SIGNED_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>SIGNED_TO_UNSIGNED_CONV_0_UNSIGNED_OUT</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="SIGNED_TO_UNSIGNED_CONV_0" spirit:portRef="UNSIGNED_OUT"/>
+        <spirit:externalPortReference spirit:portRef="UNSIGNED_OUT"/>
+        <spirit:internalPortReference spirit:componentRef="PWM_generator_0" spirit:portRef="PWM_duty_in"/>
+      </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>
 
@@ -1681,7 +1567,7 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">unity_xlconstant_1_2</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CONST_WIDTH">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0xff</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0x40</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>

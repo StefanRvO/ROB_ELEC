@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date         : Thu Dec  8 17:31:55 2016
+| Date         : Fri Dec 16 17:44:56 2016
 | Host         : Leviathan running 64-bit Arch Linux
 | Command      : report_io -file unity_wrapper_io_placed.rpt
 | Design       : unity_wrapper
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            59 |
+|            57 |
 +---------------+
 
 
@@ -196,7 +196,7 @@ Table of Contents
 | L11        |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | L12        | leds_o[4]         | High Range | IO_L12P_T1_MRCC_34      | OUTPUT      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | L13        | leds_o[2]         | High Range | IO_L10N_T1_34           | OUTPUT      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
-| L14        | SW_B_in           | High Range | IO_L9P_T1_DQS_34        | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
+| L14        |                   | High Range | IO_L9P_T1_DQS_34        | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | L15        | MTR_START         | High Range | IO_L8P_T1_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | M1         |                   |            | PS_DDR_A2_502           | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |
 | M2         |                   |            | PS_DDR_A12_502          | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |
@@ -226,7 +226,7 @@ Table of Contents
 | N11        |                   | High Range | IO_L13P_T2_MRCC_34      | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | N12        |                   | High Range | IO_L13N_T2_MRCC_34      | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | N13        | SENSE[1]          | High Range | IO_L7P_T1_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
-| N14        | SW_A_in           | High Range | IO_L7N_T1_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
+| N14        |                   | High Range | IO_L7N_T1_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | N15        |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | P1         |                   |            | PS_DDR_A0_502           | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |
 | P2         |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |

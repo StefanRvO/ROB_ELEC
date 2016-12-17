@@ -1,18 +1,18 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Wed Dec  7 23:40:16 2016
+// Date        : Wed Dec  7 23:40:15 2016
 // Host        : Leviathan running 64-bit Arch Linux
-// Command     : write_verilog -force -mode funcsim
-//               /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_7_0/unity_xlslice_7_0_sim_netlist.v
-// Design      : unity_xlslice_7_0
+// Command     : write_verilog -force -mode funcsim -rename_top unity_xlslice_7_0 -prefix
+//               unity_xlslice_7_0_ unity_xlslice_8_0_sim_netlist.v
+// Design      : unity_xlslice_8_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z010clg225-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "unity_xlslice_7_0,xlslice,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "xlslice,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "unity_xlslice_8_0,xlslice,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "xlslice,Vivado 2016.3" *) 
 (* NotValidForBitStream *)
 module unity_xlslice_7_0
    (Din,

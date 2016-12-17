@@ -48,7 +48,7 @@ ARCHITECTURE unity_xlconstant_1_2_arch OF unity_xlconstant_1_2 IS
 BEGIN
   U0 : xlconstant
     GENERIC MAP (
-      CONST_VAL => "10100000",
+      CONST_VAL => "11111111",
       CONST_WIDTH => 8
     )
     PORT MAP (

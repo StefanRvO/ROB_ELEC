@@ -83,7 +83,7 @@ BEGIN
   U0 : PWM_generator
     GENERIC MAP (
       CLK_FREQ => 200000000,
-      PWM_FREQ => 21000
+      PWM_FREQ => 80000
     )
     PORT MAP (
       clk_IN => clk_IN,

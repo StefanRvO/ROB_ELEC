@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
---Date        : Thu Dec  8 17:27:00 2016
+--Date        : Sat Dec 17 02:32:30 2016
 --Host        : Leviathan running 64-bit Arch Linux
 --Command     : generate_target unity_wrapper.bd
 --Design      : unity_wrapper
@@ -27,8 +27,6 @@ entity unity_wrapper is
     PHASE_C_out : out STD_LOGIC;
     PWM_out : out STD_LOGIC_VECTOR ( 0 to 0 );
     SENSE : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    SW_A_in : in STD_LOGIC;
-    SW_B_in : in STD_LOGIC;
     leds_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     rx_i : in STD_LOGIC;
     tx_o : out STD_LOGIC
@@ -54,8 +52,6 @@ architecture STRUCTURE of unity_wrapper is
     PHASE_B_out : out STD_LOGIC;
     PHASE_AH_out : out STD_LOGIC;
     PHASE_BH_out : out STD_LOGIC;
-    SW_A_in : in STD_LOGIC;
-    SW_B_in : in STD_LOGIC;
     leds_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component unity;
@@ -76,8 +72,6 @@ unity_i: component unity
       PHASE_C_out => PHASE_C_out,
       PWM_out(0) => PWM_out(0),
       SENSE(2 downto 0) => SENSE(2 downto 0),
-      SW_A_in => SW_A_in,
-      SW_B_in => SW_B_in,
       leds_o(7 downto 0) => leds_o(7 downto 0),
       rx_i => rx_i,
       tx_o => tx_o

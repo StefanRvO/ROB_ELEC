@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Thu Dec  8 17:27:06 2016
-# Process ID: 25803
+# Start of session at: Fri Dec 16 16:16:41 2016
+# Process ID: 19229
 # Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1
 # Command line: vivado -log unity_PID_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_PID_0_0.tcl
 # Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1/unity_PID_0_0.vds
@@ -15,50 +15,78 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25818 
+INFO: Helper process launched with PID 19414 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1062.676 ; gain = 159.301 ; free physical = 2793 ; free virtual = 19167
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1061.672 ; gain = 158.301 ; free physical = 2546 ; free virtual = 20484
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'unity_PID_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'unity_PID_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:72]
 	Parameter SIZE bound to: 32 - type: integer 
-	Parameter K_MULT bound to: 1 - type: integer 
-	Parameter K_DIV bound to: 1 - type: integer 
 	Parameter MAX bound to: 255 - type: integer 
 	Parameter MIN bound to: -255 - type: integer 
 	Parameter CONST_SIZE bound to: 32 - type: integer 
 	Parameter SAMPLE_FREQ bound to: 100000 - type: integer 
 	Parameter CLK_FREQ bound to: 200000000 - type: integer 
-INFO: [Synth 8-3491] module 'PID' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:36' bound to instance 'U0' of component 'PID' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:103]
+INFO: [Synth 8-3491] module 'PID' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:36' bound to instance 'U0' of component 'PID' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:105]
 INFO: [Synth 8-638] synthesizing module 'PID' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:59]
 	Parameter SIZE bound to: 32 - type: integer 
-	Parameter K_MULT bound to: 1 - type: integer 
-	Parameter K_DIV bound to: 1 - type: integer 
 	Parameter MAX bound to: 255 - type: integer 
 	Parameter MIN bound to: -255 - type: integer 
 	Parameter CONST_SIZE bound to: 32 - type: integer 
 	Parameter SAMPLE_FREQ bound to: 100000 - type: integer 
 	Parameter CLK_FREQ bound to: 200000000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'PID' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:59]
-INFO: [Synth 8-256] done synthesizing module 'unity_PID_0_0' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'unity_PID_0_0' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/synth/unity_PID_0_0.vhd:72]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[31]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[30]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[29]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[28]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[27]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[26]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[25]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[24]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[23]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[22]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[21]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[20]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[19]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[18]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[17]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[16]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[15]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[14]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[13]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[12]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[11]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[10]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[9]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[8]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[7]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[6]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[5]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[4]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[3]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[2]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[1]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1103.145 ; gain = 199.770 ; free physical = 2756 ; free virtual = 19130
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1103.141 ; gain = 199.770 ; free physical = 2474 ; free virtual = 20412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1103.145 ; gain = 199.770 ; free physical = 2756 ; free virtual = 19130
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1103.141 ; gain = 199.770 ; free physical = 2474 ; free virtual = 20412
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1111.148 ; gain = 207.773 ; free physical = 2756 ; free virtual = 19130
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1111.145 ; gain = 207.773 ; free physical = 2474 ; free virtual = 20412
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "scaler_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Device 21-403] Loading part xc7z010clg225-1
-INFO: [Synth 8-5545] ROM "scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1127.164 ; gain = 223.789 ; free physical = 2740 ; free virtual = 19114
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1127.160 ; gain = 223.789 ; free physical = 2459 ; free virtual = 20397
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -72,12 +100,12 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
 +---Registers : 
 	              160 Bit    Registers := 1     
 	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	                1 Bit    Registers := 1     
 +---Multipliers : 
 	               32x128  Multipliers := 1     
@@ -96,12 +124,12 @@ Hierarchical RTL Component report
 Module PID 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
 +---Registers : 
 	              160 Bit    Registers := 1     
 	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	                1 Bit    Registers := 1     
 +---Multipliers : 
 	               32x128  Multipliers := 1     
@@ -128,8 +156,8 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "scaler_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "scaled_CLK" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:112]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:114]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:116]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/PID.vhd:118]
 DSP Report: Generating DSP ARG, operation Mode is: A2*B.
 DSP Report: register A is absorbed into DSP ARG.
 DSP Report: operator ARG is absorbed into DSP ARG.
@@ -212,109 +240,141 @@ DSP Report: Generating DSP P_TMP_MULT_reg, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: register P_TMP_MULT_reg is absorbed into DSP P_TMP_MULT_reg.
 DSP Report: operator ARG is absorbed into DSP P_TMP_MULT_reg.
 DSP Report: operator ARG is absorbed into DSP P_TMP_MULT_reg.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[47]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[46]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[45]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[44]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[43]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[42]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[41]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[40]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[39]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[38]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[37]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[36]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[35]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[34]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[33]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[32]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[31]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[30]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[29]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[28]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[27]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[26]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[25]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[24]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[23]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[22]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[21]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[20]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[19]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[18]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[17]) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[47]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[46]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[45]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[44]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[43]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[42]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[41]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[40]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[39]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[38]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[37]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[36]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[35]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[34]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[33]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[32]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[31]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[30]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[29]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[28]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[27]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[26]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[25]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[24]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[23]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[22]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[21]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[20]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[19]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[18]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[17]__0) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[47]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[46]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[45]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[44]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[43]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[42]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[41]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[40]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[39]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[38]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[37]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[36]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[35]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[34]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[33]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[32]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[31]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[30]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[29]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[28]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[27]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[26]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[25]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[24]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[23]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[22]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[21]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[20]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[19]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[18]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[17]__1) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[47]__2) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[46]__2) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[45]__2) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[44]__2) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[43]__2) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[42]__2) is unused and will be removed from module unity_PID_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/I_TMP_MULT_reg[41]__2) is unused and will be removed from module unity_PID_0_0.
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[31]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[30]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[29]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[28]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[27]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[26]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[25]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[24]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[23]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[22]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[21]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[20]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[19]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[18]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[17]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[16]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[15]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[14]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[13]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[12]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[11]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[10]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[9]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[8]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[7]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[6]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[5]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[4]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[3]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[2]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[1]
+WARNING: [Synth 8-3331] design PID has unconnected port D_MULT[0]
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[47]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[46]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[45]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[44]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[43]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[42]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[41]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[40]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[39]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[38]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[37]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[36]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[35]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[34]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[33]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[32]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[31]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[30]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[29]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[28]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[27]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[26]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[25]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[24]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[23]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[22]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[21]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[20]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[19]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[18]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[17]) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[47]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[46]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[45]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[44]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[43]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[42]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[41]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[40]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[39]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[38]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[37]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[36]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[35]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[34]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[33]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[32]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[31]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[30]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[29]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[28]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[27]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[26]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[25]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[24]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[23]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[22]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[21]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[20]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[19]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[18]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[17]__0) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[47]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[46]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[45]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[44]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[43]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[42]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[41]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[40]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[39]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[38]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[37]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[36]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[35]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[34]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[33]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[32]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[31]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[30]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[29]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[28]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[27]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[26]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[25]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[24]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[23]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[22]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[21]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[20]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[19]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[18]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[17]__1) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[47]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[46]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[45]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[44]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[43]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[42]__2) is unused and will be removed from module PID.
+WARNING: [Synth 8-3332] Sequential element (I_TMP_MULT_reg[41]__2) is unused and will be removed from module PID.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1251.531 ; gain = 348.156 ; free physical = 2634 ; free virtual = 18997
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1252.535 ; gain = 349.164 ; free physical = 2192 ; free virtual = 20127
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -361,7 +421,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1251.531 ; gain = 348.156 ; free physical = 2634 ; free virtual = 18997
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1252.535 ; gain = 349.164 ; free physical = 2192 ; free virtual = 20127
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -373,7 +433,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1259.539 ; gain = 356.164 ; free physical = 2629 ; free virtual = 18992
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1260.543 ; gain = 357.172 ; free physical = 2183 ; free virtual = 20118
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -397,7 +457,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1259.539 ; gain = 356.164 ; free physical = 2628 ; free virtual = 18991
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.543 ; gain = 357.172 ; free physical = 2184 ; free virtual = 20120
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -410,7 +470,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1259.539 ; gain = 356.164 ; free physical = 2637 ; free virtual = 19000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.543 ; gain = 357.172 ; free physical = 2184 ; free virtual = 20119
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -422,25 +482,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1259.539 ; gain = 356.164 ; free physical = 2637 ; free virtual = 19000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.543 ; gain = 357.172 ; free physical = 2184 ; free virtual = 20120
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1259.539 ; gain = 356.164 ; free physical = 2637 ; free virtual = 19000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.543 ; gain = 357.172 ; free physical = 2184 ; free virtual = 20120
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1259.539 ; gain = 356.164 ; free physical = 2637 ; free virtual = 19000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.543 ; gain = 357.172 ; free physical = 2170 ; free virtual = 20107
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1259.539 ; gain = 356.164 ; free physical = 2637 ; free virtual = 19000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.543 ; gain = 357.172 ; free physical = 2169 ; free virtual = 20106
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -459,27 +519,27 @@ Report Cell Usage:
 |1     |CARRY4  |   108|
 |2     |DSP48E1 |    20|
 |3     |LUT1    |    35|
-|4     |LUT2    |   337|
-|5     |LUT3    |    91|
-|6     |LUT4    |    81|
-|7     |LUT5    |   135|
-|8     |LUT6    |   281|
-|9     |FDRE    |   395|
+|4     |LUT2    |   307|
+|5     |LUT3    |   145|
+|6     |LUT4    |   120|
+|7     |LUT5    |   185|
+|8     |LUT6    |   346|
+|9     |FDRE    |   427|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |  1483|
-|2     |  U0     |PID    |  1483|
+|1     |top      |       |  1693|
+|2     |  U0     |PID    |  1646|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1259.539 ; gain = 356.164 ; free physical = 2637 ; free virtual = 19000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.543 ; gain = 357.172 ; free physical = 2169 ; free virtual = 20105
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1259.539 ; gain = 256.863 ; free physical = 2637 ; free virtual = 19000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1259.547 ; gain = 356.172 ; free physical = 2637 ; free virtual = 19000
+Synthesis finished with 0 errors, 0 critical warnings and 374 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1260.543 ; gain = 257.871 ; free physical = 2168 ; free virtual = 20105
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1260.551 ; gain = 357.180 ; free physical = 2168 ; free virtual = 20105
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 128 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -490,12 +550,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-126 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+26 Infos, 165 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1364.566 ; gain = 374.473 ; free physical = 2566 ; free virtual = 18930
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1366.570 ; gain = 376.480 ; free physical = 2613 ; free virtual = 20551
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1/unity_PID_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1823.102 ; gain = 458.535 ; free physical = 2237 ; free virtual = 18607
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1822.105 ; gain = 455.535 ; free physical = 2276 ; free virtual = 20215
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_PID_0_0_synth_1/unity_PID_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1823.102 ; gain = 0.000 ; free physical = 2239 ; free virtual = 18605
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 17:27:54 2016...
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1822.105 ; gain = 0.000 ; free physical = 2273 ; free virtual = 20213
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 16 16:17:28 2016...

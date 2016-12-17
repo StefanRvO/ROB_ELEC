@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Sun Dec  4 18:04:48 2016
+// Date        : Fri Dec 16 14:18:35 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
-//               /home/stefan/PWM_2/workspace/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1_sim_netlist.v
+//               /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1_sim_netlist.v
 // Design      : unity_PWM_generator_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -307,81 +307,77 @@ module unity_PWM_generator_0_1_PWM_generator
   wire reset_in;
   wire scaled_CLK;
   wire scaled_CLK_i_1_n_0;
-  wire scaled_CLK_i_2_n_0;
-  wire scaled_CLK_i_3_n_0;
   wire [31:0]scaler_counter;
-  wire \scaler_counter[0]_i_2_n_0 ;
-  wire \scaler_counter[12]_i_3_n_0 ;
-  wire \scaler_counter[12]_i_4_n_0 ;
-  wire \scaler_counter[12]_i_5_n_0 ;
-  wire \scaler_counter[12]_i_6_n_0 ;
-  wire \scaler_counter[16]_i_3_n_0 ;
-  wire \scaler_counter[16]_i_4_n_0 ;
-  wire \scaler_counter[16]_i_5_n_0 ;
-  wire \scaler_counter[16]_i_6_n_0 ;
-  wire \scaler_counter[20]_i_3_n_0 ;
-  wire \scaler_counter[20]_i_4_n_0 ;
-  wire \scaler_counter[20]_i_5_n_0 ;
-  wire \scaler_counter[20]_i_6_n_0 ;
-  wire \scaler_counter[24]_i_3_n_0 ;
-  wire \scaler_counter[24]_i_4_n_0 ;
-  wire \scaler_counter[24]_i_5_n_0 ;
-  wire \scaler_counter[24]_i_6_n_0 ;
-  wire \scaler_counter[28]_i_3_n_0 ;
-  wire \scaler_counter[28]_i_4_n_0 ;
-  wire \scaler_counter[28]_i_5_n_0 ;
-  wire \scaler_counter[28]_i_6_n_0 ;
-  wire \scaler_counter[31]_i_10_n_0 ;
-  wire \scaler_counter[31]_i_11_n_0 ;
-  wire \scaler_counter[31]_i_12_n_0 ;
-  wire \scaler_counter[31]_i_13_n_0 ;
-  wire \scaler_counter[31]_i_14_n_0 ;
+  wire scaler_counter0_carry__0_i_1_n_0;
+  wire scaler_counter0_carry__0_i_2_n_0;
+  wire scaler_counter0_carry__0_i_3_n_0;
+  wire scaler_counter0_carry__0_i_4_n_0;
+  wire scaler_counter0_carry__0_n_0;
+  wire scaler_counter0_carry__0_n_1;
+  wire scaler_counter0_carry__0_n_2;
+  wire scaler_counter0_carry__0_n_3;
+  wire scaler_counter0_carry__1_i_1_n_0;
+  wire scaler_counter0_carry__1_i_2_n_0;
+  wire scaler_counter0_carry__1_i_3_n_0;
+  wire scaler_counter0_carry__1_i_4_n_0;
+  wire scaler_counter0_carry__1_n_0;
+  wire scaler_counter0_carry__1_n_1;
+  wire scaler_counter0_carry__1_n_2;
+  wire scaler_counter0_carry__1_n_3;
+  wire scaler_counter0_carry__2_i_1_n_0;
+  wire scaler_counter0_carry__2_i_2_n_0;
+  wire scaler_counter0_carry__2_i_3_n_0;
+  wire scaler_counter0_carry__2_i_4_n_0;
+  wire scaler_counter0_carry__2_n_0;
+  wire scaler_counter0_carry__2_n_1;
+  wire scaler_counter0_carry__2_n_2;
+  wire scaler_counter0_carry__2_n_3;
+  wire scaler_counter0_carry__3_i_1_n_0;
+  wire scaler_counter0_carry__3_i_2_n_0;
+  wire scaler_counter0_carry__3_i_3_n_0;
+  wire scaler_counter0_carry__3_i_4_n_0;
+  wire scaler_counter0_carry__3_n_0;
+  wire scaler_counter0_carry__3_n_1;
+  wire scaler_counter0_carry__3_n_2;
+  wire scaler_counter0_carry__3_n_3;
+  wire scaler_counter0_carry__4_i_1_n_0;
+  wire scaler_counter0_carry__4_i_2_n_0;
+  wire scaler_counter0_carry__4_i_3_n_0;
+  wire scaler_counter0_carry__4_i_4_n_0;
+  wire scaler_counter0_carry__4_n_0;
+  wire scaler_counter0_carry__4_n_1;
+  wire scaler_counter0_carry__4_n_2;
+  wire scaler_counter0_carry__4_n_3;
+  wire scaler_counter0_carry__5_i_1_n_0;
+  wire scaler_counter0_carry__5_i_2_n_0;
+  wire scaler_counter0_carry__5_i_3_n_0;
+  wire scaler_counter0_carry__5_i_4_n_0;
+  wire scaler_counter0_carry__5_n_0;
+  wire scaler_counter0_carry__5_n_1;
+  wire scaler_counter0_carry__5_n_2;
+  wire scaler_counter0_carry__5_n_3;
+  wire scaler_counter0_carry__6_i_1_n_0;
+  wire scaler_counter0_carry__6_i_2_n_0;
+  wire scaler_counter0_carry__6_i_3_n_0;
+  wire scaler_counter0_carry__6_n_2;
+  wire scaler_counter0_carry__6_n_3;
+  wire scaler_counter0_carry_i_1_n_0;
+  wire scaler_counter0_carry_i_2_n_0;
+  wire scaler_counter0_carry_i_3_n_0;
+  wire scaler_counter0_carry_i_4_n_0;
+  wire scaler_counter0_carry_n_0;
+  wire scaler_counter0_carry_n_1;
+  wire scaler_counter0_carry_n_2;
+  wire scaler_counter0_carry_n_3;
   wire \scaler_counter[31]_i_2_n_0 ;
+  wire \scaler_counter[31]_i_3_n_0 ;
   wire \scaler_counter[31]_i_4_n_0 ;
   wire \scaler_counter[31]_i_5_n_0 ;
   wire \scaler_counter[31]_i_6_n_0 ;
   wire \scaler_counter[31]_i_7_n_0 ;
   wire \scaler_counter[31]_i_8_n_0 ;
   wire \scaler_counter[31]_i_9_n_0 ;
-  wire \scaler_counter[4]_i_3_n_0 ;
-  wire \scaler_counter[4]_i_4_n_0 ;
-  wire \scaler_counter[4]_i_5_n_0 ;
-  wire \scaler_counter[4]_i_6_n_0 ;
-  wire \scaler_counter[8]_i_3_n_0 ;
-  wire \scaler_counter[8]_i_4_n_0 ;
-  wire \scaler_counter[8]_i_5_n_0 ;
-  wire \scaler_counter[8]_i_6_n_0 ;
   wire [31:0]scaler_counter_0;
-  wire \scaler_counter_reg[12]_i_2_n_0 ;
-  wire \scaler_counter_reg[12]_i_2_n_1 ;
-  wire \scaler_counter_reg[12]_i_2_n_2 ;
-  wire \scaler_counter_reg[12]_i_2_n_3 ;
-  wire \scaler_counter_reg[16]_i_2_n_0 ;
-  wire \scaler_counter_reg[16]_i_2_n_1 ;
-  wire \scaler_counter_reg[16]_i_2_n_2 ;
-  wire \scaler_counter_reg[16]_i_2_n_3 ;
-  wire \scaler_counter_reg[20]_i_2_n_0 ;
-  wire \scaler_counter_reg[20]_i_2_n_1 ;
-  wire \scaler_counter_reg[20]_i_2_n_2 ;
-  wire \scaler_counter_reg[20]_i_2_n_3 ;
-  wire \scaler_counter_reg[24]_i_2_n_0 ;
-  wire \scaler_counter_reg[24]_i_2_n_1 ;
-  wire \scaler_counter_reg[24]_i_2_n_2 ;
-  wire \scaler_counter_reg[24]_i_2_n_3 ;
-  wire \scaler_counter_reg[28]_i_2_n_0 ;
-  wire \scaler_counter_reg[28]_i_2_n_1 ;
-  wire \scaler_counter_reg[28]_i_2_n_2 ;
-  wire \scaler_counter_reg[28]_i_2_n_3 ;
-  wire \scaler_counter_reg[31]_i_3_n_2 ;
-  wire \scaler_counter_reg[31]_i_3_n_3 ;
-  wire \scaler_counter_reg[4]_i_2_n_0 ;
-  wire \scaler_counter_reg[4]_i_2_n_1 ;
-  wire \scaler_counter_reg[4]_i_2_n_2 ;
-  wire \scaler_counter_reg[4]_i_2_n_3 ;
-  wire \scaler_counter_reg[8]_i_2_n_0 ;
-  wire \scaler_counter_reg[8]_i_2_n_1 ;
-  wire \scaler_counter_reg[8]_i_2_n_2 ;
-  wire \scaler_counter_reg[8]_i_2_n_3 ;
   wire [3:0]NLW_PWM_out1_carry_O_UNCONNECTED;
   wire [3:0]NLW_PWM_out1_carry__0_O_UNCONNECTED;
   wire [3:0]NLW_PWM_out1_carry__1_O_UNCONNECTED;
@@ -390,8 +386,8 @@ module unity_PWM_generator_0_1_PWM_generator
   wire [3:3]\NLW_count_reg[31]_i_2_O_UNCONNECTED ;
   wire [3:2]\NLW_count_reg[31]_i_3_CO_UNCONNECTED ;
   wire [3:3]\NLW_count_reg[31]_i_3_O_UNCONNECTED ;
-  wire [3:2]\NLW_scaler_counter_reg[31]_i_3_CO_UNCONNECTED ;
-  wire [3:3]\NLW_scaler_counter_reg[31]_i_3_O_UNCONNECTED ;
+  wire [3:2]NLW_scaler_counter0_carry__6_CO_UNCONNECTED;
+  wire [3:3]NLW_scaler_counter0_carry__6_O_UNCONNECTED;
 
   CARRY4 PWM_out1_carry
        (.CI(1'b0),
@@ -1095,7 +1091,7 @@ module unity_PWM_generator_0_1_PWM_generator
     \count[31]_i_12 
        (.I0(count[29]),
         .O(\count[31]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \count[31]_i_13 
@@ -1154,7 +1150,7 @@ module unity_PWM_generator_0_1_PWM_generator
        (.I0(count[6]),
         .I1(count[7]),
         .O(\count[31]_i_20_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \count[31]_i_21 
@@ -1764,31 +1760,16 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(\count[9]_i_1_n_0 ),
         .Q(count[9]),
         .R(reset_in));
-  LUT5 #(
-    .INIT(32'h0000AE00)) 
+  LUT6 #(
+    .INIT(64'h00000000AAAAA8BA)) 
     scaled_CLK_i_1
        (.I0(scaled_CLK),
-        .I1(scaled_CLK_i_2_n_0),
-        .I2(scaled_CLK_i_3_n_0),
-        .I3(\scaler_counter[31]_i_2_n_0 ),
-        .I4(reset_in),
+        .I1(\scaler_counter[31]_i_2_n_0 ),
+        .I2(scaler_counter[1]),
+        .I3(scaler_counter[2]),
+        .I4(scaler_counter[0]),
+        .I5(reset_in),
         .O(scaled_CLK_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h0400)) 
-    scaled_CLK_i_2
-       (.I0(scaler_counter[1]),
-        .I1(scaler_counter[0]),
-        .I2(scaler_counter[4]),
-        .I3(scaler_counter[3]),
-        .O(scaled_CLK_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hFE)) 
-    scaled_CLK_i_3
-       (.I0(\scaler_counter[31]_i_4_n_0 ),
-        .I1(\scaler_counter[31]_i_5_n_0 ),
-        .I2(\scaler_counter[31]_i_6_n_0 ),
-        .O(scaled_CLK_i_3_n_0));
   FDRE #(
     .INIT(1'b0)) 
     scaled_CLK_reg
@@ -1797,469 +1778,573 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaled_CLK_i_1_n_0),
         .Q(scaled_CLK),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \scaler_counter[0]_i_1 
-       (.I0(\scaler_counter[0]_i_2_n_0 ),
-        .I1(scaler_counter[0]),
-        .O(scaler_counter_0[0]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFDF)) 
-    \scaler_counter[0]_i_2 
-       (.I0(scaler_counter[1]),
-        .I1(scaler_counter[3]),
-        .I2(scaler_counter[4]),
-        .I3(\scaler_counter[31]_i_6_n_0 ),
-        .I4(\scaler_counter[31]_i_5_n_0 ),
-        .I5(\scaler_counter[31]_i_4_n_0 ),
-        .O(\scaler_counter[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[10]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[10]),
-        .O(scaler_counter_0[10]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[11]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[11]),
-        .O(scaler_counter_0[11]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[12]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[12]),
-        .O(scaler_counter_0[12]));
+  CARRY4 scaler_counter0_carry
+       (.CI(1'b0),
+        .CO({scaler_counter0_carry_n_0,scaler_counter0_carry_n_1,scaler_counter0_carry_n_2,scaler_counter0_carry_n_3}),
+        .CYINIT(scaler_counter[0]),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(data0[4:1]),
+        .S({scaler_counter0_carry_i_1_n_0,scaler_counter0_carry_i_2_n_0,scaler_counter0_carry_i_3_n_0,scaler_counter0_carry_i_4_n_0}));
+  CARRY4 scaler_counter0_carry__0
+       (.CI(scaler_counter0_carry_n_0),
+        .CO({scaler_counter0_carry__0_n_0,scaler_counter0_carry__0_n_1,scaler_counter0_carry__0_n_2,scaler_counter0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(data0[8:5]),
+        .S({scaler_counter0_carry__0_i_1_n_0,scaler_counter0_carry__0_i_2_n_0,scaler_counter0_carry__0_i_3_n_0,scaler_counter0_carry__0_i_4_n_0}));
   LUT1 #(
     .INIT(2'h2)) 
-    \scaler_counter[12]_i_3 
-       (.I0(scaler_counter[12]),
-        .O(\scaler_counter[12]_i_3_n_0 ));
+    scaler_counter0_carry__0_i_1
+       (.I0(scaler_counter[8]),
+        .O(scaler_counter0_carry__0_i_1_n_0));
   LUT1 #(
     .INIT(2'h2)) 
-    \scaler_counter[12]_i_4 
-       (.I0(scaler_counter[11]),
-        .O(\scaler_counter[12]_i_4_n_0 ));
+    scaler_counter0_carry__0_i_2
+       (.I0(scaler_counter[7]),
+        .O(scaler_counter0_carry__0_i_2_n_0));
   LUT1 #(
     .INIT(2'h2)) 
-    \scaler_counter[12]_i_5 
-       (.I0(scaler_counter[10]),
-        .O(\scaler_counter[12]_i_5_n_0 ));
+    scaler_counter0_carry__0_i_3
+       (.I0(scaler_counter[6]),
+        .O(scaler_counter0_carry__0_i_3_n_0));
   LUT1 #(
     .INIT(2'h2)) 
-    \scaler_counter[12]_i_6 
-       (.I0(scaler_counter[9]),
-        .O(\scaler_counter[12]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[13]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[13]),
-        .O(scaler_counter_0[13]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[14]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[14]),
-        .O(scaler_counter_0[14]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[15]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[15]),
-        .O(scaler_counter_0[15]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[16]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[16]),
-        .O(scaler_counter_0[16]));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[16]_i_3 
-       (.I0(scaler_counter[16]),
-        .O(\scaler_counter[16]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[16]_i_4 
-       (.I0(scaler_counter[15]),
-        .O(\scaler_counter[16]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[16]_i_5 
-       (.I0(scaler_counter[14]),
-        .O(\scaler_counter[16]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[16]_i_6 
-       (.I0(scaler_counter[13]),
-        .O(\scaler_counter[16]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[17]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[17]),
-        .O(scaler_counter_0[17]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[18]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[18]),
-        .O(scaler_counter_0[18]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[19]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[19]),
-        .O(scaler_counter_0[19]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[1]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[1]),
-        .O(scaler_counter_0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[20]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[20]),
-        .O(scaler_counter_0[20]));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[20]_i_3 
-       (.I0(scaler_counter[20]),
-        .O(\scaler_counter[20]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[20]_i_4 
-       (.I0(scaler_counter[19]),
-        .O(\scaler_counter[20]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[20]_i_5 
-       (.I0(scaler_counter[18]),
-        .O(\scaler_counter[20]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[20]_i_6 
-       (.I0(scaler_counter[17]),
-        .O(\scaler_counter[20]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[21]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[21]),
-        .O(scaler_counter_0[21]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[22]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[22]),
-        .O(scaler_counter_0[22]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[23]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[23]),
-        .O(scaler_counter_0[23]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[24]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[24]),
-        .O(scaler_counter_0[24]));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[24]_i_3 
-       (.I0(scaler_counter[24]),
-        .O(\scaler_counter[24]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[24]_i_4 
-       (.I0(scaler_counter[23]),
-        .O(\scaler_counter[24]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[24]_i_5 
-       (.I0(scaler_counter[22]),
-        .O(\scaler_counter[24]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[24]_i_6 
-       (.I0(scaler_counter[21]),
-        .O(\scaler_counter[24]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[25]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[25]),
-        .O(scaler_counter_0[25]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[26]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[26]),
-        .O(scaler_counter_0[26]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[27]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[27]),
-        .O(scaler_counter_0[27]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[28]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[28]),
-        .O(scaler_counter_0[28]));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[28]_i_3 
-       (.I0(scaler_counter[28]),
-        .O(\scaler_counter[28]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[28]_i_4 
-       (.I0(scaler_counter[27]),
-        .O(\scaler_counter[28]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[28]_i_5 
-       (.I0(scaler_counter[26]),
-        .O(\scaler_counter[28]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[28]_i_6 
-       (.I0(scaler_counter[25]),
-        .O(\scaler_counter[28]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[29]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[29]),
-        .O(scaler_counter_0[29]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[2]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[2]),
-        .O(scaler_counter_0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[30]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[30]),
-        .O(scaler_counter_0[30]));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[31]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[31]),
-        .O(scaler_counter_0[31]));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[31]_i_10 
-       (.I0(scaler_counter[29]),
-        .O(\scaler_counter[31]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \scaler_counter[31]_i_11 
-       (.I0(scaler_counter[21]),
-        .I1(scaler_counter[20]),
-        .I2(scaler_counter[23]),
-        .I3(scaler_counter[22]),
-        .O(\scaler_counter[31]_i_11_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \scaler_counter[31]_i_12 
-       (.I0(scaler_counter[13]),
-        .I1(scaler_counter[12]),
-        .I2(scaler_counter[15]),
-        .I3(scaler_counter[14]),
-        .O(\scaler_counter[31]_i_12_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \scaler_counter[31]_i_13 
-       (.I0(scaler_counter[29]),
-        .I1(scaler_counter[28]),
-        .I2(scaler_counter[31]),
-        .I3(scaler_counter[30]),
-        .O(\scaler_counter[31]_i_13_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \scaler_counter[31]_i_14 
+    scaler_counter0_carry__0_i_4
        (.I0(scaler_counter[5]),
-        .I1(scaler_counter[2]),
-        .I2(scaler_counter[7]),
-        .I3(scaler_counter[6]),
-        .O(\scaler_counter[31]_i_14_n_0 ));
+        .O(scaler_counter0_carry__0_i_4_n_0));
+  CARRY4 scaler_counter0_carry__1
+       (.CI(scaler_counter0_carry__0_n_0),
+        .CO({scaler_counter0_carry__1_n_0,scaler_counter0_carry__1_n_1,scaler_counter0_carry__1_n_2,scaler_counter0_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(data0[12:9]),
+        .S({scaler_counter0_carry__1_i_1_n_0,scaler_counter0_carry__1_i_2_n_0,scaler_counter0_carry__1_i_3_n_0,scaler_counter0_carry__1_i_4_n_0}));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__1_i_1
+       (.I0(scaler_counter[12]),
+        .O(scaler_counter0_carry__1_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__1_i_2
+       (.I0(scaler_counter[11]),
+        .O(scaler_counter0_carry__1_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__1_i_3
+       (.I0(scaler_counter[10]),
+        .O(scaler_counter0_carry__1_i_3_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__1_i_4
+       (.I0(scaler_counter[9]),
+        .O(scaler_counter0_carry__1_i_4_n_0));
+  CARRY4 scaler_counter0_carry__2
+       (.CI(scaler_counter0_carry__1_n_0),
+        .CO({scaler_counter0_carry__2_n_0,scaler_counter0_carry__2_n_1,scaler_counter0_carry__2_n_2,scaler_counter0_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(data0[16:13]),
+        .S({scaler_counter0_carry__2_i_1_n_0,scaler_counter0_carry__2_i_2_n_0,scaler_counter0_carry__2_i_3_n_0,scaler_counter0_carry__2_i_4_n_0}));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__2_i_1
+       (.I0(scaler_counter[16]),
+        .O(scaler_counter0_carry__2_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__2_i_2
+       (.I0(scaler_counter[15]),
+        .O(scaler_counter0_carry__2_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__2_i_3
+       (.I0(scaler_counter[14]),
+        .O(scaler_counter0_carry__2_i_3_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__2_i_4
+       (.I0(scaler_counter[13]),
+        .O(scaler_counter0_carry__2_i_4_n_0));
+  CARRY4 scaler_counter0_carry__3
+       (.CI(scaler_counter0_carry__2_n_0),
+        .CO({scaler_counter0_carry__3_n_0,scaler_counter0_carry__3_n_1,scaler_counter0_carry__3_n_2,scaler_counter0_carry__3_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(data0[20:17]),
+        .S({scaler_counter0_carry__3_i_1_n_0,scaler_counter0_carry__3_i_2_n_0,scaler_counter0_carry__3_i_3_n_0,scaler_counter0_carry__3_i_4_n_0}));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__3_i_1
+       (.I0(scaler_counter[20]),
+        .O(scaler_counter0_carry__3_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__3_i_2
+       (.I0(scaler_counter[19]),
+        .O(scaler_counter0_carry__3_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__3_i_3
+       (.I0(scaler_counter[18]),
+        .O(scaler_counter0_carry__3_i_3_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__3_i_4
+       (.I0(scaler_counter[17]),
+        .O(scaler_counter0_carry__3_i_4_n_0));
+  CARRY4 scaler_counter0_carry__4
+       (.CI(scaler_counter0_carry__3_n_0),
+        .CO({scaler_counter0_carry__4_n_0,scaler_counter0_carry__4_n_1,scaler_counter0_carry__4_n_2,scaler_counter0_carry__4_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(data0[24:21]),
+        .S({scaler_counter0_carry__4_i_1_n_0,scaler_counter0_carry__4_i_2_n_0,scaler_counter0_carry__4_i_3_n_0,scaler_counter0_carry__4_i_4_n_0}));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__4_i_1
+       (.I0(scaler_counter[24]),
+        .O(scaler_counter0_carry__4_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__4_i_2
+       (.I0(scaler_counter[23]),
+        .O(scaler_counter0_carry__4_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__4_i_3
+       (.I0(scaler_counter[22]),
+        .O(scaler_counter0_carry__4_i_3_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__4_i_4
+       (.I0(scaler_counter[21]),
+        .O(scaler_counter0_carry__4_i_4_n_0));
+  CARRY4 scaler_counter0_carry__5
+       (.CI(scaler_counter0_carry__4_n_0),
+        .CO({scaler_counter0_carry__5_n_0,scaler_counter0_carry__5_n_1,scaler_counter0_carry__5_n_2,scaler_counter0_carry__5_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(data0[28:25]),
+        .S({scaler_counter0_carry__5_i_1_n_0,scaler_counter0_carry__5_i_2_n_0,scaler_counter0_carry__5_i_3_n_0,scaler_counter0_carry__5_i_4_n_0}));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__5_i_1
+       (.I0(scaler_counter[28]),
+        .O(scaler_counter0_carry__5_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__5_i_2
+       (.I0(scaler_counter[27]),
+        .O(scaler_counter0_carry__5_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__5_i_3
+       (.I0(scaler_counter[26]),
+        .O(scaler_counter0_carry__5_i_3_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__5_i_4
+       (.I0(scaler_counter[25]),
+        .O(scaler_counter0_carry__5_i_4_n_0));
+  CARRY4 scaler_counter0_carry__6
+       (.CI(scaler_counter0_carry__5_n_0),
+        .CO({NLW_scaler_counter0_carry__6_CO_UNCONNECTED[3:2],scaler_counter0_carry__6_n_2,scaler_counter0_carry__6_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_scaler_counter0_carry__6_O_UNCONNECTED[3],data0[31:29]}),
+        .S({1'b0,scaler_counter0_carry__6_i_1_n_0,scaler_counter0_carry__6_i_2_n_0,scaler_counter0_carry__6_i_3_n_0}));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__6_i_1
+       (.I0(scaler_counter[31]),
+        .O(scaler_counter0_carry__6_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__6_i_2
+       (.I0(scaler_counter[30]),
+        .O(scaler_counter0_carry__6_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry__6_i_3
+       (.I0(scaler_counter[29]),
+        .O(scaler_counter0_carry__6_i_3_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry_i_1
+       (.I0(scaler_counter[4]),
+        .O(scaler_counter0_carry_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry_i_2
+       (.I0(scaler_counter[3]),
+        .O(scaler_counter0_carry_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry_i_3
+       (.I0(scaler_counter[2]),
+        .O(scaler_counter0_carry_i_3_n_0));
+  LUT1 #(
+    .INIT(2'h2)) 
+    scaler_counter0_carry_i_4
+       (.I0(scaler_counter[1]),
+        .O(scaler_counter0_carry_i_4_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h00EF)) 
+    \scaler_counter[0]_i_1 
+       (.I0(\scaler_counter[31]_i_2_n_0 ),
+        .I1(scaler_counter[1]),
+        .I2(scaler_counter[2]),
+        .I3(scaler_counter[0]),
+        .O(scaler_counter_0[0]));
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[10]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[10]),
+        .O(scaler_counter_0[10]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[11]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[11]),
+        .O(scaler_counter_0[11]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[12]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[12]),
+        .O(scaler_counter_0[12]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[13]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[13]),
+        .O(scaler_counter_0[13]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[14]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[14]),
+        .O(scaler_counter_0[14]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[15]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[15]),
+        .O(scaler_counter_0[15]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[16]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[16]),
+        .O(scaler_counter_0[16]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[17]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[17]),
+        .O(scaler_counter_0[17]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[18]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[18]),
+        .O(scaler_counter_0[18]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[19]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[19]),
+        .O(scaler_counter_0[19]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[1]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[1]),
+        .O(scaler_counter_0[1]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[20]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[20]),
+        .O(scaler_counter_0[20]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[21]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[21]),
+        .O(scaler_counter_0[21]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[22]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[22]),
+        .O(scaler_counter_0[22]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[23]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[23]),
+        .O(scaler_counter_0[23]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[24]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[24]),
+        .O(scaler_counter_0[24]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[25]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[25]),
+        .O(scaler_counter_0[25]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[26]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[26]),
+        .O(scaler_counter_0[26]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[27]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[27]),
+        .O(scaler_counter_0[27]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[28]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[28]),
+        .O(scaler_counter_0[28]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[29]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[29]),
+        .O(scaler_counter_0[29]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[2]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[2]),
+        .O(scaler_counter_0[2]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[30]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[30]),
+        .O(scaler_counter_0[30]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[31]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[31]),
+        .O(scaler_counter_0[31]));
+  LUT3 #(
+    .INIT(8'hFE)) 
     \scaler_counter[31]_i_2 
-       (.I0(\scaler_counter[31]_i_4_n_0 ),
-        .I1(\scaler_counter[31]_i_5_n_0 ),
-        .I2(\scaler_counter[31]_i_6_n_0 ),
-        .I3(\scaler_counter[31]_i_7_n_0 ),
-        .I4(scaler_counter[0]),
+       (.I0(\scaler_counter[31]_i_3_n_0 ),
+        .I1(\scaler_counter[31]_i_4_n_0 ),
+        .I2(\scaler_counter[31]_i_5_n_0 ),
         .O(\scaler_counter[31]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \scaler_counter[31]_i_4 
-       (.I0(scaler_counter[18]),
-        .I1(scaler_counter[19]),
-        .I2(scaler_counter[16]),
-        .I3(scaler_counter[17]),
-        .I4(\scaler_counter[31]_i_11_n_0 ),
-        .O(\scaler_counter[31]_i_4_n_0 ));
+    \scaler_counter[31]_i_3 
+       (.I0(scaler_counter[16]),
+        .I1(scaler_counter[17]),
+        .I2(scaler_counter[14]),
+        .I3(scaler_counter[15]),
+        .I4(\scaler_counter[31]_i_6_n_0 ),
+        .O(\scaler_counter[31]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \scaler_counter[31]_i_5 
-       (.I0(scaler_counter[10]),
-        .I1(scaler_counter[11]),
-        .I2(scaler_counter[8]),
-        .I3(scaler_counter[9]),
-        .I4(\scaler_counter[31]_i_12_n_0 ),
-        .O(\scaler_counter[31]_i_5_n_0 ));
+    \scaler_counter[31]_i_4 
+       (.I0(scaler_counter[8]),
+        .I1(scaler_counter[9]),
+        .I2(scaler_counter[6]),
+        .I3(scaler_counter[7]),
+        .I4(\scaler_counter[31]_i_7_n_0 ),
+        .O(\scaler_counter[31]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \scaler_counter[31]_i_5 
+       (.I0(\scaler_counter[31]_i_8_n_0 ),
+        .I1(scaler_counter[23]),
+        .I2(scaler_counter[22]),
+        .I3(scaler_counter[25]),
+        .I4(scaler_counter[24]),
+        .I5(\scaler_counter[31]_i_9_n_0 ),
+        .O(\scaler_counter[31]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \scaler_counter[31]_i_6 
-       (.I0(\scaler_counter[31]_i_13_n_0 ),
-        .I1(scaler_counter[25]),
-        .I2(scaler_counter[24]),
-        .I3(scaler_counter[27]),
-        .I4(scaler_counter[26]),
-        .I5(\scaler_counter[31]_i_14_n_0 ),
+       (.I0(scaler_counter[19]),
+        .I1(scaler_counter[18]),
+        .I2(scaler_counter[21]),
+        .I3(scaler_counter[20]),
         .O(\scaler_counter[31]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hDF)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \scaler_counter[31]_i_7 
-       (.I0(scaler_counter[4]),
-        .I1(scaler_counter[3]),
-        .I2(scaler_counter[1]),
+       (.I0(scaler_counter[11]),
+        .I1(scaler_counter[10]),
+        .I2(scaler_counter[13]),
+        .I3(scaler_counter[12]),
         .O(\scaler_counter[31]_i_7_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \scaler_counter[31]_i_8 
-       (.I0(scaler_counter[31]),
+       (.I0(scaler_counter[27]),
+        .I1(scaler_counter[26]),
+        .I2(scaler_counter[29]),
+        .I3(scaler_counter[28]),
         .O(\scaler_counter[31]_i_8_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     \scaler_counter[31]_i_9 
-       (.I0(scaler_counter[30]),
-        .O(\scaler_counter[31]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[3]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[3]),
-        .O(scaler_counter_0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \scaler_counter[4]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[4]),
-        .O(scaler_counter_0[4]));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[4]_i_3 
-       (.I0(scaler_counter[4]),
-        .O(\scaler_counter[4]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[4]_i_4 
        (.I0(scaler_counter[3]),
-        .O(\scaler_counter[4]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[4]_i_5 
-       (.I0(scaler_counter[2]),
-        .O(\scaler_counter[4]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[4]_i_6 
-       (.I0(scaler_counter[1]),
-        .O(\scaler_counter[4]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+        .I1(scaler_counter[30]),
+        .I2(scaler_counter[31]),
+        .I3(scaler_counter[5]),
+        .I4(scaler_counter[4]),
+        .O(\scaler_counter[31]_i_9_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[3]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[3]),
+        .O(scaler_counter_0[3]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
+    \scaler_counter[4]_i_1 
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[4]),
+        .O(scaler_counter_0[4]));
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
     \scaler_counter[5]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[5]),
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[5]),
         .O(scaler_counter_0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
     \scaler_counter[6]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[6]),
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[6]),
         .O(scaler_counter_0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
     \scaler_counter[7]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[7]),
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[7]),
         .O(scaler_counter_0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
     \scaler_counter[8]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[8]),
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[8]),
         .O(scaler_counter_0[8]));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[8]_i_3 
-       (.I0(scaler_counter[8]),
-        .O(\scaler_counter[8]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[8]_i_4 
-       (.I0(scaler_counter[7]),
-        .O(\scaler_counter[8]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[8]_i_5 
-       (.I0(scaler_counter[6]),
-        .O(\scaler_counter[8]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \scaler_counter[8]_i_6 
-       (.I0(scaler_counter[5]),
-        .O(\scaler_counter[8]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT5 #(
+    .INIT(32'hFFFB0000)) 
     \scaler_counter[9]_i_1 
-       (.I0(\scaler_counter[31]_i_2_n_0 ),
-        .I1(data0[9]),
+       (.I0(scaler_counter[0]),
+        .I1(scaler_counter[2]),
+        .I2(scaler_counter[1]),
+        .I3(\scaler_counter[31]_i_2_n_0 ),
+        .I4(data0[9]),
         .O(scaler_counter_0[9]));
   FDRE #(
     .INIT(1'b0)) 
@@ -2293,13 +2378,6 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaler_counter_0[12]),
         .Q(scaler_counter[12]),
         .R(reset_in));
-  CARRY4 \scaler_counter_reg[12]_i_2 
-       (.CI(\scaler_counter_reg[8]_i_2_n_0 ),
-        .CO({\scaler_counter_reg[12]_i_2_n_0 ,\scaler_counter_reg[12]_i_2_n_1 ,\scaler_counter_reg[12]_i_2_n_2 ,\scaler_counter_reg[12]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[12:9]),
-        .S({\scaler_counter[12]_i_3_n_0 ,\scaler_counter[12]_i_4_n_0 ,\scaler_counter[12]_i_5_n_0 ,\scaler_counter[12]_i_6_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \scaler_counter_reg[13] 
@@ -2332,13 +2410,6 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaler_counter_0[16]),
         .Q(scaler_counter[16]),
         .R(reset_in));
-  CARRY4 \scaler_counter_reg[16]_i_2 
-       (.CI(\scaler_counter_reg[12]_i_2_n_0 ),
-        .CO({\scaler_counter_reg[16]_i_2_n_0 ,\scaler_counter_reg[16]_i_2_n_1 ,\scaler_counter_reg[16]_i_2_n_2 ,\scaler_counter_reg[16]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[16:13]),
-        .S({\scaler_counter[16]_i_3_n_0 ,\scaler_counter[16]_i_4_n_0 ,\scaler_counter[16]_i_5_n_0 ,\scaler_counter[16]_i_6_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \scaler_counter_reg[17] 
@@ -2379,13 +2450,6 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaler_counter_0[20]),
         .Q(scaler_counter[20]),
         .R(reset_in));
-  CARRY4 \scaler_counter_reg[20]_i_2 
-       (.CI(\scaler_counter_reg[16]_i_2_n_0 ),
-        .CO({\scaler_counter_reg[20]_i_2_n_0 ,\scaler_counter_reg[20]_i_2_n_1 ,\scaler_counter_reg[20]_i_2_n_2 ,\scaler_counter_reg[20]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[20:17]),
-        .S({\scaler_counter[20]_i_3_n_0 ,\scaler_counter[20]_i_4_n_0 ,\scaler_counter[20]_i_5_n_0 ,\scaler_counter[20]_i_6_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \scaler_counter_reg[21] 
@@ -2418,13 +2482,6 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaler_counter_0[24]),
         .Q(scaler_counter[24]),
         .R(reset_in));
-  CARRY4 \scaler_counter_reg[24]_i_2 
-       (.CI(\scaler_counter_reg[20]_i_2_n_0 ),
-        .CO({\scaler_counter_reg[24]_i_2_n_0 ,\scaler_counter_reg[24]_i_2_n_1 ,\scaler_counter_reg[24]_i_2_n_2 ,\scaler_counter_reg[24]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[24:21]),
-        .S({\scaler_counter[24]_i_3_n_0 ,\scaler_counter[24]_i_4_n_0 ,\scaler_counter[24]_i_5_n_0 ,\scaler_counter[24]_i_6_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \scaler_counter_reg[25] 
@@ -2457,13 +2514,6 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaler_counter_0[28]),
         .Q(scaler_counter[28]),
         .R(reset_in));
-  CARRY4 \scaler_counter_reg[28]_i_2 
-       (.CI(\scaler_counter_reg[24]_i_2_n_0 ),
-        .CO({\scaler_counter_reg[28]_i_2_n_0 ,\scaler_counter_reg[28]_i_2_n_1 ,\scaler_counter_reg[28]_i_2_n_2 ,\scaler_counter_reg[28]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[28:25]),
-        .S({\scaler_counter[28]_i_3_n_0 ,\scaler_counter[28]_i_4_n_0 ,\scaler_counter[28]_i_5_n_0 ,\scaler_counter[28]_i_6_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \scaler_counter_reg[29] 
@@ -2496,13 +2546,6 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaler_counter_0[31]),
         .Q(scaler_counter[31]),
         .R(reset_in));
-  CARRY4 \scaler_counter_reg[31]_i_3 
-       (.CI(\scaler_counter_reg[28]_i_2_n_0 ),
-        .CO({\NLW_scaler_counter_reg[31]_i_3_CO_UNCONNECTED [3:2],\scaler_counter_reg[31]_i_3_n_2 ,\scaler_counter_reg[31]_i_3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_scaler_counter_reg[31]_i_3_O_UNCONNECTED [3],data0[31:29]}),
-        .S({1'b0,\scaler_counter[31]_i_8_n_0 ,\scaler_counter[31]_i_9_n_0 ,\scaler_counter[31]_i_10_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \scaler_counter_reg[3] 
@@ -2519,13 +2562,6 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaler_counter_0[4]),
         .Q(scaler_counter[4]),
         .R(reset_in));
-  CARRY4 \scaler_counter_reg[4]_i_2 
-       (.CI(1'b0),
-        .CO({\scaler_counter_reg[4]_i_2_n_0 ,\scaler_counter_reg[4]_i_2_n_1 ,\scaler_counter_reg[4]_i_2_n_2 ,\scaler_counter_reg[4]_i_2_n_3 }),
-        .CYINIT(scaler_counter[0]),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[4:1]),
-        .S({\scaler_counter[4]_i_3_n_0 ,\scaler_counter[4]_i_4_n_0 ,\scaler_counter[4]_i_5_n_0 ,\scaler_counter[4]_i_6_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \scaler_counter_reg[5] 
@@ -2558,13 +2594,6 @@ module unity_PWM_generator_0_1_PWM_generator
         .D(scaler_counter_0[8]),
         .Q(scaler_counter[8]),
         .R(reset_in));
-  CARRY4 \scaler_counter_reg[8]_i_2 
-       (.CI(\scaler_counter_reg[4]_i_2_n_0 ),
-        .CO({\scaler_counter_reg[8]_i_2_n_0 ,\scaler_counter_reg[8]_i_2_n_1 ,\scaler_counter_reg[8]_i_2_n_2 ,\scaler_counter_reg[8]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(data0[8:5]),
-        .S({\scaler_counter[8]_i_3_n_0 ,\scaler_counter[8]_i_4_n_0 ,\scaler_counter[8]_i_5_n_0 ,\scaler_counter[8]_i_6_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \scaler_counter_reg[9] 
