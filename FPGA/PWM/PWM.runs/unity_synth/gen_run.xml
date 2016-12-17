@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="unity_synth" LaunchPart="xc7z010clg225-1" LaunchTime="1481906529">
-  <File Type="RDS-UTIL-PB" Name="unity_wrapper_utilization_synth.pb"/>
+<GenRun Id="unity_synth" LaunchPart="xc7z010clg225-1" LaunchTime="1481964377">
+  <File Type="VDS-TIMING-PB" Name="unity_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="unity_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="unity_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="unity_wrapper_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="unity_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="unity_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="unity_wrapper.vds"/>
-  <File Type="VDS-TIMING-PB" Name="unity_wrapper_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="unity_wrapper.tcl"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="unity_wrapper_timing_summary_synth.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/unity_link/Synchronizer.vhd">
@@ -431,6 +431,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/SPI_Master.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="unity_wrapper"/>
@@ -459,29 +466,29 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="unity_xlconstant_1_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_Toggler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_PWM_generator_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_DIR_SENSE_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_STATE_CONTROLLER_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_unity_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_PWM_smoother_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_VECTOR_INV_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_UNSIGNED_TO_SIGNED_CONV_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_Debouncer_5_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_PID_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_inverter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_PWM_generator_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_period_smoother_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_SIGNED_TO_UNSIGNED_CONV_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_SPEED_OBSERVER_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_OL_BLDC_Stepper_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_STARTUP_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_PID_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_PWM_generator_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_inverter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_xlconstant_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_Toggler_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_inverter_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_PULSER_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_DIR_CTRL_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_inverter_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_SPEED_OBSERVER_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_SIGNED_TO_UNSIGNED_CONV_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_UNSIGNED_TO_SIGNED_CONV_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_DIR_SENSE_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_unity_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_STATE_CONTROLLER_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_STARTUP_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_Debouncer_5_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_period_smoother_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_PWM_smoother_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_VECTOR_INV_0_0"/>
 </GenRun>

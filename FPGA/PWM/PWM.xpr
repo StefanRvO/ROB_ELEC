@@ -32,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="te0726_m"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="416"/>
+    <Option Name="WTXSimLaunchSim" Val="417"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -391,119 +391,31 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_SIGNED_TO_UNSIGNED_CONV_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_SIGNED_TO_UNSIGNED_CONV_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PWM_smoother_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PWM_smoother_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_UNSIGNED_TO_SIGNED_CONV_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_UNSIGNED_TO_SIGNED_CONV_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PULSER_0_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PULSER_0_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_SPEED_OBSERVER_0_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_BLDC_SPEED_OBSERVER_0_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_DIR_CTRL_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_BLDC_DIR_CTRL_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_1_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_vector_mux_1_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.xci">
-          <Proxy FileSetName="unity_PWM_smoother_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_8_0/unity_xlslice_8_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_7_0/unity_xlslice_7_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_vector_mux_1_1/unity_vector_mux_1_1.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_1_3/unity_xlslice_1_3.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PID_0_0/unity_PID_0_0.xci">
-          <Proxy FileSetName="unity_PID_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_1_1/unity_xlslice_1_1.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PULSER_0_1/unity_PULSER_0_1.xci">
-          <Proxy FileSetName="unity_PULSER_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_SPEED_OBSERVER_0_1/unity_BLDC_SPEED_OBSERVER_0_1.xci">
-          <Proxy FileSetName="unity_BLDC_SPEED_OBSERVER_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.xci">
-          <Proxy FileSetName="unity_BLDC_DIR_CTRL_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_vector_mux_1_0/unity_vector_mux_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconstant_1_2/unity_xlconstant_1_2.xci">
-          <Proxy FileSetName="unity_xlconstant_1_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_STATE_CONTROLLER_0_0/unity_BLDC_STATE_CONTROLLER_0_0.xci">
-          <Proxy FileSetName="unity_BLDC_STATE_CONTROLLER_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.xci">
-          <Proxy FileSetName="unity_DIR_SENSE_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_VECTOR_INV_0_0/unity_VECTOR_INV_0_0.xci">
-          <Proxy FileSetName="unity_VECTOR_INV_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_1_0/unity_xlslice_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_0_1/unity_xlslice_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_0_0/unity_xlslice_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconcat_0_1/unity_xlconcat_0_1.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_vector_mux_0_1/unity_vector_mux_0_1.xci">
-          <Proxy FileSetName="unity_vector_mux_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_period_smoother_0_0/unity_period_smoother_0_0.xci">
-          <Proxy FileSetName="unity_period_smoother_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_inverter_0_1/unity_inverter_0_1.xci">
-          <Proxy FileSetName="unity_inverter_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Debouncer_5_1/unity_Debouncer_5_1.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.xci">
-          <Proxy FileSetName="unity_BLDC_STARTUP_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_inverter_1_0/unity_inverter_1_0.xci">
-          <Proxy FileSetName="unity_inverter_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Toggler_0_0/unity_Toggler_0_0.xci">
-          <Proxy FileSetName="unity_Toggler_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Debouncer_5_0/unity_Debouncer_5_0.xci">
-          <Proxy FileSetName="unity_Debouncer_5_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.xci">
-          <Proxy FileSetName="unity_OL_BLDC_Stepper_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.xci">
-          <Proxy FileSetName="unity_PWM_generator_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.xci">
-          <Proxy FileSetName="unity_unity_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.hwdef"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity.hwh"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_Debouncer_5_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_OL_BLDC_Stepper_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_OL_BLDC_Stepper_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PWM_generator_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PWM_generator_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_unity_ctrl_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_unity_ctrl_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_1_0.xml"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_1.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PWM_generator_0_1.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_STATE_CONTROLLER_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_STATE_CONTROLLER_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_STATE_CONTROLLER_0_0_sim_netlist.vhdl"/>
@@ -520,11 +432,14 @@
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_DIR_SENSE_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_VECTOR_INV_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_VECTOR_INV_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_1_1.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PID_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PID_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_0_1.xml"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_vector_mux_0_1.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_0_1_sim_netlist.vhdl"/>
@@ -540,14 +455,18 @@
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_period_smoother_0_0_stub.v"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_period_smoother_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_inverter_0_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_inverter_0_1_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_inverter_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_SIGNED_TO_UNSIGNED_CONV_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_SIGNED_TO_UNSIGNED_CONV_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PWM_smoother_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_smoother_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PWM_smoother_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_UNSIGNED_TO_SIGNED_CONV_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_UNSIGNED_TO_SIGNED_CONV_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_1.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_Debouncer_5_1.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_STARTUP_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_STARTUP_0_0.vhd"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_STARTUP_0_0_sim_netlist.vhdl"/>
@@ -575,37 +494,132 @@
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_0_sim_netlist.v"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_0_stub.vhdl"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_Debouncer_5_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_Debouncer_5_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_OL_BLDC_Stepper_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_unity_ctrl_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_vector_mux_1_1.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_VECTOR_INV_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_VECTOR_INV_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.xci">
+          <Proxy FileSetName="unity_unity_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.xci">
+          <Proxy FileSetName="unity_PWM_generator_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.xci">
+          <Proxy FileSetName="unity_OL_BLDC_Stepper_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Debouncer_5_0/unity_Debouncer_5_0.xci">
+          <Proxy FileSetName="unity_Debouncer_5_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Toggler_0_0/unity_Toggler_0_0.xci">
+          <Proxy FileSetName="unity_Toggler_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_inverter_1_0/unity_inverter_1_0.xci">
+          <Proxy FileSetName="unity_inverter_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.xci">
+          <Proxy FileSetName="unity_BLDC_STARTUP_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_Debouncer_5_1/unity_Debouncer_5_1.xci">
+          <Proxy FileSetName="unity_Debouncer_5_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_inverter_0_1/unity_inverter_0_1.xci">
+          <Proxy FileSetName="unity_inverter_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.xci">
+          <Proxy FileSetName="unity_SIGNED_TO_UNSIGNED_CONV_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.xci">
+          <Proxy FileSetName="unity_PWM_smoother_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.xci">
+          <Proxy FileSetName="unity_UNSIGNED_TO_SIGNED_CONV_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_8_0/unity_xlslice_8_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_7_0/unity_xlslice_7_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_vector_mux_1_1/unity_vector_mux_1_1.xci">
+          <Proxy FileSetName="unity_vector_mux_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_1_3/unity_xlslice_1_3.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PID_0_0/unity_PID_0_0.xci">
+          <Proxy FileSetName="unity_PID_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_1_1/unity_xlslice_1_1.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PULSER_0_1/unity_PULSER_0_1.xci">
+          <Proxy FileSetName="unity_PULSER_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_SPEED_OBSERVER_0_1/unity_BLDC_SPEED_OBSERVER_0_1.xci">
+          <Proxy FileSetName="unity_BLDC_SPEED_OBSERVER_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.xci">
+          <Proxy FileSetName="unity_BLDC_DIR_CTRL_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_vector_mux_1_0/unity_vector_mux_1_0.xci">
+          <Proxy FileSetName="unity_vector_mux_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconstant_1_2/unity_xlconstant_1_2.xci">
+          <Proxy FileSetName="unity_xlconstant_1_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.xci">
+          <Proxy FileSetName="unity_PWM_generator_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_period_smoother_0_0/unity_period_smoother_0_0.xci">
+          <Proxy FileSetName="unity_period_smoother_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_vector_mux_0_1/unity_vector_mux_0_1.xci">
+          <Proxy FileSetName="unity_vector_mux_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlconcat_0_1/unity_xlconcat_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_0_0/unity_xlslice_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_0_1/unity_xlslice_0_1.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_xlslice_1_0/unity_xlslice_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_VECTOR_INV_0_0/unity_VECTOR_INV_0_0.xci">
+          <Proxy FileSetName="unity_VECTOR_INV_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.xci">
+          <Proxy FileSetName="unity_DIR_SENSE_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="ip/unity_BLDC_STATE_CONTROLLER_0_0/unity_BLDC_STATE_CONTROLLER_0_0.xci">
+          <Proxy FileSetName="unity_BLDC_STATE_CONTROLLER_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PULSER_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PULSER_0_1_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PULSER_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_SPEED_OBSERVER_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_SPEED_OBSERVER_0_1_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_BLDC_SPEED_OBSERVER_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0.xml"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_BLDC_DIR_CTRL_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_sim_netlist.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_BLDC_DIR_CTRL_0_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_BLDC_DIR_CTRL_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_UNSIGNED_TO_SIGNED_CONV_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity.hwh"/>
         <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_vector_mux_1_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PID_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PID_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PID_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_unity_ctrl_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_unity_ctrl_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_OL_BLDC_Stepper_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_OL_BLDC_Stepper_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0.xml"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PWM_generator_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="unity_PWM_generator_0_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PWM_generator_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_vector_mux_1_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_vector_mux_1_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_vector_mux_1_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_SIGNED_TO_UNSIGNED_CONV_0_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_PWM_generator_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_Debouncer_5_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_PWM_generator_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_Debouncer_5_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="sim/unity_inverter_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="synth/unity_inverter_0_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hw_handoff/unity_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="unity.bd" FileRelPathName="hdl/unity.hwdef"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/unity/hdl/unity_wrapper.vhd">
         <FileInfo>
@@ -671,13 +685,13 @@
         </FileInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_SPI_Master_0_0.xml"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="sim/design_1_SPI_Master_0_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_SPI_Master_0_0/design_1_SPI_Master_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.vhd"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.vhd"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_SPI_Master_0_0/design_1_SPI_Master_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
         <FileInfo>
@@ -885,12 +899,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="unity_inverter_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_inverter_0_1">
-      <Config>
-        <Option Name="TopModule" Val="unity_inverter_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="unity_inverter_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_inverter_1_0">
       <Config>
         <Option Name="TopModule" Val="unity_inverter_1_0"/>
@@ -930,6 +938,48 @@
     <FileSet Name="unity_PWM_smoother_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_PWM_smoother_0_0">
       <Config>
         <Option Name="TopModule" Val="unity_PWM_smoother_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_Debouncer_5_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_Debouncer_5_1">
+      <Config>
+        <Option Name="TopModule" Val="unity_Debouncer_5_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_inverter_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_inverter_0_1">
+      <Config>
+        <Option Name="TopModule" Val="unity_inverter_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_SIGNED_TO_UNSIGNED_CONV_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_SIGNED_TO_UNSIGNED_CONV_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_SIGNED_TO_UNSIGNED_CONV_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_UNSIGNED_TO_SIGNED_CONV_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_UNSIGNED_TO_SIGNED_CONV_0_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_UNSIGNED_TO_SIGNED_CONV_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_vector_mux_1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_vector_mux_1_1">
+      <Config>
+        <Option Name="TopModule" Val="unity_vector_mux_1_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_vector_mux_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_vector_mux_1_0">
+      <Config>
+        <Option Name="TopModule" Val="unity_vector_mux_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="unity_PWM_generator_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/unity_PWM_generator_0_1">
+      <Config>
+        <Option Name="TopModule" Val="unity_PWM_generator_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -1052,14 +1102,6 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="unity_inverter_0_1_synth_1" Type="Ft3:Synth" SrcSet="unity_inverter_0_1" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_inverter_0_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="unity_inverter_1_0_synth_1" Type="Ft3:Synth" SrcSet="unity_inverter_1_0" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_inverter_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
@@ -1116,6 +1158,76 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="unity_Debouncer_5_1_synth_1" Type="Ft3:Synth" SrcSet="unity_Debouncer_5_1" Part="xc7z010clg225-1" ConstrsSet="unity_Debouncer_5_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_Debouncer_5_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_inverter_0_1_synth_1" Type="Ft3:Synth" SrcSet="unity_inverter_0_1" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_inverter_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_SIGNED_TO_UNSIGNED_CONV_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_SIGNED_TO_UNSIGNED_CONV_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_SIGNED_TO_UNSIGNED_CONV_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_SIGNED_TO_UNSIGNED_CONV_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_UNSIGNED_TO_SIGNED_CONV_0_0_synth_1" Type="Ft3:Synth" SrcSet="unity_UNSIGNED_TO_SIGNED_CONV_0_0" Part="xc7z010clg225-1" ConstrsSet="unity_UNSIGNED_TO_SIGNED_CONV_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_UNSIGNED_TO_SIGNED_CONV_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_vector_mux_1_1_synth_1" Type="Ft3:Synth" SrcSet="unity_vector_mux_1_1" Part="xc7z010clg225-1" ConstrsSet="unity_vector_mux_1_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_vector_mux_1_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_vector_mux_1_0_synth_1" Type="Ft3:Synth" SrcSet="unity_vector_mux_1_0" Part="xc7z010clg225-1" ConstrsSet="unity_vector_mux_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_vector_mux_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_PWM_generator_0_1_synth_1" Type="Ft3:Synth" SrcSet="unity_PWM_generator_0_1" Part="xc7z010clg225-1" ConstrsSet="unity_PWM_generator_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/unity_PWM_generator_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="unity_impl" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/unity_impl" SynthRun="unity_synth" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
@@ -1128,9 +1240,9 @@
         <Step Id="route_design"/>
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream">
-          <Option Id="RawbitFileBool">1</Option>
           <Option Id="MaskFileBool">1</Option>
           <Option Id="BinFile">1</Option>
+          <Option Id="RawbitFileBool">1</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1301,21 +1413,6 @@
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="unity_inverter_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_0_1" Description="Default settings for Implementation." SynthRun="unity_inverter_0_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="unity_inverter_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_1_0" Description="Default settings for Implementation." SynthRun="unity_inverter_1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
@@ -1409,6 +1506,125 @@
     <Run Id="unity_PWM_smoother_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_PWM_smoother_0_0" Description="Default settings for Implementation." SynthRun="unity_PWM_smoother_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_Debouncer_5_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_Debouncer_5_1" Description="Default settings for Implementation." SynthRun="unity_Debouncer_5_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_inverter_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_inverter_0_1" Description="Default settings for Implementation." SynthRun="unity_inverter_0_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_SIGNED_TO_UNSIGNED_CONV_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_SIGNED_TO_UNSIGNED_CONV_0_0" Description="Default settings for Implementation." SynthRun="unity_SIGNED_TO_UNSIGNED_CONV_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_UNSIGNED_TO_SIGNED_CONV_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_UNSIGNED_TO_SIGNED_CONV_0_0" Description="Default settings for Implementation." SynthRun="unity_UNSIGNED_TO_SIGNED_CONV_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_vector_mux_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_vector_mux_1_1" Description="Default settings for Implementation." SynthRun="unity_vector_mux_1_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_vector_mux_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_vector_mux_1_0" Description="Default settings for Implementation." SynthRun="unity_vector_mux_1_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="unity_PWM_generator_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="unity_PWM_generator_0_1" Description="Default settings for Implementation." SynthRun="unity_PWM_generator_0_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

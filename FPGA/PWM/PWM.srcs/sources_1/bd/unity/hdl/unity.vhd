@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
---Date        : Sat Dec 17 02:32:30 2016
+--Date        : Sat Dec 17 09:46:00 2016
 --Host        : Leviathan running 64-bit Arch Linux
 --Command     : generate_target unity.bd
 --Design      : unity
@@ -526,12 +526,6 @@ architecture STRUCTURE of unity is
     out_sig : out STD_LOGIC
   );
   end component unity_inverter_1_0;
-  component unity_inverter_0_1 is
-  port (
-    in_sig : in STD_LOGIC;
-    out_sig : out STD_LOGIC
-  );
-  end component unity_inverter_0_1;
   component unity_PULSER_0_1 is
   port (
     clk_in : in STD_LOGIC;
@@ -607,6 +601,12 @@ architecture STRUCTURE of unity is
     OUT_SIG : out STD_LOGIC
   );
   end component unity_Debouncer_5_1;
+  component unity_inverter_0_1 is
+  port (
+    in_sig : in STD_LOGIC;
+    out_sig : out STD_LOGIC
+  );
+  end component unity_inverter_0_1;
   component unity_vector_mux_1_1 is
   port (
     in_vec1 : in STD_LOGIC_VECTOR ( 7 downto 0 );

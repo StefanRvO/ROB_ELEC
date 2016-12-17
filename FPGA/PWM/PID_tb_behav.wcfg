@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="135600000001fs"></ZoomEndTime>
-      <Cursor1Time time="22321000000fs"></Cursor1Time>
+      <ZoomEndTime time="156600000001fs"></ZoomEndTime>
+      <Cursor1Time time="68200000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="173"></NameColumnWidth>
-      <ValueColumnWidth column_width="159"></ValueColumnWidth>
+      <ValueColumnWidth column_width="157"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
+   <WVObjectSize size="12" />
    <wvobject type="array" fp_name="/SPI_Master_tb/uut/IN_DATA">
       <obj_property name="ElementShortName">IN_DATA[15:0]</obj_property>
       <obj_property name="ObjectShortName">IN_DATA[15:0]</obj_property>
@@ -67,37 +67,5 @@
    <wvobject type="array" fp_name="/SPI_Master_tb/uut/DATA_OUT_BUF">
       <obj_property name="ElementShortName">DATA_OUT_BUF[15:0]</obj_property>
       <obj_property name="ObjectShortName">DATA_OUT_BUF[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/scaled_CLK">
-      <obj_property name="ElementShortName">scaled_CLK</obj_property>
-      <obj_property name="ObjectShortName">scaled_CLK</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SS_buf">
-      <obj_property name="ElementShortName">SS_buf</obj_property>
-      <obj_property name="ObjectShortName">SS_buf</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/SPI_Master_tb/uut/bit_counter">
-      <obj_property name="ElementShortName">bit_counter</obj_property>
-      <obj_property name="ObjectShortName">bit_counter</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/SPI_Master_tb/uut/SCLK_counter_delay">
-      <obj_property name="ElementShortName">SCLK_counter_delay</obj_property>
-      <obj_property name="ObjectShortName">SCLK_counter_delay</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SCLK_buf">
-      <obj_property name="ElementShortName">SCLK_buf</obj_property>
-      <obj_property name="ObjectShortName">SCLK_buf</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SCLK_prev">
-      <obj_property name="ElementShortName">SCLK_prev</obj_property>
-      <obj_property name="ObjectShortName">SCLK_prev</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/SPI_Master_tb/uut/scaler_counter">
-      <obj_property name="ElementShortName">scaler_counter</obj_property>
-      <obj_property name="ObjectShortName">scaler_counter</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/SPI_Master_tb/IN_DATA">
-      <obj_property name="ElementShortName">IN_DATA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">IN_DATA[15:0]</obj_property>
    </wvobject>
 </wave_config>
