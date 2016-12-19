@@ -1,20 +1,42 @@
 {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port MOTOR_BTN_IN -pg 1 -y 290 -defaultsOSRD
-preplace port DDR -pg 1 -y 20 -defaultsOSRD
-preplace port SW_B_in -pg 1 -y 20 -defaultsOSRD
-preplace port MOTOR_INHIBIT -pg 1 -y 280 -defaultsOSRD
-preplace port SW_A_in -pg 1 -y 340 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 0 -defaultsOSRD
-preplace port MOTOR_OUT -pg 1 -y 160 -defaultsOSRD
-preplace port reset_in -pg 1 -y 220 -defaultsOSRD
-preplace portBus counter_out -pg 1 -y 90 -defaultsOSRD
-preplace inst SPI_Master_0 -pg 1 -lvl 2 -y 310 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 110 -defaultsOSRD
-preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 70 1080J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 10 20 400
-levelinfo -pg 1 -10 210 920 1700 -top -110 -bot 410
+preplace port tx_o -pg 1 -y 100 -defaultsOSRD
+preplace port SCLK -pg 1 -y 440 -defaultsOSRD
+preplace port rx_i -pg 1 -y 120 -defaultsOSRD
+preplace port SS -pg 1 -y 420 -defaultsOSRD
+preplace port MISO -pg 1 -y 510 -defaultsOSRD
+preplace port MOSI -pg 1 -y 400 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 310 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 460 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -y 50 -defaultsOSRD
+preplace inst SPI_Master_0 -pg 1 -lvl 4 -y 500 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -y 60 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 3 -y 180 -defaultsOSRD
+preplace inst AD7887_0 -pg 1 -lvl 2 -y 430 -defaultsOSRD
+preplace inst unity_ctrl_0 -pg 1 -lvl 4 -y 180 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 350 -defaultsOSRD
+preplace netloc xlconstant_1_dout 1 2 1 750
+preplace netloc SPI_Master_0_MOSI 1 4 1 1380
+preplace netloc xlconcat_1_dout 1 3 1 990
+preplace netloc SPI_Master_0_SS 1 4 1 1390
+preplace netloc SPI_Master_0_SCLK 1 4 1 1400
+preplace netloc SPI_Master_0_OUT_DATA 1 1 4 430 350 NJ 350 NJ 350 1360
+preplace netloc xlconstant_0_dout 1 3 1 990
+preplace netloc AD7887_0_X_AXIS_OUT 1 2 1 760
+preplace netloc xlconcat_0_dout 1 3 1 1030
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 400J 320 NJ 320 NJ 320 1360J
+preplace netloc unity_ctrl_0_tx_o 1 4 1 NJ
+preplace netloc MISO_1 1 0 4 20J 520 NJ 520 NJ 520 N
+preplace netloc AD7887_0_Y_AXIS_OUT 1 2 1 770
+preplace netloc Net1 1 3 2 1040 50 1360
+preplace netloc Net 1 1 3 410 310 NJ 310 1020
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 440 400
+preplace netloc AD7887_0_DATA_OUT 1 2 2 780J 400 1010
+preplace netloc SPI_Master_0_Transfer_done 1 1 4 420 330 NJ 330 NJ 330 1370
+preplace netloc AD7887_0_SAMPLE_PULSER 1 2 2 790J 410 1000
+preplace netloc rx_i_1 1 0 4 NJ 120 NJ 120 NJ 120 NJ
+levelinfo -pg 1 0 210 590 890 1200 1420 -top -60 -bot 680
 ",
 }
 {

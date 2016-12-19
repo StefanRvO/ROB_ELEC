@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="unity_impl" LaunchPart="xc7z010clg225-1" LaunchTime="1481964377">
+<GenRun Id="unity_impl" LaunchPart="xc7z010clg225-1" LaunchTime="1482163749">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="unity_wrapper.drc"/>
   <File Type="BG-BGN" Name="unity_wrapper.bgn"/>
@@ -392,6 +392,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/AND_GATE.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/unity/unity.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -401,6 +407,42 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/unity/hdl/unity_wrapper.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/AD7887.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SPI_Master.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/spi_emb.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -454,28 +496,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/AND_GATE.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/BLDC_SENSE_FIXER.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -483,7 +503,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/SPI_Master.vhd">
+    <File Path="$PSRCDIR/sources_1/new/AND.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -525,34 +545,46 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream">
-      <Option Id="RawbitFileBool">1</Option>
       <Option Id="MaskFileBool">1</Option>
       <Option Id="BinFile">1</Option>
+      <Option Id="RawbitFileBool">1</Option>
     </Step>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="unity_PWM_smoother_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_PWM_generator_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_UNSIGNED_TO_SIGNED_CONV_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_Debouncer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_unity_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_Debouncer_5_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_SPI_Master_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_AD7887_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xlconcat_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xlconstant_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_unity_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_AND_GATE_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_xlconstant_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xlconcat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_xlconcat_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_UNSIGNED_TO_SIGNED_CONV_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_SIGNED_TO_UNSIGNED_CONV_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_PID_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_inverter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_xlconstant_1_2"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_PWM_generator_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_period_smoother_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_SIGNED_TO_UNSIGNED_CONV_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_inverter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_inverter_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_SPEED_OBSERVER_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_1_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_OL_BLDC_Stepper_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_xlconstant_1_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_Toggler_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_inverter_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_PULSER_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_OL_BLDC_Stepper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_Toggler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_DIR_CTRL_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_DIR_SENSE_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_unity_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_STATE_CONTROLLER_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_STARTUP_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_Debouncer_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_BLDC_STARTUP_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_vector_mux_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="unity_PWM_smoother_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="unity_VECTOR_INV_0_0"/>
 </GenRun>

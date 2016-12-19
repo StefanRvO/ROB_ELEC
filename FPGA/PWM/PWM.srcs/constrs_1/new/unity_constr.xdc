@@ -61,3 +61,4 @@ set_property PACKAGE_PIN N14 [get_ports SW_A_in]
 set_property PACKAGE_PIN L14 [get_ports SW_B_in]
 set_property IOSTANDARD LVCMOS33 [get_ports SW_B_in]
 set_property IOSTANDARD LVCMOS33 [get_ports SW_A_in]
+

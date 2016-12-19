@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity SPI_Master is
     GENERIC(SS_ACTIVE : STD_LOGIC := '0';
             SIZE : integer range 0 to 1024 := 16;
-            SS_TRANSF_DELAY : integer range 0  to 1000000000 := 1; --Number of SCLK cycles between SS setup and data sending and aqusition
+            SS_TRANSF_DELAY : integer range 0  to 1000000000 := 0; --Number of SCLK cycles between SS setup and data sending and aqusition
             SS_CLK_DELAY : integer range 0 to 1000000000 := 2; --number of clk_in cycles between SS setup and SCLK begin
             SCLK_FREQ : integer range 1 to 1000000000 := 50000;
             CLK_IN_FREQ : integer range 1 to 1000000000 := 200000000);

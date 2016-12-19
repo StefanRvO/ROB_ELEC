@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date             : Sat Dec 17 09:52:07 2016
+| Date             : Mon Dec 19 17:13:24 2016
 | Host             : Leviathan running 64-bit Arch Linux
 | Command          : report_power -file unity_wrapper_power_routed.rpt -pb unity_wrapper_power_summary_routed.pb -rpx unity_wrapper_power_routed.rpx
 | Design           : unity_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.015 |
-| Dynamic (W)              | 0.896 |
+| Total On-Chip Power (W)  | 1.023 |
+| Dynamic (W)              | 0.903 |
 | Device Static (W)        | 0.119 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 73.3  |
-| Junction Temperature (C) | 36.7  |
+| Max Ambient (C)          | 73.2  |
+| Junction Temperature (C) | 36.8  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,22 +49,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.027 |        8 |       --- |             --- |
-| Slice Logic              |     0.024 |     5458 |       --- |             --- |
-|   LUT as Logic           |     0.019 |     2883 |     17600 |           16.38 |
-|   CARRY4                 |     0.005 |      279 |      4400 |            6.34 |
-|   Register               |    <0.001 |     1510 |     35200 |            4.29 |
+| Clocks                   |     0.029 |        8 |       --- |             --- |
+| Slice Logic              |     0.024 |     5626 |       --- |             --- |
+|   LUT as Logic           |     0.019 |     2890 |     17600 |           16.42 |
+|   CARRY4                 |     0.005 |      294 |      4400 |            6.68 |
+|   Register               |    <0.001 |     1604 |     35200 |            4.56 |
 |   LUT as Distributed RAM |    <0.001 |       68 |      6000 |            1.13 |
-|   F7/F8 Muxes            |    <0.001 |        6 |     17600 |            0.03 |
-|   Others                 |     0.000 |      187 |       --- |             --- |
-| Signals                  |     0.018 |     5031 |       --- |             --- |
+|   F7/F8 Muxes            |    <0.001 |       38 |     17600 |            0.22 |
+|   Others                 |     0.000 |      189 |       --- |             --- |
+| Signals                  |     0.021 |     5130 |       --- |             --- |
 | Block RAM                |    <0.001 |        1 |        60 |            1.67 |
 | MMCM                     |     0.117 |        1 |         2 |           50.00 |
 | DSPs                     |     0.036 |       20 |        80 |           25.00 |
-| I/O                      |     0.031 |       22 |        54 |           40.74 |
+| I/O                      |     0.034 |       21 |        54 |           38.89 |
 | PS7                      |     0.642 |        1 |       --- |             --- |
 | Static Power             |     0.119 |          |           |                 |
-| Total                    |     1.015 |          |           |                 |
+| Total                    |     1.023 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.112 |       0.107 |      0.005 |
+| Vccint    |       1.000 |     0.117 |       0.112 |      0.005 |
 | Vccaux    |       1.800 |     0.077 |       0.066 |      0.011 |
-| Vcco33    |       3.300 |     0.010 |       0.009 |      0.001 |
+| Vcco33    |       3.300 |     0.011 |       0.010 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -154,29 +154,43 @@ Table of Contents
 +-------------------------------------------------------------+-----------+
 | Name                                                        | Power (W) |
 +-------------------------------------------------------------+-----------+
-| unity_wrapper                                               |     0.896 |
-|   unity_i                                                   |     0.865 |
-|     BLDC_MOTOR_CONTROL                                      |     0.015 |
+| unity_wrapper                                               |     0.903 |
+|   unity_i                                                   |     0.870 |
+|     BLDC_MOTOR_CONTROL                                      |     0.019 |
 |       BLDC_DIR_CTRL_0                                       |    <0.001 |
+|       BLDC_SPEED_OBSERVER_0                                 |     0.002 |
+|         U0                                                  |     0.002 |
 |       BLDC_STARTUP_0                                        |     0.003 |
 |         U0                                                  |     0.003 |
 |       BLDC_STATE_CONTROLLER_0                               |    <0.001 |
 |         U0                                                  |    <0.001 |
 |       DIR_SENSE_0                                           |    <0.001 |
 |         U0                                                  |    <0.001 |
+|       Direction_Changer                                     |     0.004 |
+|         Debouncer_0                                         |    <0.001 |
+|           U0                                                |    <0.001 |
+|         PWM_smoother_0                                      |     0.002 |
+|           U0                                                |     0.002 |
+|         SIGNED_TO_UNSIGNED_CONV_0                           |    <0.001 |
+|           U0                                                |    <0.001 |
+|         UNSIGNED_TO_SIGNED_CONV_0                           |    <0.001 |
+|           U0                                                |    <0.001 |
+|         vector_mux_0                                        |     0.000 |
+|           U0                                                |     0.000 |
+|         xlconcat_0                                          |     0.000 |
+|         xlslice_0                                           |     0.000 |
+|         xlslice_3                                           |     0.000 |
+|         xlslice_4                                           |     0.000 |
+|         xlslice_5                                           |     0.000 |
+|         xlslice_6                                           |     0.000 |
+|         xlslice_7                                           |     0.000 |
 |       OL_BLDC_Stepper_0                                     |    <0.001 |
 |         U0                                                  |    <0.001 |
 |       PWM_generator_0                                       |     0.003 |
 |         U0                                                  |     0.003 |
-|       PWM_smoother_0                                        |     0.002 |
-|         U0                                                  |     0.002 |
-|       SIGNED_TO_UNSIGNED_CONV_0                             |    <0.001 |
-|         U0                                                  |    <0.001 |
 |       STARTUP_PWM_MOD                                       |     0.003 |
 |         STARTUP_PWM                                         |     0.003 |
 |           U0                                                |     0.003 |
-|       UNSIGNED_TO_SIGNED_CONV_0                             |    <0.001 |
-|         U0                                                  |    <0.001 |
 |       VECTOR_INV_0                                          |     0.000 |
 |         U0                                                  |     0.000 |
 |       period_smoother_0                                     |     0.003 |
@@ -192,8 +206,8 @@ Table of Contents
 |       U0                                                    |    <0.001 |
 |     Debouncer_6                                             |    <0.001 |
 |       U0                                                    |    <0.001 |
-|     PID_0                                                   |     0.081 |
-|       U0                                                    |     0.081 |
+|     PID_0                                                   |     0.083 |
+|       U0                                                    |     0.083 |
 |     PULSER_0                                                |    <0.001 |
 |       U0                                                    |    <0.001 |
 |     Toggler_0                                               |    <0.001 |
@@ -205,10 +219,10 @@ Table of Contents
 |     unity_ctrl_0                                            |     0.125 |
 |       U0                                                    |     0.125 |
 |         UNITY                                               |     0.124 |
-|           uart_wb_link_inst                                 |     0.007 |
-|             uart_gab_link_inst                              |     0.007 |
+|           uart_wb_link_inst                                 |     0.006 |
+|             uart_gab_link_inst                              |     0.006 |
 |               gab_link_al_fsm_inst                          |     0.003 |
-|                 SUB_GEN.subscription_manager_inst           |     0.001 |
+|                 SUB_GEN.subscription_manager_inst           |    <0.001 |
 |                   SG_GEN[0].sg                              |    <0.001 |
 |                     ram_reg_0_15_0_0                        |    <0.001 |
 |                     ram_reg_0_15_1_1                        |    <0.001 |
@@ -262,7 +276,7 @@ Table of Contents
 |                 uart_gab_link_dl_ascii_enc_inst             |    <0.001 |
 |                 uart_gab_link_dl_tx_fsm_inst                |    <0.001 |
 |                   CHECKSUM_CRC_GEN.checksum_crc8            |    <0.001 |
-|               uart_inst                                     |     0.002 |
+|               uart_inst                                     |     0.001 |
 |                 baudrate_gen_inst                           |    <0.001 |
 |                 rx_fifo_inst                                |    <0.001 |
 |                   fifo_ctrl_inst                            |    <0.001 |

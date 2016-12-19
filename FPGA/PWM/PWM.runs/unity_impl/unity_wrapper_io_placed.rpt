@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-| Date         : Sat Dec 17 09:50:15 2016
+| Date         : Mon Dec 19 17:11:56 2016
 | Host         : Leviathan running 64-bit Arch Linux
 | Command      : report_io -file unity_wrapper_io_placed.rpt
 | Design       : unity_wrapper
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            57 |
+|            56 |
 +---------------+
 
 
@@ -133,7 +133,7 @@ Table of Contents
 | G8         |                   | Dedicated  | VREFN_0                 | XADC        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |
 | G9         |                   | Dedicated  | TCK_0                   | Config      |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |
 | G10        |                   |            | VCCINT                  | VCCINT      |             |         |            |      |                     |                      |         |            |           |          |      |                  |
-| G11        | PWM_out[0]        | High Range | IO_L1P_T0_34            | TRISTATE    | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| G11        |                   | High Range | IO_L1P_T0_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | G12        |                   | High Range | IO_L2P_T0_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | G13        |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | G14        |                   | High Range | IO_L3P_T0_DQS_PUDC_B_34 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
@@ -148,10 +148,10 @@ Table of Contents
 | H8         |                   | Dedicated  | VN_0                    | XADC        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |
 | H9         |                   |            | VCCAUX                  | VCCAUX      |             |         |            |      |                     |                      |    1.80 |            |           |          |      |                  |
 | H10        |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
-| H11        | PHASE_C_out       | High Range | IO_L6P_T0_34            | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| H11        | PHASE_C_out[0]    | High Range | IO_L6P_T0_34            | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | H12        | tx_o              | High Range | IO_L1N_T0_34            | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
-| H13        | PHASE_CH_out      | High Range | IO_L2N_T0_34            | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
-| H14        | PHASE_BH_out      | High Range | IO_L3N_T0_DQS_34        | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| H13        | PHASE_CH_out[0]   | High Range | IO_L2N_T0_34            | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| H14        | PHASE_BH_out[0]   | High Range | IO_L3N_T0_DQS_34        | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | H15        |                   | High Range | VCCO_35                 | VCCO        |             |      35 |            |      |                     |                      |   any** |            |           |          |      |                  |
 | J1         |                   |            | PS_DDR_A10_502          | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |
 | J2         |                   |            | VCCO_DDR_502            | VCCO        |             |         |            |      |                     |                      |   any** |            |           |          |      |                  |
@@ -165,7 +165,7 @@ Table of Contents
 | J10        |                   |            | VCCINT                  | VCCINT      |             |         |            |      |                     |                      |         |            |           |          |      |                  |
 | J11        | SENSE[2]          | High Range | IO_L6N_T0_VREF_34       | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | J12        |                   | High Range | VCCO_34                 | VCCO        |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |
-| J13        | PHASE_AH_out      | High Range | IO_L5P_T0_34            | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| J13        | PHASE_AH_out[0]   | High Range | IO_L5P_T0_34            | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | J14        | rx_i              | High Range | IO_L5N_T0_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | J15        | DIR_IN            | High Range | IO_L4P_T0_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |
 | K1         |                   |            | PS_DDR_A14_502          | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |
@@ -178,9 +178,9 @@ Table of Contents
 | K8         |                   | Dedicated  | VCCO_0                  | VCCO        |             |       0 |            |      |                     |                      |   any** |            |           |          |      |                  |
 | K9         |                   |            | VCCAUX                  | VCCAUX      |             |         |            |      |                     |                      |    1.80 |            |           |          |      |                  |
 | K10        |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
-| K11        | PHASE_B_out       | High Range | IO_L11P_T1_SRCC_34      | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| K11        | PHASE_B_out[0]    | High Range | IO_L11P_T1_SRCC_34      | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | K12        |                   | High Range | IO_L11N_T1_SRCC_34      | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| K13        | PHASE_A_out       | High Range | IO_L10P_T1_34           | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| K13        | PHASE_A_out[0]    | High Range | IO_L10P_T1_34           | OUTPUT      | LVCMOS33    |      34 |         12 | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | K14        |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | K15        |                   | High Range | IO_L4N_T0_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | L1         |                   |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |

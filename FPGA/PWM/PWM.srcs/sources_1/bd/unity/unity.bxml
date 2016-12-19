@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="unity" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1481964366"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1481964366"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1481964366"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1482164432"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1482164432"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1482164432"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -261,7 +261,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.xci" Type="IP">
-        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/UNSIGNED_TO_SIGNED_CONV_0"/>
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/UNSIGNED_TO_SIGNED_CONV_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -269,7 +269,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.xci" Type="IP">
-        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/PWM_smoother_0"/>
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/PWM_smoother_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -277,7 +277,95 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.xci" Type="IP">
-        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/SIGNED_TO_UNSIGNED_CONV_0"/>
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/SIGNED_TO_UNSIGNED_CONV_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_vector_mux_0_0/unity_vector_mux_0_0.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/vector_mux_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlconstant_0_0/unity_xlconstant_0_0.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/xlconstant_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlconcat_0_0/unity_xlconcat_0_0.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/xlconcat_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlslice_0_2/unity_xlslice_0_2.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlslice_0_3/unity_xlslice_0_3.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlslice_3_0/unity_xlslice_3_0.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_4"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlslice_3_1/unity_xlslice_3_1.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_5"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlslice_3_2/unity_xlslice_3_2.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_6"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_xlslice_3_3/unity_xlslice_3_3.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_7"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/AND_GATE_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/unity_Debouncer_0_0/unity_Debouncer_0_0.xci" Type="IP">
+        <Instance HierarchyPath="BLDC_MOTOR_CONTROL/Direction_Changer/Debouncer_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
