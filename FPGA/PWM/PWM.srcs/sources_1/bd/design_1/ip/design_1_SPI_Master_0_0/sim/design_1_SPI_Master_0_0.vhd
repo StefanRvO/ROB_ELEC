@@ -100,9 +100,9 @@ BEGIN
     GENERIC MAP (
       SS_ACTIVE => '0',
       SIZE => 16,
-      SS_TRANSF_DELAY => 1,
+      SS_TRANSF_DELAY => 0,
       SS_CLK_DELAY => 2,
-      SCLK_FREQ => 50000,
+      SCLK_FREQ => 1900000,
       CLK_IN_FREQ => 200000000
     )
     PORT MAP (

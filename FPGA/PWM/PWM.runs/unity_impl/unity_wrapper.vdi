@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Fri Dec 16 17:43:27 2016
-# Process ID: 16388
+# Start of session at: Mon Dec 19 17:10:27 2016
+# Process ID: 3183
 # Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl
 # Command line: vivado -log unity_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source unity_wrapper.tcl -notrace
 # Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl/unity_wrapper.vdi
@@ -33,9 +33,6 @@ INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/F
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/DIR_SENSE_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/OL_BLDC_Stepper_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/PWM_generator_0'
-INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/PWM_smoother_0'
-INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/SIGNED_TO_UNSIGNED_CONV_0'
-INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/UNSIGNED_TO_SIGNED_CONV_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_VECTOR_INV_0_0/unity_VECTOR_INV_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/VECTOR_INV_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_period_smoother_0_0/unity_period_smoother_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/period_smoother_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_1/unity_vector_mux_0_1.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/vector_mux_1'
@@ -44,9 +41,23 @@ INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/F
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_0/unity_xlslice_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_1/unity_xlslice_0_1.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_1'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_0/unity_xlslice_1_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/xlslice_2'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/AND_GATE_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_0_0/unity_Debouncer_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/Debouncer_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/PWM_smoother_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/SIGNED_TO_UNSIGNED_CONV_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/UNSIGNED_TO_SIGNED_CONV_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/vector_mux_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/xlconcat_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/xlconstant_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_3/unity_xlslice_0_3.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_3'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_4'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_1/unity_xlslice_3_1.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_5'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_2/unity_xlslice_3_2.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_6'
+INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_3/unity_xlslice_3_3.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/Direction_Changer/xlslice_7'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/STARTUP_PWM'
 INFO: [Project 1-454] Reading design checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2.dcp' for cell 'unity_i/BLDC_MOTOR_CONTROL/STARTUP_PWM_MOD/xlconstant_3'
-INFO: [Netlist 29-17] Analyzing 339 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 346 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.3
 INFO: [Device 21-403] Loading part xc7z010clg225-1
@@ -54,128 +65,50 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc] for cell 'unity_i/processing_system7_0/inst'
 Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc] for cell 'unity_i/processing_system7_0/inst'
 Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'reset_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:2]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:2]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'reset_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'MOSI'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:3]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:3]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW_A_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'SCKL'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'MOSI'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:6]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:6]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW_B_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'SCKL'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:7]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:7]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[0]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:8]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:8]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[1]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'SS'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:9]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:9]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[2]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'SS'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:10]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:10]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[3]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[4]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:12]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:12]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[5]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:13]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:13]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[6]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[7]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'MOSI'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:15]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:15]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[6]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:16]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:16]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[5]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'SS'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:17]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[4]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[3]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[2]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[1]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[7]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW_B_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW_A_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'counter_out[0]'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW_A_DB'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW_B_DB'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW_B_DB'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW_A_DB'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ccw_out'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'cw_out'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ccw_out'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'cw_out'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'cw_out_1'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ccw_out_1'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'ccw_out_1'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'cw_out_1'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'MOTOR_BTN_IN'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'MOTOR_INHIBIT'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'MOTOR_OUT'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:44]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'MOTOR_BTN_IN'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'MOTOR_INHIBIT'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:46]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'MOTOR_OUT'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc:47]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc]
 Parsing XDC File [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/unity_constr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'PWM_out'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/unity_constr.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/unity_constr.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'SW_A_in'. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/unity_constr.xdc:60]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/unity_constr.xdc:60]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -197,7 +130,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 6 instances
 
-link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1284.555 ; gain = 294.469 ; free physical = 2385 ; free virtual = 20283
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1287.559 ; gain = 297.469 ; free physical = 3464 ; free virtual = 21554
 CRITICAL WARNING: [Pfi 67-13] Hardware Handoff file unity_processing_system7_0_0.hwdef does not exist for instance unity_i/processing_system7_0/inst
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
@@ -209,33 +142,33 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.54 . Memory (MB): peak = 1373.586 ; gain = 89.031 ; free physical = 2363 ; free virtual = 20260
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.53 . Memory (MB): peak = 1392.590 ; gain = 105.031 ; free physical = 3426 ; free virtual = 21517
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-2] Deriving generated clocks
 
 Starting Logic Optimization Task
-Implement Debug Cores | Checksum: 15a6b1ff7
+Implement Debug Cores | Checksum: 13cb21ed8
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 5 inverter(s) to 18 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1b2c6ecf5
+Phase 1 Retarget | Checksum: 17d010dd7
 
-Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.54 . Memory (MB): peak = 1772.078 ; gain = 0.000 ; free physical = 2012 ; free virtual = 19911
+Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.52 . Memory (MB): peak = 1776.082 ; gain = 1.000 ; free physical = 3079 ; free virtual = 21170
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 110 cells.
-Phase 2 Constant propagation | Checksum: 116ded9e2
+INFO: [Opt 31-10] Eliminated 83 cells.
+Phase 2 Constant propagation | Checksum: 222d23cbc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1772.078 ; gain = 0.000 ; free physical = 2011 ; free virtual = 19910
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1776.082 ; gain = 1.000 ; free physical = 3079 ; free virtual = 21170
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 1258 unconnected nets.
-INFO: [Opt 31-11] Eliminated 264 unconnected cells.
-Phase 3 Sweep | Checksum: 88bc6ebd
+INFO: [Opt 31-12] Eliminated 1235 unconnected nets.
+INFO: [Opt 31-11] Eliminated 153 unconnected cells.
+Phase 3 Sweep | Checksum: 164ba1db4
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1772.078 ; gain = 0.000 ; free physical = 2011 ; free virtual = 19910
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1776.082 ; gain = 1.000 ; free physical = 3079 ; free virtual = 21170
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-194] Inserted BUFG unity_i/unity_ctrl_0/U0/UNITY/unity_clk_BUFG_inst to drive 641 load(s) on clock net unity_i/unity_ctrl_0/U0/unity_clk
@@ -243,16 +176,16 @@ INFO: [Opt 31-194] Inserted BUFG unity_i/unity_ctrl_0/U0/UNITY/clk_uart_BUFG_ins
 INFO: [Opt 31-193] Inserted 2 BUFG(s) on clock nets
 INFO: [Opt 31-12] Eliminated 0 unconnected nets.
 INFO: [Opt 31-11] Eliminated 0 unconnected cells.
-Phase 4 BUFG optimization | Checksum: 399fa5f3
+Phase 4 BUFG optimization | Checksum: 1cde16a5b
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1772.078 ; gain = 0.000 ; free physical = 2011 ; free virtual = 19910
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1776.082 ; gain = 1.000 ; free physical = 3079 ; free virtual = 21170
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1772.078 ; gain = 0.000 ; free physical = 2011 ; free virtual = 19910
-Ending Logic Optimization Task | Checksum: 399fa5f3
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1776.082 ; gain = 0.000 ; free physical = 3079 ; free virtual = 21169
+Ending Logic Optimization Task | Checksum: 1cde16a5b
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1772.078 ; gain = 0.000 ; free physical = 2011 ; free virtual = 19910
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1776.082 ; gain = 1.000 ; free physical = 3079 ; free virtual = 21169
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -268,21 +201,21 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 2 Total Ports: 2
-Ending PowerOpt Patch Enables Task | Checksum: 14a8d59c6
+Ending PowerOpt Patch Enables Task | Checksum: 1f2289f14
 
-Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1854 ; free virtual = 19753
-Ending Power Optimization Task | Checksum: 14a8d59c6
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2886 ; free virtual = 20976
+Ending Power Optimization Task | Checksum: 1f2289f14
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2158.285 ; gain = 386.207 ; free physical = 1854 ; free virtual = 19753
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2155.281 ; gain = 379.199 ; free physical = 2886 ; free virtual = 20976
 INFO: [Common 17-83] Releasing license: Implementation
-66 Infos, 44 Warnings, 45 Critical Warnings and 0 Errors encountered.
+77 Infos, 18 Warnings, 19 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 2158.285 ; gain = 873.730 ; free physical = 1854 ; free virtual = 19753
+opt_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 2155.281 ; gain = 867.723 ; free physical = 2886 ; free virtual = 20976
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1852 ; free virtual = 19753
+Write XDEF Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2884 ; free virtual = 20976
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl/unity_wrapper_opt.dcp' has been generated.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl/unity_wrapper_drc_opted.rpt.
@@ -304,89 +237,89 @@ Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
 
 Phase 1 Placer Initialization
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1840 ; free virtual = 19737
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2880 ; free virtual = 20967
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1838 ; free virtual = 19735
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2879 ; free virtual = 20967
 
 Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f3bd77d5
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d997a87e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1835 ; free virtual = 19732
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2879 ; free virtual = 20967
 
 Phase 1.2 Build Placer Netlist Model
-Phase 1.2 Build Placer Netlist Model | Checksum: f9319c72
+Phase 1.2 Build Placer Netlist Model | Checksum: e3e8e65b
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1825 ; free virtual = 19721
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2879 ; free virtual = 20966
 
 Phase 1.3 Constrain Clocks/Macros
-Phase 1.3 Constrain Clocks/Macros | Checksum: f9319c72
+Phase 1.3 Constrain Clocks/Macros | Checksum: e3e8e65b
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1825 ; free virtual = 19721
-Phase 1 Placer Initialization | Checksum: f9319c72
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2879 ; free virtual = 20966
+Phase 1 Placer Initialization | Checksum: e3e8e65b
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1825 ; free virtual = 19721
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2879 ; free virtual = 20967
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: bc5b22e7
+Phase 2 Global Placement | Checksum: 1fc9075d7
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1822 ; free virtual = 19719
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:11 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2879 ; free virtual = 20966
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: bc5b22e7
+Phase 3.1 Commit Multi Column Macros | Checksum: 1fc9075d7
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:10 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1822 ; free virtual = 19719
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:12 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: a3015c69
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 168bdcd66
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1822 ; free virtual = 19719
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:12 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: f5c28fed
+Phase 3.3 Area Swap Optimization | Checksum: 15b40972e
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1822 ; free virtual = 19719
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: f5c28fed
+Phase 3.4 Pipeline Register Optimization | Checksum: 15b40972e
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1822 ; free virtual = 19719
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: f6d9a061
+Phase 3.5 Timing Path Optimizer | Checksum: 139243fd3
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1822 ; free virtual = 19719
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:13 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 91c71aef
+Phase 3.6 Fast Optimization | Checksum: 1ba5a8d8a
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1821 ; free virtual = 19718
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:13 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: d60b8fa0
+Phase 3.7 Small Shape Detail Placement | Checksum: 131abb337
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1820 ; free virtual = 19717
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 12c4a0f9d
+Phase 3.8 Re-assign LUT pins | Checksum: 10d5095c8
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1820 ; free virtual = 19717
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:15 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 12c4a0f9d
+Phase 3.9 Pipeline Register Optimization | Checksum: 10d5095c8
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:13 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1820 ; free virtual = 19717
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:15 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: 13d84edae
+Phase 3.10 Fast Optimization | Checksum: 17cbf2ad5
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:14 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1820 ; free virtual = 19717
-Phase 3 Detail Placement | Checksum: 13d84edae
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:16 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
+Phase 3 Detail Placement | Checksum: 17cbf2ad5
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:14 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1820 ; free virtual = 19717
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:16 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2878 ; free virtual = 20966
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -394,47 +327,47 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.550. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 102a224be
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.506. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 19e09a8ea
 
-Time (s): cpu = 00:01:09 ; elapsed = 00:00:47 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1829 ; free virtual = 19717
-Phase 4.1 Post Commit Optimization | Checksum: 102a224be
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:47 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2856 ; free virtual = 20963
+Phase 4.1 Post Commit Optimization | Checksum: 19e09a8ea
 
-Time (s): cpu = 00:01:09 ; elapsed = 00:00:48 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1829 ; free virtual = 19717
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:47 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2856 ; free virtual = 20963
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 102a224be
+Phase 4.2 Post Placement Cleanup | Checksum: 19e09a8ea
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1828 ; free virtual = 19717
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:47 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2866 ; free virtual = 20963
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 102a224be
+Phase 4.3 Placer Reporting | Checksum: 19e09a8ea
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1828 ; free virtual = 19716
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:47 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2866 ; free virtual = 20963
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 68da9f8e
+Phase 4.4 Final Placement Cleanup | Checksum: 1485999b9
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1828 ; free virtual = 19717
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 68da9f8e
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:47 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2866 ; free virtual = 20964
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1485999b9
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1828 ; free virtual = 19717
-Ending Placer Task | Checksum: 1e1a0f77
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:47 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2866 ; free virtual = 20964
+Ending Placer Task | Checksum: 6f3d48fe
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1828 ; free virtual = 19716
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:47 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2866 ; free virtual = 20964
 INFO: [Common 17-83] Releasing license: Implementation
-84 Infos, 44 Warnings, 45 Critical Warnings and 0 Errors encountered.
+95 Infos, 18 Warnings, 19 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:15 ; elapsed = 00:00:50 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1828 ; free virtual = 19716
+place_design: Time (s): cpu = 00:01:16 ; elapsed = 00:00:49 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2866 ; free virtual = 20964
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1822 ; free virtual = 19717
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.43 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2859 ; free virtual = 20964
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl/unity_wrapper_placed.dcp' has been generated.
-report_io: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1825 ; free virtual = 19715
-report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1824 ; free virtual = 19715
-report_control_sets: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1824 ; free virtual = 19714
+report_io: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2863 ; free virtual = 20963
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2863 ; free virtual = 20963
+report_control_sets: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2863 ; free virtual = 20963
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -446,158 +379,201 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: 1251ab9b ConstDB: 0 ShapeSum: bc863dc RouteDB: 0
+Checksum: PlaceDB: 6dd6710a ConstDB: 0 ShapeSum: 166d7f4 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 1003ee1e0
+Phase 1 Build RT Design | Checksum: 1f032c4e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1807 ; free virtual = 19699
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2857 ; free virtual = 20957
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 1003ee1e0
+Phase 2.1 Create Timer | Checksum: 1f032c4e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1807 ; free virtual = 19699
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2857 ; free virtual = 20957
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 1003ee1e0
+Phase 2.2 Fix Topology Constraints | Checksum: 1f032c4e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1792 ; free virtual = 19684
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2850 ; free virtual = 20950
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 1003ee1e0
+Phase 2.3 Pre Route Cleanup | Checksum: 1f032c4e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1792 ; free virtual = 19684
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2850 ; free virtual = 20950
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1ad5bebec
+Phase 2.4 Update Timing | Checksum: 1c6f47fb2
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1779 ; free virtual = 19671
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.460 | TNS=-414.683| WHS=-0.316 | THS=-35.430|
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2838 ; free virtual = 20938
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.417 | TNS=-481.008| WHS=-1.639 | THS=-84.537|
 
-Phase 2 Router Initialization | Checksum: 1aab251ee
+Phase 2 Router Initialization | Checksum: 1aaf2ad13
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1772 ; free virtual = 19665
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2830 ; free virtual = 20930
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: f0f2a539
+Phase 3 Initial Routing | Checksum: 124f54625
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1740 ; free virtual = 19633
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2801 ; free virtual = 20901
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 533
- Number of Nodes with overlaps = 15
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 446
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 6
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 1b0b9822d
+Phase 4.1.1 Update Timing | Checksum: a8fea11c
 
-Time (s): cpu = 00:02:51 ; elapsed = 00:01:56 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1422 ; free virtual = 19554
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.756 | TNS=-476.821| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2813 ; free virtual = 20899
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.172 | TNS=-596.937| WHS=N/A    | THS=N/A    |
 
 
 Phase 4.1.2 GlobIterForTiming
 
 Phase 4.1.2.1 Update Timing
-Phase 4.1.2.1 Update Timing | Checksum: 1445684ba
+Phase 4.1.2.1 Update Timing | Checksum: 16689eb05
 
-Time (s): cpu = 00:02:52 ; elapsed = 00:01:56 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1422 ; free virtual = 19554
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:38 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2813 ; free virtual = 20899
 
 Phase 4.1.2.2 Fast Budgeting
-Phase 4.1.2.2 Fast Budgeting | Checksum: 11b158040
+Phase 4.1.2.2 Fast Budgeting | Checksum: 16d3c6d81
 
-Time (s): cpu = 00:02:52 ; elapsed = 00:01:57 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1423 ; free virtual = 19554
-Phase 4.1.2 GlobIterForTiming | Checksum: 124c48f94
+Time (s): cpu = 00:01:33 ; elapsed = 00:00:38 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2813 ; free virtual = 20899
+Phase 4.1.2 GlobIterForTiming | Checksum: 101de7ec9
 
-Time (s): cpu = 00:02:53 ; elapsed = 00:01:57 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1423 ; free virtual = 19554
-Phase 4.1 Global Iteration 0 | Checksum: 124c48f94
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:39 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2813 ; free virtual = 20899
+Phase 4.1 Global Iteration 0 | Checksum: 101de7ec9
 
-Time (s): cpu = 00:02:53 ; elapsed = 00:01:57 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1423 ; free virtual = 19554
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:39 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2813 ; free virtual = 20899
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 9
- Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: 162c234ee
+Phase 4.2.1 Update Timing | Checksum: 2a4154183
 
-Time (s): cpu = 00:04:48 ; elapsed = 00:03:17 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.104 | TNS=-484.797| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:52 ; elapsed = 00:00:50 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.958 | TNS=-592.071| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 19213c8b7
 
-Time (s): cpu = 00:04:48 ; elapsed = 00:03:17 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
-Phase 4 Rip-up And Reroute | Checksum: 19213c8b7
+Phase 4.2.2 GlobIterForTiming
 
-Time (s): cpu = 00:04:48 ; elapsed = 00:03:17 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
+Phase 4.2.2.1 Update Timing
+Phase 4.2.2.1 Update Timing | Checksum: 279854e91
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:00:50 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+
+Phase 4.2.2.2 Fast Budgeting
+Phase 4.2.2.2 Fast Budgeting | Checksum: 23213095e
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:00:50 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+Phase 4.2.2 GlobIterForTiming | Checksum: 17f5931a7
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:00:51 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+Phase 4.2 Global Iteration 1 | Checksum: 17f5931a7
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:00:51 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2806 ; free virtual = 20895
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+
+Phase 4.3.1 Update Timing
+Phase 4.3.1 Update Timing | Checksum: 997b73ce
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:56 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.959 | TNS=-593.842| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 203c93e9b
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:56 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+Phase 4 Rip-up And Reroute | Checksum: 203c93e9b
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:56 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1e48c3eff
+Phase 5.1.1 Update Timing | Checksum: 298043e43
 
-Time (s): cpu = 00:04:49 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.756 | TNS=-476.821| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:02:06 ; elapsed = 00:00:56 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.958 | TNS=-592.054| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 1349d1283
+Phase 5.1 Delay CleanUp | Checksum: 13f541a6b
 
-Time (s): cpu = 00:04:50 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
+Time (s): cpu = 00:02:07 ; elapsed = 00:00:56 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1349d1283
+Phase 5.2 Clock Skew Optimization | Checksum: 13f541a6b
 
-Time (s): cpu = 00:04:50 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
-Phase 5 Delay and Skew Optimization | Checksum: 1349d1283
+Time (s): cpu = 00:02:07 ; elapsed = 00:00:56 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+Phase 5 Delay and Skew Optimization | Checksum: 13f541a6b
 
-Time (s): cpu = 00:04:50 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
+Time (s): cpu = 00:02:07 ; elapsed = 00:00:56 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 15933b488
+Phase 6.1.1 Update Timing | Checksum: 22b5f3b5f
 
-Time (s): cpu = 00:04:51 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.754 | TNS=-475.815| WHS=0.013  | THS=0.000  |
+Time (s): cpu = 00:02:08 ; elapsed = 00:00:57 . Memory (MB): peak = 2155.281 ; gain = 0.000 ; free physical = 2807 ; free virtual = 20895
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.947 | TNS=-578.331| WHS=-0.326 | THS=-2.721 |
 
-Phase 6.1 Hold Fix Iter | Checksum: 17acacfaa
 
-Time (s): cpu = 00:04:51 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
-Phase 6 Post Hold Fix | Checksum: 17acacfaa
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 1805ffb4b
 
-Time (s): cpu = 00:04:51 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
+Time (s): cpu = 00:03:38 ; elapsed = 00:01:16 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1067 ; free virtual = 19153
+Phase 6.1 Hold Fix Iter | Checksum: 1805ffb4b
+
+Time (s): cpu = 00:03:38 ; elapsed = 00:01:16 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1067 ; free virtual = 19153
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.947 | TNS=-588.524| WHS=0.036  | THS=0.000  |
+
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.947 | TNS=-588.524| WHS=0.036  | THS=0.000  |
+
+Phase 6.2 Additional Hold Fix | Checksum: 22e3af159
+
+Time (s): cpu = 00:03:40 ; elapsed = 00:01:16 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1066 ; free virtual = 19153
+WARNING: [Route 35-468] The router encountered 32 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_RX_GEN.uart_gab_link_dl_rx_fsm_inst/t_cnt_reg[3]_i_1__0/I1
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_RX_GEN.uart_gab_link_dl_rx_fsm_inst/t_cnt_reg[3]_i_1__0/I2
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_RX_GEN.uart_gab_link_dl_rx_fsm_inst/t_cnt_reg[3]_i_1__0/I4
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_RX_GEN.uart_gab_link_dl_rx_fsm_inst/t_cnt_reg[3]_i_1__0/I3
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/rx_fifo_inst/fifo_ctrl_inst/synchdepth_2p.sync_w_ptr/sync_reg_reg[0][0]/D
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/rx_fifo_inst/fifo_ctrl_inst/synchdepth_2p.sync_w_ptr/sync_reg_reg[0][1]/D
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/rx_fifo_inst/fifo_ctrl_inst/synchdepth_2p.sync_w_ptr/sync_reg_reg[0][2]/D
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/uart_rx_inst/lsr_rx_overrun_err_reg_i_1/I0
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/uart_rx_inst/lsr_rx_parity_err_reg_i_1/I0
+	unity_i/unity_ctrl_0/U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_inst/uart_rx_inst/f_err_reg_i_1/I5
+	.. and 22 more pins.
+
+Phase 6 Post Hold Fix | Checksum: 22e3af159
+
+Time (s): cpu = 00:03:40 ; elapsed = 00:01:16 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1066 ; free virtual = 19153
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.31503 %
-  Global Horizontal Routing Utilization  = 2.87132 %
+  Global Vertical Routing Utilization    = 3.11684 %
+  Global Horizontal Routing Utilization  = 3.4676 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -607,48 +583,48 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 43.2432%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 55.8559%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 55.8824%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 54.4118%, No Congested Regions.
-Phase 7 Route finalize | Checksum: 1820599ee
+North Dir 1x1 Area, Max Cong = 63.0631%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 56.7568%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 54.4118%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 75%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 202d5edac
 
-Time (s): cpu = 00:04:51 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
+Time (s): cpu = 00:03:40 ; elapsed = 00:01:17 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1066 ; free virtual = 19153
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1820599ee
+Phase 8 Verifying routed nets | Checksum: 202d5edac
 
-Time (s): cpu = 00:04:51 ; elapsed = 00:03:18 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1425 ; free virtual = 19546
+Time (s): cpu = 00:03:40 ; elapsed = 00:01:17 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1066 ; free virtual = 19153
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1847b3834
+Phase 9 Depositing Routes | Checksum: 246e95a86
 
-Time (s): cpu = 00:04:51 ; elapsed = 00:03:19 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1424 ; free virtual = 19545
+Time (s): cpu = 00:03:41 ; elapsed = 00:01:17 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1066 ; free virtual = 19153
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.754 | TNS=-475.815| WHS=0.013  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.947 | TNS=-588.524| WHS=0.036  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 1847b3834
+Phase 10 Post Router Timing | Checksum: 246e95a86
 
-Time (s): cpu = 00:04:51 ; elapsed = 00:03:19 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1424 ; free virtual = 19545
+Time (s): cpu = 00:03:41 ; elapsed = 00:01:17 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1066 ; free virtual = 19153
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:04:52 ; elapsed = 00:03:19 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1424 ; free virtual = 19545
+Time (s): cpu = 00:03:41 ; elapsed = 00:01:17 . Memory (MB): peak = 3761.238 ; gain = 1605.957 ; free physical = 1066 ; free virtual = 19153
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-98 Infos, 45 Warnings, 45 Critical Warnings and 0 Errors encountered.
+112 Infos, 20 Warnings, 19 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:04:57 ; elapsed = 00:03:21 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1424 ; free virtual = 19545
+route_design: Time (s): cpu = 00:03:45 ; elapsed = 00:01:19 . Memory (MB): peak = 3804.188 ; gain = 1648.906 ; free physical = 1066 ; free virtual = 19153
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.42 . Memory (MB): peak = 2158.285 ; gain = 0.000 ; free physical = 1417 ; free virtual = 19546
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.50 . Memory (MB): peak = 3827.836 ; gain = 0.000 ; free physical = 1057 ; free virtual = 19153
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl/unity_wrapper_routed.dcp' has been generated.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl/unity_wrapper_drc_routed.rpt.
@@ -664,7 +640,9 @@ Command: report_power -file unity_wrapper_power_routed.rpt -pb unity_wrapper_pow
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-108 Infos, 45 Warnings, 46 Critical Warnings and 0 Errors encountered.
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+122 Infos, 21 Warnings, 20 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 Command: write_bitstream -force -no_partial_bitfile unity_wrapper.bit -raw_bitfile -mask_file -bin_file
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
@@ -737,7 +715,7 @@ Creating bitstream...
 Writing bitstream ./unity_wrapper.msk...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-114 Infos, 95 Warnings, 46 Critical Warnings and 0 Errors encountered.
+128 Infos, 71 Warnings, 20 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 2320.938 ; gain = 136.023 ; free physical = 1160 ; free virtual = 19311
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 16 17:48:45 2016...
+write_bitstream: Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 3883.863 ; gain = 0.000 ; free physical = 1021 ; free virtual = 19146
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 19 17:13:45 2016...

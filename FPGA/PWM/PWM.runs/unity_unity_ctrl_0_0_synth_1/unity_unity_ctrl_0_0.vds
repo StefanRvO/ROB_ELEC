@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Thu Dec  8 22:08:14 2016
-# Process ID: 30146
+# Start of session at: Mon Dec 19 16:33:34 2016
+# Process ID: 24422
 # Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1
 # Command line: vivado -log unity_unity_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_unity_ctrl_0_0.tcl
 # Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 30511 
+INFO: Helper process launched with PID 24515 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1058.676 ; gain = 155.301 ; free physical = 1904 ; free virtual = 17301
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1059.672 ; gain = 156.301 ; free physical = 3083 ; free virtual = 21158
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'unity_unity_ctrl_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/synth/unity_unity_ctrl_0_0.vhd:79]
 INFO: [Synth 8-3491] module 'unity_ctrl' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/unity_ctrl.vhd:34' bound to instance 'U0' of component 'unity_ctrl' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/synth/unity_unity_ctrl_0_0.vhd:109]
@@ -464,17 +464,17 @@ WARNING: [Synth 8-3331] design uart_asynch has unconnected port clr_err_cnt_i[2]
 WARNING: [Synth 8-3331] design uart_asynch has unconnected port clr_err_cnt_i[1]
 WARNING: [Synth 8-3331] design uart_asynch has unconnected port clr_err_cnt_i[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1122.145 ; gain = 218.770 ; free physical = 1519 ; free virtual = 16918
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1123.141 ; gain = 219.770 ; free physical = 2859 ; free virtual = 20935
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1122.145 ; gain = 218.770 ; free physical = 1517 ; free virtual = 16916
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1123.141 ; gain = 219.770 ; free physical = 2859 ; free virtual = 20935
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1130.148 ; gain = 226.773 ; free physical = 1517 ; free virtual = 16916
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1131.145 ; gain = 227.773 ; free physical = 2859 ; free virtual = 20935
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg225-1
 INFO: [Synth 8-5544] ROM "rx_done_tick_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -627,7 +627,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encod
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'wb_mst_ctrl'
 INFO: [Synth 8-3971] The signal bram_reg was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1215.266 ; gain = 311.891 ; free physical = 2167 ; free virtual = 17580
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1214.332 ; gain = 310.961 ; free physical = 2513 ; free virtual = 20590
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1141,7 +1141,7 @@ INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_lin
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_TX_GEN.txfifo_a_inst/fifo_ctrl_inst/read_ctrl/empty_flag_reg_reg) is unused and will be removed from module unity_unity_ctrl_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/UNITY/uart_wb_link_inst/uart_gab_link_inst/uart_gab_link_dl_inst/FULL_DL_TX_GEN.txfifo_b_inst/fifo_ctrl_inst/read_ctrl/empty_flag_reg_reg) is unused and will be removed from module unity_unity_ctrl_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2070 ; free virtual = 17485
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:37 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3439 ; free virtual = 21518
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1185,7 +1185,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2070 ; free virtual = 17485
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:37 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3439 ; free virtual = 21518
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1199,7 +1199,7 @@ Start Technology Mapping
 INFO: [Synth 8-4480] The timing for the instance U0/UNITY/wb_mem_inst/ram_rwrw_inst/bram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance U0/UNITY/wb_mem_inst/ram_rwrw_inst/bram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2067 ; free virtual = 17482
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:39 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3411 ; free virtual = 21490
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1223,7 +1223,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:34 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2066 ; free virtual = 17481
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:39 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3408 ; free virtual = 21487
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1236,7 +1236,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:34 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2066 ; free virtual = 17481
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:39 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3408 ; free virtual = 21487
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1248,25 +1248,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2058 ; free virtual = 17473
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3407 ; free virtual = 21486
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2058 ; free virtual = 17473
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3406 ; free virtual = 21486
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2059 ; free virtual = 17474
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3406 ; free virtual = 21486
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2059 ; free virtual = 17474
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3405 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1366,11 +1366,11 @@ Report Instance Areas:
 |60    |        wb_slv_mem_ctrl_inst                              |wb_slv_mem_ctrl                 |     3|
 +------+----------------------------------------------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1316.297 ; gain = 412.922 ; free physical = 2059 ; free virtual = 17474
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 1316.363 ; gain = 412.992 ; free physical = 3405 ; free virtual = 21484
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 44 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 1316.297 ; gain = 313.621 ; free physical = 2059 ; free virtual = 17474
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1316.305 ; gain = 412.930 ; free physical = 2059 ; free virtual = 17474
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:36 . Memory (MB): peak = 1316.363 ; gain = 313.691 ; free physical = 3405 ; free virtual = 21484
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 1316.371 ; gain = 413.000 ; free physical = 3405 ; free virtual = 21484
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1386,11 +1386,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 340 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1392.324 ; gain = 402.230 ; free physical = 2039 ; free virtual = 17454
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:40 . Memory (MB): peak = 1392.391 ; gain = 402.301 ; free physical = 3000 ; free virtual = 21079
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1854.508 ; gain = 462.184 ; free physical = 1711 ; free virtual = 17123
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1855.574 ; gain = 463.184 ; free physical = 2167 ; free virtual = 20245
 INFO: [Coretcl 2-1174] Renamed 59 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_unity_ctrl_0_0_synth_1/unity_unity_ctrl_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1854.508 ; gain = 0.000 ; free physical = 1716 ; free virtual = 17121
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 22:09:12 2016...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1855.574 ; gain = 0.000 ; free physical = 2089 ; free virtual = 20166
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 19 16:34:41 2016...

@@ -33,7 +33,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f2b47424</spirit:value>
+            <spirit:value>9785a466</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -46,7 +46,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f2b47424</spirit:value>
+            <spirit:value>9785a466</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -228,7 +228,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SS_TRANSF_DELAY</spirit:name>
         <spirit:displayName>Ss Transf Delay</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SS_TRANSF_DELAY" spirit:maximum="1000000000" spirit:rangeType="long">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SS_TRANSF_DELAY" spirit:maximum="1000000000" spirit:rangeType="long">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SS_CLK_DELAY</spirit:name>
@@ -273,7 +273,7 @@
     <spirit:parameter>
       <spirit:name>SS_TRANSF_DELAY</spirit:name>
       <spirit:displayName>Ss Transf Delay</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SS_TRANSF_DELAY">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SS_TRANSF_DELAY">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SS_CLK_DELAY</spirit:name>
@@ -310,7 +310,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-12-17T01:20:15Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-12-19T14:49:20Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2016.3</xilinx:xilinxVersion>

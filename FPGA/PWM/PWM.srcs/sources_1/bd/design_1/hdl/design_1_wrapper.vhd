@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
---Date        : Sat Dec 17 02:32:23 2016
+--Date        : Mon Dec 19 16:19:48 2016
 --Host        : Leviathan running 64-bit Arch Linux
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -17,13 +17,12 @@ entity design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    MOTOR_BTN_IN : in STD_LOGIC;
-    MOTOR_INHIBIT : out STD_LOGIC;
-    MOTOR_OUT : out STD_LOGIC;
-    SW_A_in : in STD_LOGIC;
-    SW_B_in : in STD_LOGIC;
-    counter_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    reset_in : in STD_LOGIC
+    MISO : in STD_LOGIC;
+    MOSI : out STD_LOGIC;
+    SCLK : out STD_LOGIC;
+    SS : out STD_LOGIC;
+    rx_i : in STD_LOGIC;
+    tx_o : out STD_LOGIC
   );
 end design_1_wrapper;
 
@@ -34,13 +33,12 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    reset_in : in STD_LOGIC;
-    SW_B_in : in STD_LOGIC;
-    SW_A_in : in STD_LOGIC;
-    MOTOR_BTN_IN : in STD_LOGIC;
-    MOTOR_OUT : out STD_LOGIC;
-    MOTOR_INHIBIT : out STD_LOGIC;
-    counter_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    MISO : in STD_LOGIC;
+    MOSI : out STD_LOGIC;
+    SS : out STD_LOGIC;
+    SCLK : out STD_LOGIC;
+    rx_i : in STD_LOGIC;
+    tx_o : out STD_LOGIC
   );
   end component design_1;
 begin
@@ -50,12 +48,11 @@ design_1_i: component design_1
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      MOTOR_BTN_IN => MOTOR_BTN_IN,
-      MOTOR_INHIBIT => MOTOR_INHIBIT,
-      MOTOR_OUT => MOTOR_OUT,
-      SW_A_in => SW_A_in,
-      SW_B_in => SW_B_in,
-      counter_out(7 downto 0) => counter_out(7 downto 0),
-      reset_in => reset_in
+      MISO => MISO,
+      MOSI => MOSI,
+      SCLK => SCLK,
+      SS => SS,
+      rx_i => rx_i,
+      tx_o => tx_o
     );
 end STRUCTURE;

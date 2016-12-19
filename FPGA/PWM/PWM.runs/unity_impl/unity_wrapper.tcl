@@ -44,6 +44,8 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -127,6 +129,28 @@ set rc [catch {
   set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.dcp]
   add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.dcp
   set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_3/unity_xlslice_0_3.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_3/unity_xlslice_0_3.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_1/unity_xlslice_3_1.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_1/unity_xlslice_3_1.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_2/unity_xlslice_3_2.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_2/unity_xlslice_3_2.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_3/unity_xlslice_3_3.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_3/unity_xlslice_3_3.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.dcp]
+  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_0_0/unity_Debouncer_0_0.dcp
+  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_0_0/unity_Debouncer_0_0.dcp]
   read_xdc -ref unity_processing_system7_0_0 -cells inst /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc
   set_property processing_order EARLY [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc]
   read_xdc /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc

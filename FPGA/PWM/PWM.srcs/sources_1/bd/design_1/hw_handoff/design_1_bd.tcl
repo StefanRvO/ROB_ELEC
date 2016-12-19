@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# SPI_Master
+# AD7887, SPI_Master, unity_ctrl
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -161,20 +161,29 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
-  set MOTOR_BTN_IN [ create_bd_port -dir I MOTOR_BTN_IN ]
-  set MOTOR_INHIBIT [ create_bd_port -dir O MOTOR_INHIBIT ]
-  set MOTOR_OUT [ create_bd_port -dir O MOTOR_OUT ]
-  set SW_A_in [ create_bd_port -dir I SW_A_in ]
-  set SW_B_in [ create_bd_port -dir I SW_B_in ]
-  set counter_out [ create_bd_port -dir O -from 7 -to 0 counter_out ]
-  set reset_in [ create_bd_port -dir I -type rst reset_in ]
-  set_property -dict [ list \
-CONFIG.POLARITY {ACTIVE_LOW} \
- ] $reset_in
+  set MISO [ create_bd_port -dir I MISO ]
+  set MOSI [ create_bd_port -dir O MOSI ]
+  set SCLK [ create_bd_port -dir O SCLK ]
+  set SS [ create_bd_port -dir O SS ]
+  set rx_i [ create_bd_port -dir I rx_i ]
+  set tx_o [ create_bd_port -dir O tx_o ]
+
+  # Create instance: AD7887_0, and set properties
+  set block_name AD7887
+  set block_cell_name AD7887_0
+  if { [catch {set AD7887_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $AD7887_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+    set_property -dict [ list \
+CONFIG.SAMPLE_FREQ {60000} \
+ ] $AD7887_0
 
   # Create instance: SPI_Master_0, and set properties
   set block_name SPI_Master
@@ -186,7 +195,10 @@ CONFIG.POLARITY {ACTIVE_LOW} \
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+CONFIG.SCLK_FREQ {1900000} \
+ ] $SPI_Master_0
+
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
@@ -1205,11 +1217,59 @@ CONFIG.PCW_USB1_USB1_IO.VALUE_SRC {DEFAULT} \
 CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
  ] $processing_system7_0
 
+  # Create instance: unity_ctrl_0, and set properties
+  set block_name unity_ctrl
+  set block_cell_name unity_ctrl_0
+  if { [catch {set unity_ctrl_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $unity_ctrl_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: xlconcat_0, and set properties
+  set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
+
+  # Create instance: xlconcat_1, and set properties
+  set xlconcat_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_1 ]
+
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+  set_property -dict [ list \
+CONFIG.CONST_VAL {0} \
+ ] $xlconstant_0
+
+  # Create instance: xlconstant_1, and set properties
+  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
+  set_property -dict [ list \
+CONFIG.CONST_VAL {0} \
+CONFIG.CONST_WIDTH {20} \
+ ] $xlconstant_1
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
 
   # Create port connections
+  connect_bd_net -net AD7887_0_DATA_OUT [get_bd_pins AD7887_0/DATA_OUT] [get_bd_pins SPI_Master_0/IN_DATA]
+  connect_bd_net -net AD7887_0_SAMPLE_PULSER [get_bd_pins AD7887_0/SAMPLE_PULSER] [get_bd_pins SPI_Master_0/START_TRANSFER]
+  connect_bd_net -net AD7887_0_X_AXIS_OUT [get_bd_pins AD7887_0/X_AXIS_OUT] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net AD7887_0_Y_AXIS_OUT [get_bd_pins AD7887_0/Y_AXIS_OUT] [get_bd_pins xlconcat_1/In0]
+  connect_bd_net -net MISO_1 [get_bd_ports MISO] [get_bd_pins SPI_Master_0/MISO]
+  connect_bd_net -net Net [get_bd_pins AD7887_0/clk_in] [get_bd_pins SPI_Master_0/CLK_in] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins unity_ctrl_0/clk_i]
+  connect_bd_net -net Net1 [get_bd_pins unity_ctrl_0/addr10_in] [get_bd_pins unity_ctrl_0/addr2_in] [get_bd_pins unity_ctrl_0/addr3_in] [get_bd_pins unity_ctrl_0/addr4_out] [get_bd_pins unity_ctrl_0/addr8_in] [get_bd_pins unity_ctrl_0/addr9_in]
+  connect_bd_net -net SPI_Master_0_MOSI [get_bd_ports MOSI] [get_bd_pins SPI_Master_0/MOSI]
+  connect_bd_net -net SPI_Master_0_OUT_DATA [get_bd_pins AD7887_0/DATA_IN] [get_bd_pins SPI_Master_0/OUT_DATA]
+  connect_bd_net -net SPI_Master_0_SCLK [get_bd_ports SCLK] [get_bd_pins SPI_Master_0/SCLK]
+  connect_bd_net -net SPI_Master_0_SS [get_bd_ports SS] [get_bd_pins SPI_Master_0/SS]
+  connect_bd_net -net SPI_Master_0_Transfer_done [get_bd_pins AD7887_0/DATA_READY_IN] [get_bd_pins SPI_Master_0/Transfer_done]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+  connect_bd_net -net rx_i_1 [get_bd_ports rx_i] [get_bd_pins unity_ctrl_0/rx_i]
+  connect_bd_net -net unity_ctrl_0_tx_o [get_bd_ports tx_o] [get_bd_pins unity_ctrl_0/tx_o]
+  connect_bd_net -net xlconcat_0_dout [get_bd_pins unity_ctrl_0/addr0_in] [get_bd_pins xlconcat_0/dout]
+  connect_bd_net -net xlconcat_1_dout [get_bd_pins unity_ctrl_0/addr1_in] [get_bd_pins xlconcat_1/dout]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins SPI_Master_0/reset_in] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins xlconcat_0/In1] [get_bd_pins xlconcat_1/In1] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
 
@@ -1217,20 +1277,42 @@ CONFIG.PCW_WDT_WDT_IO.VALUE_SRC {DEFAULT} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port MOTOR_BTN_IN -pg 1 -y 290 -defaultsOSRD
-preplace port DDR -pg 1 -y 20 -defaultsOSRD
-preplace port SW_B_in -pg 1 -y 20 -defaultsOSRD
-preplace port MOTOR_INHIBIT -pg 1 -y 280 -defaultsOSRD
-preplace port SW_A_in -pg 1 -y 340 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 0 -defaultsOSRD
-preplace port MOTOR_OUT -pg 1 -y 160 -defaultsOSRD
-preplace port reset_in -pg 1 -y 220 -defaultsOSRD
-preplace portBus counter_out -pg 1 -y 90 -defaultsOSRD
-preplace inst SPI_Master_0 -pg 1 -lvl 2 -y 310 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 110 -defaultsOSRD
-preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 70 1080J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 10 20 400
-levelinfo -pg 1 -10 210 920 1700 -top -110 -bot 410
+preplace port tx_o -pg 1 -y 100 -defaultsOSRD
+preplace port SCLK -pg 1 -y 440 -defaultsOSRD
+preplace port rx_i -pg 1 -y 120 -defaultsOSRD
+preplace port SS -pg 1 -y 420 -defaultsOSRD
+preplace port MISO -pg 1 -y 510 -defaultsOSRD
+preplace port MOSI -pg 1 -y 400 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 310 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 460 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -y 50 -defaultsOSRD
+preplace inst SPI_Master_0 -pg 1 -lvl 4 -y 500 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -y 60 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 3 -y 180 -defaultsOSRD
+preplace inst AD7887_0 -pg 1 -lvl 2 -y 430 -defaultsOSRD
+preplace inst unity_ctrl_0 -pg 1 -lvl 4 -y 180 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 350 -defaultsOSRD
+preplace netloc xlconstant_1_dout 1 2 1 750
+preplace netloc SPI_Master_0_MOSI 1 4 1 1380
+preplace netloc xlconcat_1_dout 1 3 1 990
+preplace netloc SPI_Master_0_SS 1 4 1 1390
+preplace netloc SPI_Master_0_SCLK 1 4 1 1400
+preplace netloc SPI_Master_0_OUT_DATA 1 1 4 430 350 NJ 350 NJ 350 1360
+preplace netloc xlconstant_0_dout 1 3 1 990
+preplace netloc AD7887_0_X_AXIS_OUT 1 2 1 760
+preplace netloc xlconcat_0_dout 1 3 1 1030
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 400J 320 NJ 320 NJ 320 1360J
+preplace netloc unity_ctrl_0_tx_o 1 4 1 NJ
+preplace netloc MISO_1 1 0 4 20J 520 NJ 520 NJ 520 N
+preplace netloc AD7887_0_Y_AXIS_OUT 1 2 1 770
+preplace netloc Net1 1 3 2 1040 50 1360
+preplace netloc Net 1 1 3 410 310 NJ 310 1020
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 440 400
+preplace netloc AD7887_0_DATA_OUT 1 2 2 780J 400 1010
+preplace netloc SPI_Master_0_Transfer_done 1 1 4 420 330 NJ 330 NJ 330 1370
+preplace netloc AD7887_0_SAMPLE_PULSER 1 2 2 790J 410 1000
+preplace netloc rx_i_1 1 0 4 NJ 120 NJ 120 NJ 120 NJ
+levelinfo -pg 1 0 210 590 890 1200 1420 -top -60 -bot 680
 ",
 }
 
