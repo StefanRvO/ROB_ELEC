@@ -1,8 +1,8 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
---Date        : Mon Dec 19 17:09:03 2016
---Host        : Leviathan running 64-bit Arch Linux
+--Date        : Tue Dec 20 10:51:54 2016
+--Host        : tobias-pc running 64-bit Ubuntu 16.04.1 LTS
 --Command     : generate_target unity.bd
 --Design      : unity
 --Purpose     : IP block netlist
@@ -113,6 +113,17 @@ architecture STRUCTURE of Direction_Changer_imp_2MZ4BC is
     Q_out : out STD_LOGIC
   );
   end component unity_AND_GATE_0_1;
+  component unity_PWM_smoother_0_0 is
+  port (
+    PWM_Desired : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    PWM_OUT : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    clk_in : in STD_LOGIC;
+    reset_in : in STD_LOGIC;
+    SPEED_IN : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    STOPPING : out STD_LOGIC;
+    MEASURE_DIR_IN : in STD_LOGIC
+  );
+  end component unity_PWM_smoother_0_0;
   component unity_Debouncer_0_0 is
   port (
     IN_SIG : in STD_LOGIC;
@@ -128,17 +139,6 @@ architecture STRUCTURE of Direction_Changer_imp_2MZ4BC is
     sel_in : in STD_LOGIC
   );
   end component unity_vector_mux_0_0;
-  component unity_PWM_smoother_0_0 is
-  port (
-    PWM_Desired : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    PWM_OUT : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    clk_in : in STD_LOGIC;
-    reset_in : in STD_LOGIC;
-    SPEED_IN : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    STOPPING : out STD_LOGIC;
-    MEASURE_DIR_IN : in STD_LOGIC
-  );
-  end component unity_PWM_smoother_0_0;
   signal AND_GATE_0_Q_out : STD_LOGIC;
   signal B_in_1 : STD_LOGIC;
   signal Debouncer_0_OUT_SIG : STD_LOGIC;

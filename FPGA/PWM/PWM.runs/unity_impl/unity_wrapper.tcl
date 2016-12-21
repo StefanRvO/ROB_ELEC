@@ -44,8 +44,6 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -55,106 +53,106 @@ set rc [catch {
   set_property board_part trenz.biz:te0726_m:part0:3.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.cache/wt [current_project]
-  set_property parent.project_path /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.xpr [current_project]
-  set_property ip_repo_paths /home/stefan/ip_repo [current_project]
-  set_property ip_output_repo /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.cache/ip [current_project]
+  set_property webtalk.parent_dir /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.cache/wt [current_project]
+  set_property parent.project_path /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.xpr [current_project]
+  set_property ip_repo_paths /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/ip_repo [current_project]
+  set_property ip_output_repo /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_synth/unity_wrapper.dcp
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_0/unity_Debouncer_5_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_0/unity_Debouncer_5_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Toggler_0_0/unity_Toggler_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Toggler_0_0/unity_Toggler_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_1_0/unity_inverter_1_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_1_0/unity_inverter_1_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_1/unity_Debouncer_5_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_1/unity_Debouncer_5_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_0_1/unity_inverter_0_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_0_1/unity_inverter_0_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_period_smoother_0_0/unity_period_smoother_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_period_smoother_0_0/unity_period_smoother_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_1/unity_vector_mux_0_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_1/unity_vector_mux_0_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_1/unity_xlconcat_0_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_1/unity_xlconcat_0_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_0/unity_xlslice_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_0/unity_xlslice_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_1/unity_xlslice_0_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_1/unity_xlslice_0_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_0/unity_xlslice_1_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_0/unity_xlslice_1_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_VECTOR_INV_0_0/unity_VECTOR_INV_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_VECTOR_INV_0_0/unity_VECTOR_INV_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STATE_CONTROLLER_0_0/unity_BLDC_STATE_CONTROLLER_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STATE_CONTROLLER_0_0/unity_BLDC_STATE_CONTROLLER_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_0/unity_vector_mux_1_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_0/unity_vector_mux_1_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_SPEED_OBSERVER_0_1/unity_BLDC_SPEED_OBSERVER_0_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_SPEED_OBSERVER_0_1/unity_BLDC_SPEED_OBSERVER_0_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/unity_PULSER_0_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/unity_PULSER_0_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_1/unity_xlslice_1_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_1/unity_xlslice_1_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/unity_PID_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/unity_PID_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_3/unity_xlslice_1_3.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_3/unity_xlslice_1_3.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_1/unity_vector_mux_1_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_1/unity_vector_mux_1_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_7_0/unity_xlslice_7_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_7_0/unity_xlslice_7_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_8_0/unity_xlslice_8_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_8_0/unity_xlslice_8_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_3/unity_xlslice_0_3.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_3/unity_xlslice_0_3.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_1/unity_xlslice_3_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_1/unity_xlslice_3_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_2/unity_xlslice_3_2.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_2/unity_xlslice_3_2.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_3/unity_xlslice_3_3.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_3/unity_xlslice_3_3.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.dcp]
-  add_files -quiet /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_0_0/unity_Debouncer_0_0.dcp
-  set_property netlist_only true [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_0_0/unity_Debouncer_0_0.dcp]
-  read_xdc -ref unity_processing_system7_0_0 -cells inst /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc
-  set_property processing_order EARLY [get_files /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc]
-  read_xdc /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc
-  read_xdc /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/constrs_1/new/unity_constr.xdc
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/unity_synth/unity_wrapper.dcp
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_unity_ctrl_0_0/unity_unity_ctrl_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_0/unity_PWM_generator_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_OL_BLDC_Stepper_0_0/unity_OL_BLDC_Stepper_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_0/unity_Debouncer_5_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_0/unity_Debouncer_5_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Toggler_0_0/unity_Toggler_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Toggler_0_0/unity_Toggler_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_1_0/unity_inverter_1_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_1_0/unity_inverter_1_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STARTUP_0_0/unity_BLDC_STARTUP_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_1/unity_Debouncer_5_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_5_1/unity_Debouncer_5_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_0_1/unity_inverter_0_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_inverter_0_1/unity_inverter_0_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_period_smoother_0_0/unity_period_smoother_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_period_smoother_0_0/unity_period_smoother_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_1/unity_vector_mux_0_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_1/unity_vector_mux_0_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_1/unity_xlconcat_0_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_1/unity_xlconcat_0_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_0/unity_xlslice_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_0/unity_xlslice_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_1/unity_xlslice_0_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_1/unity_xlslice_0_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_0/unity_xlslice_1_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_0/unity_xlslice_1_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_VECTOR_INV_0_0/unity_VECTOR_INV_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_VECTOR_INV_0_0/unity_VECTOR_INV_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_DIR_SENSE_0_0/unity_DIR_SENSE_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STATE_CONTROLLER_0_0/unity_BLDC_STATE_CONTROLLER_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_STATE_CONTROLLER_0_0/unity_BLDC_STATE_CONTROLLER_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_generator_0_1/unity_PWM_generator_0_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_0/unity_vector_mux_1_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_0/unity_vector_mux_1_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_DIR_CTRL_0_0/unity_BLDC_DIR_CTRL_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_SPEED_OBSERVER_0_1/unity_BLDC_SPEED_OBSERVER_0_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_BLDC_SPEED_OBSERVER_0_1/unity_BLDC_SPEED_OBSERVER_0_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/unity_PULSER_0_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PULSER_0_1/unity_PULSER_0_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_1/unity_xlslice_1_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_1/unity_xlslice_1_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/unity_PID_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PID_0_0/unity_PID_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_3/unity_xlslice_1_3.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_1_3/unity_xlslice_1_3.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_1/unity_vector_mux_1_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_1/unity_vector_mux_1_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_7_0/unity_xlslice_7_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_7_0/unity_xlslice_7_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_8_0/unity_xlslice_8_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_8_0/unity_xlslice_8_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_3/unity_xlslice_0_3.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_0_3/unity_xlslice_0_3.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_1/unity_xlslice_3_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_1/unity_xlslice_3_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_2/unity_xlslice_3_2.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_2/unity_xlslice_3_2.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_3/unity_xlslice_3_3.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_3/unity_xlslice_3_3.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.dcp]
+  add_files -quiet /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_0_0/unity_Debouncer_0_0.dcp
+  set_property netlist_only true [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_Debouncer_0_0/unity_Debouncer_0_0.dcp]
+  read_xdc -ref unity_processing_system7_0_0 -cells inst /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0.xdc]
+  read_xdc /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/constrs_1/new/constraints.xdc
+  read_xdc /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/constrs_1/new/unity_constr.xdc
   link_design -top unity_wrapper -part xc7z010clg225-1
   write_hwdef -file unity_wrapper.hwdef
   close_msg_db -file init_design.pb

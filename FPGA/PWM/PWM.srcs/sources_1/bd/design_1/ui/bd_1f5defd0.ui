@@ -13,8 +13,8 @@ preplace inst xlconstant_1 -pg 1 -lvl 2 -y 50 -defaultsOSRD
 preplace inst SPI_Master_0 -pg 1 -lvl 4 -y 500 -defaultsOSRD
 preplace inst xlconcat_0 -pg 1 -lvl 3 -y 60 -defaultsOSRD
 preplace inst xlconcat_1 -pg 1 -lvl 3 -y 180 -defaultsOSRD
-preplace inst AD7887_0 -pg 1 -lvl 2 -y 430 -defaultsOSRD
 preplace inst unity_ctrl_0 -pg 1 -lvl 4 -y 180 -defaultsOSRD
+preplace inst AD7887_0 -pg 1 -lvl 2 -y 430 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -y 350 -defaultsOSRD
 preplace netloc xlconstant_1_dout 1 2 1 750
 preplace netloc SPI_Master_0_MOSI 1 4 1 1380

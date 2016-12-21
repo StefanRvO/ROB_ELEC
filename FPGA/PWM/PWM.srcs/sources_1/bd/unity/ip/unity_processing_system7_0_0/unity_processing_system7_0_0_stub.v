@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Sat Nov 26 17:12:55 2016
-// Host        : Leviathan running 64-bit Arch Linux
-// Command     : write_verilog -force -mode synth_stub -rename_top unity_processing_system7_0_0 -prefix
-//               unity_processing_system7_0_0_ unity_processing_system7_0_0_stub.v
+// Date        : Tue Dec 20 11:04:06 2016
+// Host        : tobias-pc running 64-bit Ubuntu 16.04.1 LTS
+// Command     : write_verilog -force -mode synth_stub
+//               /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_processing_system7_0_0/unity_processing_system7_0_0_stub.v
 // Design      : unity_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg225-1
