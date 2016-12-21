@@ -7765,8 +7765,8 @@ Low profile connectors, straight&lt;p&gt;
 </class>
 </classes>
 <parts>
-<part name="IC3" library="tobylib" deviceset="AD7887BRZ" device=""/>
-<part name="IC4" library="tobylib" deviceset="ADXL203CE" device=""/>
+<part name="IC1" library="tobylib" deviceset="AD7887BRZ" device=""/>
+<part name="IC2" library="tobylib" deviceset="ADXL203CE" device=""/>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
@@ -7798,16 +7798,11 @@ Low profile connectors, straight&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
-<text x="48.26" y="160.02" size="1.778" layer="91">Dual mode: ADC range 0 - Vdd</text>
-<text x="48.26" y="162.56" size="1.778" layer="91">OBS. the impedance from the source device into the ADC affects AC perfomance see page 12, when making lowpass filter</text>
-<text x="48.26" y="157.48" size="1.778" layer="91">Tjek at connector PCB layout passer</text>
-<text x="55.88" y="132.08" size="1.778" layer="91">Terminering seriel eller parallel?
-Max 35cm kabel</text>
 <text x="160.02" y="127" size="1.778" layer="91">fc =2.2KHz </text>
 </plain>
 <instances>
-<instance part="IC3" gate="G$1" x="106.68" y="119.38"/>
-<instance part="IC4" gate="G$1" x="198.12" y="119.38"/>
+<instance part="IC1" gate="G$1" x="106.68" y="119.38"/>
+<instance part="IC2" gate="G$1" x="198.12" y="119.38"/>
 <instance part="+3V4" gate="G$1" x="129.54" y="139.7"/>
 <instance part="GND7" gate="1" x="121.92" y="96.52"/>
 <instance part="+3V5" gate="G$1" x="220.98" y="139.7"/>
@@ -7844,13 +7839,13 @@ Max 35cm kabel</text>
 <nets>
 <net name="GND" class="1">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GND"/>
+<pinref part="IC1" gate="G$1" pin="GND"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="119.38" y1="109.22" x2="121.92" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="109.22" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC4" gate="G$1" pin="GND"/>
+<pinref part="IC2" gate="G$1" pin="GND"/>
 <pinref part="GND8" gate="1" pin="GND"/>
 <wire x1="210.82" y1="109.22" x2="213.36" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="109.22" x2="213.36" y2="99.06" width="0.1524" layer="91"/>
@@ -7904,7 +7899,7 @@ Max 35cm kabel</text>
 </net>
 <net name="+3V3" class="1">
 <segment>
-<pinref part="IC3" gate="G$1" pin="VDD"/>
+<pinref part="IC1" gate="G$1" pin="VDD"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <wire x1="119.38" y1="129.54" x2="129.54" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="129.54" x2="129.54" y2="137.16" width="0.1524" layer="91"/>
@@ -7917,7 +7912,7 @@ Max 35cm kabel</text>
 <junction x="129.54" y="129.54"/>
 </segment>
 <segment>
-<pinref part="IC4" gate="G$1" pin="VDD"/>
+<pinref part="IC2" gate="G$1" pin="VDD"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <wire x1="210.82" y1="129.54" x2="220.98" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="129.54" x2="220.98" y2="137.16" width="0.1524" layer="91"/>
@@ -7942,11 +7937,11 @@ Max 35cm kabel</text>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="IC4" gate="G$1" pin="XOUT"/>
+<pinref part="IC2" gate="G$1" pin="XOUT"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="124.46" x2="185.42" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="109.22" x2="160.02" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="AIN1"/>
+<pinref part="IC1" gate="G$1" pin="AIN1"/>
 <wire x1="152.4" y1="116.84" x2="119.38" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="124.46" x2="152.4" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="124.46" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
@@ -7962,7 +7957,7 @@ Max 35cm kabel</text>
 </net>
 <net name="ADC_CS" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="!CS"/>
+<pinref part="IC1" gate="G$1" pin="!CS"/>
 <pinref part="CON1" gate="1" pin="4"/>
 <wire x1="40.64" y1="119.38" x2="38.1" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="119.38" x2="38.1" y2="129.54" width="0.1524" layer="91"/>
@@ -7985,14 +7980,14 @@ Max 35cm kabel</text>
 <pinref part="CON1" gate="1" pin="3"/>
 <wire x1="55.88" y1="119.38" x2="88.9" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="119.38" x2="88.9" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="DIN"/>
+<pinref part="IC1" gate="G$1" pin="DIN"/>
 <wire x1="88.9" y1="116.84" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
 <label x="60.96" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ADC_SCLK" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="SCLK"/>
+<pinref part="IC1" gate="G$1" pin="SCLK"/>
 <wire x1="38.1" y1="109.22" x2="93.98" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="109.22" x2="38.1" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="CON1" gate="1" pin="2"/>
@@ -8002,7 +7997,7 @@ Max 35cm kabel</text>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="IC4" gate="G$1" pin="ST"/>
+<pinref part="IC2" gate="G$1" pin="ST"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="185.42" y1="114.3" x2="182.88" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="114.3" x2="182.88" y2="111.76" width="0.1524" layer="91"/>
@@ -8011,16 +8006,16 @@ Max 35cm kabel</text>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="IC3" gate="G$1" pin="DOUT"/>
+<pinref part="IC1" gate="G$1" pin="DOUT"/>
 <wire x1="91.44" y1="121.92" x2="93.98" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="AIN0"/>
+<pinref part="IC1" gate="G$1" pin="AIN0"/>
 <wire x1="119.38" y1="121.92" x2="149.86" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="121.92" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="IC4" gate="G$1" pin="YOUT"/>
+<pinref part="IC2" gate="G$1" pin="YOUT"/>
 <wire x1="185.42" y1="119.38" x2="170.18" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="119.38" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
@@ -8037,10 +8032,4 @@ Max 35cm kabel</text>
 </errors>
 </schematic>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>

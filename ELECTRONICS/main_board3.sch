@@ -8635,11 +8635,11 @@ DIN A4, landscape with location and doc. field</description>
 <parts>
 <part name="IC1" library="linear" deviceset="LM324" device="D"/>
 <part name="IC2" library="74xx-eu" deviceset="74*14" device="N" value="7414N"/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="100K"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
 <part name="CON2" library="con-lstb" deviceset="MA17-2" device=""/>
 <part name="CON1" library="con-lstb" deviceset="MA05-2" device=""/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="100K"/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="100K"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
@@ -8676,7 +8676,7 @@ DIN A4, landscape with location and doc. field</description>
 <sheet>
 <plain>
 <text x="190.5" y="116.84" size="1.778" layer="94">OBS. place C1 and C2 close to IC1 and IC2 respectively!</text>
-<text x="208.28" y="76.2" size="1.778" layer="94">Unused components</text>
+<text x="208.28" y="71.12" size="1.778" layer="94">Unused components</text>
 </plain>
 <instances>
 <instance part="IC2" gate="D" x="208.28" y="63.5"/>
