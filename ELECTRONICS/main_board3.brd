@@ -1887,9 +1887,9 @@ Covered vias can be set in Masks (Limit).
 <element name="IC1" library="linear" package="SO14" value="LM324D" x="35.51" y="20.61"/>
 <element name="IC2" library="74xx-eu" package="DIL14" value="7414N" x="34.14" y="33.59" rot="R180"/>
 <element name="LED1" library="led" package="CHIP-LED0805" value="Power indicator" x="48.07" y="9.15" rot="R180"/>
-<element name="R1" library="rcl" package="R0805" value="100K" x="40.4" y="12.63"/>
-<element name="R2" library="rcl" package="R0805" value="100K" x="23.4" y="24.68" rot="R90"/>
-<element name="R3" library="rcl" package="R0805" value="100K" x="23.38" y="20" rot="R270"/>
+<element name="R1" library="rcl" package="R0805" value="10K" x="40.4" y="12.63"/>
+<element name="R2" library="rcl" package="R0805" value="10K" x="23.4" y="24.68" rot="R90"/>
+<element name="R3" library="rcl" package="R0805" value="10K" x="23.38" y="20" rot="R270"/>
 <element name="R4" library="rcl" package="R0805" value="100R" x="48.11" y="14.57" rot="R90"/>
 <element name="R5" library="rcl" package="R0805" value="50R" x="30.27" y="51.32"/>
 <element name="R6" library="rcl" package="R0805" value="50R" x="20.15" y="51.7"/>
