@@ -3,69 +3,44 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="SPI_Master_tb_behav.wdb" id="1">
+      <db_ref path="PWM_generator_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="SPI_Master_tb" />
+            <top_module name="PWM_generator_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="156600000001fs"></ZoomEndTime>
-      <Cursor1Time time="68200000000fs"></Cursor1Time>
+      <ZoomEndTime time="125520211163fs"></ZoomEndTime>
+      <Cursor1Time time="35510256000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="173"></NameColumnWidth>
-      <ValueColumnWidth column_width="157"></ValueColumnWidth>
+      <ValueColumnWidth column_width="149"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject type="array" fp_name="/SPI_Master_tb/uut/IN_DATA">
-      <obj_property name="ElementShortName">IN_DATA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">IN_DATA[15:0]</obj_property>
+   <WVObjectSize size="6" />
+   <wvobject type="logic" fp_name="/PWM_generator_tb/clk_IN">
+      <obj_property name="ElementShortName">clk_IN</obj_property>
+      <obj_property name="ObjectShortName">clk_IN</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SPI_Master_tb/uut/OUT_DATA">
-      <obj_property name="ElementShortName">OUT_DATA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">OUT_DATA[15:0]</obj_property>
+   <wvobject type="array" fp_name="/PWM_generator_tb/PWM_duty_in">
+      <obj_property name="ElementShortName">PWM_duty_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PWM_duty_in[7:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/CLK_in">
-      <obj_property name="ElementShortName">CLK_in</obj_property>
-      <obj_property name="ObjectShortName">CLK_in</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/START_TRANSFER">
-      <obj_property name="ElementShortName">START_TRANSFER</obj_property>
-      <obj_property name="ObjectShortName">START_TRANSFER</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/MISO">
-      <obj_property name="ElementShortName">MISO</obj_property>
-      <obj_property name="ObjectShortName">MISO</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/MOSI">
-      <obj_property name="ElementShortName">MOSI</obj_property>
-      <obj_property name="ObjectShortName">MOSI</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SS">
-      <obj_property name="ElementShortName">SS</obj_property>
-      <obj_property name="ObjectShortName">SS</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/SCLK">
-      <obj_property name="ElementShortName">SCLK</obj_property>
-      <obj_property name="ObjectShortName">SCLK</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/reset_in">
+   <wvobject type="logic" fp_name="/PWM_generator_tb/reset_in">
       <obj_property name="ElementShortName">reset_in</obj_property>
       <obj_property name="ObjectShortName">reset_in</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/SPI_Master_tb/uut/Transfer_done">
-      <obj_property name="ElementShortName">Transfer_done</obj_property>
-      <obj_property name="ObjectShortName">Transfer_done</obj_property>
+   <wvobject type="logic" fp_name="/PWM_generator_tb/PWM_out">
+      <obj_property name="ElementShortName">PWM_out</obj_property>
+      <obj_property name="ObjectShortName">PWM_out</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SPI_Master_tb/uut/DATA_IN_BUF">
-      <obj_property name="ElementShortName">DATA_IN_BUF[15:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_IN_BUF[15:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject type="other" fp_name="/PWM_generator_tb/stop_the_clock">
+      <obj_property name="ElementShortName">stop_the_clock</obj_property>
+      <obj_property name="ObjectShortName">stop_the_clock</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/SPI_Master_tb/uut/DATA_OUT_BUF">
-      <obj_property name="ElementShortName">DATA_OUT_BUF[15:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_OUT_BUF[15:0]</obj_property>
+   <wvobject type="other" fp_name="/PWM_generator_tb/clock_period">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
    </wvobject>
 </wave_config>

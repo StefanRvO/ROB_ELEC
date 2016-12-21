@@ -61,6 +61,8 @@ ENTITY unity_PID_0_0 IS
     clk_in : IN STD_LOGIC;
     P_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     P_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    D_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    D_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     I_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     I_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     reset_in : IN STD_LOGIC
@@ -73,8 +75,6 @@ ARCHITECTURE unity_PID_0_0_arch OF unity_PID_0_0 IS
   COMPONENT PID IS
     GENERIC (
       SIZE : INTEGER;
-      K_MULT : INTEGER;
-      K_DIV : INTEGER;
       MAX : INTEGER;
       MIN : INTEGER;
       CONST_SIZE : INTEGER;
@@ -88,6 +88,8 @@ ARCHITECTURE unity_PID_0_0_arch OF unity_PID_0_0 IS
       clk_in : IN STD_LOGIC;
       P_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       P_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      D_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      D_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       I_MULT : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       I_DIV : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       reset_in : IN STD_LOGIC
@@ -99,10 +101,8 @@ BEGIN
   U0 : PID
     GENERIC MAP (
       SIZE => 32,
-      K_MULT => 1,
-      K_DIV => 1,
       MAX => 255,
-      MIN => -255,
+      MIN => 0,
       CONST_SIZE => 32,
       SAMPLE_FREQ => 100000,
       CLK_FREQ => 200000000
@@ -114,6 +114,8 @@ BEGIN
       clk_in => clk_in,
       P_MULT => P_MULT,
       P_DIV => P_DIV,
+      D_MULT => D_MULT,
+      D_DIV => D_DIV,
       I_MULT => I_MULT,
       I_DIV => I_DIV,
       reset_in => reset_in

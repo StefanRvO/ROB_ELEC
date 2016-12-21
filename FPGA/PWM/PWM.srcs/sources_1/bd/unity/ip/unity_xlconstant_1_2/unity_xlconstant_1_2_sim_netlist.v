@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Fri Dec 16 16:17:15 2016
+// Date        : Tue Dec 20 14:05:49 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlconstant_1_2/unity_xlconstant_1_2_sim_netlist.v
@@ -22,13 +22,13 @@ module unity_xlconstant_1_2
   wire \<const1> ;
 
   assign dout[7] = \<const0> ;
-  assign dout[6] = \<const1> ;
-  assign dout[5] = \<const0> ;
+  assign dout[6] = \<const0> ;
+  assign dout[5] = \<const1> ;
   assign dout[4] = \<const0> ;
-  assign dout[3] = \<const0> ;
+  assign dout[3] = \<const1> ;
   assign dout[2] = \<const0> ;
   assign dout[1] = \<const0> ;
-  assign dout[0] = \<const0> ;
+  assign dout[0] = \<const1> ;
   GND GND
        (.G(\<const0> ));
   VCC VCC

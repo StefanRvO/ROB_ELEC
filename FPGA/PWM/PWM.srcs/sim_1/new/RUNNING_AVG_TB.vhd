@@ -30,7 +30,7 @@ begin
 
   -- Insert values for generic parameters !!
   uut: RUNNING_AVG generic map ( IN_SIZE      => 8,
-                                 AVG_SIZE_BITS     =>  16)
+                                 AVG_SIZE_BITS     =>  4)
                       port map ( clk_in       => clk_in,
                                  input_in     => input_in,
                                  output_out   => output_out,

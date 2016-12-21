@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Fri Dec 16 14:18:35 2016
+// Date        : Tue Dec 20 10:55:43 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_vector_mux_1_0/unity_vector_mux_1_0_sim_netlist.v

@@ -38,9 +38,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_Debouncer
 # IP: bd/unity/ip/unity_inverter_0_1/unity_inverter_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_inverter_0_1 || ORIG_REF_NAME==unity_inverter_0_1}]
 
-# IP: bd/unity/ip/unity_period_smoother_0_0/unity_period_smoother_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_period_smoother_0_0 || ORIG_REF_NAME==unity_period_smoother_0_0}]
-
 # IP: bd/unity/ip/unity_vector_mux_0_1/unity_vector_mux_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_vector_mux_0_1 || ORIG_REF_NAME==unity_vector_mux_0_1}]
 
@@ -86,23 +83,56 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PULSER_0_
 # IP: bd/unity/ip/unity_xlslice_1_1/unity_xlslice_1_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_1_1 || ORIG_REF_NAME==unity_xlslice_1_1}]
 
-# IP: bd/unity/ip/unity_PID_0_0/unity_PID_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PID_0_0 || ORIG_REF_NAME==unity_PID_0_0}]
-
-# IP: bd/unity/ip/unity_xlslice_1_3/unity_xlslice_1_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_1_3 || ORIG_REF_NAME==unity_xlslice_1_3}]
-
-# IP: bd/unity/ip/unity_vector_mux_1_1/unity_vector_mux_1_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_vector_mux_1_1 || ORIG_REF_NAME==unity_vector_mux_1_1}]
-
-# IP: bd/unity/ip/unity_xlslice_7_0/unity_xlslice_7_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_7_0 || ORIG_REF_NAME==unity_xlslice_7_0}]
-
 # IP: bd/unity/ip/unity_xlslice_8_0/unity_xlslice_8_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_8_0 || ORIG_REF_NAME==unity_xlslice_8_0}]
 
-# IP: bd/unity/ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_UNSIGNED_TO_SIGNED_CONV_0_0 || ORIG_REF_NAME==unity_UNSIGNED_TO_SIGNED_CONV_0_0}]
+# IP: bd/unity/ip/unity_xlconcat_0_2/unity_xlconcat_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconcat_0_2 || ORIG_REF_NAME==unity_xlconcat_0_2}]
+
+# IP: bd/unity/ip/unity_xlconstant_0_1/unity_xlconstant_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconstant_0_1 || ORIG_REF_NAME==unity_xlconstant_0_1}]
+
+# IP: bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_3_0 || ORIG_REF_NAME==unity_xlslice_3_0}]
+
+# IP: bd/unity/ip/unity_AD7887_0_0/unity_AD7887_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_AD7887_0_0 || ORIG_REF_NAME==unity_AD7887_0_0}]
+
+# IP: bd/unity/ip/unity_SPI_Master_0_0/unity_SPI_Master_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_SPI_Master_0_0 || ORIG_REF_NAME==unity_SPI_Master_0_0}]
+
+# IP: bd/unity/ip/unity_xlconcat_1_0/unity_xlconcat_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconcat_1_0 || ORIG_REF_NAME==unity_xlconcat_1_0}]
+
+# IP: bd/unity/ip/unity_xlconstant_1_0/unity_xlconstant_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconstant_1_0 || ORIG_REF_NAME==unity_xlconstant_1_0}]
+
+# IP: bd/unity/ip/unity_xlconcat_1_1/unity_xlconcat_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconcat_1_1 || ORIG_REF_NAME==unity_xlconcat_1_1}]
+
+# IP: bd/unity/ip/unity_PID_0_0/unity_PID_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PID_0_0 || ORIG_REF_NAME==unity_PID_0_0}]
+
+# IP: bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_0_2 || ORIG_REF_NAME==unity_xlslice_0_2}]
+
+# IP: bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_vector_mux_0_0 || ORIG_REF_NAME==unity_vector_mux_0_0}]
+
+# IP: bd/unity/ip/unity_xlslice_1_2/unity_xlslice_1_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_1_2 || ORIG_REF_NAME==unity_xlslice_1_2}]
+
+# IP: bd/unity/ip/unity_AXIS_INVERTER_0_0/unity_AXIS_INVERTER_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_AXIS_INVERTER_0_0 || ORIG_REF_NAME==unity_AXIS_INVERTER_0_0}]
+
+# IP: bd/unity/ip/unity_RUNNING_AVG_0_0/unity_RUNNING_AVG_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_RUNNING_AVG_0_0 || ORIG_REF_NAME==unity_RUNNING_AVG_0_0}]
+
+# IP: bd/unity/ip/unity_Toggler_1_0/unity_Toggler_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_Toggler_1_0 || ORIG_REF_NAME==unity_Toggler_1_0}]
+
+# IP: bd/unity/ip/unity_xlconcat_1_2/unity_xlconcat_1_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconcat_1_2 || ORIG_REF_NAME==unity_xlconcat_1_2}]
 
 # IP: bd/unity/ip/unity_PWM_smoother_0_0/unity_PWM_smoother_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PWM_smoother_0_0 || ORIG_REF_NAME==unity_PWM_smoother_0_0}]
@@ -110,37 +140,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_PWM_smoot
 # IP: bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_SIGNED_TO_UNSIGNED_CONV_0_0 || ORIG_REF_NAME==unity_SIGNED_TO_UNSIGNED_CONV_0_0}]
 
-# IP: bd/unity/ip/unity_vector_mux_0_0/unity_vector_mux_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_vector_mux_0_0 || ORIG_REF_NAME==unity_vector_mux_0_0}]
+# IP: bd/unity/ip/unity_UNSIGNED_TO_SIGNED_CONV_0_0/unity_UNSIGNED_TO_SIGNED_CONV_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_UNSIGNED_TO_SIGNED_CONV_0_0 || ORIG_REF_NAME==unity_UNSIGNED_TO_SIGNED_CONV_0_0}]
 
 # IP: bd/unity/ip/unity_xlconstant_0_0/unity_xlconstant_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconstant_0_0 || ORIG_REF_NAME==unity_xlconstant_0_0}]
-
-# IP: bd/unity/ip/unity_xlconcat_0_0/unity_xlconcat_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlconcat_0_0 || ORIG_REF_NAME==unity_xlconcat_0_0}]
-
-# IP: bd/unity/ip/unity_xlslice_0_2/unity_xlslice_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_0_2 || ORIG_REF_NAME==unity_xlslice_0_2}]
-
-# IP: bd/unity/ip/unity_xlslice_0_3/unity_xlslice_0_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_0_3 || ORIG_REF_NAME==unity_xlslice_0_3}]
-
-# IP: bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_3_0 || ORIG_REF_NAME==unity_xlslice_3_0}]
-
-# IP: bd/unity/ip/unity_xlslice_3_1/unity_xlslice_3_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_3_1 || ORIG_REF_NAME==unity_xlslice_3_1}]
-
-# IP: bd/unity/ip/unity_xlslice_3_2/unity_xlslice_3_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_3_2 || ORIG_REF_NAME==unity_xlslice_3_2}]
-
-# IP: bd/unity/ip/unity_xlslice_3_3/unity_xlslice_3_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_xlslice_3_3 || ORIG_REF_NAME==unity_xlslice_3_3}]
-
-# IP: bd/unity/ip/unity_AND_GATE_0_1/unity_AND_GATE_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_AND_GATE_0_1 || ORIG_REF_NAME==unity_AND_GATE_0_1}]
-
-# IP: bd/unity/ip/unity_Debouncer_0_0/unity_Debouncer_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==unity_Debouncer_0_0 || ORIG_REF_NAME==unity_Debouncer_0_0}]
 
 # XDC: bd/unity/unity_ooc.xdc

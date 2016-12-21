@@ -1,0 +1,260 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Dec 20 18:25:01 2016
+# Process ID: 32017
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_AD7887_0_0_synth_1
+# Command line: vivado -log unity_AD7887_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_AD7887_0_0.tcl
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_AD7887_0_0_synth_1/unity_AD7887_0_0.vds
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_AD7887_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source unity_AD7887_0_0.tcl -notrace
+Command: synth_design -top unity_AD7887_0_0 -part xc7z010clg225-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 32068 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1058.672 ; gain = 155.301 ; free physical = 2094 ; free virtual = 19829
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'unity_AD7887_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AD7887_0_0/synth/unity_AD7887_0_0.vhd:68]
+	Parameter CLK_FREQ bound to: 200000000 - type: integer 
+	Parameter SAMPLE_FREQ bound to: 20000 - type: integer 
+INFO: [Synth 8-3491] module 'AD7887' declared at '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/AD7887.vhd:34' bound to instance 'U0' of component 'AD7887' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AD7887_0_0/synth/unity_AD7887_0_0.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'AD7887' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/AD7887.vhd:48]
+	Parameter CLK_FREQ bound to: 200000000 - type: integer 
+	Parameter SAMPLE_FREQ bound to: 20000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'AD7887' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/new/AD7887.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'unity_AD7887_0_0' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_AD7887_0_0/synth/unity_AD7887_0_0.vhd:68]
+WARNING: [Synth 8-3331] design AD7887 has unconnected port DATA_IN[15]
+WARNING: [Synth 8-3331] design AD7887 has unconnected port DATA_IN[14]
+WARNING: [Synth 8-3331] design AD7887 has unconnected port DATA_IN[13]
+WARNING: [Synth 8-3331] design AD7887 has unconnected port DATA_IN[12]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1099.141 ; gain = 195.770 ; free physical = 1948 ; free virtual = 19683
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1099.141 ; gain = 195.770 ; free physical = 1946 ; free virtual = 19681
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1107.145 ; gain = 203.773 ; free physical = 1945 ; free virtual = 19681
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1115.152 ; gain = 211.781 ; free physical = 1936 ; free virtual = 19671
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module AD7887 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[15] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[14] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[13] driven by constant 1
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[12] driven by constant 1
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[10] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[9] driven by constant 1
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[8] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[7] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[6] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[5] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[4] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[3] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[2] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[1] driven by constant 0
+INFO: [Synth 8-3917] design unity_AD7887_0_0 has port DATA_OUT[0] driven by constant 0
+WARNING: [Synth 8-3331] design unity_AD7887_0_0 has unconnected port DATA_IN[15]
+WARNING: [Synth 8-3331] design unity_AD7887_0_0 has unconnected port DATA_IN[14]
+WARNING: [Synth 8-3331] design unity_AD7887_0_0 has unconnected port DATA_IN[13]
+WARNING: [Synth 8-3331] design unity_AD7887_0_0 has unconnected port DATA_IN[12]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1199.488 ; gain = 296.117 ; free physical = 1598 ; free virtual = 19334
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1199.488 ; gain = 296.117 ; free physical = 1598 ; free virtual = 19334
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1207.496 ; gain = 304.125 ; free physical = 1589 ; free virtual = 19325
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1207.496 ; gain = 304.125 ; free physical = 1567 ; free virtual = 19303
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1207.496 ; gain = 304.125 ; free physical = 1566 ; free virtual = 19303
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1207.496 ; gain = 304.125 ; free physical = 1566 ; free virtual = 19303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1207.496 ; gain = 304.125 ; free physical = 1566 ; free virtual = 19303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1207.496 ; gain = 304.125 ; free physical = 1567 ; free virtual = 19304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1207.496 ; gain = 304.125 ; free physical = 1567 ; free virtual = 19304
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    21|
+|2     |LUT1   |    34|
+|3     |LUT2   |    23|
+|4     |LUT3   |    32|
+|5     |LUT4   |     1|
+|6     |FDRE   |    58|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   169|
+|2     |  U0     |AD7887 |   169|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1207.496 ; gain = 304.125 ; free physical = 1567 ; free virtual = 19303
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1207.496 ; gain = 204.824 ; free physical = 1567 ; free virtual = 19303
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1207.504 ; gain = 304.133 ; free physical = 1567 ; free virtual = 19303
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1279.496 ; gain = 289.406 ; free physical = 1343 ; free virtual = 19080
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_AD7887_0_0_synth_1/unity_AD7887_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1769.031 ; gain = 489.535 ; free physical = 307 ; free virtual = 18046
+INFO: [Common 17-1381] The checkpoint '/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_AD7887_0_0_synth_1/unity_AD7887_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1770.031 ; gain = 0.000 ; free physical = 1064 ; free virtual = 18803
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 20 18:25:44 2016...

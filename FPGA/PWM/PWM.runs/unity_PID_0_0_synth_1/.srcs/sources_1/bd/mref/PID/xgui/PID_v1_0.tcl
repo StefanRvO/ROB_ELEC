@@ -6,6 +6,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "CLK_FREQ" -parent ${Page_0}
   ipgui::add_param $IPINST -name "CONST_SIZE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MAX" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "MAX_SUM" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MIN" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SAMPLE_FREQ" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SIZE" -parent ${Page_0}
@@ -37,6 +38,15 @@ proc update_PARAM_VALUE.MAX { PARAM_VALUE.MAX } {
 
 proc validate_PARAM_VALUE.MAX { PARAM_VALUE.MAX } {
 	# Procedure called to validate MAX
+	return true
+}
+
+proc update_PARAM_VALUE.MAX_SUM { PARAM_VALUE.MAX_SUM } {
+	# Procedure called to update MAX_SUM when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.MAX_SUM { PARAM_VALUE.MAX_SUM } {
+	# Procedure called to validate MAX_SUM
 	return true
 }
 
@@ -96,5 +106,10 @@ proc update_MODELPARAM_VALUE.SAMPLE_FREQ { MODELPARAM_VALUE.SAMPLE_FREQ PARAM_VA
 proc update_MODELPARAM_VALUE.CLK_FREQ { MODELPARAM_VALUE.CLK_FREQ PARAM_VALUE.CLK_FREQ } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.CLK_FREQ}] ${MODELPARAM_VALUE.CLK_FREQ}
+}
+
+proc update_MODELPARAM_VALUE.MAX_SUM { MODELPARAM_VALUE.MAX_SUM PARAM_VALUE.MAX_SUM } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.MAX_SUM}] ${MODELPARAM_VALUE.MAX_SUM}
 }
 

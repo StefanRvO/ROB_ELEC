@@ -47,6 +47,17 @@ entity unity_ctrl is
            addr14_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
            addr15_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
 
+           addr20_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr21_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr22_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr23_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+
+           addr28_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr29_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr30_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+           addr31_out   : out STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+
+
            addr0_in : in STD_LOGIC_VECTOR(31 downto 0);
            addr1_in : in STD_LOGIC_VECTOR(31 downto 0);
            addr2_in : in STD_LOGIC_VECTOR(31 downto 0);
@@ -155,6 +166,16 @@ if(rising_edge(unity_clk)) then
           when "001101" => addr13_out <= mem_data_out;   --13
           when "001110" => addr14_out <= mem_data_out;   --14
           when "001111" => addr15_out <= mem_data_out;   --15
+          
+          when "010100" => addr20_out <= mem_data_out;   --15
+          when "010101" => addr21_out <= mem_data_out;   --15
+          when "010110" => addr22_out <= mem_data_out;   --15
+          when "010111" => addr23_out <= mem_data_out;   --15
+
+          when "011100" => addr28_out <= mem_data_out;   --15
+          when "011101" => addr29_out <= mem_data_out;   --15
+          when "011110" => addr30_out <= mem_data_out;   --15
+          when "011111" => addr31_out <= mem_data_out;   --15
 
           when others =>
         end case;

@@ -66,6 +66,14 @@ ENTITY unity_unity_ctrl_0_0 IS
     addr13_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     addr14_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     addr15_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr20_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr21_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr22_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr23_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr28_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr29_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr30_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    addr31_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     addr0_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     addr2_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -92,6 +100,14 @@ ARCHITECTURE unity_unity_ctrl_0_0_arch OF unity_unity_ctrl_0_0 IS
       addr13_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       addr14_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       addr15_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr20_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr21_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr22_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr23_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr28_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr29_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr30_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      addr31_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       addr0_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       addr1_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       addr2_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -115,6 +131,14 @@ BEGIN
       addr13_out => addr13_out,
       addr14_out => addr14_out,
       addr15_out => addr15_out,
+      addr20_out => addr20_out,
+      addr21_out => addr21_out,
+      addr22_out => addr22_out,
+      addr23_out => addr23_out,
+      addr28_out => addr28_out,
+      addr29_out => addr29_out,
+      addr30_out => addr30_out,
+      addr31_out => addr31_out,
       addr0_in => addr0_in,
       addr1_in => addr1_in,
       addr2_in => addr2_in,

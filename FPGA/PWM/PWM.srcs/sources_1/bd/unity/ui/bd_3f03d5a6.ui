@@ -1,0 +1,21 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace portBus out_vec -pg 1 -y 120 -defaultsOSRD
+preplace portBus Din -pg 1 -y 200 -defaultsOSRD
+preplace portBus Din1 -pg 1 -y 40 -defaultsOSRD
+preplace portBus Din2 -pg 1 -y 120 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 1 -y 120 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 1 -y 200 -defaultsOSRD
+preplace inst vector_mux_0 -pg 1 -lvl 2 -y 120 -defaultsOSRD
+preplace inst xlslice_9 -pg 1 -lvl 1 -y 40 -defaultsOSRD
+preplace netloc PID_0_output_out 1 0 1 NJ
+preplace netloc xlslice_9_Dout 1 1 1 210J
+preplace netloc unity_ctrl_0_addr7_out 1 0 1 NJ
+preplace netloc PWM_duty_in_1 1 2 1 N
+preplace netloc xlslice_2_Dout 1 1 1 210J
+preplace netloc unity_ctrl_0_addr4_out 1 0 1 NJ
+preplace netloc xlslice_0_Dout 1 1 1 NJ
+levelinfo -pg 1 -10 110 340 490 -top -10 -bot 250
+",
+}

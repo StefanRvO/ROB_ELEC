@@ -51,6 +51,7 @@ signal sum : unsigned(IN_SIZE * 2 - 1 downto 0) := (others => '0');
 signal first_run: STD_LOGIC := '1';
 signal average : unsigned(IN_SIZE - 1 downto 0) := (others => '0');
 signal added : STD_LOGIC := '1';
+signal last_do_sample : STD_LOGIC := '0';
 begin
 
 average <= resize(sum srl AVG_SIZE_BITS, average'length);
@@ -58,7 +59,8 @@ output_out <= input_in when(first_run = '1') else average;
 save_input : process(clk_in, do_sample_in)
 begin
     if(rising_edge(clk_in)) then
-        if(do_sample_in = '1') then
+        last_do_sample <= do_sample_in;
+        if(last_do_sample = '0' and do_sample_in = '1') then
             added <= '0';
             sum <= sum - AVG_LIST(index_counter);
             AVG_LIST(index_counter) <= input_in;

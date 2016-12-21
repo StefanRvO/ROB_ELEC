@@ -2,11 +2,11 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Dec 20 10:53:47 2016
-# Process ID: 31239
-# Current directory: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1
+# Start of session at: Tue Dec 20 14:05:05 2016
+# Process ID: 11050
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1
 # Command line: vivado -log unity_BLDC_STARTUP_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source unity_BLDC_STARTUP_0_0.tcl
-# Log file: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/unity_BLDC_STARTUP_0_0.vds
-# Journal file: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/vivado.jou
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/unity_BLDC_STARTUP_0_0.vds
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_BLDC_STARTUP_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source unity_BLDC_STARTUP_0_0.tcl -notrace

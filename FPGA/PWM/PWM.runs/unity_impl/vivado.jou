@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Dec 21 14:39:19 2016
+# Process ID: 14779
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl
+# Command line: vivado -log unity_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source unity_wrapper.tcl -notrace
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl/unity_wrapper.vdi
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/unity_impl/vivado.jou
+#-----------------------------------------------------------
+source unity_wrapper.tcl -notrace

@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Fri Dec 16 17:21:19 2016
+// Date        : Tue Dec 20 18:25:43 2016
 // Host        : Leviathan running 64-bit Arch Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_SIGNED_TO_UNSIGNED_CONV_0_0/unity_SIGNED_TO_UNSIGNED_CONV_0_0_sim_netlist.v
@@ -58,11 +58,11 @@ module unity_SIGNED_TO_UNSIGNED_CONV_0_0_SIGNED_TO_UNSIGNED_CONV
 
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
-    .INIT(16'hAAAB)) 
+    .INIT(16'hF0F1)) 
     SIGN_out_i_1
-       (.I0(SIGNED_in[8]),
-        .I1(\UNSIGNED_OUT[7]_i_2_n_0 ),
-        .I2(SIGNED_in[6]),
+       (.I0(\UNSIGNED_OUT[7]_i_2_n_0 ),
+        .I1(SIGNED_in[6]),
+        .I2(SIGNED_in[8]),
         .I3(SIGNED_in[7]),
         .O(SIGN_out_i_1_n_0));
   FDRE SIGN_out_reg
@@ -134,7 +134,7 @@ module unity_SIGNED_TO_UNSIGNED_CONV_0_0_SIGNED_TO_UNSIGNED_CONV
         .O(p_0_in[6]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
-    .INIT(16'h0002)) 
+    .INIT(16'h57A8)) 
     \UNSIGNED_OUT[7]_i_1 
        (.I0(SIGNED_in[8]),
         .I1(\UNSIGNED_OUT[7]_i_2_n_0 ),

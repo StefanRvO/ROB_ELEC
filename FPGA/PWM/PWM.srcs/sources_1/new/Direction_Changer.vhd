@@ -40,10 +40,11 @@ generic (SMOOTHING: integer range 0 to 100000000 := 10;
     Port ( PWM_Desired : in signed (8 downto 0);
            PWM_OUT : out signed (8 downto 0) := (others => '0');
            clk_in : in STD_LOGIC;
-           reset_in : in STD_LOGIC;
-           SPEED_IN : in STD_LOGIC_VECTOR(31 downto 0);
-           STOPPING : out STD_LOGIC := '0';
-           MEASURE_DIR_IN : in STD_LOGIC);
+           reset_in : in STD_LOGIC
+           --SPEED_IN : in STD_LOGIC_VECTOR(31 downto 0);
+           --STOPPING : out STD_LOGIC := '0';
+           --MEASURE_DIR_IN : in STD_LOGIC
+           );
 end PWM_smoother;
 
 architecture Behavioral of PWM_smoother is
@@ -61,14 +62,14 @@ begin
         if(reset_in = '1') then
             counter <= SMOOTHING;
             CUR_PWM <= PWM_Desired;
-            STOPPING <= '0';
+           -- STOPPING <= '0';
         else
-            STOPPING <= '0';
-            if(PWM_Desired(PWM_Desired'left) = MEASURE_DIR_IN and unsigned(SPEED_IN) >= to_unsigned(STOP_SPEED,SPEED_IN'length)) then
-               STOPPING <= '1';
-                CUR_PWM <= to_signed(0, CUR_PWM'length);
-                CUR_PWM <= CUR_PWM;
-            elsif counter > 0 then
+            --STOPPING <= '0';
+            --if(PWM_Desired(PWM_Desired'left) = MEASURE_DIR_IN and unsigned(SPEED_IN) >= to_unsigned(STOP_SPEED,SPEED_IN'length)) then
+               --STOPPING <= '1';
+                --CUR_PWM <= to_signed(0, CUR_PWM'length);
+                --CUR_PWM <= CUR_PWM;
+            if counter > 0 then
                 counter <= counter - 1;
             else
                 counter <= SMOOTHING - 1;

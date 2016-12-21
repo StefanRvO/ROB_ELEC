@@ -1,81 +1,69 @@
 {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port dir_out -pg 1 -y 120 -defaultsOSRD
-preplace port clk_IN -pg 1 -y 150 -defaultsOSRD
-preplace port dir_in -pg 1 -y 270 -defaultsOSRD
-preplace port reset_in -pg 1 -y 70 -defaultsOSRD
-preplace port startup_in -pg 1 -y 130 -defaultsOSRD
-preplace portBus PWM_duty_in -pg 1 -y 250 -defaultsOSRD
-preplace portBus PHASE_C_out -pg 1 -y 1070 -defaultsOSRD
-preplace portBus PHASE_CH_out -pg 1 -y 910 -defaultsOSRD
-preplace portBus SENSE_in -pg 1 -y 620 -defaultsOSRD
-preplace portBus UNSIGNED_OUT -pg 1 -y 80 -defaultsOSRD
-preplace portBus PHASE_A_out -pg 1 -y 990 -defaultsOSRD
-preplace portBus PHASE_AH_out -pg 1 -y 750 -defaultsOSRD
-preplace portBus PHASE_B_out -pg 1 -y 670 -defaultsOSRD
-preplace portBus speed_out -pg 1 -y 100 -defaultsOSRD
-preplace portBus PHASE_BH_out -pg 1 -y 830 -defaultsOSRD
-preplace inst BLDC_SPEED_OBSERVER_0 -pg 1 -lvl 8 -y 540 -defaultsOSRD
-preplace inst STARTUP_PWM_MOD -pg 1 -lvl 5 -y 60 -defaultsOSRD
-preplace inst PWM_generator_0 -pg 1 -lvl 5 -y 170 -defaultsOSRD
-preplace inst BLDC_STATE_CONTROLLER_0 -pg 1 -lvl 7 -y 390 -defaultsOSRD
-preplace inst period_smoother_0 -pg 1 -lvl 2 -y 170 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 6 -y 340 -defaultsOSRD
-preplace inst DIR_SENSE_0 -pg 1 -lvl 4 -y 610 -defaultsOSRD
-preplace inst BLDC_DIR_CTRL_0 -pg 1 -lvl 8 -y 370 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 6 -y 420 -defaultsOSRD
-preplace inst BLDC_STARTUP_0 -pg 1 -lvl 1 -y 140 -defaultsOSRD
-preplace inst xlslice_2 -pg 1 -lvl 6 -y 500 -defaultsOSRD
-preplace inst xlconcat_1 -pg 1 -lvl 4 -y 180 -defaultsOSRD
-preplace inst Direction_Changer -pg 1 -lvl 9 -y 266 -defaultsOSRD
-preplace inst VECTOR_INV_0 -pg 1 -lvl 3 -y 620 -defaultsOSRD
-preplace inst vector_mux_1 -pg 1 -lvl 5 -y 370 -defaultsOSRD
-preplace inst vector_mux_2 -pg 1 -lvl 6 -y 170 -defaultsOSRD
-preplace inst OL_BLDC_Stepper_0 -pg 1 -lvl 3 -y 180 -defaultsOSRD
-preplace netloc hier_0_Dout5 1 9 1 3120J
-preplace netloc BLDC_DIR_CTRL_0_PHASE_B_out 1 8 1 2620
-preplace netloc BLDC_DIR_CTRL_0_PHASE_A_out 1 8 1 2610
-preplace netloc vector_mux_2_out_vec 1 6 1 1910
-preplace netloc BLDC_DIR_CTRL_0_PHASE_AH_out 1 8 1 2640
-preplace netloc SIGNED_TO_UNSIGNED_CONV_0_UNSIGNED_OUT 1 4 6 1330 240 1630J 60 NJ 60 NJ 60 NJ 60 3130
-preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_A_out 1 7 1 2280
-preplace netloc STARTUP_PWM_PWM_out 1 5 1 1620
-preplace netloc xlslice_1_Dout 1 6 1 N
-preplace netloc OL_BLDC_Stepper_0_SENSE_A_out 1 3 1 N
-preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_B_out 1 7 1 2260
-preplace netloc OL_BLDC_Stepper_0_SENSE_B_out 1 3 1 N
-preplace netloc dir_in_1 1 0 9 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 2600J
-preplace netloc DIR_SENSE_0_SENSE_out 1 4 1 1320
-preplace netloc xlconcat_1_dout 1 4 1 1320
-preplace netloc VECTOR_INV_0_VEC_out 1 3 5 1010 530 1300J 620 NJ 620 NJ 620 2280
-preplace netloc period_smoother_0_period_out 1 2 1 710
-preplace netloc hier_0_Dout 1 9 1 3190J
-preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_C_out 1 7 2 2220 470 2680J
-preplace netloc BLDC_STARTUP_0_startup_done_out 1 1 8 340 280 NJ 280 NJ 280 1330 280 1640 280 NJ 280 NJ 280 2630
-preplace netloc PWM_duty_in_1 1 0 9 10J 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 2580J
-preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_BH_out 1 7 1 2260
-preplace netloc inverter_2_out_sig 1 0 1 NJ
-preplace netloc xlslice_2_Dout 1 6 1 1910
-preplace netloc OL_BLDC_Stepper_0_SENSE_C_out 1 3 1 N
-preplace netloc PWM_generator_0_PWM_out 1 5 1 N
-preplace netloc hier_0_Dout1 1 9 1 3180J
-preplace netloc vector_mux_1_out_vec 1 5 1 1630
-preplace netloc BLDC_STARTUP_0_stepper_period_out 1 1 1 N
-preplace netloc hier_0_Dout2 1 9 1 3150J
-preplace netloc Net1 1 3 7 1020 550 NJ 550 NJ 550 NJ 550 2230 40 NJ 40 3120
-preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_AH_out 1 7 1 2240
-preplace netloc Net 1 0 9 NJ 70 360 250 730 250 NJ 250 1310 250 NJ 250 1920 250 2250 250 2590J
-preplace netloc hier_0_Dout3 1 9 1 3140J
-preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_CH_out 1 7 2 2210 460 2670J
-preplace netloc BLDC_DIR_CTRL_0_PHASE_BH_out 1 8 1 2650
-preplace netloc BLDC_SPEED_OBSERVER_0_speed_out 1 8 2 2660 550 3160J
-preplace netloc SENSE_in_1 1 0 3 NJ 620 NJ 620 NJ
-preplace netloc processing_system7_0_FCLK_CLK1 1 0 9 20 290 350 290 720 290 NJ 290 1300 290 NJ 290 1930 290 2270 140 2580J
-preplace netloc hier_0_Dout4 1 9 1 3130J
-preplace netloc BLDC_SPEED_OBSERVER_0_dir_out 1 8 2 2690 530 3170J
-preplace netloc xlslice_0_Dout 1 6 1 1900
-levelinfo -pg 1 -10 180 540 870 1160 1480 1770 2070 2430 2960 3210 -top 0 -bot 1140
+preplace port dir_out -pg 1 -y 310 -defaultsOSRD
+preplace port clk_IN -pg 1 -y 10 -defaultsOSRD
+preplace port dir_in -pg 1 -y 300 -defaultsOSRD
+preplace port reset_in -pg 1 -y 110 -defaultsOSRD
+preplace port startup_in -pg 1 -y 170 -defaultsOSRD
+preplace portBus PWM_duty_in -pg 1 -y 90 -defaultsOSRD
+preplace portBus PHASE_C_out -pg 1 -y 120 -defaultsOSRD
+preplace portBus PHASE_CH_out -pg 1 -y 140 -defaultsOSRD
+preplace portBus SENSE_in -pg 1 -y 350 -defaultsOSRD
+preplace portBus PHASE_A_out -pg 1 -y 160 -defaultsOSRD
+preplace portBus PHASE_AH_out -pg 1 -y 180 -defaultsOSRD
+preplace portBus PHASE_B_out -pg 1 -y 220 -defaultsOSRD
+preplace portBus speed_out -pg 1 -y 330 -defaultsOSRD
+preplace portBus PHASE_BH_out -pg 1 -y 200 -defaultsOSRD
+preplace inst STARTUP|vector_mux_1 -pg 1 -lvl 4 -y 202 -defaultsOSRD
+preplace inst BLDC_SPEED_OBSERVER_0 -pg 1 -lvl 4 -y 320 -defaultsOSRD
+preplace inst STARTUP|vector_mux_2 -pg 1 -lvl 4 -y 322 -defaultsOSRD
+preplace inst STARTUP -pg 1 -lvl 3 -y 182 -defaultsOSRD
+preplace inst PWM_generator_0 -pg 1 -lvl 2 -y 100 -defaultsOSRD
+preplace inst STARTUP|BLDC_STARTUP_0 -pg 1 -lvl 1 -y 192 -defaultsOSRD
+preplace inst DIR_SENSE_0 -pg 1 -lvl 2 -y 360 -defaultsOSRD
+preplace inst STATE_CONTROLLER -pg 1 -lvl 4 -y 170 -defaultsOSRD
+preplace inst PWM_SMOOTHER -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace inst VECTOR_INV_0 -pg 1 -lvl 1 -y 350 -defaultsOSRD
+preplace inst STARTUP|xlconcat_1 -pg 1 -lvl 3 -y 182 -defaultsOSRD
+preplace inst STARTUP|STARTUP_PWM_MOD -pg 1 -lvl 3 -y 342 -defaultsOSRD
+preplace inst STARTUP|OL_BLDC_Stepper_0 -pg 1 -lvl 2 -y 182 -defaultsOSRD
+preplace netloc STARTUP|vector_mux_2_out_vec 1 4 1 1900
+preplace netloc STARTUP|BLDC_STARTUP_0_stepper_period_out 1 1 1 N
+preplace netloc STATE_CONTROLLER_PHASE_B_out 1 4 1 NJ
+preplace netloc STARTUP|in_vec2_1 1 0 4 NJ 272 NJ 272 NJ 272 1620
+preplace netloc STARTUP|OL_BLDC_Stepper_0_SENSE_A_out 1 2 1 N
+preplace netloc STATE_CONTROLLER_PHASE_A_out 1 4 1 NJ
+preplace netloc SIGNED_TO_UNSIGNED_CONV_0_UNSIGNED_OUT 1 1 1 350
+preplace netloc STARTUP|BLDC_STARTUP_0_startup_done_out 1 1 3 1130J 252 NJ 252 1640
+preplace netloc STARTUP|vector_mux_1_out_vec 1 4 1 N
+preplace netloc STARTUP|OL_BLDC_Stepper_0_SENSE_C_out 1 2 1 N
+preplace netloc STARTUP|processing_system7_0_FCLK_CLK1 1 0 3 800 332 1120 332 NJ
+preplace netloc STATE_CONTROLLER_PHASE_AH_out 1 4 1 NJ
+preplace netloc STARTUP|STARTUP_PWM_MOD_PWM_out 1 3 1 1630
+preplace netloc STARTUP|Net 1 0 3 NJ 252 1140 352 NJ
+preplace netloc Din_1 1 3 1 2080
+preplace netloc DIR_SENSE_0_SENSE_out 1 2 1 650
+preplace netloc dir_in_1 1 0 4 NJ 300 350 300 630J 30 2090
+preplace netloc STARTUP|in_vec3_1 1 0 4 NJ 292 NJ 292 1420J 262 1620
+preplace netloc VECTOR_INV_0_VEC_out 1 1 3 340 430 NJ 430 2110J
+preplace netloc STARTUP|xlconcat_1_dout 1 3 1 N
+preplace netloc STATE_CONTROLLER_PHASE_BH_out 1 4 1 NJ
+preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_C_out 1 4 1 NJ
+preplace netloc PWM_generator_0_PWM_out 1 2 1 640
+preplace netloc PWM_duty_in_1 1 0 1 NJ
+preplace netloc inverter_2_out_sig 1 0 3 10J 182 NJ 182 NJ
+preplace netloc PWM_in_1 1 3 1 2060
+preplace netloc Net 1 0 4 20 252 350 252 660 80 2070
+preplace netloc BLDC_STATE_CONTROLLER_0_PHASE_CH_out 1 4 1 NJ
+preplace netloc BLDC_SPEED_OBSERVER_0_speed_out 1 4 1 NJ
+preplace netloc SENSE_in_1 1 0 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 4 20 10 350 10 650 10 2100
+preplace netloc STARTUP|inverter_2_out_sig 1 0 1 N
+preplace netloc STARTUP|OL_BLDC_Stepper_0_SENSE_B_out 1 2 1 N
+preplace netloc BLDC_SPEED_OBSERVER_0_dir_out 1 4 1 NJ
+levelinfo -pg 1 -10 180 490 870 2260 2430 -top -10 -bot 470
+levelinfo -hier STARTUP * 960 1280 1520 1770 *
 ",
 }
 0

@@ -2,13 +2,39 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Dec 20 10:57:48 2016
-# Process ID: 32225
-# Current directory: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/design_1_xlconcat_0_1_synth_1
+# Start of session at: Mon Dec 19 00:17:25 2016
+# Process ID: 32499
+# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/design_1_xlconcat_0_1_synth_1
 # Command line: vivado -log design_1_xlconcat_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xlconcat_0_1.tcl
-# Log file: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/design_1_xlconcat_0_1_synth_1/design_1_xlconcat_0_1.vds
-# Journal file: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/design_1_xlconcat_0_1_synth_1/vivado.jou
+# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/design_1_xlconcat_0_1_synth_1/design_1_xlconcat_0_1.vds
+# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/design_1_xlconcat_0_1_synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_xlconcat_0_1.tcl -notrace
-ERROR: [Common 17-55] 'set_property' expects at least one object.
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Starting Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1057.672 ; gain = 154.301 ; free physical = 1042 ; free virtual = 18535
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconcat_0_1' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_1/synth/design_1_xlconcat_0_1.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'xlconcat' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/design_1/ipshared/2e37/xlconcat.vhd:100]
+INFO: [Synth 8-256] done synthesizing module 'xlconcat' (1#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/design_1/ipshared/2e37/xlconcat.vhd:100]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xlconcat_0_1' (2#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_1/synth/design_1_xlconcat_0_1.vhd:67]
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1098.141 ; gain = 194.770 ; free physical = 908 ; free virtual = 18398
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1098.141 ; gain = 194.770 ; free physical = 895 ; free virtual = 18385
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1106.145 ; gain = 202.773 ; free physical = 894 ; free virtual = 18385
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1114.152 ; gain = 210.781 ; free physical = 880 ; free virtual = 18371
+INFO: [Device 21-403] Loading part xc7z010clg225-1
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1173.152 ; gain = 269.781 ; free physical = 596 ; free virtual = 18097
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1173.152 ; gain = 269.781 ; free physical = 596 ; free virtual = 18097
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1181.160 ; gain = 277.789 ; free physical = 587 ; free virtual = 18088
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.160 ; gain = 277.789 ; free physical = 535 ; free virtual = 18038
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.160 ; gain = 277.789 ; free physical = 535 ; free virtual = 18038
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.160 ; gain = 277.789 ; free physical = 535 ; free virtual = 18038
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.160 ; gain = 277.789 ; free physical = 535 ; free virtual = 18038
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.160 ; gain = 277.789 ; free physical = 535 ; free virtual = 18038
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.160 ; gain = 277.789 ; free physical = 535 ; free virtual = 18038
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.160 ; gain = 277.789 ; free physical = 535 ; free virtual = 18038
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1262.160 ; gain = 272.070 ; free physical = 322 ; free virtual = 17826
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1687.695 ; gain = 425.535 ; free physical = 160 ; free virtual = 17159

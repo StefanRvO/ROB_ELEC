@@ -28,16 +28,16 @@ architecture bench of PID_tb is
              );
   end component;
 
-  signal set_point: signed (SIZE - 1 downto 0);
-  signal feedback: signed (SIZE - 1 downto 0);
-  signal output_out: signed (SIZE - 1 downto 0) := (others => '0');
+  signal set_point: signed (32 - 1 downto 0) := to_signed(2048, 32);
+  signal feedback: signed (32 - 1 downto 0) := to_signed(1700, 32);
+  signal output_out: signed (32 - 1 downto 0) := (others => '0');
   signal clk_in: STD_LOGIC;
-  signal P_MULT: signed(CONST_SIZE - 1 downto 0);
-  signal P_DIV: unsigned(CONST_SIZE - 1 downto 0);
-  signal D_MULT: signed(CONST_SIZE - 1 downto 0);
-  signal D_DIV: unsigned(CONST_SIZE - 1 downto 0);
-  signal I_MULT: signed(CONST_SIZE - 1 downto 0);
-  signal I_DIV: unsigned(CONST_SIZE - 1 downto 0);
+  signal P_MULT: signed(32 - 1 downto 0) := to_signed(1,32);
+  signal P_DIV: unsigned(32 - 1 downto 0) := to_unsigned(2, 32);
+  signal D_MULT: signed(32 - 1 downto 0) := to_signed(0,32);
+  signal D_DIV: unsigned(32 - 1 downto 0) := to_unsigned(0,32);
+  signal I_MULT: signed(32 - 1 downto 0) := to_signed(900,32);
+  signal I_DIV: unsigned(32 - 1 downto 0) := to_unsigned(10,32);
   signal reset_in: STD_LOGIC := '0' ;
 
   constant clock_period: time := 10 ns;
@@ -46,12 +46,12 @@ architecture bench of PID_tb is
 begin
 
   -- Insert values for generic parameters !!
-  uut: PID generic map ( SIZE        => ,
-                         MAX         => ,
-                         MIN         => ,
-                         CONST_SIZE  => ,
-                         SAMPLE_FREQ => ,
-                         CLK_FREQ    =>  )
+  uut: PID generic map ( SIZE        => 32,
+                         MAX         => 255,
+                         MIN         => -255,
+                         CONST_SIZE  => 32,
+                         SAMPLE_FREQ => 100000,
+                         CLK_FREQ    =>  200000000)
               port map ( set_point   => set_point,
                          feedback    => feedback,
                          output_out  => output_out,
@@ -72,7 +72,7 @@ begin
 
     -- Put test bench stimulus code here
 
-    stop_the_clock <= true;
+    stop_the_clock <= false;
     wait;
   end process;
 
@@ -84,6 +84,36 @@ begin
     end loop;
     wait;
   end process;
+
+
+  constant_change: process
+  begin
+     I_MULT <= I_MULT + 1;
+      wait for 1 ms;
+  end process;
+
+--    feed: process
+--  begin
+--    feedback <= "00000000000000000000000000000010";
+    
+--    wait for clock_period*20000;
+--    feedback <= "00000000000000000000000000000011";
+--    wait for clock_period*20000;
+--       feedback <= "00000000000000000000000000000100";
+--   wait for clock_period*20000;
+--        feedback <= "00000000000000000000000000000101"; 
+--    wait for clock_period*20000;
+--    feedback <= "00000000000000000000000000000110"; 
+--    wait for clock_period*20000;
+--    feedback <= "00000000000000000000000000000111";
+--    wait;  
+--  end process;
+  
+--   setPoint_tb: process
+--   begin  
+--     set_point <= "00000000000000000000000000000111";
+--     wait;
+--    end process;
 
 end;
   

@@ -58,8 +58,8 @@ USE work.xlslice;
 
 ENTITY unity_xlslice_0_2 IS
   PORT (
-    Din : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-    Dout : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+    Din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END unity_xlslice_0_2;
 
@@ -73,16 +73,16 @@ ARCHITECTURE unity_xlslice_0_2_arch OF unity_xlslice_0_2 IS
       DIN_TO : INTEGER
     );
     PORT (
-      Din : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-      Dout : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+      Din : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      Dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
   END COMPONENT xlslice;
 BEGIN
   U0 : xlslice
     GENERIC MAP (
-      DIN_WIDTH => 6,
-      DIN_FROM => 4,
-      DIN_TO => 4
+      DIN_WIDTH => 32,
+      DIN_FROM => 7,
+      DIN_TO => 0
     )
     PORT MAP (
       Din => Din,

@@ -58,8 +58,8 @@ USE work.xlslice;
 
 ENTITY unity_xlslice_3_0 IS
   PORT (
-    Din : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-    Dout : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+    Din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    Dout : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
   );
 END unity_xlslice_3_0;
 
@@ -73,8 +73,8 @@ ARCHITECTURE unity_xlslice_3_0_arch OF unity_xlslice_3_0 IS
       DIN_TO : INTEGER
     );
     PORT (
-      Din : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-      Dout : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+      Din : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+      Dout : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
     );
   END COMPONENT xlslice;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -82,13 +82,13 @@ ARCHITECTURE unity_xlslice_3_0_arch OF unity_xlslice_3_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF unity_xlslice_3_0_arch : ARCHITECTURE IS "unity_xlslice_3_0,xlslice,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF unity_xlslice_3_0_arch: ARCHITECTURE IS "unity_xlslice_3_0,xlslice,{x_ipProduct=Vivado 2016.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=0,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,DIN_WIDTH=6,DIN_FROM=3,DIN_TO=3}";
+  ATTRIBUTE CORE_GENERATION_INFO OF unity_xlslice_3_0_arch: ARCHITECTURE IS "unity_xlslice_3_0,xlslice,{x_ipProduct=Vivado 2016.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=0,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,DIN_WIDTH=8,DIN_FROM=6,DIN_TO=0}";
 BEGIN
   U0 : xlslice
     GENERIC MAP (
-      DIN_WIDTH => 6,
-      DIN_FROM => 3,
-      DIN_TO => 3
+      DIN_WIDTH => 8,
+      DIN_FROM => 6,
+      DIN_TO => 0
     )
     PORT MAP (
       Din => Din,

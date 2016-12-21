@@ -51,7 +51,7 @@ architecture Behavioral of AD7887 is
     signal AXIS_SELECT : STD_LOGIC := '0';
     
 begin
-DATA_OUT <= "0011001000000000" when(AXIS_SELECT = '0') else "0011001000000000";
+DATA_OUT <= "0011001000000000" when(AXIS_SELECT = '0') else "0011101000000000";
 
 DATA_OUTPUT_PROCESS : process(clk_in)
 begin

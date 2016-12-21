@@ -79,7 +79,8 @@ ARCHITECTURE unity_PID_0_0_arch OF unity_PID_0_0 IS
       MIN : INTEGER;
       CONST_SIZE : INTEGER;
       SAMPLE_FREQ : INTEGER;
-      CLK_FREQ : INTEGER
+      CLK_FREQ : INTEGER;
+      MAX_SUM : INTEGER
     );
     PORT (
       set_point : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -102,10 +103,11 @@ BEGIN
     GENERIC MAP (
       SIZE => 32,
       MAX => 255,
-      MIN => -255,
+      MIN => 35,
       CONST_SIZE => 32,
-      SAMPLE_FREQ => 100000,
-      CLK_FREQ => 200000000
+      SAMPLE_FREQ => 100,
+      CLK_FREQ => 200000000,
+      MAX_SUM => 500000000
     )
     PORT MAP (
       set_point => set_point,

@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
-// Date        : Sat Dec 17 12:13:48 2016
+// Date        : Tue Dec 20 10:56:53 2016
 // Host        : Leviathan running 64-bit Arch Linux
-// Command     : write_verilog -force -mode funcsim -rename_top unity_xlslice_3_0 -prefix
-//               unity_xlslice_3_0_ unity_xlslice_3_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/unity/ip/unity_xlslice_3_0/unity_xlslice_3_0_sim_netlist.v
 // Design      : unity_xlslice_3_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,12 +17,12 @@
 module unity_xlslice_3_0
    (Din,
     Dout);
-  input [5:0]Din;
-  output [0:0]Dout;
+  input [7:0]Din;
+  output [6:0]Dout;
 
-  wire [5:0]Din;
+  wire [7:0]Din;
 
-  assign Dout[0] = Din[3];
+  assign Dout[6:0] = Din[6:0];
 endmodule
 `ifndef GLBL
 `define GLBL
