@@ -2,52 +2,13 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Sun Dec 18 22:22:50 2016
-# Process ID: 28021
-# Current directory: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/design_1_processing_system7_0_0_synth_1
+# Start of session at: Tue Dec 20 10:57:27 2016
+# Process ID: 32147
+# Current directory: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/design_1_processing_system7_0_0_synth_1
 # Command line: vivado -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
-# Log file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
-# Journal file: /home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.runs/design_1_processing_system7_0_0_synth_1/vivado.jou
+# Log file: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
+# Journal file: /media/tobias/Data/Dropbox/RobTek/Cand_1_semester/Robot_Electronics/Final_project/FPGA/PWM/PWM.runs/design_1_processing_system7_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_processing_system7_0_0.tcl -notrace
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1067.668 ; gain = 164.301 ; free physical = 135 ; free virtual = 18710
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
-INFO: [Synth 8-638] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
-INFO: [Synth 8-638] synthesizing module 'BUFG' [/home/stefan/HDD/Vivado/2016.3/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [/home/stefan/HDD/Vivado/2016.3/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-638] synthesizing module 'BIBUF' [/home/stefan/HDD/Vivado/2016.3/scripts/rt/data/unisim_comp.v:268]
-INFO: [Synth 8-256] done synthesizing module 'BIBUF' (2#1) [/home/stefan/HDD/Vivado/2016.3/scripts/rt/data/unisim_comp.v:268]
-INFO: [Synth 8-638] synthesizing module 'PS7' [/home/stefan/HDD/Vivado/2016.3/scripts/rt/data/unisim_comp.v:33182]
-INFO: [Synth 8-256] done synthesizing module 'PS7' (3#1) [/home/stefan/HDD/Vivado/2016.3/scripts/rt/data/unisim_comp.v:33182]
-INFO: [Synth 8-256] done synthesizing module 'processing_system7_v5_5_processing_system7' (4#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
-INFO: [Synth 8-256] done synthesizing module 'design_1_processing_system7_0_0' (5#1) [/home/stefan/Dropbox/ROB_ELEC/FPGA/PWM/PWM.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1108.137 ; gain = 204.770 ; free physical = 333 ; free virtual = 18893
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1108.137 ; gain = 204.770 ; free physical = 330 ; free virtual = 18890
-INFO: [Device 21-403] Loading part xc7z010clg225-1
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1361.043 ; gain = 0.000 ; free physical = 139 ; free virtual = 18526
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1361.043 ; gain = 457.676 ; free physical = 149 ; free virtual = 18485
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1361.043 ; gain = 457.676 ; free physical = 152 ; free virtual = 18488
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1361.043 ; gain = 457.676 ; free physical = 154 ; free virtual = 18489
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1361.043 ; gain = 457.676 ; free physical = 145 ; free virtual = 18480
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1361.043 ; gain = 457.676 ; free physical = 179 ; free virtual = 18479
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1528.035 ; gain = 624.668 ; free physical = 758 ; free virtual = 18832
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1549.043 ; gain = 645.676 ; free physical = 738 ; free virtual = 18812
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1557.051 ; gain = 653.684 ; free physical = 710 ; free virtual = 18784
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1557.051 ; gain = 653.684 ; free physical = 710 ; free virtual = 18784
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1557.051 ; gain = 653.684 ; free physical = 710 ; free virtual = 18784
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1557.051 ; gain = 653.684 ; free physical = 710 ; free virtual = 18784
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1557.051 ; gain = 653.684 ; free physical = 710 ; free virtual = 18784
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1557.051 ; gain = 653.684 ; free physical = 710 ; free virtual = 18784
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1557.051 ; gain = 653.684 ; free physical = 710 ; free virtual = 18784
-
-Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |BIBUF |    86|
-|2     |BUFG  |     2|
-|3     |LUT1  |   112|
-|4     |PS7   |     1|
-+------+------+------+
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1557.051 ; gain = 653.684 ; free physical = 710 ; free virtual = 18784
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1567.051 ; gain = 576.965 ; free physical = 679 ; free virtual = 18753
+ERROR: [Common 17-55] 'set_property' expects at least one object.
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
